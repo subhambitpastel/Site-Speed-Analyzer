@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV441FC3587C49JXB2GK9VS",
+  "taskId": "refine-ui",
+  "invocationKey": "bug-fix-pipeline:S000008:refine-ui",
+  "status": "ok",
+  "result": {
+    "changesApplied": [
+      "Fixed dark mode CSS conflict with data-theme attribute",
+      "Fixed hydration mismatch with mounted guard",
+      "Added focus-visible rings to strategy toggle buttons",
+      "Added focus-visible ring to ExportDropdown trigger"
+    ],
+    "filesModified": [
+      "src/app/globals.css",
+      "src/app/layout.tsx",
+      "src/app/page.tsx",
+      "src/components/ExportDropdown.tsx"
+    ],
+    "success": true,
+    "summary": "5 targeted fixes for dark mode and focus-visible. Build passes."
+  },
+  "startedAt": "2026-03-16T10:50:46.525Z",
+  "finishedAt": "2026-03-16T10:50:46.525Z",
+  "value": {
+    "changesApplied": [
+      "Fixed dark mode CSS conflict with data-theme attribute",
+      "Fixed hydration mismatch with mounted guard",
+      "Added focus-visible rings to strategy toggle buttons",
+      "Added focus-visible ring to ExportDropdown trigger"
+    ],
+    "filesModified": [
+      "src/app/globals.css",
+      "src/app/layout.tsx",
+      "src/app/page.tsx",
+      "src/components/ExportDropdown.tsx"
+    ],
+    "success": true,
+    "summary": "5 targeted fixes for dark mode and focus-visible. Build passes."
+  }
+}

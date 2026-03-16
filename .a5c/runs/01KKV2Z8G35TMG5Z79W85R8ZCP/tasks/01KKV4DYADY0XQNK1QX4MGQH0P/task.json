@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV4DYADY0XQNK1QX4MGQH0P",
+  "taskId": "score-ui-quality",
+  "invocationKey": "bug-fix-pipeline:S000010:score-ui-quality",
+  "stepId": "S000010",
+  "kind": "agent",
+  "title": "Score UI quality (iteration 2)",
+  "io": {
+    "inputJsonPath": "tasks/01KKV4DYADY0XQNK1QX4MGQH0P/input.json",
+    "outputJsonPath": "tasks/01KKV4DYADY0XQNK1QX4MGQH0P/result.json"
+  },
+  "inputs": {
+    "focus": "mobile responsiveness, layout adaptation, visual polish, overflow handling",
+    "iteration": 2,
+    "targetQuality": 85
+  }
+}

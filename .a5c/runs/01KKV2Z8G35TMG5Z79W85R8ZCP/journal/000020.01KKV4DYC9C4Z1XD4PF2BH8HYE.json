@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T10:52:52.490Z",
+  "data": {
+    "effectId": "01KKV4DYADY0XQNK1QX4MGQH0P",
+    "invocationKey": "bug-fix-pipeline:S000010:score-ui-quality",
+    "invocationHash": "d7a8f65266243edfbd6873f530feb06fc7a33b4e05ca20f2ee89df173976aefb",
+    "stepId": "S000010",
+    "taskId": "score-ui-quality",
+    "kind": "agent",
+    "label": "Score UI quality (iteration 2)",
+    "taskDefRef": "tasks/01KKV4DYADY0XQNK1QX4MGQH0P/task.json"
+  },
+  "checksum": "4197223c0245e00506bb629c4cef85aa5afd7dccc468a38609ef73356e19cae8"
+}

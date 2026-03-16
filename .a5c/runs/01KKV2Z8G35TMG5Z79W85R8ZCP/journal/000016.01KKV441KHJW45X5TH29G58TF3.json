@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T10:47:28.113Z",
+  "data": {
+    "effectId": "01KKV441FC3587C49JXB2GK9VS",
+    "invocationKey": "bug-fix-pipeline:S000008:refine-ui",
+    "invocationHash": "37f1334cd2f3923d8acfc64c873fed6020d54291a3a36455959b054db29bf7eb",
+    "stepId": "S000008",
+    "taskId": "refine-ui",
+    "kind": "agent",
+    "label": "Refine UI (iteration 2)",
+    "taskDefRef": "tasks/01KKV441FC3587C49JXB2GK9VS/task.json"
+  },
+  "checksum": "8309052a60dd3746bf6c9cc45e676042816adaada63c31f1e028903f7b81e5e5"
+}

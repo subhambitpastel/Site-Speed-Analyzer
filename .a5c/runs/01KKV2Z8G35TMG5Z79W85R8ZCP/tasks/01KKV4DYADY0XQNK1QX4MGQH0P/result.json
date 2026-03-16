@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV4DYADY0XQNK1QX4MGQH0P",
+  "taskId": "score-ui-quality",
+  "invocationKey": "bug-fix-pipeline:S000010:score-ui-quality",
+  "status": "ok",
+  "result": {
+    "breakdown": {
+      "consistency": 13,
+      "darkMode": 8,
+      "desktopLayout": 13,
+      "interactive": 8,
+      "mobileLayout": 22,
+      "tabletLayout": 13,
+      "typography": 8
+    },
+    "gaps": [
+      "Table header sort controls lack focus-visible styling",
+      "ScoreBadge/ScoreChart use hardcoded hex colors instead of CSS custom properties for dark mode",
+      "Mobile card labels use 10px text below accessibility minimum"
+    ],
+    "overallScore": 85,
+    "strengths": [
+      "Hydration-safe dark mode with localStorage and inline script",
+      "Excellent responsive card/table pattern",
+      "44px touch targets on all interactive elements",
+      "Focus-visible rings on key interactive elements"
+    ]
+  },
+  "startedAt": "2026-03-16T10:54:20.544Z",
+  "finishedAt": "2026-03-16T10:54:20.544Z",
+  "value": {
+    "breakdown": {
+      "consistency": 13,
+      "darkMode": 8,
+      "desktopLayout": 13,
+      "interactive": 8,
+      "mobileLayout": 22,
+      "tabletLayout": 13,
+      "typography": 8
+    },
+    "gaps": [
+      "Table header sort controls lack focus-visible styling",
+      "ScoreBadge/ScoreChart use hardcoded hex colors instead of CSS custom properties for dark mode",
+      "Mobile card labels use 10px text below accessibility minimum"
+    ],
+    "overallScore": 85,
+    "strengths": [
+      "Hydration-safe dark mode with localStorage and inline script",
+      "Excellent responsive card/table pattern",
+      "44px touch targets on all interactive elements",
+      "Focus-visible rings on key interactive elements"
+    ]
+  }
+}

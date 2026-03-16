@@ -1,0 +1,13 @@
+{
+  "runId": "01KKV2Z8G35TMG5Z79W85R8ZCP",
+  "request": "bug-fix-pipeline",
+  "processId": "bug-fix-pipeline",
+  "entrypoint": {
+    "importPath": "../../processes/bug-fix-pipeline.js",
+    "exportName": "process"
+  },
+  "processPath": "../../processes/bug-fix-pipeline.js",
+  "layoutVersion": "2026.01-storage-preview",
+  "createdAt": "2026-03-16T10:27:22.816Z",
+  "completionProof": "a11aeb97c517e497eb6256509183ac40"
+}

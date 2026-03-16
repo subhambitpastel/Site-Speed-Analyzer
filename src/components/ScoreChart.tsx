@@ -26,7 +26,7 @@ export default function ScoreChart({ scores }: ScoreChartProps) {
         const score = scores[cat.key];
         return (
           <div key={cat.key} className="flex items-center gap-3">
-            <span className="w-28 text-xs text-slate-500 dark:text-slate-400 shrink-0">
+            <span className="w-20 text-xs text-slate-500 dark:text-slate-400 shrink-0 sm:w-28">
               {cat.label}
             </span>
             <div className="relative h-2 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-700">

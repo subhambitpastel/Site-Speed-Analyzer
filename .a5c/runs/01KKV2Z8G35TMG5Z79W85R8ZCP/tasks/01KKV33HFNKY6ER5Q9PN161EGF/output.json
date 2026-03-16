@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "filesModified": [
+    "src/app/page.tsx",
+    "src/components/ResultsTable.tsx",
+    "src/components/MetricsPanel.tsx",
+    "src/components/ScoreChart.tsx",
+    "src/components/ExportDropdown.tsx"
+  ],
+  "changesApplied": [
+    "page.tsx: Header uses flex-wrap with gap-3 so elements stack on narrow screens",
+    "page.tsx: Strategy toggle buttons have min-h-[44px] on mobile for touch targets",
+    "page.tsx: Responsive gaps (gap-6 py-6 -> sm:gap-8 -> lg:gap-12) and padding (px-4 -> sm:px-6)",
+    "page.tsx: Results header uses flex-wrap with gap-3",
+    "ResultsTable.tsx: Added mobile card-based layout replacing 5-column table on phones",
+    "ResultsTable.tsx: Table hidden on mobile (hidden sm:block)",
+    "ResultsTable.tsx: Fluid URL truncation max-w-[200px] md:max-w-sm lg:max-w-lg",
+    "ResultsTable.tsx: Abbreviated column headers on small screens",
+    "ResultsTable.tsx: Responsive cell padding and expanded row padding",
+    "ResultsTable.tsx: Added role=button, aria-expanded, keyboard support",
+    "MetricsPanel.tsx: Grid uses md:grid-cols-5 instead of lg:grid-cols-5",
+    "ScoreChart.tsx: Responsive label width w-20 sm:w-28",
+    "ExportDropdown.tsx: Larger touch targets py-3 px-4"
+  ],
+  "summary": "Fixed all 12 mobile responsiveness issues across 5 files. Converted ResultsTable to card layout on mobile, fixed header wrapping, responsive spacing, touch targets, ARIA attributes."
+}

@@ -1,0 +1,5 @@
+{
+  "success": true,
+  "buildOutput": "Next.js 16.1.6 (Turbopack) compiled successfully in 12.6s. Generated 4 static pages. TypeScript check passed. No errors.",
+  "fixesApplied": ["Installed missing native binary package lightningcss-linux-x64-gnu required by Tailwind CSS"]
+}

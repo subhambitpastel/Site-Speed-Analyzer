@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV4AEWNFW5X3K80129E45WB",
+  "taskId": "verify-build",
+  "invocationKey": "bug-fix-pipeline:S000009:verify-build",
+  "stepId": "S000009",
+  "kind": "agent",
+  "title": "Verify build (Phase 1 - Refinement 2)",
+  "io": {
+    "inputJsonPath": "tasks/01KKV4AEWNFW5X3K80129E45WB/input.json",
+    "outputJsonPath": "tasks/01KKV4AEWNFW5X3K80129E45WB/result.json"
+  },
+  "inputs": {
+    "phase": "Phase 1 - Refinement 2"
+  }
+}

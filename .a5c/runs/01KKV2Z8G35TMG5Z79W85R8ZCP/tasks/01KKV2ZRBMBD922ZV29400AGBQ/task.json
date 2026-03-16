@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV2ZRBMBD922ZV29400AGBQ",
+  "taskId": "analyze-ui",
+  "invocationKey": "bug-fix-pipeline:S000001:analyze-ui",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Analyze UI for responsiveness issues",
+  "io": {
+    "inputJsonPath": "tasks/01KKV2ZRBMBD922ZV29400AGBQ/input.json",
+    "outputJsonPath": "tasks/01KKV2ZRBMBD922ZV29400AGBQ/result.json"
+  },
+  "inputs": {
+    "files": [
+      "src/app/page.tsx",
+      "src/app/globals.css",
+      "src/app/layout.tsx",
+      "src/components/URLInput.tsx",
+      "src/components/ScoreBadge.tsx",
+      "src/components/ResultsTable.tsx",
+      "src/components/MetricsPanel.tsx",
+      "src/components/LoadingSpinner.tsx",
+      "src/components/ExportDropdown.tsx",
+      "src/components/ScoreChart.tsx"
+    ],
+    "scope": "Analyze all components for mobile responsiveness issues, overflow, misalignment, and visual polish gaps"
+  }
+}

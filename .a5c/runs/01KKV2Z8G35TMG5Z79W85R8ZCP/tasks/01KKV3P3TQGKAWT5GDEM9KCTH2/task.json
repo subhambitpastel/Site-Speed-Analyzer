@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV3P3TQGKAWT5GDEM9KCTH2",
+  "taskId": "refine-ui",
+  "invocationKey": "bug-fix-pipeline:S000005:refine-ui",
+  "stepId": "S000005",
+  "kind": "agent",
+  "title": "Refine UI (iteration 1)",
+  "io": {
+    "inputJsonPath": "tasks/01KKV3P3TQGKAWT5GDEM9KCTH2/input.json",
+    "outputJsonPath": "tasks/01KKV3P3TQGKAWT5GDEM9KCTH2/result.json"
+  },
+  "inputs": {
+    "focus": "mobile responsiveness and visual polish",
+    "iteration": 1,
+    "previousScore": 74,
+    "targetQuality": 85
+  }
+}

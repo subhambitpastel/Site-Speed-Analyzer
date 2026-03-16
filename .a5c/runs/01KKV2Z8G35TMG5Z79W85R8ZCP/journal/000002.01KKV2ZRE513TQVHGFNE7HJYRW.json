@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T10:27:39.078Z",
+  "data": {
+    "effectId": "01KKV2ZRBMBD922ZV29400AGBQ",
+    "invocationKey": "bug-fix-pipeline:S000001:analyze-ui",
+    "invocationHash": "078c8dc60250d1a48334644da74ec06120ec83ef85b5bd93d3de967bafba0740",
+    "stepId": "S000001",
+    "taskId": "analyze-ui",
+    "kind": "agent",
+    "label": "Analyze UI for responsiveness issues",
+    "taskDefRef": "tasks/01KKV2ZRBMBD922ZV29400AGBQ/task.json"
+  },
+  "checksum": "18f83c78e9f958eb2a1586236b141cd79c101c0a8307edf5971f7c45d4644f98"
+}

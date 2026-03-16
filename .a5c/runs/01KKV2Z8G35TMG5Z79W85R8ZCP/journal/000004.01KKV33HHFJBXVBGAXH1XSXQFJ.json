@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T10:29:43.087Z",
+  "data": {
+    "effectId": "01KKV33HFNKY6ER5Q9PN161EGF",
+    "invocationKey": "bug-fix-pipeline:S000002:fix-responsiveness",
+    "invocationHash": "d40ca55fa57e6255c6feafed425acb8a171a0b0e164ba00dda1f4c210cfef080",
+    "stepId": "S000002",
+    "taskId": "fix-responsiveness",
+    "kind": "agent",
+    "label": "Fix UI responsiveness and visual polish",
+    "taskDefRef": "tasks/01KKV33HFNKY6ER5Q9PN161EGF/task.json"
+  },
+  "checksum": "d8dd55245f70a50c5aae03a19bebb9edd1c195da628b6dd453336e4422008e8d"
+}

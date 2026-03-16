@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
@@ -14,8 +16,22 @@
   --score-red: #ef4444;
 }
 
+.dark {
+  --background: #020617;
+  --foreground: #f1f5f9;
+  --accent: #818cf8;
+  --surface: #0f172a;
+  --surface-elevated: #1e293b;
+  --border: #1e293b;
+  --text-secondary: #94a3b8;
+  --text-tertiary: #64748b;
+  --score-green: #34d399;
+  --score-amber: #fbbf24;
+  --score-red: #f87171;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --background: #020617;
     --foreground: #f1f5f9;
     --accent: #818cf8;
@@ -76,8 +92,12 @@ body {
   background: rgba(255, 255, 255, 0.8);
 }
 
+.dark .glass {
+  background: rgba(15, 23, 42, 0.8);
+}
+
 @media (prefers-color-scheme: dark) {
-  .glass {
+  :root:not([data-theme="light"]) .glass {
     background: rgba(15, 23, 42, 0.8);
   }
 }

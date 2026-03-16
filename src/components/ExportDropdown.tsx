@@ -75,7 +75,7 @@ export default function ExportDropdown({ results }: ExportDropdownProps) {
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
         disabled={isDisabled}
-        className={`inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3.5 py-2 text-sm font-medium text-slate-700 shadow-sm transition-colors duration-200 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 ${
+        className={`inline-flex min-h-[44px] items-center gap-2 rounded-lg border border-slate-200 bg-white px-3.5 py-2 text-sm font-medium text-slate-700 shadow-sm transition-colors duration-200 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 ${
           isDisabled
             ? "cursor-not-allowed bg-slate-50 opacity-50 dark:bg-slate-800"
             : ""
@@ -123,7 +123,7 @@ export default function ExportDropdown({ results }: ExportDropdownProps) {
                 option.action();
                 setIsOpen(false);
               }}
-              className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm text-slate-600 transition-colors duration-150 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-slate-200"
+              className="flex w-full items-center gap-3 rounded-lg px-4 py-3 text-sm text-slate-600 transition-colors duration-150 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-slate-200"
             >
               <span className="text-slate-400 dark:text-slate-500">
                 {option.icon}

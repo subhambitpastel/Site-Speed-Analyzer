@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV33HFNKY6ER5Q9PN161EGF",
+  "taskId": "fix-responsiveness",
+  "invocationKey": "bug-fix-pipeline:S000002:fix-responsiveness",
+  "stepId": "S000002",
+  "kind": "agent",
+  "title": "Fix UI responsiveness and visual polish",
+  "io": {
+    "inputJsonPath": "tasks/01KKV33HFNKY6ER5Q9PN161EGF/input.json",
+    "outputJsonPath": "tasks/01KKV33HFNKY6ER5Q9PN161EGF/result.json"
+  },
+  "inputs": {
+    "analysis": {
+      "issues": [
+        {
+          "component": "src/components/ResultsTable.tsx",
+          "issue": "Five-column table forces horizontal scrolling on phones (<640px) with no card-based mobile alternative. Min table width ~600-700px.",
+          "recommendation": "Convert to card-based layout on mobile or hide less important columns.",
+          "severity": "high"
+        },
+        {
+          "component": "src/components/ResultsTable.tsx",
+          "issue": "Long column headers (Performance, Accessibility, Best Practices) are cramped on narrow viewports with no abbreviation.",
+          "recommendation": "Use abbreviated headers on small screens (Perf, A11y, SEO, BP).",
+          "severity": "medium"
+        },
+        {
+          "component": "src/components/ResultsTable.tsx",
+          "issue": "Expanded detail row uses lg:grid-cols with px-8 padding consuming significant space on tablets.",
+          "recommendation": "Add md:grid-cols-2 intermediate breakpoint, reduce padding responsively.",
+          "severity": "medium"
+        },
+        {
+          "component": "src/components/MetricsPanel.tsx",
+          "issue": "lg:grid-cols-5 inside constrained expanded row makes cards extremely narrow (<80px wide) on large screens.",
+          "recommendation": "Cap grid at grid-cols-3 inside expanded row or use container queries.",
+          "severity": "medium"
+        },
+        {
+          "component": "src/app/page.tsx",
+          "issue": "Header flex items-center justify-between has no wrapping. Logo/title and strategy toggle collide on narrow screens (<360px).",
+          "recommendation": "Add flex-wrap or stack vertically on screens < 400px.",
+          "severity": "high"
+        },
+        {
+          "component": "src/app/page.tsx",
+          "issue": "Strategy toggle buttons have ~32px height touch targets, below 44px minimum for mobile.",
+          "recommendation": "Increase mobile touch targets: py-2.5 sm:py-1.5.",
+          "severity": "medium"
+        },
+        {
+          "component": "src/components/ExportDropdown.tsx",
+          "issue": "Dropdown menu items have ~36px touch targets, below 44px minimum.",
+          "recommendation": "Increase to py-3 px-4 on mobile.",
+          "severity": "low"
+        },
+        {
+          "component": "src/components/ResultsTable.tsx",
+          "issue": "Rows are clickable but no visible affordance or aria attributes for mobile users. ChevronIcon is only 16px.",
+          "recommendation": "Add role=button, aria-expanded. Make expand affordance larger on mobile.",
+          "severity": "medium"
+        },
+        {
+          "component": "src/app/page.tsx",
+          "issue": "Results section header text and export button can collide on narrow screens - no flex-wrap or gap.",
+          "recommendation": "Add gap-4 flex-wrap to results header.",
+          "severity": "low"
+        },
+        {
+          "component": "src/components/ResultsTable.tsx",
+          "issue": "URL truncation uses fixed max-w-xs (320px) which pushes table wider than viewport on 375px phones.",
+          "recommendation": "Use fluid max-w-[40vw] sm:max-w-xs lg:max-w-lg instead.",
+          "severity": "high"
+        },
+        {
+          "component": "src/app/page.tsx",
+          "issue": "Main content uses gap-12 py-12 (48px) which wastes vertical space on mobile.",
+          "recommendation": "Use responsive gap-8 sm:gap-12 py-8 sm:py-12.",
+          "severity": "medium"
+        },
+        {
+          "component": "src/components/ScoreChart.tsx",
+          "issue": "Score label uses fixed w-28 (112px) consuming too much space on mobile in expanded row.",
+          "recommendation": "Use w-20 sm:w-28 or abbreviate labels on mobile.",
+          "severity": "medium"
+        }
+      ],
+      "summary": "The UI has a clean desktop design but significant mobile responsiveness gaps. Top issues: (1) results table forces horizontal scrolling with no card-based mobile alternative, (2) header overflows on narrow devices, (3) fixed URL truncation pushes table wider than viewport. Additional issues include undersized touch targets, excessive vertical spacing on mobile, and grid constraints in expanded rows."
+    },
+    "files": [
+      "src/app/page.tsx",
+      "src/app/globals.css",
+      "src/app/layout.tsx",
+      "src/components/URLInput.tsx",
+      "src/components/ScoreBadge.tsx",
+      "src/components/ResultsTable.tsx",
+      "src/components/MetricsPanel.tsx",
+      "src/components/LoadingSpinner.tsx",
+      "src/components/ExportDropdown.tsx",
+      "src/components/ScoreChart.tsx"
+    ]
+  }
+}

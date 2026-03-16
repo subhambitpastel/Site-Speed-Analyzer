@@ -1,0 +1,29 @@
+{
+  "overallScore": 74,
+  "breakdown": {
+    "mobileLayout": 21,
+    "tabletLayout": 12,
+    "desktopLayout": 13,
+    "typography": 7,
+    "interactive": 7,
+    "consistency": 12,
+    "darkMode": 2
+  },
+  "gaps": [
+    "No user-controlled dark mode toggle - relies solely on OS prefers-color-scheme with no manual override",
+    "ExportDropdown button has no min-height for mobile touch targets (py-2 yields ~36px)",
+    "MetricsPanel md:grid-cols-5 can compress 5 columns too tightly at 768px inside table cell",
+    "ResultsTable at 640-767px has cramped 5-column layout with ScoreBadge rings",
+    "No focus-visible ring on table rows with tabIndex=0 and role=button",
+    "Textarea in URLInput has no max-height control - can grow to consume entire viewport",
+    "Header flex-wrap causes strategy toggle to wrap without re-alignment on <360px screens",
+    "ScoreBadge fixed 40x40px with no responsive scaling for very small screens",
+    "No landscape-specific handling for mobile"
+  ],
+  "strengths": [
+    "Excellent mobile-first card vs table pattern",
+    "Strategy toggle correctly implements min-h-[44px] on mobile",
+    "prefers-reduced-motion support for accessibility",
+    "Consistent design language throughout"
+  ]
+}

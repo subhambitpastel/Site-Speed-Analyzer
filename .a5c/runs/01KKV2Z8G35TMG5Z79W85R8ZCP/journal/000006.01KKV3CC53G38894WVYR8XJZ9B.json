@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T10:34:32.483Z",
+  "data": {
+    "effectId": "01KKV3CC2ZPW23QM17M34F3EZ2",
+    "invocationKey": "bug-fix-pipeline:S000003:verify-build",
+    "invocationHash": "18b189258238fd12d90b007267a7897754f99e04cedc3001defa9c9590bf7ac4",
+    "stepId": "S000003",
+    "taskId": "verify-build",
+    "kind": "agent",
+    "label": "Verify build (Phase 1 - UI Responsiveness)",
+    "taskDefRef": "tasks/01KKV3CC2ZPW23QM17M34F3EZ2/task.json"
+  },
+  "checksum": "eb60faaf041296afc3eb2c2027b6fb42797337d1e31f5b473a7ec71fa8e44ed9"
+}

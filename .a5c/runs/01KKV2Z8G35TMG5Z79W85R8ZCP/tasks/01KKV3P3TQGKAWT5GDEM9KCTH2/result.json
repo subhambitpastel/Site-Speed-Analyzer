@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV3P3TQGKAWT5GDEM9KCTH2",
+  "taskId": "refine-ui",
+  "invocationKey": "bug-fix-pipeline:S000005:refine-ui",
+  "status": "ok",
+  "result": {
+    "changesApplied": [
+      "Added class-based dark mode toggle with localStorage persistence in layout.tsx and globals.css",
+      "Added dark mode toggle button with sun/moon icons to header in page.tsx",
+      "Added min-h-[44px] to ExportDropdown trigger button",
+      "Added focus-visible:ring-2 on interactive table rows in ResultsTable.tsx",
+      "Added max-h-[50vh] overflow-y-auto to URLInput textarea",
+      "Header strategy toggle centers when wrapped on small screens"
+    ],
+    "filesModified": [
+      "src/app/globals.css",
+      "src/app/layout.tsx",
+      "src/app/page.tsx",
+      "src/components/ExportDropdown.tsx",
+      "src/components/ResultsTable.tsx",
+      "src/components/URLInput.tsx"
+    ],
+    "success": true,
+    "summary": "Applied 6 targeted edits addressing dark mode toggle, touch targets, focus visibility, textarea height, and header alignment. Build passes."
+  },
+  "startedAt": "2026-03-16T10:44:02.440Z",
+  "finishedAt": "2026-03-16T10:44:02.440Z",
+  "value": {
+    "changesApplied": [
+      "Added class-based dark mode toggle with localStorage persistence in layout.tsx and globals.css",
+      "Added dark mode toggle button with sun/moon icons to header in page.tsx",
+      "Added min-h-[44px] to ExportDropdown trigger button",
+      "Added focus-visible:ring-2 on interactive table rows in ResultsTable.tsx",
+      "Added max-h-[50vh] overflow-y-auto to URLInput textarea",
+      "Header strategy toggle centers when wrapped on small screens"
+    ],
+    "filesModified": [
+      "src/app/globals.css",
+      "src/app/layout.tsx",
+      "src/app/page.tsx",
+      "src/components/ExportDropdown.tsx",
+      "src/components/ResultsTable.tsx",
+      "src/components/URLInput.tsx"
+    ],
+    "success": true,
+    "summary": "Applied 6 targeted edits addressing dark mode toggle, touch targets, focus visibility, textarea height, and header alignment. Build passes."
+  }
+}

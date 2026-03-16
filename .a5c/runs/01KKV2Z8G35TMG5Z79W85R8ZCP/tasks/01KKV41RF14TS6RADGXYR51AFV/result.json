@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV41RF14TS6RADGXYR51AFV",
+  "taskId": "score-ui-quality",
+  "invocationKey": "bug-fix-pipeline:S000007:score-ui-quality",
+  "status": "ok",
+  "result": {
+    "breakdown": {
+      "consistency": 13,
+      "darkMode": 4,
+      "desktopLayout": 14,
+      "interactive": 8,
+      "mobileLayout": 22,
+      "tabletLayout": 13,
+      "typography": 8
+    },
+    "gaps": [
+      "Dark mode toggle has hydration mismatch - icon flashes on first render",
+      "Dark mode CSS conflict: .dark class removal + prefers-color-scheme fallback causes incorrect theme for dark OS users toggling to light",
+      "Export dropdown trigger button missing focus-visible ring",
+      "Strategy toggle buttons missing focus-visible ring styles",
+      "Table header th elements no min-h-[44px] touch target for tablets",
+      "ScoreChart truncates 'Best Practices' label at small sizes",
+      "Mobile card view has no sorting UI"
+    ],
+    "overallScore": 82,
+    "strengths": [
+      "Excellent mobile-first card/table responsive pattern",
+      "Dark mode with localStorage persistence and FOUC prevention",
+      "Consistent CSS custom properties for theming",
+      "Well-implemented reduced-motion support",
+      "Proper touch targets on toggle buttons"
+    ]
+  },
+  "startedAt": "2026-03-16T10:47:19.552Z",
+  "finishedAt": "2026-03-16T10:47:19.552Z",
+  "value": {
+    "breakdown": {
+      "consistency": 13,
+      "darkMode": 4,
+      "desktopLayout": 14,
+      "interactive": 8,
+      "mobileLayout": 22,
+      "tabletLayout": 13,
+      "typography": 8
+    },
+    "gaps": [
+      "Dark mode toggle has hydration mismatch - icon flashes on first render",
+      "Dark mode CSS conflict: .dark class removal + prefers-color-scheme fallback causes incorrect theme for dark OS users toggling to light",
+      "Export dropdown trigger button missing focus-visible ring",
+      "Strategy toggle buttons missing focus-visible ring styles",
+      "Table header th elements no min-h-[44px] touch target for tablets",
+      "ScoreChart truncates 'Best Practices' label at small sizes",
+      "Mobile card view has no sorting UI"
+    ],
+    "overallScore": 82,
+    "strengths": [
+      "Excellent mobile-first card/table responsive pattern",
+      "Dark mode with localStorage persistence and FOUC prevention",
+      "Consistent CSS custom properties for theming",
+      "Well-implemented reduced-motion support",
+      "Proper touch targets on toggle buttons"
+    ]
+  }
+}

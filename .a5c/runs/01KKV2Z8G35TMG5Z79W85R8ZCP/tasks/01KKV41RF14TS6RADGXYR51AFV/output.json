@@ -1,0 +1,20 @@
+{
+  "overallScore": 82,
+  "breakdown": {"mobileLayout": 22, "tabletLayout": 13, "desktopLayout": 14, "typography": 8, "interactive": 8, "consistency": 13, "darkMode": 4},
+  "gaps": [
+    "Dark mode toggle has hydration mismatch - icon flashes on first render",
+    "Dark mode CSS conflict: .dark class removal + prefers-color-scheme fallback causes incorrect theme for dark OS users toggling to light",
+    "Export dropdown trigger button missing focus-visible ring",
+    "Strategy toggle buttons missing focus-visible ring styles",
+    "Table header th elements no min-h-[44px] touch target for tablets",
+    "ScoreChart truncates 'Best Practices' label at small sizes",
+    "Mobile card view has no sorting UI"
+  ],
+  "strengths": [
+    "Excellent mobile-first card/table responsive pattern",
+    "Dark mode with localStorage persistence and FOUC prevention",
+    "Consistent CSS custom properties for theming",
+    "Well-implemented reduced-motion support",
+    "Proper touch targets on toggle buttons"
+  ]
+}

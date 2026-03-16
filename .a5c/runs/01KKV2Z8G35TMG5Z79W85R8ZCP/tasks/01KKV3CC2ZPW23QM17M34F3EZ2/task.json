@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV3CC2ZPW23QM17M34F3EZ2",
+  "taskId": "verify-build",
+  "invocationKey": "bug-fix-pipeline:S000003:verify-build",
+  "stepId": "S000003",
+  "kind": "agent",
+  "title": "Verify build (Phase 1 - UI Responsiveness)",
+  "io": {
+    "inputJsonPath": "tasks/01KKV3CC2ZPW23QM17M34F3EZ2/input.json",
+    "outputJsonPath": "tasks/01KKV3CC2ZPW23QM17M34F3EZ2/result.json"
+  },
+  "inputs": {
+    "phase": "Phase 1 - UI Responsiveness"
+  }
+}

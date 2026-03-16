@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-03-16T10:27:22.883Z",
+  "data": {
+    "runId": "01KKV2Z8G35TMG5Z79W85R8ZCP",
+    "processId": "bug-fix-pipeline",
+    "entrypoint": {
+      "importPath": "../../processes/bug-fix-pipeline.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "0afc073fafe6e0b913d2c1a81d28483378e5acdeb85190c70650abd2432c4743"
+}

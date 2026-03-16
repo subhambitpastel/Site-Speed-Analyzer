@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "changesApplied": [
+    "Added class-based dark mode toggle with localStorage persistence in layout.tsx and globals.css",
+    "Added dark mode toggle button with sun/moon icons to header in page.tsx",
+    "Added min-h-[44px] to ExportDropdown trigger button",
+    "Added focus-visible:ring-2 on interactive table rows in ResultsTable.tsx",
+    "Added max-h-[50vh] overflow-y-auto to URLInput textarea",
+    "Header strategy toggle centers when wrapped on small screens"
+  ],
+  "filesModified": ["src/app/globals.css", "src/app/layout.tsx", "src/app/page.tsx", "src/components/ExportDropdown.tsx", "src/components/ResultsTable.tsx", "src/components/URLInput.tsx"],
+  "summary": "Applied 6 targeted edits addressing dark mode toggle, touch targets, focus visibility, textarea height, and header alignment. Build passes."
+}

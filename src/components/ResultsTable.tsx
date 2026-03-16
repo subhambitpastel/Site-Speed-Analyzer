@@ -79,15 +79,29 @@ function ChevronIcon({ expanded }: { expanded: boolean }) {
   );
 }
 
+function ErrorCard({ url, error }: { url: string; error: string }) {
+  return (
+    <div className="border-b border-slate-100 p-4 dark:border-slate-800">
+      <p className="truncate text-sm font-medium text-slate-900 dark:text-slate-100">{url}</p>
+      <div className="mt-2 flex items-center gap-2 text-sm text-red-600 dark:text-red-400">
+        <svg className="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        {error}
+      </div>
+    </div>
+  );
+}
+
 function ErrorRow({ url, error }: { url: string; error: string }) {
   return (
     <tr className="border-b border-slate-100 transition-all duration-150 dark:border-slate-800">
-      <td className="px-5 py-4 text-sm text-slate-900 dark:text-slate-100">
-        <span className="block max-w-xs truncate font-medium sm:max-w-sm lg:max-w-lg">
+      <td className="px-3 py-3 text-sm text-slate-900 dark:text-slate-100 md:px-5 md:py-4">
+        <span className="block max-w-[200px] truncate font-medium md:max-w-sm lg:max-w-lg">
           {url}
         </span>
       </td>
-      <td colSpan={4} className="px-5 py-4 text-sm text-red-600 dark:text-red-400">
+      <td colSpan={4} className="px-3 py-3 text-sm text-red-600 dark:text-red-400 md:px-5 md:py-4">
         <div className="flex items-center gap-2">
           <svg className="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -99,15 +113,27 @@ function ErrorRow({ url, error }: { url: string; error: string }) {
   );
 }
 
+function LoadingCard({ url }: { url: string }) {
+  return (
+    <div className="border-b border-slate-100 p-4 dark:border-slate-800">
+      <p className="truncate text-sm font-medium text-slate-900 dark:text-slate-100">{url}</p>
+      <div className="mt-2 flex items-center gap-2.5 text-sm text-slate-400">
+        <LoadingSpinner size="sm" />
+        <span>Analyzing...</span>
+      </div>
+    </div>
+  );
+}
+
 function LoadingRow({ url }: { url: string }) {
   return (
     <tr className="border-b border-slate-100 transition-all duration-150 dark:border-slate-800">
-      <td className="px-5 py-4 text-sm text-slate-900 dark:text-slate-100">
-        <span className="block max-w-xs truncate font-medium sm:max-w-sm lg:max-w-lg">
+      <td className="px-3 py-3 text-sm text-slate-900 dark:text-slate-100 md:px-5 md:py-4">
+        <span className="block max-w-[200px] truncate font-medium md:max-w-sm lg:max-w-lg">
           {url}
         </span>
       </td>
-      <td colSpan={4} className="px-5 py-4">
+      <td colSpan={4} className="px-3 py-3 md:px-5 md:py-4">
         <div className="flex items-center gap-2.5 text-sm text-slate-400">
           <LoadingSpinner size="sm" />
           <span className="text-slate-400">
@@ -119,6 +145,69 @@ function LoadingRow({ url }: { url: string }) {
   );
 }
 
+function SuccessCard({ report, index }: { report: LighthouseReport; index: number }) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <div
+      className="animate-stagger-fade-in border-b border-slate-100 dark:border-slate-800"
+      style={{ animationDelay: `${index * 50}ms` }}
+    >
+      <button
+        type="button"
+        onClick={() => setExpanded(!expanded)}
+        aria-expanded={expanded}
+        className={`flex w-full min-h-[44px] items-start gap-3 p-4 text-left transition-colors duration-200 ${
+          expanded
+            ? "bg-slate-50 dark:bg-slate-800/30"
+            : "hover:bg-slate-50 dark:hover:bg-slate-800/50"
+        }`}
+      >
+        <ChevronIcon expanded={expanded} />
+        <div className="min-w-0 flex-1">
+          <p className="truncate text-sm font-medium text-slate-900 dark:text-slate-100">
+            {report.url}
+          </p>
+          <div className="mt-2 grid grid-cols-4 gap-2">
+            <div className="flex flex-col items-center">
+              <span className="mb-1 text-[10px] font-medium uppercase text-slate-400">Perf</span>
+              <ScoreBadge score={report.scores.performance} />
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="mb-1 text-[10px] font-medium uppercase text-slate-400">A11y</span>
+              <ScoreBadge score={report.scores.accessibility} />
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="mb-1 text-[10px] font-medium uppercase text-slate-400">SEO</span>
+              <ScoreBadge score={report.scores.seo} />
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="mb-1 text-[10px] font-medium uppercase text-slate-400">BP</span>
+              <ScoreBadge score={report.scores.bestPractices} />
+            </div>
+          </div>
+        </div>
+      </button>
+      {expanded && (
+        <div className="animate-fade-in-up space-y-4 bg-slate-50 px-4 pb-4 dark:bg-slate-800/20">
+          <div>
+            <p className="mb-2 text-xs font-medium uppercase tracking-wide text-slate-400 dark:text-slate-500">
+              Score Overview
+            </p>
+            <ScoreChart scores={report.scores} />
+          </div>
+          <div>
+            <p className="mb-2 text-xs font-medium uppercase tracking-wide text-slate-400 dark:text-slate-500">
+              Core Web Vitals
+            </p>
+            <MetricsPanel coreWebVitals={report.coreWebVitals} />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function SuccessRow({ report, index }: { report: LighthouseReport; index: number }) {
   const [expanded, setExpanded] = useState(false);
 
@@ -126,37 +215,41 @@ function SuccessRow({ report, index }: { report: LighthouseReport; index: number
     <>
       <tr
         onClick={() => setExpanded(!expanded)}
-        className={`animate-stagger-fade-in cursor-pointer border-b transition-all duration-200 ${
+        role="button"
+        aria-expanded={expanded}
+        tabIndex={0}
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setExpanded(!expanded); } }}
+        className={`animate-stagger-fade-in cursor-pointer border-b transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/50 focus-visible:ring-inset ${
           expanded
             ? "border-slate-100 bg-slate-50 dark:border-slate-800 dark:bg-slate-800/30"
             : "border-slate-100 hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-800/50"
         }`}
         style={{ animationDelay: `${index * 50}ms` }}
       >
-        <td className="px-5 py-4 text-sm">
+        <td className="px-3 py-3 text-sm md:px-5 md:py-4">
           <div className="flex items-center gap-2.5">
             <ChevronIcon expanded={expanded} />
-            <span className="block max-w-xs truncate font-medium text-slate-900 dark:text-slate-100 sm:max-w-sm lg:max-w-lg">
+            <span className="block max-w-[200px] truncate font-medium text-slate-900 dark:text-slate-100 md:max-w-sm lg:max-w-lg">
               {report.url}
             </span>
           </div>
         </td>
-        <td className="px-5 py-4">
+        <td className="px-3 py-3 md:px-5 md:py-4">
           <div className="flex justify-center">
             <ScoreBadge score={report.scores.performance} />
           </div>
         </td>
-        <td className="px-5 py-4">
+        <td className="px-3 py-3 md:px-5 md:py-4">
           <div className="flex justify-center">
             <ScoreBadge score={report.scores.accessibility} />
           </div>
         </td>
-        <td className="px-5 py-4">
+        <td className="px-3 py-3 md:px-5 md:py-4">
           <div className="flex justify-center">
             <ScoreBadge score={report.scores.seo} />
           </div>
         </td>
-        <td className="px-5 py-4">
+        <td className="px-3 py-3 md:px-5 md:py-4">
           <div className="flex justify-center">
             <ScoreBadge score={report.scores.bestPractices} />
           </div>
@@ -164,7 +257,7 @@ function SuccessRow({ report, index }: { report: LighthouseReport; index: number
       </tr>
       {expanded && (
         <tr className="border-b border-slate-100 dark:border-slate-800">
-          <td colSpan={5} className="bg-slate-50 px-8 py-6 dark:bg-slate-800/20">
+          <td colSpan={5} className="bg-slate-50 px-4 py-4 dark:bg-slate-800/20 md:px-8 md:py-6">
             <div className="animate-fade-in-up grid gap-6 lg:grid-cols-[1fr_auto_1fr]">
               <div>
                 <p className="mb-3 text-xs font-medium uppercase tracking-wide text-slate-400 dark:text-slate-500">
@@ -187,12 +280,12 @@ function SuccessRow({ report, index }: { report: LighthouseReport; index: number
   );
 }
 
-const COLUMNS: { key: SortKey; label: string; align: string }[] = [
-  { key: "url", label: "URL", align: "text-left" },
-  { key: "performance", label: "Performance", align: "text-center" },
-  { key: "accessibility", label: "Accessibility", align: "text-center" },
-  { key: "seo", label: "SEO", align: "text-center" },
-  { key: "bestPractices", label: "Best Practices", align: "text-center" },
+const COLUMNS: { key: SortKey; label: string; shortLabel: string; align: string }[] = [
+  { key: "url", label: "URL", shortLabel: "URL", align: "text-left" },
+  { key: "performance", label: "Performance", shortLabel: "Perf", align: "text-center" },
+  { key: "accessibility", label: "Accessibility", shortLabel: "A11y", align: "text-center" },
+  { key: "seo", label: "SEO", shortLabel: "SEO", align: "text-center" },
+  { key: "bestPractices", label: "Best Practices", shortLabel: "BP", align: "text-center" },
 ];
 
 export default function ResultsTable({ results }: ResultsTableProps) {
@@ -238,7 +331,20 @@ export default function ResultsTable({ results }: ResultsTableProps) {
 
   return (
     <div className="overflow-hidden rounded-xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
-      <div className="overflow-x-auto">
+      {/* Mobile card view */}
+      <div className="sm:hidden">
+        {sortedResults.map((report, index) => {
+          if (report.error) {
+            return <ErrorCard key={`card-${report.url}-${index}`} url={report.url} error={report.error} />;
+          }
+          if (isLoading(report)) {
+            return <LoadingCard key={`card-${report.url}-${index}`} url={report.url} />;
+          }
+          return <SuccessCard key={`card-${report.url}-${index}`} report={report} index={index} />;
+        })}
+      </div>
+      {/* Desktop table view */}
+      <div className="hidden overflow-x-auto sm:block">
         <table className="w-full">
           <thead>
             <tr className="border-b border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-800/50">
@@ -246,9 +352,10 @@ export default function ResultsTable({ results }: ResultsTableProps) {
                 <th
                   key={col.key}
                   onClick={() => handleSort(col.key)}
-                  className={`cursor-pointer select-none px-5 py-3.5 text-xs font-medium uppercase tracking-wide text-slate-400 transition-colors duration-200 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-400 ${col.align}`}
+                  className={`cursor-pointer select-none px-3 py-3 text-xs font-medium uppercase tracking-wide text-slate-400 transition-colors duration-200 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-400 md:px-5 md:py-3.5 ${col.align}`}
                 >
-                  {col.label}
+                  <span className="md:hidden">{col.shortLabel}</span>
+                  <span className="hidden md:inline">{col.label}</span>
                   <SortIcon
                     active={sortKey === col.key}
                     direction={sortKey === col.key ? sortDir : "desc"}
