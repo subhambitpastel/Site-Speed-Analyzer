@@ -1,0 +1,1 @@
+{"overallScore": 91, "breakdown": {"fileParser": 23, "uiComponent": 23, "integration": 19, "designMatch": 13, "codeQuality": 13}, "gaps": ["No unit tests for fileParser", "Use These URLs button not full-width"]}

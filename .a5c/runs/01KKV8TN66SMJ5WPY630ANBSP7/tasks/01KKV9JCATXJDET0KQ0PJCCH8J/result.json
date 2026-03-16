@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV9JCATXJDET0KQ0PJCCH8J",
+  "taskId": "score-quality",
+  "invocationKey": "file-upload-feature:S000008:score-quality",
+  "status": "ok",
+  "result": {
+    "breakdown": {
+      "codeQuality": 13,
+      "designMatch": 13,
+      "fileParser": 23,
+      "integration": 19,
+      "uiComponent": 23
+    },
+    "gaps": [
+      "No unit tests for fileParser",
+      "Use These URLs button not full-width"
+    ],
+    "overallScore": 91
+  },
+  "startedAt": "2026-03-16T12:23:57.456Z",
+  "finishedAt": "2026-03-16T12:23:57.456Z",
+  "value": {
+    "breakdown": {
+      "codeQuality": 13,
+      "designMatch": 13,
+      "fileParser": 23,
+      "integration": 19,
+      "uiComponent": 23
+    },
+    "gaps": [
+      "No unit tests for fileParser",
+      "Use These URLs button not full-width"
+    ],
+    "overallScore": 91
+  }
+}

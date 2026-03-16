@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV9AKWAZ25G07GKH5MZYQV8",
+  "taskId": "refine",
+  "invocationKey": "file-upload-feature:S000006:refine",
+  "stepId": "S000006",
+  "kind": "agent",
+  "title": "Refine (iteration 1)",
+  "io": {
+    "inputJsonPath": "tasks/01KKV9AKWAZ25G07GKH5MZYQV8/input.json",
+    "outputJsonPath": "tasks/01KKV9AKWAZ25G07GKH5MZYQV8/result.json"
+  },
+  "inputs": {
+    "iteration": 1,
+    "previousScore": 82,
+    "targetQuality": 85
+  }
+}

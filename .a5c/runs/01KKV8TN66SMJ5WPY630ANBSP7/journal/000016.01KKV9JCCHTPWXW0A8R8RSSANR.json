@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T12:22:40.786Z",
+  "data": {
+    "effectId": "01KKV9JCATXJDET0KQ0PJCCH8J",
+    "invocationKey": "file-upload-feature:S000008:score-quality",
+    "invocationHash": "4e0d969ae58a32610346e67143bacf586ca4df133b7886d9d4710332cf802d1e",
+    "stepId": "S000008",
+    "taskId": "score-quality",
+    "kind": "agent",
+    "label": "Score quality (iteration 1)",
+    "taskDefRef": "tasks/01KKV9JCATXJDET0KQ0PJCCH8J/task.json"
+  },
+  "checksum": "9d363bed1a551cb51d80c85c65c2a6a395a4bab0e5cb84b37cbe0c64aaa5d6fb"
+}

@@ -1,0 +1,13 @@
+{
+  "runId": "01KKV8TN66SMJ5WPY630ANBSP7",
+  "request": "file-upload-feature",
+  "processId": "file-upload-feature",
+  "entrypoint": {
+    "importPath": "../../processes/file-upload-feature.js",
+    "exportName": "process"
+  },
+  "processPath": "../../processes/file-upload-feature.js",
+  "layoutVersion": "2026.01-storage-preview",
+  "createdAt": "2026-03-16T12:09:43.418Z",
+  "completionProof": "9e5ffcfc2efa9a033e3cc7dfbd0f66a7"
+}

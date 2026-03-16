@@ -1,0 +1,1 @@
+{"success": true, "changesApplied": ["10MB file size limit", "MAX_URLS=500 cap with truncation flag", "MIME types support", "Button sizing match", "URL string as React key", "Tab switching resets FileUpload state via key prop"], "filesModified": ["src/lib/fileParser.ts", "src/components/FileUpload.tsx", "src/app/page.tsx"]}

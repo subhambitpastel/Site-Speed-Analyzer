@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV9N5ZT0F3HFMBPS58CECTW",
+  "taskId": "document-and-commit",
+  "invocationKey": "file-upload-feature:S000009:document-and-commit",
+  "stepId": "S000009",
+  "kind": "agent",
+  "title": "Document fixes and commit",
+  "io": {
+    "inputJsonPath": "tasks/01KKV9N5ZT0F3HFMBPS58CECTW/input.json",
+    "outputJsonPath": "tasks/01KKV9N5ZT0F3HFMBPS58CECTW/result.json"
+  },
+  "inputs": {
+    "iterations": 1,
+    "score": 91
+  }
+}

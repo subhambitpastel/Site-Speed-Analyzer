@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV8V7DBJ0KTBEWFQW6C4SNF",
+  "taskId": "create-file-parser",
+  "invocationKey": "file-upload-feature:S000001:create-file-parser",
+  "status": "ok",
+  "result": {
+    "success": true,
+    "summary": "Installed xlsx, created src/lib/fileParser.ts with parseFile() and extractURLsFromSheet(). Smart URL column detection with fallback to full cell scan."
+  },
+  "startedAt": "2026-03-16T12:11:28.925Z",
+  "finishedAt": "2026-03-16T12:11:28.925Z",
+  "value": {
+    "success": true,
+    "summary": "Installed xlsx, created src/lib/fileParser.ts with parseFile() and extractURLsFromSheet(). Smart URL column detection with fallback to full cell scan."
+  }
+}

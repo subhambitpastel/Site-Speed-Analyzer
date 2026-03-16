@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T12:13:26.510Z",
+  "data": {
+    "effectId": "01KKV91F1D6287689JKF2W5MRH",
+    "invocationKey": "file-upload-feature:S000003:integrate-into-page",
+    "invocationHash": "df0d9ae9c0658aa6017ebb58e9b199614f62d3cb983f22ffa59f1222a2b023c6",
+    "stepId": "S000003",
+    "taskId": "integrate-into-page",
+    "kind": "agent",
+    "label": "Integrate file upload into page.tsx",
+    "taskDefRef": "tasks/01KKV91F1D6287689JKF2W5MRH/task.json"
+  },
+  "checksum": "33e91d60be161da0fff34d45b6ec53f9247c80d970e665d7ac858d68506ea1ff"
+}

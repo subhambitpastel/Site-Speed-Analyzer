@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV98BA71R4YXH23TP468HEC",
+  "taskId": "score-quality",
+  "invocationKey": "file-upload-feature:S000005:score-quality",
+  "stepId": "S000005",
+  "kind": "agent",
+  "title": "Score quality (iteration 0)",
+  "io": {
+    "inputJsonPath": "tasks/01KKV98BA71R4YXH23TP468HEC/input.json",
+    "outputJsonPath": "tasks/01KKV98BA71R4YXH23TP468HEC/result.json"
+  },
+  "inputs": {
+    "iteration": 0,
+    "targetQuality": 85
+  }
+}

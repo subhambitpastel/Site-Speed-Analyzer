@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV8Y4WQWJ12KYA82VPHA0R4",
+  "taskId": "create-file-upload",
+  "invocationKey": "file-upload-feature:S000002:create-file-upload",
+  "status": "ok",
+  "result": {
+    "success": true,
+    "summary": "Created FileUpload.tsx with 5 UI states, drag-drop, file parsing, URL preview, matching design system."
+  },
+  "startedAt": "2026-03-16T12:13:14.157Z",
+  "finishedAt": "2026-03-16T12:13:14.157Z",
+  "value": {
+    "success": true,
+    "summary": "Created FileUpload.tsx with 5 UI states, drag-drop, file parsing, URL preview, matching design system."
+  }
+}

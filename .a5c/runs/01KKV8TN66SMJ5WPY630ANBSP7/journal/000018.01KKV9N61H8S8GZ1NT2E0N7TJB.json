@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T12:24:12.593Z",
+  "data": {
+    "effectId": "01KKV9N5ZT0F3HFMBPS58CECTW",
+    "invocationKey": "file-upload-feature:S000009:document-and-commit",
+    "invocationHash": "adb182a3264ee172834ca6c9243fac97588257494045014d9aa20bf5a19f56c5",
+    "stepId": "S000009",
+    "taskId": "document-and-commit",
+    "kind": "agent",
+    "label": "Document fixes and commit",
+    "taskDefRef": "tasks/01KKV9N5ZT0F3HFMBPS58CECTW/task.json"
+  },
+  "checksum": "17417d68a54148103cf19b7abd209cd7388b529f44a3878760bb7d35ded84e0d"
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV940XP1WX5PZRK0M4VGP3T",
+  "taskId": "verify-build",
+  "invocationKey": "file-upload-feature:S000004:verify-build",
+  "status": "ok",
+  "result": {
+    "fixesApplied": [],
+    "success": true
+  },
+  "startedAt": "2026-03-16T12:17:00.150Z",
+  "finishedAt": "2026-03-16T12:17:00.150Z",
+  "value": {
+    "fixesApplied": [],
+    "success": true
+  }
+}

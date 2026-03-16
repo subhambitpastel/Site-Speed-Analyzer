@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T12:10:02.089Z",
+  "data": {
+    "effectId": "01KKV8V7DBJ0KTBEWFQW6C4SNF",
+    "invocationKey": "file-upload-feature:S000001:create-file-parser",
+    "invocationHash": "ef811f3b67ec7931431a53cfec5b8e9ef58a26dd52780f3d26c99ad0e64484ef",
+    "stepId": "S000001",
+    "taskId": "create-file-parser",
+    "kind": "agent",
+    "label": "Create file parser library",
+    "taskDefRef": "tasks/01KKV8V7DBJ0KTBEWFQW6C4SNF/task.json"
+  },
+  "checksum": "bf642b1c3fdf1d21cb9bcd2b31cd431b64679a7e2abda13d4c3e968811fdbf56"
+}

@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T12:11:37.810Z",
+  "data": {
+    "effectId": "01KKV8Y4WQWJ12KYA82VPHA0R4",
+    "invocationKey": "file-upload-feature:S000002:create-file-upload",
+    "invocationHash": "fb5e32bb73d83685b591c92cfc709b0f7b4a70b13f12e5e771df49f7f25439e7",
+    "stepId": "S000002",
+    "taskId": "create-file-upload",
+    "kind": "agent",
+    "label": "Create FileUpload component",
+    "taskDefRef": "tasks/01KKV8Y4WQWJ12KYA82VPHA0R4/task.json"
+  },
+  "checksum": "e5fb5c8ea943bea9cf90a700bb9f80646b92e7c98020e1c699057604a2dbc6d3"
+}

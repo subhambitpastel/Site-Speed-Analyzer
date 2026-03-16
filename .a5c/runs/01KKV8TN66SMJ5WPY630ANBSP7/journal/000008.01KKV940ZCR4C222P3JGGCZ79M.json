@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T12:14:50.348Z",
+  "data": {
+    "effectId": "01KKV940XP1WX5PZRK0M4VGP3T",
+    "invocationKey": "file-upload-feature:S000004:verify-build",
+    "invocationHash": "a2418bb352f4610d0d249c67a09fa0f8025d77397b75c12cc77517cb310350c3",
+    "stepId": "S000004",
+    "taskId": "verify-build",
+    "kind": "agent",
+    "label": "Verify build (Initial implementation)",
+    "taskDefRef": "tasks/01KKV940XP1WX5PZRK0M4VGP3T/task.json"
+  },
+  "checksum": "1889b069fe16f9e36b7eecda8872348bbf496929f65601c49c91f3404ee88d9e"
+}

@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T12:18:26.375Z",
+  "data": {
+    "effectId": "01KKV9AKWAZ25G07GKH5MZYQV8",
+    "invocationKey": "file-upload-feature:S000006:refine",
+    "invocationHash": "54b1de538a4f00fb750beb7c33e19922f83446d551f352d3e7fa9aa1d0067cc5",
+    "stepId": "S000006",
+    "taskId": "refine",
+    "kind": "agent",
+    "label": "Refine (iteration 1)",
+    "taskDefRef": "tasks/01KKV9AKWAZ25G07GKH5MZYQV8/task.json"
+  },
+  "checksum": "2f3d289b4611d154a639eac8ca70f1a048573c3d7959c97f7f386fc8b4145a93"
+}

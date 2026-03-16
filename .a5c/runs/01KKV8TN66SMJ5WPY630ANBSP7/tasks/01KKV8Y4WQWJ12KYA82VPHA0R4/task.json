@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV8Y4WQWJ12KYA82VPHA0R4",
+  "taskId": "create-file-upload",
+  "invocationKey": "file-upload-feature:S000002:create-file-upload",
+  "stepId": "S000002",
+  "kind": "agent",
+  "title": "Create FileUpload component",
+  "io": {
+    "inputJsonPath": "tasks/01KKV8Y4WQWJ12KYA82VPHA0R4/input.json",
+    "outputJsonPath": "tasks/01KKV8Y4WQWJ12KYA82VPHA0R4/result.json"
+  },
+  "inputs": {}
+}

@@ -33,7 +33,7 @@ export default function LoadingSpinner({ size = "md" }: LoadingSpinnerProps) {
         fill="none"
         stroke="currentColor"
         strokeWidth={s.stroke}
-        className="text-slate-200 dark:text-slate-700"
+        className="text-[var(--surface-elevated)]"
       />
       {/* Arc */}
       <circle
@@ -45,7 +45,7 @@ export default function LoadingSpinner({ size = "md" }: LoadingSpinnerProps) {
         strokeWidth={s.stroke}
         strokeLinecap="round"
         strokeDasharray={`${circumference * 0.25} ${circumference * 0.75}`}
-        className="text-indigo-500 dark:text-indigo-400"
+        className="text-[var(--accent)]"
       />
     </svg>
   );

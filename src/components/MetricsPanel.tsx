@@ -14,14 +14,14 @@ interface MetricCardProps {
 
 function MetricCard({ name, abbreviation, displayValue }: MetricCardProps) {
   return (
-    <div className="min-w-0 overflow-hidden rounded-xl border border-slate-200 bg-white px-3 py-3 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-slate-800 sm:px-4 sm:py-4">
-      <p className="truncate text-xs font-medium uppercase tracking-wide text-slate-400 dark:text-slate-500">
+    <div className="glow-card min-w-0 overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)] px-3 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/[0.03] dark:hover:shadow-black/[0.15] sm:px-4 sm:py-4">
+      <p className="truncate text-[10px] font-bold uppercase tracking-widest text-[var(--accent)]">
         {abbreviation}
       </p>
-      <p className="mt-1.5 truncate text-lg font-semibold tabular-nums font-mono text-slate-900 dark:text-slate-100 sm:text-xl">
+      <p className="mt-2 truncate text-xl font-bold tabular-nums font-mono text-[var(--foreground)] sm:text-2xl">
         {displayValue}
       </p>
-      <p className="mt-0.5 truncate text-[11px] text-slate-500 dark:text-slate-400 sm:text-xs">
+      <p className="mt-1 truncate text-[11px] text-[var(--text-tertiary)] sm:text-xs">
         {name}
       </p>
     </div>
@@ -58,7 +58,7 @@ export default function MetricsPanel({ coreWebVitals }: MetricsPanelProps) {
   ];
 
   return (
-    <div className="grid min-w-0 grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-5">
+    <div className="grid min-w-0 grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3 lg:grid-cols-5">
       {metrics.map((metric) => (
         <MetricCard
           key={metric.abbreviation}

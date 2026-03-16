@@ -1,0 +1,1 @@
+{"success": true, "summary": "Installed xlsx, created src/lib/fileParser.ts with parseFile() and extractURLsFromSheet(). Smart URL column detection with fallback to full cell scan."}

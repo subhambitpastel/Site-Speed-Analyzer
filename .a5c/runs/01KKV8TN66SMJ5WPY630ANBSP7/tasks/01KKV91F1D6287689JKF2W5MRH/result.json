@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV91F1D6287689JKF2W5MRH",
+  "taskId": "integrate-into-page",
+  "invocationKey": "file-upload-feature:S000003:integrate-into-page",
+  "status": "ok",
+  "result": {
+    "success": true,
+    "summary": "Integrated FileUpload into page.tsx with tab toggle, conditional rendering, matching design."
+  },
+  "startedAt": "2026-03-16T12:14:39.070Z",
+  "finishedAt": "2026-03-16T12:14:39.070Z",
+  "value": {
+    "success": true,
+    "summary": "Integrated FileUpload into page.tsx with tab toggle, conditional rendering, matching design."
+  }
+}

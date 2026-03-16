@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV9AKWAZ25G07GKH5MZYQV8",
+  "taskId": "refine",
+  "invocationKey": "file-upload-feature:S000006:refine",
+  "status": "ok",
+  "result": {
+    "changesApplied": [
+      "10MB file size limit",
+      "MAX_URLS=500 cap with truncation flag",
+      "MIME types support",
+      "Button sizing match",
+      "URL string as React key",
+      "Tab switching resets FileUpload state via key prop"
+    ],
+    "filesModified": [
+      "src/lib/fileParser.ts",
+      "src/components/FileUpload.tsx",
+      "src/app/page.tsx"
+    ],
+    "success": true
+  },
+  "startedAt": "2026-03-16T12:20:26.182Z",
+  "finishedAt": "2026-03-16T12:20:26.182Z",
+  "value": {
+    "changesApplied": [
+      "10MB file size limit",
+      "MAX_URLS=500 cap with truncation flag",
+      "MIME types support",
+      "Button sizing match",
+      "URL string as React key",
+      "Tab switching resets FileUpload state via key prop"
+    ],
+    "filesModified": [
+      "src/lib/fileParser.ts",
+      "src/components/FileUpload.tsx",
+      "src/app/page.tsx"
+    ],
+    "success": true
+  }
+}

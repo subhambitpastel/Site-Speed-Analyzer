@@ -4,6 +4,13 @@ This file tracks recent improvements and bug fixes. New entries are added at the
 
 ---
 
+### 4. Upload Excel/CSV File for Bulk Reports (2026-03-16)
+- **Bug:** No option to upload a file with multiple website URLs for bulk report generation
+- **Root cause:** Feature not implemented — only manual URL entry was available
+- **Fix:** Added file upload with drag-and-drop UI, Excel/CSV parser using SheetJS (xlsx), smart URL column detection, tab toggle between "Enter URLs" and "Upload File" modes, 10MB file size limit, 500 URL cap
+- **Files modified:** src/lib/fileParser.ts (new), src/components/FileUpload.tsx (new), src/app/page.tsx, package.json
+- **Verified by:** Build passes, quality scoring (91/100)
+
 ### 1. Frontend UI & Mobile Responsiveness (2026-03-16)
 - **Bug:** Frontend not responsive on mobile/tablet - elements overflow, misalign, don't adapt
 - **Root cause:** Missing responsive breakpoints, fixed widths, no mobile-specific layouts, no dark mode toggle

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV98BA71R4YXH23TP468HEC",
+  "taskId": "score-quality",
+  "invocationKey": "file-upload-feature:S000005:score-quality",
+  "status": "ok",
+  "result": {
+    "breakdown": {
+      "codeQuality": 7,
+      "designMatch": 13,
+      "fileParser": 22,
+      "integration": 18,
+      "uiComponent": 22
+    },
+    "gaps": [
+      "No file size limit check in fileParser",
+      "No max URL count cap",
+      "URL preview uses array index as React key",
+      "Button sizing inconsistency between FileUpload and URLInput",
+      "Duplicated extension check logic",
+      "File input missing MIME types in accept attribute",
+      "Tab switching doesn't clear FileUpload state"
+    ],
+    "overallScore": 82
+  },
+  "startedAt": "2026-03-16T12:18:14.424Z",
+  "finishedAt": "2026-03-16T12:18:14.424Z",
+  "value": {
+    "breakdown": {
+      "codeQuality": 7,
+      "designMatch": 13,
+      "fileParser": 22,
+      "integration": 18,
+      "uiComponent": 22
+    },
+    "gaps": [
+      "No file size limit check in fileParser",
+      "No max URL count cap",
+      "URL preview uses array index as React key",
+      "Button sizing inconsistency between FileUpload and URLInput",
+      "Duplicated extension check logic",
+      "File input missing MIME types in accept attribute",
+      "Tab switching doesn't clear FileUpload state"
+    ],
+    "overallScore": 82
+  }
+}

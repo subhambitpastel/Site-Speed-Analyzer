@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV8V7DBJ0KTBEWFQW6C4SNF",
+  "taskId": "create-file-parser",
+  "invocationKey": "file-upload-feature:S000001:create-file-parser",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Create file parser library",
+  "io": {
+    "inputJsonPath": "tasks/01KKV8V7DBJ0KTBEWFQW6C4SNF/input.json",
+    "outputJsonPath": "tasks/01KKV8V7DBJ0KTBEWFQW6C4SNF/result.json"
+  },
+  "inputs": {}
+}

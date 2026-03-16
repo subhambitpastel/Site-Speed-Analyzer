@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-03-16T12:09:43.515Z",
+  "data": {
+    "runId": "01KKV8TN66SMJ5WPY630ANBSP7",
+    "processId": "file-upload-feature",
+    "entrypoint": {
+      "importPath": "../../processes/file-upload-feature.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "cc6fadfea00fa0578b1f93aae6e04d5c0e4c4756761a09373f68689d0bba11a4"
+}

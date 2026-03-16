@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV940XP1WX5PZRK0M4VGP3T",
+  "taskId": "verify-build",
+  "invocationKey": "file-upload-feature:S000004:verify-build",
+  "stepId": "S000004",
+  "kind": "agent",
+  "title": "Verify build (Initial implementation)",
+  "io": {
+    "inputJsonPath": "tasks/01KKV940XP1WX5PZRK0M4VGP3T/input.json",
+    "outputJsonPath": "tasks/01KKV940XP1WX5PZRK0M4VGP3T/result.json"
+  },
+  "inputs": {
+    "phase": "Initial implementation"
+  }
+}

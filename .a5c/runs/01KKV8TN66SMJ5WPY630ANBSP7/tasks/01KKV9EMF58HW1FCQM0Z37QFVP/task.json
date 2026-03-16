@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV9EMF58HW1FCQM0Z37QFVP",
+  "taskId": "verify-build",
+  "invocationKey": "file-upload-feature:S000007:verify-build",
+  "stepId": "S000007",
+  "kind": "agent",
+  "title": "Verify build (Refinement 1)",
+  "io": {
+    "inputJsonPath": "tasks/01KKV9EMF58HW1FCQM0Z37QFVP/input.json",
+    "outputJsonPath": "tasks/01KKV9EMF58HW1FCQM0Z37QFVP/result.json"
+  },
+  "inputs": {
+    "phase": "Refinement 1"
+  }
+}
