@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T12:38:47.610Z",
+  "data": {
+    "effectId": "01KKVAFWFZPR4449VZ0ZCY7YBW",
+    "invocationKey": "cancel-and-cache-fix:S000002:verify-build",
+    "invocationHash": "daf4dbc296027ef2a6f00e2234500bd86165676a91030bfa026811e0932c1761",
+    "stepId": "S000002",
+    "taskId": "verify-build",
+    "kind": "agent",
+    "label": "Verify build",
+    "taskDefRef": "tasks/01KKVAFWFZPR4449VZ0ZCY7YBW/task.json"
+  },
+  "checksum": "209ce531a10d317682c368bdb0b8fd6c584985f43b8b89a2fae47b79a2ac1db4"
+}

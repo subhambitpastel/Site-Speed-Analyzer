@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKVAKJFE04D1YV4K1PPVVR6C",
+  "taskId": "document-and-commit",
+  "invocationKey": "cancel-and-cache-fix:S000003:document-and-commit",
+  "stepId": "S000003",
+  "kind": "agent",
+  "title": "Document and commit",
+  "io": {
+    "inputJsonPath": "tasks/01KKVAKJFE04D1YV4K1PPVVR6C/input.json",
+    "outputJsonPath": "tasks/01KKVAKJFE04D1YV4K1PPVVR6C/result.json"
+  },
+  "inputs": {}
+}

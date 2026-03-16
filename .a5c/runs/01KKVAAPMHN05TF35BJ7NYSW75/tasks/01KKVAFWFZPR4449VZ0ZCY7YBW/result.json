@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKVAFWFZPR4449VZ0ZCY7YBW",
+  "taskId": "verify-build",
+  "invocationKey": "cancel-and-cache-fix:S000002:verify-build",
+  "status": "ok",
+  "result": {
+    "success": true
+  },
+  "startedAt": "2026-03-16T12:40:42.340Z",
+  "finishedAt": "2026-03-16T12:40:42.340Z",
+  "value": {
+    "success": true
+  }
+}

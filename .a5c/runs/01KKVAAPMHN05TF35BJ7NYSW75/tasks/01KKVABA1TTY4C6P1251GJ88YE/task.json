@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKVABA1TTY4C6P1251GJ88YE",
+  "taskId": "fix-both-bugs",
+  "invocationKey": "cancel-and-cache-fix:S000001:fix-both-bugs",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Fix cancel abort and strategy cache",
+  "io": {
+    "inputJsonPath": "tasks/01KKVABA1TTY4C6P1251GJ88YE/input.json",
+    "outputJsonPath": "tasks/01KKVABA1TTY4C6P1251GJ88YE/result.json"
+  },
+  "inputs": {}
+}

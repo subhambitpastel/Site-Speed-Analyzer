@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T12:36:17.653Z",
+  "data": {
+    "effectId": "01KKVABA1TTY4C6P1251GJ88YE",
+    "invocationKey": "cancel-and-cache-fix:S000001:fix-both-bugs",
+    "invocationHash": "157ecab04e4820eb6e36a41b045008b6de47db64ede3cdcbd49f1d3e5df16aec",
+    "stepId": "S000001",
+    "taskId": "fix-both-bugs",
+    "kind": "agent",
+    "label": "Fix cancel abort and strategy cache",
+    "taskDefRef": "tasks/01KKVABA1TTY4C6P1251GJ88YE/task.json"
+  },
+  "checksum": "466988d568da9073949613443ebb4b6b1d5de531cf2ee2765d4d759508bdaf2b"
+}

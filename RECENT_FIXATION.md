@@ -4,6 +4,20 @@ This file tracks recent improvements and bug fixes. New entries are added at the
 
 ---
 
+### 5. Cancel Button Instantly Aborts Analysis (2026-03-16)
+- **Bug:** Cancel button did not stop in-flight API requests immediately
+- **Root cause:** Cancel only set a boolean flag; in-flight fetch() calls were not aborted
+- **Fix:** Added AbortController integration — cancel now aborts all in-flight fetch requests instantly, clears loading state, and marks remaining URLs as cancelled
+- **Files modified:** src/app/page.tsx, src/lib/pagespeedClient.ts
+- **Verified by:** Build passes
+
+### 6. Strategy Toggle Caches Results Per Device Type (2026-03-16)
+- **Bug:** Switching between Desktop/Mobile toggle re-triggered analysis instead of showing cached results
+- **Root cause:** No results caching per device type; strategy change cleared results
+- **Fix:** Added in-memory results cache per strategy (mobile/desktop). Toggling shows cached results instantly.
+- **Files modified:** src/app/page.tsx
+- **Verified by:** Build passes
+
 ### 4. Upload Excel/CSV File for Bulk Reports (2026-03-16)
 - **Bug:** No option to upload a file with multiple website URLs for bulk report generation
 - **Root cause:** Feature not implemented — only manual URL entry was available

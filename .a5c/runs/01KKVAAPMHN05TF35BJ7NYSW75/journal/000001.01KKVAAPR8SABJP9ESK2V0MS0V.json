@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-03-16T12:35:57.832Z",
+  "data": {
+    "runId": "01KKVAAPMHN05TF35BJ7NYSW75",
+    "processId": "cancel-and-cache-fix",
+    "entrypoint": {
+      "importPath": "../../processes/cancel-and-cache-fix.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "642801d649415c3f8987880cb8246feb756268b54b1fb76e634c3c2d3019dd0a"
+}

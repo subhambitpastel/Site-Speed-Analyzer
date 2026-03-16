@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKVABA1TTY4C6P1251GJ88YE",
+  "taskId": "fix-both-bugs",
+  "invocationKey": "cancel-and-cache-fix:S000001:fix-both-bugs",
+  "status": "ok",
+  "result": {
+    "filesModified": [
+      "src/lib/pagespeedClient.ts",
+      "src/app/page.tsx"
+    ],
+    "success": true,
+    "summary": "Cancel now uses AbortController to abort in-flight fetch calls immediately. Strategy toggle caches results per device type via Map ref."
+  },
+  "startedAt": "2026-03-16T12:38:35.809Z",
+  "finishedAt": "2026-03-16T12:38:35.809Z",
+  "value": {
+    "filesModified": [
+      "src/lib/pagespeedClient.ts",
+      "src/app/page.tsx"
+    ],
+    "success": true,
+    "summary": "Cancel now uses AbortController to abort in-flight fetch calls immediately. Strategy toggle caches results per device type via Map ref."
+  }
+}

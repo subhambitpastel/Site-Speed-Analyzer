@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKVAFWFZPR4449VZ0ZCY7YBW",
+  "taskId": "verify-build",
+  "invocationKey": "cancel-and-cache-fix:S000002:verify-build",
+  "stepId": "S000002",
+  "kind": "agent",
+  "title": "Verify build",
+  "io": {
+    "inputJsonPath": "tasks/01KKVAFWFZPR4449VZ0ZCY7YBW/input.json",
+    "outputJsonPath": "tasks/01KKVAFWFZPR4449VZ0ZCY7YBW/result.json"
+  },
+  "inputs": {}
+}

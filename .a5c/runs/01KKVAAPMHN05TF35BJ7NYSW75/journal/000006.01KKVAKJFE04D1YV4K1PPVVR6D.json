@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T12:40:45.950Z",
+  "data": {
+    "effectId": "01KKVAKJFE04D1YV4K1PPVVR6C",
+    "invocationKey": "cancel-and-cache-fix:S000003:document-and-commit",
+    "invocationHash": "1b35695e29c18e126e0e5fe6eaf38412549a16c4fe5cee0b75ca8b27107d407b",
+    "stepId": "S000003",
+    "taskId": "document-and-commit",
+    "kind": "agent",
+    "label": "Document and commit",
+    "taskDefRef": "tasks/01KKVAKJFE04D1YV4K1PPVVR6C/task.json"
+  },
+  "checksum": "94b192a2bc1ec90f15aa33bf3fa0e791ecd4a2de847c64f6e37b5c7609c8126a"
+}

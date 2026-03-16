@@ -41,13 +41,23 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [inputMode, setInputMode] = useState<"url" | "file">("url");
   const [mounted, setMounted] = useState(false);
-  const abortRef = useRef(false);
+  const abortControllerRef = useRef<AbortController | null>(null);
+  const resultsCacheRef = useRef<Map<string, LighthouseReport[]>>(new Map());
   const completedRef = useRef(0);
 
   useEffect(() => {
     setDarkMode(document.documentElement.classList.contains("dark"));
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    const cached = resultsCacheRef.current.get(strategy);
+    if (cached) {
+      setResults(cached);
+    } else if (!isLoading) {
+      setResults([]);
+    }
+  }, [strategy, isLoading]);
 
   const toggleDarkMode = useCallback(() => {
     const next = !darkMode;
@@ -66,7 +76,8 @@ export default function Home() {
     async (urls: string[]) => {
       if (urls.length === 0) return;
 
-      abortRef.current = false;
+      const ac = new AbortController();
+      abortControllerRef.current = ac;
       completedRef.current = 0;
       setIsLoading(true);
       setProgress({ current: 0, total: urls.length });
@@ -77,9 +88,9 @@ export default function Home() {
       setResults(placeholders);
 
       const processUrl = async (index: number) => {
-        if (abortRef.current) return;
+        if (ac.signal.aborted) return;
         try {
-          const apiResponse = await fetchReport(urls[index], strategy);
+          const apiResponse = await fetchReport(urls[index], strategy, ac.signal);
           const report = parseReport(urls[index], apiResponse, strategy);
           setResults((prev) => {
             const updated = [...prev];
@@ -87,6 +98,18 @@ export default function Home() {
             return updated;
           });
         } catch (error: unknown) {
+          if (error instanceof DOMException && error.name === "AbortError") {
+            setResults((prev) => {
+              const updated = [...prev];
+              updated[index] = {
+                ...placeholders[index],
+                error: "Cancelled",
+                fetchedAt: new Date().toISOString(),
+              };
+              return updated;
+            });
+            return;
+          }
           const errorMessage =
             error instanceof Error ? error.message : "An unknown error occurred";
           setResults((prev) => {
@@ -108,7 +131,7 @@ export default function Home() {
       const workers = Array.from(
         { length: Math.min(CONCURRENCY, urls.length) },
         async () => {
-          while (queue.length > 0 && !abortRef.current) {
+          while (queue.length > 0 && !ac.signal.aborted) {
             const index = queue.shift();
             if (index === undefined) break;
             await processUrl(index);
@@ -118,6 +141,10 @@ export default function Home() {
 
       await Promise.all(workers);
       setIsLoading(false);
+      setResults((current) => {
+        resultsCacheRef.current.set(strategy, current);
+        return current;
+      });
     },
     [strategy],
   );
@@ -303,7 +330,7 @@ export default function Home() {
                   </span>
                   <button
                     type="button"
-                    onClick={() => { abortRef.current = true; }}
+                    onClick={() => { abortControllerRef.current?.abort(); setIsLoading(false); }}
                     className="rounded-lg border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-semibold text-red-600 transition-all duration-200 hover:bg-red-100 hover:border-red-300 dark:border-red-800/60 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/40"
                   >
                     Cancel

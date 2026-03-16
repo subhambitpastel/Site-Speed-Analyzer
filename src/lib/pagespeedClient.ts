@@ -19,6 +19,7 @@ function wait(ms: number): Promise<void> {
 export async function fetchReport(
   url: string,
   strategy: "mobile" | "desktop",
+  signal?: AbortSignal,
 ): Promise<any> {
   const params: Record<string, string> = { url, strategy };
   if (API_KEY) {
@@ -35,6 +36,15 @@ export async function fetchReport(
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
+
+    if (signal) {
+      if (signal.aborted) {
+        clearTimeout(timeoutId);
+        controller.abort();
+      } else {
+        signal.addEventListener("abort", () => controller.abort(), { once: true });
+      }
+    }
 
     try {
       const response = await fetch(endpoint, { signal: controller.signal });
@@ -78,6 +88,9 @@ export async function fetchReport(
       clearTimeout(timeoutId);
 
       if (error instanceof DOMException && error.name === "AbortError") {
+        if (signal?.aborted) {
+          throw new DOMException("The operation was aborted.", "AbortError");
+        }
         throw new Error(
           `Request timed out after ${TIMEOUT_MS / 1000}s. The target site may be slow or unresponsive.`,
         );

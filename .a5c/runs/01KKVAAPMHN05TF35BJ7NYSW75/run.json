@@ -1,0 +1,13 @@
+{
+  "runId": "01KKVAAPMHN05TF35BJ7NYSW75",
+  "request": "cancel-and-cache-fix",
+  "processId": "cancel-and-cache-fix",
+  "entrypoint": {
+    "importPath": "../../processes/cancel-and-cache-fix.js",
+    "exportName": "process"
+  },
+  "processPath": "../../processes/cancel-and-cache-fix.js",
+  "layoutVersion": "2026.01-storage-preview",
+  "createdAt": "2026-03-16T12:35:57.765Z",
+  "completionProof": "b40c8dd0d8d175c672f9014045f23c42"
+}

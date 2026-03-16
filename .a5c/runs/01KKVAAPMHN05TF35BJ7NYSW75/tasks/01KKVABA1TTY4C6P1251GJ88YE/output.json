@@ -1,0 +1,1 @@
+{"success": true, "filesModified": ["src/lib/pagespeedClient.ts", "src/app/page.tsx"], "summary": "Cancel now uses AbortController to abort in-flight fetch calls immediately. Strategy toggle caches results per device type via Map ref."}
