@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T11:02:43.402Z",
+  "data": {
+    "effectId": "01KKV4ZZC44H6S6KGMP92W7KJ5",
+    "invocationKey": "bug-fix-pipeline:S000016:refine-exports",
+    "invocationHash": "5b0bbd5764d1f31c6a48636c3b5ef97bd19808f6c8105312a72efb1e1e291162",
+    "stepId": "S000016",
+    "taskId": "refine-exports",
+    "kind": "agent",
+    "label": "Refine exports (iteration 1)",
+    "taskDefRef": "tasks/01KKV4ZZC44H6S6KGMP92W7KJ5/task.json"
+  },
+  "checksum": "903f5d7c738dcfcc1a5e4cbfd3f486ecdda5ba3feec5c49cd755722056e6e9f6"
+}

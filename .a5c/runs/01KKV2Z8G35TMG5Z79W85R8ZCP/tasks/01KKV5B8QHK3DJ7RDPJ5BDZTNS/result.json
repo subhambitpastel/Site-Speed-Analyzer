@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV5B8QHK3DJ7RDPJ5BDZTNS",
+  "taskId": "score-export-quality",
+  "invocationKey": "bug-fix-pipeline:S000018:score-export-quality",
+  "status": "ok",
+  "result": {
+    "breakdown": {
+      "codeQuality": 11,
+      "csvQuality": 13,
+      "docxQuality": 30,
+      "pdfQuality": 31
+    },
+    "gaps": [
+      "PDF Core Web Vitals table lacks color coding",
+      "Silent return on empty reports",
+      "Duplicated isValidReport across files",
+      "DOCX footer lacks total page count"
+    ],
+    "overallScore": 85
+  },
+  "startedAt": "2026-03-16T11:09:45.389Z",
+  "finishedAt": "2026-03-16T11:09:45.389Z",
+  "value": {
+    "breakdown": {
+      "codeQuality": 11,
+      "csvQuality": 13,
+      "docxQuality": 30,
+      "pdfQuality": 31
+    },
+    "gaps": [
+      "PDF Core Web Vitals table lacks color coding",
+      "Silent return on empty reports",
+      "Duplicated isValidReport across files",
+      "DOCX footer lacks total page count"
+    ],
+    "overallScore": 85
+  }
+}

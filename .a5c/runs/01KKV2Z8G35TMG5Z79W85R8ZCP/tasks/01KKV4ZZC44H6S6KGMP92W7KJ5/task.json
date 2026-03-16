@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV4ZZC44H6S6KGMP92W7KJ5",
+  "taskId": "refine-exports",
+  "invocationKey": "bug-fix-pipeline:S000016:refine-exports",
+  "stepId": "S000016",
+  "kind": "agent",
+  "title": "Refine exports (iteration 1)",
+  "io": {
+    "inputJsonPath": "tasks/01KKV4ZZC44H6S6KGMP92W7KJ5/input.json",
+    "outputJsonPath": "tasks/01KKV4ZZC44H6S6KGMP92W7KJ5/result.json"
+  },
+  "inputs": {
+    "iteration": 1,
+    "previousScore": 78,
+    "targetQuality": 85
+  }
+}

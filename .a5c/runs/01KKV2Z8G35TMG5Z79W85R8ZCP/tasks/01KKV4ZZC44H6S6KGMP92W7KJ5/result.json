@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV4ZZC44H6S6KGMP92W7KJ5",
+  "taskId": "refine-exports",
+  "invocationKey": "bug-fix-pipeline:S000016:refine-exports",
+  "status": "ok",
+  "result": {
+    "changesApplied": [
+      "Fixed MetricsPanel card overflow with min-w-0, truncate, responsive text sizing",
+      "Fixed ResultsTable expanded row grid with minmax constraints",
+      "Added try/catch to all three export functions",
+      "Replaced unsafe casts with proper types in PDF and DOCX",
+      "Added UTF-8 BOM to CSV",
+      "Added score color legend to PDF and DOCX",
+      "Added page break before Core Web Vitals in DOCX"
+    ],
+    "filesModified": [
+      "src/components/MetricsPanel.tsx",
+      "src/components/ResultsTable.tsx",
+      "src/lib/exportPDF.ts",
+      "src/lib/exportCSV.ts",
+      "src/lib/exportDOCX.ts"
+    ],
+    "success": true,
+    "summary": "Fixed mini cards display and refined all three export files. TypeScript passes."
+  },
+  "startedAt": "2026-03-16T11:06:45.998Z",
+  "finishedAt": "2026-03-16T11:06:45.998Z",
+  "value": {
+    "changesApplied": [
+      "Fixed MetricsPanel card overflow with min-w-0, truncate, responsive text sizing",
+      "Fixed ResultsTable expanded row grid with minmax constraints",
+      "Added try/catch to all three export functions",
+      "Replaced unsafe casts with proper types in PDF and DOCX",
+      "Added UTF-8 BOM to CSV",
+      "Added score color legend to PDF and DOCX",
+      "Added page break before Core Web Vitals in DOCX"
+    ],
+    "filesModified": [
+      "src/components/MetricsPanel.tsx",
+      "src/components/ResultsTable.tsx",
+      "src/lib/exportPDF.ts",
+      "src/lib/exportCSV.ts",
+      "src/lib/exportDOCX.ts"
+    ],
+    "success": true,
+    "summary": "Fixed mini cards display and refined all three export files. TypeScript passes."
+  }
+}

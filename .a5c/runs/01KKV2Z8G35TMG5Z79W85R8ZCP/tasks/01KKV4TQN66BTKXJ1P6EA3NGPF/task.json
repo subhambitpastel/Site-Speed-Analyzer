@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV4TQN66BTKXJ1P6EA3NGPF",
+  "taskId": "verify-build",
+  "invocationKey": "bug-fix-pipeline:S000014:verify-build",
+  "stepId": "S000014",
+  "kind": "agent",
+  "title": "Verify build (Phase 2 - Export Files)",
+  "io": {
+    "inputJsonPath": "tasks/01KKV4TQN66BTKXJ1P6EA3NGPF/input.json",
+    "outputJsonPath": "tasks/01KKV4TQN66BTKXJ1P6EA3NGPF/result.json"
+  },
+  "inputs": {
+    "phase": "Phase 2 - Export Files"
+  }
+}

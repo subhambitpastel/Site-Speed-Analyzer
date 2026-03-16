@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T10:59:51.656Z",
+  "data": {
+    "effectId": "01KKV4TQN66BTKXJ1P6EA3NGPF",
+    "invocationKey": "bug-fix-pipeline:S000014:verify-build",
+    "invocationHash": "d87c3cd46efd105b87e16b9c5dbd4bef008d7c1a879f82469e16d45735dce60d",
+    "stepId": "S000014",
+    "taskId": "verify-build",
+    "kind": "agent",
+    "label": "Verify build (Phase 2 - Export Files)",
+    "taskDefRef": "tasks/01KKV4TQN66BTKXJ1P6EA3NGPF/task.json"
+  },
+  "checksum": "8f123a36be36cfec376167066f7c7dff3482a41817a40a412532a48c8f00ea76"
+}

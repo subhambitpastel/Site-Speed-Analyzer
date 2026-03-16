@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV5D5152HQW67V4222G53NB",
+  "taskId": "git-commit",
+  "invocationKey": "bug-fix-pipeline:S000019:git-commit",
+  "stepId": "S000019",
+  "kind": "agent",
+  "title": "Git commit: BUG-3",
+  "io": {
+    "inputJsonPath": "tasks/01KKV5D5152HQW67V4222G53NB/input.json",
+    "outputJsonPath": "tasks/01KKV5D5152HQW67V4222G53NB/result.json"
+  },
+  "inputs": {
+    "criteria": [
+      "PDF export has professional layout with color-coded scores",
+      "DOCX export has proper heading hierarchy and formatting",
+      "CSV export has metadata and summary rows",
+      "Build passes without errors"
+    ],
+    "phase": "BUG-3",
+    "summary": "Redesigned PDF, CSV, and DOCX export outputs for professional quality. Added proper formatting, color-coded scores, headers/footers. Quality score: 85/85 after 1 iterations.",
+    "title": "Polish export files (PDF/CSV/DOCX)"
+  }
+}

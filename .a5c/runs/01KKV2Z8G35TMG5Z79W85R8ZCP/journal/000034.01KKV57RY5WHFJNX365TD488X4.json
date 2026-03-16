@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T11:06:58.886Z",
+  "data": {
+    "effectId": "01KKV57RW8486ZRPNJ0GPD0336",
+    "invocationKey": "bug-fix-pipeline:S000017:verify-build",
+    "invocationHash": "dc5661a5358ef276dfbbaef4f9edbfd040bf4c5fdf35f7b536949354dcddd504",
+    "stepId": "S000017",
+    "taskId": "verify-build",
+    "kind": "agent",
+    "label": "Verify build (Phase 2 - Export Refinement 1)",
+    "taskDefRef": "tasks/01KKV57RW8486ZRPNJ0GPD0336/task.json"
+  },
+  "checksum": "e378e0ba7c0107ebf888199e358ba3d32b447d63d84fb3440445ee95e73844fe"
+}

@@ -258,15 +258,15 @@ function SuccessRow({ report, index }: { report: LighthouseReport; index: number
       {expanded && (
         <tr className="border-b border-slate-100 dark:border-slate-800">
           <td colSpan={5} className="bg-slate-50 px-4 py-4 dark:bg-slate-800/20 md:px-8 md:py-6">
-            <div className="animate-fade-in-up grid gap-6 lg:grid-cols-[1fr_auto_1fr]">
-              <div>
+            <div className="animate-fade-in-up grid min-w-0 gap-6 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1.5fr)]">
+              <div className="min-w-0">
                 <p className="mb-3 text-xs font-medium uppercase tracking-wide text-slate-400 dark:text-slate-500">
                   Score Overview
                 </p>
                 <ScoreChart scores={report.scores} />
               </div>
               <div className="hidden lg:block w-px bg-slate-200 dark:bg-slate-700" />
-              <div>
+              <div className="min-w-0 overflow-hidden">
                 <p className="mb-3 text-xs font-medium uppercase tracking-wide text-slate-400 dark:text-slate-500">
                   Core Web Vitals
                 </p>

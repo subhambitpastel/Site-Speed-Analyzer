@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV4Y2S59VF1ZV7KD5KP3K4H",
+  "taskId": "score-export-quality",
+  "invocationKey": "bug-fix-pipeline:S000015:score-export-quality",
+  "stepId": "S000015",
+  "kind": "agent",
+  "title": "Score export quality (iteration 0)",
+  "io": {
+    "inputJsonPath": "tasks/01KKV4Y2S59VF1ZV7KD5KP3K4H/input.json",
+    "outputJsonPath": "tasks/01KKV4Y2S59VF1ZV7KD5KP3K4H/result.json"
+  },
+  "inputs": {
+    "focus": "PDF layout, DOCX formatting, CSV structure, professional appearance",
+    "iteration": 0,
+    "targetQuality": 85
+  }
+}

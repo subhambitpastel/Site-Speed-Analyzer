@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV4KGDXPK74VBDYJM555R5S",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "bug-fix-pipeline:S000012:__sdk.breakpoint",
+  "stepId": "S000012",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Phase 1 complete: UI & Mobile Responsiveness. Score: 85/85 after 2 iterations. Committed. Review and approve to proceed to Phase 2 (Export Files)?",
+      "tag": "phase-1-review",
+      "title": "Phase 1 Review - UI Responsiveness"
+    },
+    "requestedAt": "2026-03-16T10:55:54.813Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Phase 1 complete: UI & Mobile Responsiveness. Score: 85/85 after 2 iterations. Committed. Review and approve to proceed to Phase 2 (Export Files)?",
+      "tag": "phase-1-review",
+      "title": "Phase 1 Review - UI Responsiveness"
+    },
+    "requestedAt": "2026-03-16T10:55:54.813Z"
+  }
+}

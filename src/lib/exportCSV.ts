@@ -26,12 +26,42 @@ function isValidReport(report: LighthouseReport): boolean {
   return true;
 }
 
+function formatScore(score: number): string {
+  return score.toFixed(1);
+}
+
 export function exportCSV(reports: LighthouseReport[]): void {
+  try {
   const validReports = reports.filter(isValidReport);
 
   if (validReports.length === 0) {
     return;
   }
+
+  const today = new Date().toISOString().split("T")[0];
+
+  // Compute averages
+  const avgPerformance =
+    validReports.reduce((sum, r) => sum + r.scores.performance, 0) /
+    validReports.length;
+  const avgAccessibility =
+    validReports.reduce((sum, r) => sum + r.scores.accessibility, 0) /
+    validReports.length;
+  const avgSEO =
+    validReports.reduce((sum, r) => sum + r.scores.seo, 0) /
+    validReports.length;
+  const avgBestPractices =
+    validReports.reduce((sum, r) => sum + r.scores.bestPractices, 0) /
+    validReports.length;
+
+  // Metadata comment rows
+  const metadataRows = [
+    `# Lighthouse Bulk Performance Report`,
+    `# Generated: ${today}`,
+    `# URLs Analyzed: ${validReports.length}`,
+    `# Average Scores - Performance: ${formatScore(avgPerformance)} | Accessibility: ${formatScore(avgAccessibility)} | SEO: ${formatScore(avgSEO)} | Best Practices: ${formatScore(avgBestPractices)}`,
+    `#`,
+  ];
 
   const headers = [
     "URL",
@@ -50,10 +80,10 @@ export function exportCSV(reports: LighthouseReport[]): void {
 
   const rows = validReports.map((report) => [
     escapeCSVField(report.url),
-    escapeCSVField(String(report.scores.performance)),
-    escapeCSVField(String(report.scores.accessibility)),
-    escapeCSVField(String(report.scores.seo)),
-    escapeCSVField(String(report.scores.bestPractices)),
+    escapeCSVField(formatScore(report.scores.performance)),
+    escapeCSVField(formatScore(report.scores.accessibility)),
+    escapeCSVField(formatScore(report.scores.seo)),
+    escapeCSVField(formatScore(report.scores.bestPractices)),
     escapeCSVField(report.coreWebVitals.fcp.displayValue),
     escapeCSVField(report.coreWebVitals.lcp.displayValue),
     escapeCSVField(report.coreWebVitals.tbt.displayValue),
@@ -63,12 +93,35 @@ export function exportCSV(reports: LighthouseReport[]): void {
     escapeCSVField(report.fetchedAt),
   ]);
 
-  const csvContent = [headers.join(","), ...rows.map((row) => row.join(","))].join("\r\n");
+  // Summary/averages row
+  const summaryRow = [
+    escapeCSVField("AVERAGE"),
+    escapeCSVField(formatScore(avgPerformance)),
+    escapeCSVField(formatScore(avgAccessibility)),
+    escapeCSVField(formatScore(avgSEO)),
+    escapeCSVField(formatScore(avgBestPractices)),
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ];
 
-  const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+  const csvContent = [
+    ...metadataRows,
+    headers.join(","),
+    ...rows.map((row) => row.join(",")),
+    "",
+    summaryRow.join(","),
+  ].join("\r\n");
+
+  // Add UTF-8 BOM for proper Excel handling
+  const bom = "\uFEFF";
+  const blob = new Blob([bom + csvContent], { type: "text/csv;charset=utf-8;" });
   const url = URL.createObjectURL(blob);
 
-  const today = new Date().toISOString().split("T")[0];
   const filename = `lighthouse-report-${today}.csv`;
 
   const link = document.createElement("a");
@@ -78,4 +131,8 @@ export function exportCSV(reports: LighthouseReport[]): void {
   link.click();
   document.body.removeChild(link);
   URL.revokeObjectURL(url);
+  } catch (error) {
+    console.error("Failed to export CSV:", error);
+    alert("Failed to export CSV. Please try again.");
+  }
 }

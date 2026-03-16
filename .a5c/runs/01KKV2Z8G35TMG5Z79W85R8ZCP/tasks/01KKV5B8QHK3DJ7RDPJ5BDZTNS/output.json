@@ -1,0 +1,1 @@
+{"overallScore": 85, "breakdown": {"pdfQuality": 31, "docxQuality": 30, "csvQuality": 13, "codeQuality": 11}, "gaps": ["PDF Core Web Vitals table lacks color coding", "Silent return on empty reports", "Duplicated isValidReport across files", "DOCX footer lacks total page count"]}

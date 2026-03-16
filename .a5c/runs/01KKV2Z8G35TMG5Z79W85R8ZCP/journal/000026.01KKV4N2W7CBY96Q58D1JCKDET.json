@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T10:56:46.471Z",
+  "data": {
+    "effectId": "01KKV4N2SPXDHH3KGDHT0BRR04",
+    "invocationKey": "bug-fix-pipeline:S000013:fix-export-files",
+    "invocationHash": "08b0b8a0ff9bbde5f2581629f56316c5527135169d6017a677fc202363afc218",
+    "stepId": "S000013",
+    "taskId": "fix-export-files",
+    "kind": "agent",
+    "label": "Redesign export files (PDF/CSV/DOCX)",
+    "taskDefRef": "tasks/01KKV4N2SPXDHH3KGDHT0BRR04/task.json"
+  },
+  "checksum": "95ec7bc6a2007039800b76263591ce35ccaea8a1a58613e86c126919e5ca24e7"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV4Y2S59VF1ZV7KD5KP3K4H",
+  "taskId": "score-export-quality",
+  "invocationKey": "bug-fix-pipeline:S000015:score-export-quality",
+  "status": "ok",
+  "result": {
+    "breakdown": {
+      "codeQuality": 6,
+      "csvQuality": 13,
+      "docxQuality": 29,
+      "pdfQuality": 30
+    },
+    "gaps": [
+      "All three files lack try/catch error handling",
+      "PDF uses `as any` cast for lastAutoTable",
+      "DOCX uses unsafe cast for verticalAlign",
+      "DOCX missing page break before Core Web Vitals",
+      "CSV metadata uses # comment prefix non-standard for CSV",
+      "CSV missing BOM for UTF-8 Excel handling",
+      "All files silently return on empty input with no user notification",
+      "Duplicated isValidReport and average computation across files",
+      "PDF/DOCX lack score color legend",
+      "DOCX Core Web Vitals values not color-coded"
+    ],
+    "overallScore": 78
+  },
+  "startedAt": "2026-03-16T11:02:30.842Z",
+  "finishedAt": "2026-03-16T11:02:30.842Z",
+  "value": {
+    "breakdown": {
+      "codeQuality": 6,
+      "csvQuality": 13,
+      "docxQuality": 29,
+      "pdfQuality": 30
+    },
+    "gaps": [
+      "All three files lack try/catch error handling",
+      "PDF uses `as any` cast for lastAutoTable",
+      "DOCX uses unsafe cast for verticalAlign",
+      "DOCX missing page break before Core Web Vitals",
+      "CSV metadata uses # comment prefix non-standard for CSV",
+      "CSV missing BOM for UTF-8 Excel handling",
+      "All files silently return on empty input with no user notification",
+      "Duplicated isValidReport and average computation across files",
+      "PDF/DOCX lack score color legend",
+      "DOCX Core Web Vitals values not color-coded"
+    ],
+    "overallScore": 78
+  }
+}

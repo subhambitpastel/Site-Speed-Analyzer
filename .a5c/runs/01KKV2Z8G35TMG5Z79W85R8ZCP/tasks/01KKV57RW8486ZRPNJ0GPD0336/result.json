@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV57RW8486ZRPNJ0GPD0336",
+  "taskId": "verify-build",
+  "invocationKey": "bug-fix-pipeline:S000017:verify-build",
+  "status": "ok",
+  "result": {
+    "buildOutput": "Compiled successfully. TypeScript passed. 4 static pages generated.",
+    "fixesApplied": [],
+    "success": true
+  },
+  "startedAt": "2026-03-16T11:08:43.511Z",
+  "finishedAt": "2026-03-16T11:08:43.511Z",
+  "value": {
+    "buildOutput": "Compiled successfully. TypeScript passed. 4 static pages generated.",
+    "fixesApplied": [],
+    "success": true
+  }
+}

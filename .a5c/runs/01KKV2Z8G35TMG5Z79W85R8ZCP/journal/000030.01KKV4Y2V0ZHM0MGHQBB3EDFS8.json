@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T11:01:41.344Z",
+  "data": {
+    "effectId": "01KKV4Y2S59VF1ZV7KD5KP3K4H",
+    "invocationKey": "bug-fix-pipeline:S000015:score-export-quality",
+    "invocationHash": "443352f56d0ab713b306795dec38ec67449996d46aa7b5b0f09bfb0571943dc4",
+    "stepId": "S000015",
+    "taskId": "score-export-quality",
+    "kind": "agent",
+    "label": "Score export quality (iteration 0)",
+    "taskDefRef": "tasks/01KKV4Y2S59VF1ZV7KD5KP3K4H/task.json"
+  },
+  "checksum": "45716d7b86ae478577386d52b0dc477e0fcbf7e5cffa550b8fa9fb8750403b72"
+}

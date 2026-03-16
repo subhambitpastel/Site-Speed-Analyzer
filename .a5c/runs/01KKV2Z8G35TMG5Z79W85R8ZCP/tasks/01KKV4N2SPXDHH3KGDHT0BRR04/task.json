@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV4N2SPXDHH3KGDHT0BRR04",
+  "taskId": "fix-export-files",
+  "invocationKey": "bug-fix-pipeline:S000013:fix-export-files",
+  "stepId": "S000013",
+  "kind": "agent",
+  "title": "Redesign export files (PDF/CSV/DOCX)",
+  "io": {
+    "inputJsonPath": "tasks/01KKV4N2SPXDHH3KGDHT0BRR04/input.json",
+    "outputJsonPath": "tasks/01KKV4N2SPXDHH3KGDHT0BRR04/result.json"
+  },
+  "inputs": {
+    "files": [
+      "src/lib/exportPDF.ts",
+      "src/lib/exportCSV.ts",
+      "src/lib/exportDOCX.ts"
+    ],
+    "requirements": "Professional, polished documents with proper formatting, clean alignment, appropriate spacing, consistent typography, and attractive layout"
+  }
+}

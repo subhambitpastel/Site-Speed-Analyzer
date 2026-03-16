@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T11:09:55.167Z",
+  "data": {
+    "effectId": "01KKV5D5152HQW67V4222G53NB",
+    "invocationKey": "bug-fix-pipeline:S000019:git-commit",
+    "invocationHash": "0b78fa2d4d9efbbdd435a884e3c97196e62788987bf06ef7dbe5a72221d5db97",
+    "stepId": "S000019",
+    "taskId": "git-commit",
+    "kind": "agent",
+    "label": "Git commit: BUG-3",
+    "taskDefRef": "tasks/01KKV5D5152HQW67V4222G53NB/task.json"
+  },
+  "checksum": "27620e023148966e6f3734a1add63c376b7159a35d69dcd0d1eea886b160d50f"
+}
