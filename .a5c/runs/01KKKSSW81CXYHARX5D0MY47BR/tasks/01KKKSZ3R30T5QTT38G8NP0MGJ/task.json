@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKKSZ3R30T5QTT38G8NP0MGJ",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "elegant-redesign:S000002:__sdk.breakpoint",
+  "stepId": "S000002",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "context": {
+        "designDirection": "Minimal & Clean",
+        "features": [
+          "micro-animations",
+          "data-visualization",
+          "refined-typography"
+        ],
+        "scope": "Full app redesign"
+      },
+      "question": "Design specification created for \"Minimal & Clean\" redesign. Review the spec and approve to begin implementation?",
+      "tag": "design-spec-review",
+      "title": "Design Specification Review"
+    },
+    "requestedAt": "2026-03-13T14:35:19.682Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "context": {
+        "designDirection": "Minimal & Clean",
+        "features": [
+          "micro-animations",
+          "data-visualization",
+          "refined-typography"
+        ],
+        "scope": "Full app redesign"
+      },
+      "question": "Design specification created for \"Minimal & Clean\" redesign. Review the spec and approve to begin implementation?",
+      "tag": "design-spec-review",
+      "title": "Design Specification Review"
+    },
+    "requestedAt": "2026-03-13T14:35:19.682Z"
+  }
+}

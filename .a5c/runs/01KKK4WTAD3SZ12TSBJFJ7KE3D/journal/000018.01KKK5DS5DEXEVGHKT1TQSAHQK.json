@@ -1,0 +1,20 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-13T08:36:20.269Z",
+  "data": {
+    "effectId": "01KKK5DS4NK2T62R6W4TEPJ8PQ",
+    "invocationKey": "lighthouse-bulk-report:S000009:integration",
+    "invocationHash": "fc871530d1591d1ace7c52221bf7e6f06f4c3aac2c8a58e5b9e7d8f5241c81de",
+    "stepId": "S000009",
+    "taskId": "integration",
+    "kind": "agent",
+    "label": "agent",
+    "taskDefRef": "tasks/01KKK5DS4NK2T62R6W4TEPJ8PQ/task.json",
+    "labels": [
+      "agent",
+      "phase-5",
+      "integration"
+    ]
+  },
+  "checksum": "e600c1532851b3defa4442acaea3fc8b4b0285f2d54b61997a6db24d5142a00c"
+}

@@ -1,0 +1,20 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-13T08:37:34.670Z",
+  "data": {
+    "effectId": "01KKK5G1T03NWWSGTP1T4N8FSQ",
+    "invocationKey": "lighthouse-bulk-report:S000010:build-verify",
+    "invocationHash": "5c1c85042aa702d2b4ad0caa090cb3b790bcda747b6f12a2b52eeb435cf305aa",
+    "stepId": "S000010",
+    "taskId": "build-verify",
+    "kind": "agent",
+    "label": "agent",
+    "taskDefRef": "tasks/01KKK5G1T03NWWSGTP1T4N8FSQ/task.json",
+    "labels": [
+      "agent",
+      "verification",
+      "integration"
+    ]
+  },
+  "checksum": "7c06a0420f223e9a1a4ff8fa1b3ae6dab6280aaa17b429e4af6cbc5b9306d7de"
+}

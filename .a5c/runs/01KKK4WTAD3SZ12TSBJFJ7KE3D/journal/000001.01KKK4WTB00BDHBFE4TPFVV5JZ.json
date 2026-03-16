@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-03-13T08:27:04.416Z",
+  "data": {
+    "runId": "01KKK4WTAD3SZ12TSBJFJ7KE3D",
+    "processId": "lighthouse-bulk-report",
+    "entrypoint": {
+      "importPath": "../../processes/lighthouse-bulk-report.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "355bb3bc4adb3037852d82427c65071d47c64e432cfe713dacb807cde2eb8297"
+}

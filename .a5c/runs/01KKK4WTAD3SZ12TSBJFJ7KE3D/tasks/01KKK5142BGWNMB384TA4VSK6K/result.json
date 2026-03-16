@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKK5142BGWNMB384TA4VSK6K",
+  "taskId": "build-verify",
+  "invocationKey": "lighthouse-bulk-report:S000002:build-verify",
+  "status": "ok",
+  "result": {
+    "issues": [],
+    "passed": true,
+    "summary": "Build completed successfully. Static export generates out/ directory. All key directories exist."
+  },
+  "startedAt": "2026-03-13T08:30:02.436Z",
+  "finishedAt": "2026-03-13T08:30:02.436Z",
+  "value": {
+    "issues": [],
+    "passed": true,
+    "summary": "Build completed successfully. Static export generates out/ directory. All key directories exist."
+  }
+}

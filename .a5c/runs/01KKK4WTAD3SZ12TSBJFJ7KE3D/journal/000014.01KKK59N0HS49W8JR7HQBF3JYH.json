@@ -1,0 +1,20 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-13T08:34:04.945Z",
+  "data": {
+    "effectId": "01KKK59N03KX6TMTMQ0N29GGW0",
+    "invocationKey": "lighthouse-bulk-report:S000007:dashboard-ui",
+    "invocationHash": "4d102f1193db2bd0c93315d15baa18f0611af118685fefea5fec8f3e77b72e8a",
+    "stepId": "S000007",
+    "taskId": "dashboard-ui",
+    "kind": "agent",
+    "label": "agent",
+    "taskDefRef": "tasks/01KKK59N03KX6TMTMQ0N29GGW0/task.json",
+    "labels": [
+      "agent",
+      "phase-4",
+      "dashboard"
+    ]
+  },
+  "checksum": "a8e45b5301933ca4ea622f4f8c4229ccb0e4c2212037f3af6ae5b571007ffe9f"
+}

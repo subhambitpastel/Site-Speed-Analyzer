@@ -1,0 +1,20 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-13T09:35:49.353Z",
+  "data": {
+    "effectId": "01KKK8TPJTSBB881YA14EM2447",
+    "invocationKey": "ui-polish-export-feature:S000003:install-export-libs",
+    "invocationHash": "b79b2b855a68ca5c89b753be3efeda9b756354d4039ef7f0989df65f5b300db9",
+    "stepId": "S000003",
+    "taskId": "install-export-libs",
+    "kind": "agent",
+    "label": "agent",
+    "taskDefRef": "tasks/01KKK8TPJTSBB881YA14EM2447/task.json",
+    "labels": [
+      "agent",
+      "phase-2",
+      "install"
+    ]
+  },
+  "checksum": "05228d676b6084b35f23a7debdaf99f5daeb35dd3c395c635b22d257f4067214"
+}

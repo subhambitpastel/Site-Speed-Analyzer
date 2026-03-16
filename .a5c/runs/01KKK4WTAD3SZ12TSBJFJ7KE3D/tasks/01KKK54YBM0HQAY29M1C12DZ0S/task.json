@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKK54YBM0HQAY29M1C12DZ0S",
+  "taskId": "build-verify",
+  "invocationKey": "lighthouse-bulk-report:S000004:build-verify",
+  "stepId": "S000004",
+  "kind": "agent",
+  "title": "Verify build: url-input",
+  "labels": [
+    "agent",
+    "url-input",
+    "verification"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KKK54YBM0HQAY29M1C12DZ0S/input.json",
+    "outputJsonPath": "tasks/01KKK54YBM0HQAY29M1C12DZ0S/result.json"
+  },
+  "inputs": {
+    "description": "Verify URL input: build succeeds, URLInput component exists with textarea, submit button, URL validation, loading state",
+    "phase": "url-input",
+    "projectDir": "/home/shovan/Documents/Office/Bitpastel/Projects/Claude Code Demos/Lighthouse Report Generator"
+  }
+}

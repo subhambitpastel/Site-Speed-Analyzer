@@ -1,0 +1,19 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-13T14:32:39.970Z",
+  "data": {
+    "effectId": "01KKKST7R2SFNACW9K8MQWY7MT",
+    "invocationKey": "elegant-redesign:S000001:create-design-spec",
+    "invocationHash": "c043cf05571d1205faeea4e1aac8e4fa7adde92fa45cfdd9b3f41157341361f2",
+    "stepId": "S000001",
+    "taskId": "create-design-spec",
+    "kind": "agent",
+    "label": "agent",
+    "taskDefRef": "tasks/01KKKST7R2SFNACW9K8MQWY7MT/task.json",
+    "labels": [
+      "agent",
+      "design-spec"
+    ]
+  },
+  "checksum": "8817a57e09700b13a0728815f4cccd406799021e4257f9a20c9ad6688ee0b036"
+}

@@ -1,0 +1,1 @@
+{"filesCreated": [], "filesModified": ["src/app/page.tsx"], "summary": "Wired all components together. page.tsx integrates URLInput, ResultsTable, strategy toggle, sequential batch processing with 1.5s delay, progressive results, progress indicator, error handling per URL. Build passes."}

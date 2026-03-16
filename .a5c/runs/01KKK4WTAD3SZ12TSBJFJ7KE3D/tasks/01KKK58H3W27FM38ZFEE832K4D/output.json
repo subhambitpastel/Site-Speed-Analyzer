@@ -1,0 +1,1 @@
+{"passed": true, "issues": [], "summary": "Build succeeds. pagespeedClient.ts has fetchReport, reportParser.ts has parseReport, types/report.ts has LighthouseReport."}

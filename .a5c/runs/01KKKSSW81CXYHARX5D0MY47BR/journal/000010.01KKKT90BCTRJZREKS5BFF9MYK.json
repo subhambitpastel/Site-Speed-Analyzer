@@ -1,0 +1,20 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-13T14:40:43.885Z",
+  "data": {
+    "effectId": "01KKKT90AHM7P93AV8N4JZDNJW",
+    "invocationKey": "elegant-redesign:S000005:add-animations-viz",
+    "invocationHash": "1d27999050bb83f6be6ef43b1469b3736aa35d7b72895d6a4bbc2ae8cd848b29",
+    "stepId": "S000005",
+    "taskId": "add-animations-viz",
+    "kind": "agent",
+    "label": "agent",
+    "taskDefRef": "tasks/01KKKT90AHM7P93AV8N4JZDNJW/task.json",
+    "labels": [
+      "agent",
+      "implementation",
+      "animations"
+    ]
+  },
+  "checksum": "3e76c8cf9615ae77ff5ef525330399ce2961ee4770144a8837441c4033704e3c"
+}

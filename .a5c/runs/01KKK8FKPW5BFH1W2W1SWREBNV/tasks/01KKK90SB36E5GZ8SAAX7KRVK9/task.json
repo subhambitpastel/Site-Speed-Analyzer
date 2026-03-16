@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKK90SB36E5GZ8SAAX7KRVK9",
+  "taskId": "build-verify",
+  "invocationKey": "ui-polish-export-feature:S000005:build-verify",
+  "stepId": "S000005",
+  "kind": "agent",
+  "title": "Verify build: export-utils",
+  "labels": [
+    "agent",
+    "export-utils",
+    "verification"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KKK90SB36E5GZ8SAAX7KRVK9/input.json",
+    "outputJsonPath": "tasks/01KKK90SB36E5GZ8SAAX7KRVK9/result.json"
+  },
+  "inputs": {
+    "description": "Verify export utilities: build succeeds, src/lib/exportCSV.ts, src/lib/exportPDF.ts, src/lib/exportDOCX.ts exist with proper TypeScript types and export functions",
+    "phase": "export-utils",
+    "projectDir": "/home/shovan/Documents/Office/Bitpastel/Projects/Claude Code Demos/Lighthouse Report Generator"
+  }
+}

@@ -1,0 +1,1 @@
+{"passed": true, "issues": [], "summary": "Build succeeds. All 3 export utilities (CSV, PDF, DOCX) compile with proper TypeScript types."}

@@ -1,0 +1,20 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-13T14:35:39.464Z",
+  "data": {
+    "effectId": "01KKKSZQ1SS1E12RG3RWVV64JC",
+    "invocationKey": "elegant-redesign:S000003:implement-foundation",
+    "invocationHash": "7a28cda476253b4d80cfc2f7512394a81182c90f00d3fcd5d43a2efe4b4ef1eb",
+    "stepId": "S000003",
+    "taskId": "implement-foundation",
+    "kind": "agent",
+    "label": "agent",
+    "taskDefRef": "tasks/01KKKSZQ1SS1E12RG3RWVV64JC/task.json",
+    "labels": [
+      "agent",
+      "implementation",
+      "foundation"
+    ]
+  },
+  "checksum": "f903dd544e1111b3ba9f63560532fd0438caef54b0db238b076e676812384c13"
+}

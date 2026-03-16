@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKK58H3W27FM38ZFEE832K4D",
+  "taskId": "build-verify",
+  "invocationKey": "lighthouse-bulk-report:S000006:build-verify",
+  "status": "ok",
+  "result": {
+    "issues": [],
+    "passed": true,
+    "summary": "Build succeeds. pagespeedClient.ts has fetchReport, reportParser.ts has parseReport, types/report.ts has LighthouseReport."
+  },
+  "startedAt": "2026-03-13T08:34:01.469Z",
+  "finishedAt": "2026-03-13T08:34:01.469Z",
+  "value": {
+    "issues": [],
+    "passed": true,
+    "summary": "Build succeeds. pagespeedClient.ts has fetchReport, reportParser.ts has parseReport, types/report.ts has LighthouseReport."
+  }
+}

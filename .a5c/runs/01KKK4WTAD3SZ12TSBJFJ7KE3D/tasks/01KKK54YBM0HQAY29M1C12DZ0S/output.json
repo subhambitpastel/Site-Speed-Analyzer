@@ -1,0 +1,1 @@
+{"passed": true, "issues": [], "summary": "Build succeeded. URLInput.tsx has textarea, submit button, validation, loading state. urlValidator.ts has parseURLs, validateURL, sanitizeAndValidate."}

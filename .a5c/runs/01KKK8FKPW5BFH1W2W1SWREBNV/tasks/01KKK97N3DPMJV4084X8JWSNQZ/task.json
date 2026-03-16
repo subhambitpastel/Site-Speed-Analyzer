@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKK97N3DPMJV4084X8JWSNQZ",
+  "taskId": "final-verification",
+  "invocationKey": "ui-polish-export-feature:S000009:final-verification",
+  "stepId": "S000009",
+  "kind": "agent",
+  "title": "Final verification of UI polish and export feature",
+  "labels": [
+    "agent",
+    "final-verification"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KKK97N3DPMJV4084X8JWSNQZ/input.json",
+    "outputJsonPath": "tasks/01KKK97N3DPMJV4084X8JWSNQZ/result.json"
+  },
+  "inputs": {
+    "projectDir": "/home/shovan/Documents/Office/Bitpastel/Projects/Claude Code Demos/Lighthouse Report Generator"
+  }
+}

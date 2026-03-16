@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKK5H2F6AEQZFT5GYGC0PEBY",
+  "taskId": "quality-check",
+  "invocationKey": "lighthouse-bulk-report:S000011:quality-check",
+  "stepId": "S000011",
+  "kind": "agent",
+  "title": "Quality check iteration 1",
+  "labels": [
+    "agent",
+    "iteration-1",
+    "quality"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KKK5H2F6AEQZFT5GYGC0PEBY/input.json",
+    "outputJsonPath": "tasks/01KKK5H2F6AEQZFT5GYGC0PEBY/result.json"
+  },
+  "inputs": {
+    "iteration": 1,
+    "projectDir": "/home/shovan/Documents/Office/Bitpastel/Projects/Claude Code Demos/Lighthouse Report Generator",
+    "projectName": "Lighthouse Bulk Report Generator"
+  }
+}

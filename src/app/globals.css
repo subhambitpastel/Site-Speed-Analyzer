@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --accent: #6366f1;
+  --surface: #ffffff;
+  --surface-elevated: #f1f5f9;
+  --border: #e2e8f0;
+  --text-secondary: #475569;
+  --text-tertiary: #94a3b8;
+  --score-green: #10b981;
+  --score-amber: #f59e0b;
+  --score-red: #ef4444;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #020617;
+    --foreground: #f1f5f9;
+    --accent: #818cf8;
+    --surface: #0f172a;
+    --surface-elevated: #1e293b;
+    --border: #1e293b;
+    --text-secondary: #94a3b8;
+    --text-tertiary: #64748b;
+    --score-green: #34d399;
+    --score-amber: #fbbf24;
+    --score-red: #f87171;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Animations */
+@keyframes score-ring-fill {
+  from { stroke-dashoffset: 282.74; }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes stagger-fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-score-ring {
+  animation: score-ring-fill 800ms ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 300ms ease-out forwards;
+}
+
+.animate-stagger-fade-in {
+  animation: stagger-fade-in 300ms ease-out forwards;
+}
+
+/* Base body */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans, 'Inter', system-ui, sans-serif);
+}
+
+/* Subtle surface utility */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+@media (prefers-color-scheme: dark) {
+  .glass {
+    background: rgba(15, 23, 42, 0.8);
+  }
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

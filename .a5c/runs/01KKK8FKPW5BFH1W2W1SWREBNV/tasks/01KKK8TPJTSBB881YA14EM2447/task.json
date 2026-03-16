@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKK8TPJTSBB881YA14EM2447",
+  "taskId": "install-export-libs",
+  "invocationKey": "ui-polish-export-feature:S000003:install-export-libs",
+  "stepId": "S000003",
+  "kind": "agent",
+  "title": "Phase 2: Install client-side export libraries",
+  "labels": [
+    "agent",
+    "install",
+    "phase-2"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KKK8TPJTSBB881YA14EM2447/input.json",
+    "outputJsonPath": "tasks/01KKK8TPJTSBB881YA14EM2447/result.json"
+  },
+  "inputs": {
+    "projectDir": "/home/shovan/Documents/Office/Bitpastel/Projects/Claude Code Demos/Lighthouse Report Generator"
+  }
+}

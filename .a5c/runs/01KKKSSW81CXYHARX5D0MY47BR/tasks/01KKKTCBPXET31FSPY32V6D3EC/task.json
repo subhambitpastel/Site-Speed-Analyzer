@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKKTCBPXET31FSPY32V6D3EC",
+  "taskId": "visual-qa-scoring",
+  "invocationKey": "elegant-redesign:S000006:visual-qa-scoring",
+  "stepId": "S000006",
+  "kind": "agent",
+  "title": "Visual QA scoring (iteration 0)",
+  "labels": [
+    "agent",
+    "iteration-0",
+    "scoring"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KKKTCBPXET31FSPY32V6D3EC/input.json",
+    "outputJsonPath": "tasks/01KKKTCBPXET31FSPY32V6D3EC/result.json"
+  },
+  "inputs": {
+    "designDirection": "Minimal & Clean",
+    "designSpec": {
+      "animations": {
+        "hoverLift": "translateY(-1px), 200ms",
+        "remove": [
+          "pulse-glow",
+          "gradient-shimmer",
+          "spin-dual",
+          "spin-reverse",
+          "drop-shadow glows"
+        ],
+        "scoreCountUp": "800ms ease-out",
+        "staggeredRows": "50ms delay per row"
+      },
+      "colorSystem": {
+        "dark": {
+          "accentPrimary": "#818cf8",
+          "accentPrimaryHover": "#a5b4fc",
+          "accentPrimarySubtle": "rgba(99, 102, 241, 0.1)",
+          "background": "#020617",
+          "backgroundSubtle": "#0f172a",
+          "border": "#1e293b",
+          "focusRing": "rgba(129, 140, 248, 0.3)",
+          "surface": "#0f172a",
+          "surfaceElevated": "#1e293b",
+          "surfaceHover": "#1e293b",
+          "textPrimary": "#f1f5f9",
+          "textSecondary": "#94a3b8",
+          "textTertiary": "#64748b"
+        },
+        "light": {
+          "accentPrimary": "#6366f1",
+          "accentPrimaryHover": "#4f46e5",
+          "accentPrimarySubtle": "#eef2ff",
+          "background": "#ffffff",
+          "backgroundSubtle": "#f8fafc",
+          "border": "#e2e8f0",
+          "borderSubtle": "#f1f5f9",
+          "focusRing": "rgba(99, 102, 241, 0.25)",
+          "surface": "#ffffff",
+          "surfaceElevated": "#f1f5f9",
+          "surfaceHover": "#f8fafc",
+          "textPrimary": "#0f172a",
+          "textSecondary": "#475569",
+          "textTertiary": "#94a3b8"
+        },
+        "scores": {
+          "average": {
+            "color": "#f59e0b",
+            "darkBg": "rgba(245, 158, 11, 0.1)",
+            "lightBg": "#fffbeb"
+          },
+          "good": {
+            "color": "#10b981",
+            "darkBg": "rgba(16, 185, 129, 0.1)",
+            "lightBg": "#ecfdf5"
+          },
+          "poor": {
+            "color": "#ef4444",
+            "darkBg": "rgba(239, 68, 68, 0.1)",
+            "lightBg": "#fef2f2"
+          }
+        }
+      },
+      "components": {
+        "ExportDropdown": "Ghost/outlined trigger, clean dropdown",
+        "LoadingSpinner": "Single ring, no dual counter-rotating",
+        "MetricsPanel": "Solid cards, subtle elevation on hover",
+        "ResultsTable": "Minimal borders, staggered rows, clean hover",
+        "ScoreBadge": "40px, no glow, count-up animation",
+        "URLInput": "Clean border, no glassmorphism, solid button"
+      },
+      "dataVisualization": {
+        "placement": "Expanded metrics area or summary section",
+        "type": "CSS-only horizontal bar chart"
+      },
+      "spacing": {
+        "containerPaddingY": "py-12",
+        "maxWidth": "max-w-5xl",
+        "sectionGap": "gap-12"
+      },
+      "typography": {
+        "body": "font-normal (400)",
+        "headings": "font-semibold (600), no extrabold",
+        "labels": "font-medium (500)",
+        "weights": "400, 500, 600 only"
+      }
+    },
+    "iteration": 0,
+    "scoringDimensions": {
+      "animations": 10,
+      "colorSystem": 15,
+      "componentDesign": 20,
+      "consistency": 10,
+      "modernFeel": 10,
+      "spacing": 15,
+      "typography": 20
+    },
+    "targetQuality": 90
+  }
+}

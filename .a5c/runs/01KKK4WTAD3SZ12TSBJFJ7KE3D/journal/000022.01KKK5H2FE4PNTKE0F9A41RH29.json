@@ -1,0 +1,20 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-13T08:38:08.110Z",
+  "data": {
+    "effectId": "01KKK5H2F6AEQZFT5GYGC0PEBY",
+    "invocationKey": "lighthouse-bulk-report:S000011:quality-check",
+    "invocationHash": "8283bbdbf764ca8496a017714e5a1986fbd87a7bafd791b6dc635420a0f9b02c",
+    "stepId": "S000011",
+    "taskId": "quality-check",
+    "kind": "agent",
+    "label": "agent",
+    "taskDefRef": "tasks/01KKK5H2F6AEQZFT5GYGC0PEBY/task.json",
+    "labels": [
+      "agent",
+      "quality",
+      "iteration-1"
+    ]
+  },
+  "checksum": "b08ccf057529fe4a09c0916ecf0643d0b1cf660bbd2b6bab8af041a05fede77c"
+}

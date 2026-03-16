@@ -1,0 +1,69 @@
+{
+  "colorSystem": {
+    "light": {
+      "background": "#ffffff",
+      "backgroundSubtle": "#f8fafc",
+      "surface": "#ffffff",
+      "surfaceElevated": "#f1f5f9",
+      "surfaceHover": "#f8fafc",
+      "border": "#e2e8f0",
+      "borderSubtle": "#f1f5f9",
+      "textPrimary": "#0f172a",
+      "textSecondary": "#475569",
+      "textTertiary": "#94a3b8",
+      "accentPrimary": "#6366f1",
+      "accentPrimaryHover": "#4f46e5",
+      "accentPrimarySubtle": "#eef2ff",
+      "focusRing": "rgba(99, 102, 241, 0.25)"
+    },
+    "dark": {
+      "background": "#020617",
+      "backgroundSubtle": "#0f172a",
+      "surface": "#0f172a",
+      "surfaceElevated": "#1e293b",
+      "surfaceHover": "#1e293b",
+      "border": "#1e293b",
+      "textPrimary": "#f1f5f9",
+      "textSecondary": "#94a3b8",
+      "textTertiary": "#64748b",
+      "accentPrimary": "#818cf8",
+      "accentPrimaryHover": "#a5b4fc",
+      "accentPrimarySubtle": "rgba(99, 102, 241, 0.1)",
+      "focusRing": "rgba(129, 140, 248, 0.3)"
+    },
+    "scores": {
+      "good": { "color": "#10b981", "lightBg": "#ecfdf5", "darkBg": "rgba(16, 185, 129, 0.1)" },
+      "average": { "color": "#f59e0b", "lightBg": "#fffbeb", "darkBg": "rgba(245, 158, 11, 0.1)" },
+      "poor": { "color": "#ef4444", "lightBg": "#fef2f2", "darkBg": "rgba(239, 68, 68, 0.1)" }
+    }
+  },
+  "typography": {
+    "weights": "400, 500, 600 only",
+    "headings": "font-semibold (600), no extrabold",
+    "labels": "font-medium (500)",
+    "body": "font-normal (400)"
+  },
+  "spacing": {
+    "maxWidth": "max-w-5xl",
+    "containerPaddingY": "py-12",
+    "sectionGap": "gap-12"
+  },
+  "components": {
+    "URLInput": "Clean border, no glassmorphism, solid button",
+    "ScoreBadge": "40px, no glow, count-up animation",
+    "ResultsTable": "Minimal borders, staggered rows, clean hover",
+    "MetricsPanel": "Solid cards, subtle elevation on hover",
+    "LoadingSpinner": "Single ring, no dual counter-rotating",
+    "ExportDropdown": "Ghost/outlined trigger, clean dropdown"
+  },
+  "animations": {
+    "staggeredRows": "50ms delay per row",
+    "scoreCountUp": "800ms ease-out",
+    "hoverLift": "translateY(-1px), 200ms",
+    "remove": ["pulse-glow", "gradient-shimmer", "spin-dual", "spin-reverse", "drop-shadow glows"]
+  },
+  "dataVisualization": {
+    "type": "CSS-only horizontal bar chart",
+    "placement": "Expanded metrics area or summary section"
+  }
+}

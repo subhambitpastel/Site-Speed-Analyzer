@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKK58H3W27FM38ZFEE832K4D",
+  "taskId": "build-verify",
+  "invocationKey": "lighthouse-bulk-report:S000006:build-verify",
+  "stepId": "S000006",
+  "kind": "agent",
+  "title": "Verify build: api-integration",
+  "labels": [
+    "agent",
+    "api-integration",
+    "verification"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KKK58H3W27FM38ZFEE832K4D/input.json",
+    "outputJsonPath": "tasks/01KKK58H3W27FM38ZFEE832K4D/result.json"
+  },
+  "inputs": {
+    "description": "Verify API integration: build succeeds, pagespeedClient.ts exists with fetchReport function, reportParser.ts exists with parseReport function, types/report.ts has LighthouseReport type",
+    "phase": "api-integration",
+    "projectDir": "/home/shovan/Documents/Office/Bitpastel/Projects/Claude Code Demos/Lighthouse Report Generator"
+  }
+}

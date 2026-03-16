@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKK5CJB0M9ZMVQ0HSPVBKFFM",
+  "taskId": "build-verify",
+  "invocationKey": "lighthouse-bulk-report:S000008:build-verify",
+  "stepId": "S000008",
+  "kind": "agent",
+  "title": "Verify build: dashboard",
+  "labels": [
+    "agent",
+    "dashboard",
+    "verification"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KKK5CJB0M9ZMVQ0HSPVBKFFM/input.json",
+    "outputJsonPath": "tasks/01KKK5CJB0M9ZMVQ0HSPVBKFFM/result.json"
+  },
+  "inputs": {
+    "description": "Verify dashboard UI: build succeeds, ResultsTable.tsx exists, ScoreBadge.tsx exists, components render score colors (green/yellow/red), loading indicators present",
+    "phase": "dashboard",
+    "projectDir": "/home/shovan/Documents/Office/Bitpastel/Projects/Claude Code Demos/Lighthouse Report Generator"
+  }
+}

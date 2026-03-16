@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKK91KHNQQ0FPQFZS4732PQZ",
+  "taskId": "export-ui",
+  "invocationKey": "ui-polish-export-feature:S000006:export-ui",
+  "stepId": "S000006",
+  "kind": "agent",
+  "title": "Phase 4: Build export UI (dropdown with PDF/DOC/CSV options)",
+  "labels": [
+    "agent",
+    "export-ui",
+    "phase-4"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KKK91KHNQQ0FPQFZS4732PQZ/input.json",
+    "outputJsonPath": "tasks/01KKK91KHNQQ0FPQFZS4732PQZ/result.json"
+  },
+  "inputs": {
+    "exportUtils": {
+      "filesCreated": [
+        "src/lib/exportCSV.ts",
+        "src/lib/exportPDF.ts",
+        "src/lib/exportDOCX.ts"
+      ],
+      "summary": "Created three export utility modules. CSV with RFC 4180 escaping, PDF with jspdf+autotable (color-coded scores table, Core Web Vitals), DOCX with docx+file-saver (formatted document with tables). All filter out error/loading reports. Build passes."
+    },
+    "projectDir": "/home/shovan/Documents/Office/Bitpastel/Projects/Claude Code Demos/Lighthouse Report Generator"
+  }
+}

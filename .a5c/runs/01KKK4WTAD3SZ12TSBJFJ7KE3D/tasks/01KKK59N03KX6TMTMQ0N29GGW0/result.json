@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKK59N03KX6TMTMQ0N29GGW0",
+  "taskId": "dashboard-ui",
+  "invocationKey": "lighthouse-bulk-report:S000007:dashboard-ui",
+  "status": "ok",
+  "result": {
+    "filesCreated": [
+      "src/components/ScoreBadge.tsx",
+      "src/components/MetricsPanel.tsx",
+      "src/components/ResultsTable.tsx",
+      "src/components/LoadingSpinner.tsx"
+    ],
+    "filesModified": [],
+    "summary": "Created 4 dashboard UI components: ScoreBadge (color-coded pill), MetricsPanel (Core Web Vitals grid), ResultsTable (expandable rows with scores), LoadingSpinner. All styled with Tailwind. Build passes."
+  },
+  "startedAt": "2026-03-13T08:35:36.825Z",
+  "finishedAt": "2026-03-13T08:35:36.825Z",
+  "value": {
+    "filesCreated": [
+      "src/components/ScoreBadge.tsx",
+      "src/components/MetricsPanel.tsx",
+      "src/components/ResultsTable.tsx",
+      "src/components/LoadingSpinner.tsx"
+    ],
+    "filesModified": [],
+    "summary": "Created 4 dashboard UI components: ScoreBadge (color-coded pill), MetricsPanel (Core Web Vitals grid), ResultsTable (expandable rows with scores), LoadingSpinner. All styled with Tailwind. Build passes."
+  }
+}

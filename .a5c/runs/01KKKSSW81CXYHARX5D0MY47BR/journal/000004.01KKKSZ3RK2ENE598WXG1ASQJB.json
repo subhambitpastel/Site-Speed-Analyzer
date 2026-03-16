@@ -1,0 +1,18 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-13T14:35:19.699Z",
+  "data": {
+    "effectId": "01KKKSZ3R30T5QTT38G8NP0MGJ",
+    "invocationKey": "elegant-redesign:S000002:__sdk.breakpoint",
+    "invocationHash": "372c318f56a5ad9d8eb00e95535b9949c21109431c0e941cd895c217c69fed4a",
+    "stepId": "S000002",
+    "taskId": "__sdk.breakpoint",
+    "kind": "breakpoint",
+    "label": "breakpoint",
+    "taskDefRef": "tasks/01KKKSZ3R30T5QTT38G8NP0MGJ/task.json",
+    "labels": [
+      "breakpoint"
+    ]
+  },
+  "checksum": "bf157bd96b176d2c7fc85fbda062db6e4d3c33404dd2ef01ae198e83edabdd6b"
+}

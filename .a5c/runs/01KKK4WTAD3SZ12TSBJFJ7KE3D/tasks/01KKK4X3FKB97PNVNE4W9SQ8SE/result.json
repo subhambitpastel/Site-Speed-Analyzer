@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKK4X3FKB97PNVNE4W9SQ8SE",
+  "taskId": "project-init",
+  "invocationKey": "lighthouse-bulk-report:S000001:project-init",
+  "status": "ok",
+  "result": {
+    "filesCreated": [
+      "next.config.ts",
+      "package.json",
+      "package-lock.json",
+      "tsconfig.json",
+      "eslint.config.mjs",
+      "postcss.config.mjs",
+      "next-env.d.ts",
+      ".gitignore",
+      "src/app/page.tsx",
+      "src/app/layout.tsx",
+      "src/app/globals.css",
+      "src/components/.gitkeep",
+      "src/lib/.gitkeep",
+      "src/types/.gitkeep"
+    ],
+    "summary": "Initialized Next.js 16 project with TypeScript, Tailwind CSS, ESLint, App Router, src directory. Static export enabled (output: export). Build succeeds and generates out/ directory."
+  },
+  "startedAt": "2026-03-13T08:29:20.469Z",
+  "finishedAt": "2026-03-13T08:29:20.469Z",
+  "value": {
+    "filesCreated": [
+      "next.config.ts",
+      "package.json",
+      "package-lock.json",
+      "tsconfig.json",
+      "eslint.config.mjs",
+      "postcss.config.mjs",
+      "next-env.d.ts",
+      ".gitignore",
+      "src/app/page.tsx",
+      "src/app/layout.tsx",
+      "src/app/globals.css",
+      "src/components/.gitkeep",
+      "src/lib/.gitkeep",
+      "src/types/.gitkeep"
+    ],
+    "summary": "Initialized Next.js 16 project with TypeScript, Tailwind CSS, ESLint, App Router, src directory. Static export enabled (output: export). Build succeeds and generates out/ directory."
+  }
+}

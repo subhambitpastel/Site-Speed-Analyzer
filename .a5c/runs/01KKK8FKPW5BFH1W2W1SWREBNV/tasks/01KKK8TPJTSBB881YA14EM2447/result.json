@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKK8TPJTSBB881YA14EM2447",
+  "taskId": "install-export-libs",
+  "invocationKey": "ui-polish-export-feature:S000003:install-export-libs",
+  "status": "ok",
+  "result": {
+    "packagesInstalled": [
+      "jspdf",
+      "jspdf-autotable",
+      "docx",
+      "file-saver",
+      "@types/file-saver"
+    ],
+    "summary": "All export libraries installed successfully. Build still passes."
+  },
+  "startedAt": "2026-03-13T09:36:32.490Z",
+  "finishedAt": "2026-03-13T09:36:32.490Z",
+  "value": {
+    "packagesInstalled": [
+      "jspdf",
+      "jspdf-autotable",
+      "docx",
+      "file-saver",
+      "@types/file-saver"
+    ],
+    "summary": "All export libraries installed successfully. Build still passes."
+  }
+}

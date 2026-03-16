@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKK5G1T03NWWSGTP1T4N8FSQ",
+  "taskId": "build-verify",
+  "invocationKey": "lighthouse-bulk-report:S000010:build-verify",
+  "stepId": "S000010",
+  "kind": "agent",
+  "title": "Verify build: integration",
+  "labels": [
+    "agent",
+    "integration",
+    "verification"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KKK5G1T03NWWSGTP1T4N8FSQ/input.json",
+    "outputJsonPath": "tasks/01KKK5G1T03NWWSGTP1T4N8FSQ/result.json"
+  },
+  "inputs": {
+    "description": "Verify full integration: build succeeds, index page wires URLInput to API to ResultsTable, batch processing works sequentially, error handling for invalid URLs and API failures, progress indicator during batch processing",
+    "phase": "integration",
+    "projectDir": "/home/shovan/Documents/Office/Bitpastel/Projects/Claude Code Demos/Lighthouse Report Generator"
+  }
+}

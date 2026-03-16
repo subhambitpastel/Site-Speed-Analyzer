@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKK90SB36E5GZ8SAAX7KRVK9",
+  "taskId": "build-verify",
+  "invocationKey": "ui-polish-export-feature:S000005:build-verify",
+  "status": "ok",
+  "result": {
+    "issues": [],
+    "passed": true,
+    "summary": "Build succeeds. All 3 export utilities (CSV, PDF, DOCX) compile with proper TypeScript types."
+  },
+  "startedAt": "2026-03-13T09:39:30.020Z",
+  "finishedAt": "2026-03-13T09:39:30.020Z",
+  "value": {
+    "issues": [],
+    "passed": true,
+    "summary": "Build succeeds. All 3 export utilities (CSV, PDF, DOCX) compile with proper TypeScript types."
+  }
+}

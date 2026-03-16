@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKK8W5Y08166ZN9YTVNAKEZ3",
+  "taskId": "export-utils",
+  "invocationKey": "ui-polish-export-feature:S000004:export-utils",
+  "status": "ok",
+  "result": {
+    "filesCreated": [
+      "src/lib/exportCSV.ts",
+      "src/lib/exportPDF.ts",
+      "src/lib/exportDOCX.ts"
+    ],
+    "summary": "Created three export utility modules. CSV with RFC 4180 escaping, PDF with jspdf+autotable (color-coded scores table, Core Web Vitals), DOCX with docx+file-saver (formatted document with tables). All filter out error/loading reports. Build passes."
+  },
+  "startedAt": "2026-03-13T09:39:01.672Z",
+  "finishedAt": "2026-03-13T09:39:01.672Z",
+  "value": {
+    "filesCreated": [
+      "src/lib/exportCSV.ts",
+      "src/lib/exportPDF.ts",
+      "src/lib/exportDOCX.ts"
+    ],
+    "summary": "Created three export utility modules. CSV with RFC 4180 escaping, PDF with jspdf+autotable (color-coded scores table, Core Web Vitals), DOCX with docx+file-saver (formatted document with tables). All filter out error/loading reports. Build passes."
+  }
+}

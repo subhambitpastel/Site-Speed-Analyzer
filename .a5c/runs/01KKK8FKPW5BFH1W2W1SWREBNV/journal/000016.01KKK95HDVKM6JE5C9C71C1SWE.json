@@ -1,0 +1,20 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-13T09:41:44.507Z",
+  "data": {
+    "effectId": "01KKK95HD2XFKG5T7Y6XCJ1JHS",
+    "invocationKey": "ui-polish-export-feature:S000008:quality-check",
+    "invocationHash": "7a87dc8b2a771f800ff0252d9f6987ed52390c404595f295693ec232b9cf211c",
+    "stepId": "S000008",
+    "taskId": "quality-check",
+    "kind": "agent",
+    "label": "agent",
+    "taskDefRef": "tasks/01KKK95HD2XFKG5T7Y6XCJ1JHS/task.json",
+    "labels": [
+      "agent",
+      "quality",
+      "iteration-1"
+    ]
+  },
+  "checksum": "5e2e66f08c8574656de8139de4a932d5dd6318a3b5d8dc8188609a1c4b3f4eb9"
+}

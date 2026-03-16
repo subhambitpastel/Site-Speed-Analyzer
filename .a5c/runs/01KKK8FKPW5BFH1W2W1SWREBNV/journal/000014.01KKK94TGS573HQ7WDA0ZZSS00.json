@@ -1,0 +1,20 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-13T09:41:21.049Z",
+  "data": {
+    "effectId": "01KKK94TGANHSQ1KHA73XPWFC3",
+    "invocationKey": "ui-polish-export-feature:S000007:build-verify",
+    "invocationHash": "d0488f0de38078910b1ef46aef8e85e6784964cee87f1a206b1c6325c8039d61",
+    "stepId": "S000007",
+    "taskId": "build-verify",
+    "kind": "agent",
+    "label": "agent",
+    "taskDefRef": "tasks/01KKK94TGANHSQ1KHA73XPWFC3/task.json",
+    "labels": [
+      "agent",
+      "verification",
+      "export-ui"
+    ]
+  },
+  "checksum": "5496b148260ce054c940784feb4c59003a976a21420e064fefe039088ead1bd3"
+}

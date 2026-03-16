@@ -1,0 +1,20 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-13T08:27:13.795Z",
+  "data": {
+    "effectId": "01KKK4X3FKB97PNVNE4W9SQ8SE",
+    "invocationKey": "lighthouse-bulk-report:S000001:project-init",
+    "invocationHash": "7031bd4a67c410dae0bdba096438e3668428083a8328cb0fe3740123f25a2a03",
+    "stepId": "S000001",
+    "taskId": "project-init",
+    "kind": "agent",
+    "label": "agent",
+    "taskDefRef": "tasks/01KKK4X3FKB97PNVNE4W9SQ8SE/task.json",
+    "labels": [
+      "agent",
+      "phase-1",
+      "init"
+    ]
+  },
+  "checksum": "58a3de758872572151b11d581d44829226d662a24d73993ad5be7b5c0cae0401"
+}

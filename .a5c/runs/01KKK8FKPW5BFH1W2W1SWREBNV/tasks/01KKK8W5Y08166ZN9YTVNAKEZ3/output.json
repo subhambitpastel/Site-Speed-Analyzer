@@ -1,0 +1,1 @@
+{"filesCreated": ["src/lib/exportCSV.ts", "src/lib/exportPDF.ts", "src/lib/exportDOCX.ts"], "summary": "Created three export utility modules. CSV with RFC 4180 escaping, PDF with jspdf+autotable (color-coded scores table, Core Web Vitals), DOCX with docx+file-saver (formatted document with tables). All filter out error/loading reports. Build passes."}

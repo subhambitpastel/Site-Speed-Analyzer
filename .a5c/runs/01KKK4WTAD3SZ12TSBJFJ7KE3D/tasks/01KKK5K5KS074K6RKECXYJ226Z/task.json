@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKK5K5KS074K6RKECXYJ226Z",
+  "taskId": "final-verification",
+  "invocationKey": "lighthouse-bulk-report:S000012:final-verification",
+  "stepId": "S000012",
+  "kind": "agent",
+  "title": "Final verification against DONE_CRITERIA.md",
+  "labels": [
+    "agent",
+    "final-verification"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KKK5K5KS074K6RKECXYJ226Z/input.json",
+    "outputJsonPath": "tasks/01KKK5K5KS074K6RKECXYJ226Z/result.json"
+  },
+  "inputs": {
+    "projectDir": "/home/shovan/Documents/Office/Bitpastel/Projects/Claude Code Demos/Lighthouse Report Generator",
+    "projectName": "Lighthouse Bulk Report Generator"
+  }
+}

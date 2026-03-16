@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKK52BN38JS5Z4VXD8JNXH8Y",
+  "taskId": "url-input-system",
+  "invocationKey": "lighthouse-bulk-report:S000003:url-input-system",
+  "stepId": "S000003",
+  "kind": "agent",
+  "title": "Phase 2: Build URL input system",
+  "labels": [
+    "agent",
+    "phase-2",
+    "url-input"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KKK52BN38JS5Z4VXD8JNXH8Y/input.json",
+    "outputJsonPath": "tasks/01KKK52BN38JS5Z4VXD8JNXH8Y/result.json"
+  },
+  "inputs": {
+    "initSummary": {
+      "filesCreated": [
+        "next.config.ts",
+        "package.json",
+        "package-lock.json",
+        "tsconfig.json",
+        "eslint.config.mjs",
+        "postcss.config.mjs",
+        "next-env.d.ts",
+        ".gitignore",
+        "src/app/page.tsx",
+        "src/app/layout.tsx",
+        "src/app/globals.css",
+        "src/components/.gitkeep",
+        "src/lib/.gitkeep",
+        "src/types/.gitkeep"
+      ],
+      "summary": "Initialized Next.js 16 project with TypeScript, Tailwind CSS, ESLint, App Router, src directory. Static export enabled (output: export). Build succeeds and generates out/ directory."
+    },
+    "projectDir": "/home/shovan/Documents/Office/Bitpastel/Projects/Claude Code Demos/Lighthouse Report Generator",
+    "projectName": "Lighthouse Bulk Report Generator"
+  }
+}

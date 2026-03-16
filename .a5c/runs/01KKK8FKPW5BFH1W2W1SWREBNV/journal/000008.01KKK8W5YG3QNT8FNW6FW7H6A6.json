@@ -1,0 +1,20 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-13T09:36:37.840Z",
+  "data": {
+    "effectId": "01KKK8W5Y08166ZN9YTVNAKEZ3",
+    "invocationKey": "ui-polish-export-feature:S000004:export-utils",
+    "invocationHash": "f90be00383e267d46f3e423ab8ce9a3217924099783d3f9ee8d2a07f0e05b6aa",
+    "stepId": "S000004",
+    "taskId": "export-utils",
+    "kind": "agent",
+    "label": "agent",
+    "taskDefRef": "tasks/01KKK8W5Y08166ZN9YTVNAKEZ3/task.json",
+    "labels": [
+      "agent",
+      "phase-3",
+      "export-utils"
+    ]
+  },
+  "checksum": "5c9bc826c5c035d9fb0ad95a93698d4bbcbb220cfc45f0ec7e7372d174d8e9c7"
+}

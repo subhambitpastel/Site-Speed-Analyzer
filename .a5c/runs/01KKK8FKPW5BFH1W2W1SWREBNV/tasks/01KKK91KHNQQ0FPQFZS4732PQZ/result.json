@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKK91KHNQQ0FPQFZS4732PQZ",
+  "taskId": "export-ui",
+  "invocationKey": "ui-polish-export-feature:S000006:export-ui",
+  "status": "ok",
+  "result": {
+    "filesCreated": [
+      "src/components/ExportDropdown.tsx"
+    ],
+    "filesModified": [
+      "src/app/page.tsx"
+    ],
+    "summary": "Created ExportDropdown with indigo/violet gradient button, 3 options (CSV/PDF/DOCX) with icons, smooth animations, outside-click close, disabled when no results. Integrated into page.tsx results section header. Build passes."
+  },
+  "startedAt": "2026-03-13T09:41:15.400Z",
+  "finishedAt": "2026-03-13T09:41:15.400Z",
+  "value": {
+    "filesCreated": [
+      "src/components/ExportDropdown.tsx"
+    ],
+    "filesModified": [
+      "src/app/page.tsx"
+    ],
+    "summary": "Created ExportDropdown with indigo/violet gradient button, 3 options (CSV/PDF/DOCX) with icons, smooth animations, outside-click close, disabled when no results. Integrated into page.tsx results section header. Build passes."
+  }
+}

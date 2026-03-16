@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKK5DS4NK2T62R6W4TEPJ8PQ",
+  "taskId": "integration",
+  "invocationKey": "lighthouse-bulk-report:S000009:integration",
+  "status": "ok",
+  "result": {
+    "filesCreated": [],
+    "filesModified": [
+      "src/app/page.tsx"
+    ],
+    "summary": "Wired all components together. page.tsx integrates URLInput, ResultsTable, strategy toggle, sequential batch processing with 1.5s delay, progressive results, progress indicator, error handling per URL. Build passes."
+  },
+  "startedAt": "2026-03-13T08:37:29.997Z",
+  "finishedAt": "2026-03-13T08:37:29.997Z",
+  "value": {
+    "filesCreated": [],
+    "filesModified": [
+      "src/app/page.tsx"
+    ],
+    "summary": "Wired all components together. page.tsx integrates URLInput, ResultsTable, strategy toggle, sequential batch processing with 1.5s delay, progressive results, progress indicator, error handling per URL. Build passes."
+  }
+}

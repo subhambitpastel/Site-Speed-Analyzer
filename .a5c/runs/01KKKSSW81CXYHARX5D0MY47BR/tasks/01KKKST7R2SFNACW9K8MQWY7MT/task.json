@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKKST7R2SFNACW9K8MQWY7MT",
+  "taskId": "create-design-spec",
+  "invocationKey": "elegant-redesign:S000001:create-design-spec",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Create design specification",
+  "labels": [
+    "agent",
+    "design-spec"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KKKST7R2SFNACW9K8MQWY7MT/input.json",
+    "outputJsonPath": "tasks/01KKKST7R2SFNACW9K8MQWY7MT/result.json"
+  },
+  "inputs": {
+    "currentFiles": [
+      "src/app/page.tsx",
+      "src/app/globals.css",
+      "src/app/layout.tsx",
+      "src/components/URLInput.tsx",
+      "src/components/ScoreBadge.tsx",
+      "src/components/ResultsTable.tsx",
+      "src/components/MetricsPanel.tsx",
+      "src/components/LoadingSpinner.tsx",
+      "src/components/ExportDropdown.tsx"
+    ],
+    "designDirection": "Minimal & Clean",
+    "features": [
+      "micro-animations",
+      "data-visualization",
+      "refined-typography"
+    ],
+    "projectName": "Lighthouse Report Generator",
+    "scope": "Full app redesign"
+  }
+}

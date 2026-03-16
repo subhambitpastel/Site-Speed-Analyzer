@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKK54YBM0HQAY29M1C12DZ0S",
+  "taskId": "build-verify",
+  "invocationKey": "lighthouse-bulk-report:S000004:build-verify",
+  "status": "ok",
+  "result": {
+    "issues": [],
+    "passed": true,
+    "summary": "Build succeeded. URLInput.tsx has textarea, submit button, validation, loading state. urlValidator.ts has parseURLs, validateURL, sanitizeAndValidate."
+  },
+  "startedAt": "2026-03-13T08:32:07.627Z",
+  "finishedAt": "2026-03-13T08:32:07.627Z",
+  "value": {
+    "issues": [],
+    "passed": true,
+    "summary": "Build succeeded. URLInput.tsx has textarea, submit button, validation, loading state. urlValidator.ts has parseURLs, validateURL, sanitizeAndValidate."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-13T14:42:33.846Z",
+  "data": {
+    "effectId": "01KKKTCBPXET31FSPY32V6D3EC",
+    "invocationKey": "elegant-redesign:S000006:visual-qa-scoring",
+    "invocationHash": "e9d0f1c6faff288c2a4a79555800670ca2185b45c3b4b898df3148e79ce6672f",
+    "stepId": "S000006",
+    "taskId": "visual-qa-scoring",
+    "kind": "agent",
+    "label": "agent",
+    "taskDefRef": "tasks/01KKKTCBPXET31FSPY32V6D3EC/task.json",
+    "labels": [
+      "agent",
+      "scoring",
+      "iteration-0"
+    ]
+  },
+  "checksum": "6022e78a98ba553a9a7085f485a85ea8f47697e402a13adcdcb58d189e476e41"
+}

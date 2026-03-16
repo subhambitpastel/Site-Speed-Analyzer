@@ -1,0 +1,13 @@
+{
+  "runId": "01KKK4WTAD3SZ12TSBJFJ7KE3D",
+  "request": "lighthouse-bulk-report",
+  "processId": "lighthouse-bulk-report",
+  "entrypoint": {
+    "importPath": "../../processes/lighthouse-bulk-report.js",
+    "exportName": "process"
+  },
+  "processPath": "../../processes/lighthouse-bulk-report.js",
+  "layoutVersion": "2026.01-storage-preview",
+  "createdAt": "2026-03-13T08:27:04.411Z",
+  "completionProof": "3c1d570cbe8f9daf27e97803a694b1a4"
+}

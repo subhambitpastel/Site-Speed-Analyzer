@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKK4X3FKB97PNVNE4W9SQ8SE",
+  "taskId": "project-init",
+  "invocationKey": "lighthouse-bulk-report:S000001:project-init",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Phase 1: Initialize Next.js project with TypeScript + Tailwind + static export",
+  "labels": [
+    "agent",
+    "init",
+    "phase-1"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KKK4X3FKB97PNVNE4W9SQ8SE/input.json",
+    "outputJsonPath": "tasks/01KKK4X3FKB97PNVNE4W9SQ8SE/result.json"
+  },
+  "inputs": {
+    "projectDir": "/home/shovan/Documents/Office/Bitpastel/Projects/Claude Code Demos/Lighthouse Report Generator",
+    "projectName": "Lighthouse Bulk Report Generator"
+  }
+}

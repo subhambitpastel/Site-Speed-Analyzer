@@ -1,0 +1,8 @@
+{
+  "projectName": "Lighthouse Report Generator",
+  "designDirection": "Minimal & Clean",
+  "scope": "Full app redesign",
+  "targetQuality": 90,
+  "maxIterations": 8,
+  "features": ["micro-animations", "data-visualization", "refined-typography"]
+}
