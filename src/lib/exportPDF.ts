@@ -207,6 +207,7 @@ export function exportPDF(reports: LighthouseReport[]): void {
 
   autoTable(doc, {
     startY: currentY,
+    margin: { top: 28 },
     head: [scoreColumns],
     body: scoreRows,
     theme: "grid",
@@ -280,6 +281,7 @@ export function exportPDF(reports: LighthouseReport[]): void {
 
   autoTable(doc, {
     startY: currentY,
+    margin: { top: 28 },
     head: [vitalsColumns],
     body: vitalsRows,
     theme: "grid",

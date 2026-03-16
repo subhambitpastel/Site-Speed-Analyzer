@@ -1,0 +1,1 @@
+{"success": true, "summary": "Added margin.top: 28 to both autoTable calls so table content clears the header bar on subsequent pages."}

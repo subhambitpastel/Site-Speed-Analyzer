@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T11:42:26.649Z",
+  "data": {
+    "effectId": "01KKV78PRYNK6P52QKV2Z7FFB1",
+    "invocationKey": "pdf-header-fix:S000002:verify-build",
+    "invocationHash": "7f0cb64fbdddbba0a7c0d33472daea5741e4f39c8c1a41d03e75669fba9cc1f9",
+    "stepId": "S000002",
+    "taskId": "verify-build",
+    "kind": "agent",
+    "label": "Verify build",
+    "taskDefRef": "tasks/01KKV78PRYNK6P52QKV2Z7FFB1/task.json"
+  },
+  "checksum": "ee238bb7ee47f5754c38e6b05bbff8da895d0d39f828635095667a2f3a14c319"
+}

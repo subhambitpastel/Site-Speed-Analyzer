@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T11:44:48.467Z",
+  "data": {
+    "effectId": "01KKV7D18XP56C9RNJ0H0BRN9W",
+    "invocationKey": "pdf-header-fix:S000003:git-commit",
+    "invocationHash": "d75c0c7b3120e8678ec4f22c432e29a7744cfe3e630510fe7f0d37f141835fcd",
+    "stepId": "S000003",
+    "taskId": "git-commit",
+    "kind": "agent",
+    "label": "Git commit fix",
+    "taskDefRef": "tasks/01KKV7D18XP56C9RNJ0H0BRN9W/task.json"
+  },
+  "checksum": "e4aba46a367f0fa5b3fa7c2508bd51b0e61fdbd195448d790bb5e44b7343fc29"
+}

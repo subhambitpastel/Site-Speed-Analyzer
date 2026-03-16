@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-03-16T11:41:06.445Z",
+  "data": {
+    "runId": "01KKV768CJ7QSTKCQZJ0B2HJ98",
+    "processId": "pdf-header-fix",
+    "entrypoint": {
+      "importPath": "../../processes/pdf-header-fix.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "a243bc1ae7ee2b21e1e213ac230246aa8eccdb0acb8657b3dbc6f996e94c5395"
+}

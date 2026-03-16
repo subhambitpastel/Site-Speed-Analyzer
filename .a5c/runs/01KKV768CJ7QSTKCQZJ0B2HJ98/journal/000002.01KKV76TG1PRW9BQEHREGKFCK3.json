@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T11:41:24.866Z",
+  "data": {
+    "effectId": "01KKV76TDMEQTYHNXV7D1HTPVD",
+    "invocationKey": "pdf-header-fix:S000001:fix-pdf-header",
+    "invocationHash": "763176b33ac3d4126f2c0994302109d28288657ac66a562cb7d80518019542e2",
+    "stepId": "S000001",
+    "taskId": "fix-pdf-header",
+    "kind": "agent",
+    "label": "Fix PDF header overlapping content",
+    "taskDefRef": "tasks/01KKV76TDMEQTYHNXV7D1HTPVD/task.json"
+  },
+  "checksum": "c6e89f9efb7339fe62b2e0ba199429c3f38d1ae55157d142cd5efe344569196e"
+}

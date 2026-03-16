@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV76TDMEQTYHNXV7D1HTPVD",
+  "taskId": "fix-pdf-header",
+  "invocationKey": "pdf-header-fix:S000001:fix-pdf-header",
+  "status": "ok",
+  "result": {
+    "success": true,
+    "summary": "Added margin.top: 28 to both autoTable calls so table content clears the header bar on subsequent pages."
+  },
+  "startedAt": "2026-03-16T11:42:13.530Z",
+  "finishedAt": "2026-03-16T11:42:13.530Z",
+  "value": {
+    "success": true,
+    "summary": "Added margin.top: 28 to both autoTable calls so table content clears the header bar on subsequent pages."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV78PRYNK6P52QKV2Z7FFB1",
+  "taskId": "verify-build",
+  "invocationKey": "pdf-header-fix:S000002:verify-build",
+  "stepId": "S000002",
+  "kind": "agent",
+  "title": "Verify build",
+  "io": {
+    "inputJsonPath": "tasks/01KKV78PRYNK6P52QKV2Z7FFB1/input.json",
+    "outputJsonPath": "tasks/01KKV78PRYNK6P52QKV2Z7FFB1/result.json"
+  },
+  "inputs": {}
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV6G601NRWPJKVNVBH2P0ZA",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "bug-fix-pipeline:S000026:__sdk.breakpoint",
+  "stepId": "S000026",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "All 3 bugs fixed, documented, and committed. Final build: PASSED. Review final state?",
+      "tag": "final-review",
+      "title": "Final Review - All Bugs Fixed"
+    },
+    "requestedAt": "2026-03-16T11:29:02.977Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "All 3 bugs fixed, documented, and committed. Final build: PASSED. Review final state?",
+      "tag": "final-review",
+      "title": "Final Review - All Bugs Fixed"
+    },
+    "requestedAt": "2026-03-16T11:29:02.977Z"
+  }
+}

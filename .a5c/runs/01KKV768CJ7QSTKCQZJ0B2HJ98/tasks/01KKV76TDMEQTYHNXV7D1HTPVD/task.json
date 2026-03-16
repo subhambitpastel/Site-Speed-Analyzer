@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV76TDMEQTYHNXV7D1HTPVD",
+  "taskId": "fix-pdf-header",
+  "invocationKey": "pdf-header-fix:S000001:fix-pdf-header",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Fix PDF header overlapping content",
+  "io": {
+    "inputJsonPath": "tasks/01KKV76TDMEQTYHNXV7D1HTPVD/input.json",
+    "outputJsonPath": "tasks/01KKV76TDMEQTYHNXV7D1HTPVD/result.json"
+  },
+  "inputs": {}
+}

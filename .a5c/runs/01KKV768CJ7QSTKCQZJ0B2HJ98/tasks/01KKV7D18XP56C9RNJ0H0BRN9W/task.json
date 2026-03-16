@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV7D18XP56C9RNJ0H0BRN9W",
+  "taskId": "git-commit",
+  "invocationKey": "pdf-header-fix:S000003:git-commit",
+  "stepId": "S000003",
+  "kind": "agent",
+  "title": "Git commit fix",
+  "io": {
+    "inputJsonPath": "tasks/01KKV7D18XP56C9RNJ0H0BRN9W/input.json",
+    "outputJsonPath": "tasks/01KKV7D18XP56C9RNJ0H0BRN9W/result.json"
+  },
+  "inputs": {}
+}
