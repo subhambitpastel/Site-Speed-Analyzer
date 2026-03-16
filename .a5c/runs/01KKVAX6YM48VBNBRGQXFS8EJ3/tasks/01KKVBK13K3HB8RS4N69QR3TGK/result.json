@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKVBK13K3HB8RS4N69QR3TGK",
+  "taskId": "run-playwright-test",
+  "invocationKey": "cancel-bug-playwright:S000005:run-playwright-test",
+  "status": "ok",
+  "result": {
+    "errors": [],
+    "success": true,
+    "testOutput": "2 passed (1.1m) - both cancel tests pass cleanly after fix"
+  },
+  "startedAt": "2026-03-16T13:00:14.606Z",
+  "finishedAt": "2026-03-16T13:00:14.606Z",
+  "value": {
+    "errors": [],
+    "success": true,
+    "testOutput": "2 passed (1.1m) - both cancel tests pass cleanly after fix"
+  }
+}

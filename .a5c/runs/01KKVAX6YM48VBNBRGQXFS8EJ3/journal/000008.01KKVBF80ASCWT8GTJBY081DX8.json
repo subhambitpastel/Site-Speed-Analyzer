@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T12:55:55.146Z",
+  "data": {
+    "effectId": "01KKVBF7YFGRZ0VN3VF9A3PR2N",
+    "invocationKey": "cancel-bug-playwright:S000004:verify-build",
+    "invocationHash": "67cd75c4e2f258a0bc3e13f113483f775cb6c16fe214a18bfe7a4e88bf449622",
+    "stepId": "S000004",
+    "taskId": "verify-build",
+    "kind": "agent",
+    "label": "Verify build",
+    "taskDefRef": "tasks/01KKVBF7YFGRZ0VN3VF9A3PR2N/task.json"
+  },
+  "checksum": "07e747c4d2fb266267cb129ab38110015ec71c39203c720eea57ca41a33dd96c"
+}

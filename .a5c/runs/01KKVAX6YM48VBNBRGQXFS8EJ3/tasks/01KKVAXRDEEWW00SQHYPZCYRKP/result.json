@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKVAXRDEEWW00SQHYPZCYRKP",
+  "taskId": "write-playwright-test",
+  "invocationKey": "cancel-bug-playwright:S000001:write-playwright-test",
+  "status": "ok",
+  "result": {
+    "filesCreated": [
+      "playwright.config.ts",
+      "tests/cancel.spec.ts"
+    ],
+    "success": true
+  },
+  "startedAt": "2026-03-16T12:47:32.262Z",
+  "finishedAt": "2026-03-16T12:47:32.262Z",
+  "value": {
+    "filesCreated": [
+      "playwright.config.ts",
+      "tests/cancel.spec.ts"
+    ],
+    "success": true
+  }
+}

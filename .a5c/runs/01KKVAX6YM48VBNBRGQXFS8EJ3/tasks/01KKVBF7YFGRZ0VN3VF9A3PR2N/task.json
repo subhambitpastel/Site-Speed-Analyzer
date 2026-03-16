@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKVBF7YFGRZ0VN3VF9A3PR2N",
+  "taskId": "verify-build",
+  "invocationKey": "cancel-bug-playwright:S000004:verify-build",
+  "stepId": "S000004",
+  "kind": "agent",
+  "title": "Verify build",
+  "io": {
+    "inputJsonPath": "tasks/01KKVBF7YFGRZ0VN3VF9A3PR2N/input.json",
+    "outputJsonPath": "tasks/01KKVBF7YFGRZ0VN3VF9A3PR2N/result.json"
+  },
+  "inputs": {}
+}

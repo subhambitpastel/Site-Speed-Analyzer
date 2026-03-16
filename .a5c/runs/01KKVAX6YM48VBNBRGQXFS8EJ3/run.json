@@ -1,0 +1,13 @@
+{
+  "runId": "01KKVAX6YM48VBNBRGQXFS8EJ3",
+  "request": "cancel-bug-playwright",
+  "processId": "cancel-bug-playwright",
+  "entrypoint": {
+    "importPath": "../../processes/cancel-bug-playwright.js",
+    "exportName": "process"
+  },
+  "processPath": "../../processes/cancel-bug-playwright.js",
+  "layoutVersion": "2026.01-storage-preview",
+  "createdAt": "2026-03-16T12:46:04.298Z",
+  "completionProof": "901e3082335beb9841c91fbcdaef9579"
+}

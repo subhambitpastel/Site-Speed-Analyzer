@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKVAXRDEEWW00SQHYPZCYRKP",
+  "taskId": "write-playwright-test",
+  "invocationKey": "cancel-bug-playwright:S000001:write-playwright-test",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Write Playwright test for cancel bug",
+  "io": {
+    "inputJsonPath": "tasks/01KKVAXRDEEWW00SQHYPZCYRKP/input.json",
+    "outputJsonPath": "tasks/01KKVAXRDEEWW00SQHYPZCYRKP/result.json"
+  },
+  "inputs": {}
+}

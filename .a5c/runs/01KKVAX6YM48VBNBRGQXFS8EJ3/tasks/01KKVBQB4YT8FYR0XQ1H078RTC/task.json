@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKVBQB4YT8FYR0XQ1H078RTC",
+  "taskId": "commit",
+  "invocationKey": "cancel-bug-playwright:S000006:commit",
+  "stepId": "S000006",
+  "kind": "agent",
+  "title": "Commit cancel fix",
+  "io": {
+    "inputJsonPath": "tasks/01KKVBQB4YT8FYR0XQ1H078RTC/input.json",
+    "outputJsonPath": "tasks/01KKVBQB4YT8FYR0XQ1H078RTC/result.json"
+  },
+  "inputs": {}
+}

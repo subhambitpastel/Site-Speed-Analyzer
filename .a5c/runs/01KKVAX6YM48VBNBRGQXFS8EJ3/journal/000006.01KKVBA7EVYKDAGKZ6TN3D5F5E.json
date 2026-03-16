@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T12:53:10.747Z",
+  "data": {
+    "effectId": "01KKVBA7DATBVZZYEYN986Z4J2",
+    "invocationKey": "cancel-bug-playwright:S000003:fix-cancel-bug",
+    "invocationHash": "df4299dbc027b7dd0f3b7132f2c8ee4b46dca05cc43d2cff20e3ed322713ba86",
+    "stepId": "S000003",
+    "taskId": "fix-cancel-bug",
+    "kind": "agent",
+    "label": "Fix cancel button bug",
+    "taskDefRef": "tasks/01KKVBA7DATBVZZYEYN986Z4J2/task.json"
+  },
+  "checksum": "af30d6af57fd8f54099f5a550caa3893eeb7ed00927fd26f8836744c3ab46364"
+}

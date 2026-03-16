@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKVAKJFE04D1YV4K1PPVVR6C",
+  "taskId": "document-and-commit",
+  "invocationKey": "cancel-and-cache-fix:S000003:document-and-commit",
+  "status": "ok",
+  "result": {
+    "commitHash": "fc7fa6e",
+    "success": true
+  },
+  "startedAt": "2026-03-16T12:41:44.824Z",
+  "finishedAt": "2026-03-16T12:41:44.824Z",
+  "value": {
+    "commitHash": "fc7fa6e",
+    "success": true
+  }
+}

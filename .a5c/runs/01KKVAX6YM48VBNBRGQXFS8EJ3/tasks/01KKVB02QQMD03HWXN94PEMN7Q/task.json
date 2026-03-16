@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKVB02QQMD03HWXN94PEMN7Q",
+  "taskId": "run-playwright-test",
+  "invocationKey": "cancel-bug-playwright:S000002:run-playwright-test",
+  "stepId": "S000002",
+  "kind": "agent",
+  "title": "Run Playwright test (reproduce)",
+  "io": {
+    "inputJsonPath": "tasks/01KKVB02QQMD03HWXN94PEMN7Q/input.json",
+    "outputJsonPath": "tasks/01KKVB02QQMD03HWXN94PEMN7Q/result.json"
+  },
+  "inputs": {
+    "phase": "reproduce"
+  }
+}

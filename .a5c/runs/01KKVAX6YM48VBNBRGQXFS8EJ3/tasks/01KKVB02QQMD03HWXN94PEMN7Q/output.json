@@ -1,0 +1,1 @@
+{"success": true, "testOutput": "Both Playwright tests passed in 1.2m. Cancel button works - loading stops, no page errors, generate button re-enabled. Initial dev server failure fixed by clearing .next cache.", "errors": []}

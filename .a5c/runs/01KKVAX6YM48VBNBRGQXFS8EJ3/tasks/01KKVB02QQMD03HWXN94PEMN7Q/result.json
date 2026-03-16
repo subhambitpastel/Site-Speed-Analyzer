@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKVB02QQMD03HWXN94PEMN7Q",
+  "taskId": "run-playwright-test",
+  "invocationKey": "cancel-bug-playwright:S000002:run-playwright-test",
+  "status": "ok",
+  "result": {
+    "errors": [],
+    "success": true,
+    "testOutput": "Both Playwright tests passed in 1.2m. Cancel button works - loading stops, no page errors, generate button re-enabled. Initial dev server failure fixed by clearing .next cache."
+  },
+  "startedAt": "2026-03-16T12:53:07.203Z",
+  "finishedAt": "2026-03-16T12:53:07.203Z",
+  "value": {
+    "errors": [],
+    "success": true,
+    "testOutput": "Both Playwright tests passed in 1.2m. Cancel button works - loading stops, no page errors, generate button re-enabled. Initial dev server failure fixed by clearing .next cache."
+  }
+}

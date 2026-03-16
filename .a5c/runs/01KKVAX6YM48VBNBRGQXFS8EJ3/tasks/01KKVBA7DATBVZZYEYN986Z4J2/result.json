@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKVBA7DATBVZZYEYN986Z4J2",
+  "taskId": "fix-cancel-bug",
+  "invocationKey": "cancel-bug-playwright:S000003:fix-cancel-bug",
+  "status": "ok",
+  "result": {
+    "filesModified": [
+      "src/app/page.tsx",
+      "src/lib/pagespeedClient.ts"
+    ],
+    "success": true,
+    "summary": "Fixed 3 race conditions: removed setIsLoading from cancel onClick, added abort check before caching, made retry wait abortable."
+  },
+  "startedAt": "2026-03-16T12:55:48.849Z",
+  "finishedAt": "2026-03-16T12:55:48.849Z",
+  "value": {
+    "filesModified": [
+      "src/app/page.tsx",
+      "src/lib/pagespeedClient.ts"
+    ],
+    "success": true,
+    "summary": "Fixed 3 race conditions: removed setIsLoading from cancel onClick, added abort check before caching, made retry wait abortable."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T13:00:20.561Z",
+  "data": {
+    "effectId": "01KKVBQB4YT8FYR0XQ1H078RTC",
+    "invocationKey": "cancel-bug-playwright:S000006:commit",
+    "invocationHash": "99002c9271e07aad6a38e1bf757b0612bbd68adc751c549af64a815b78334517",
+    "stepId": "S000006",
+    "taskId": "commit",
+    "kind": "agent",
+    "label": "Commit cancel fix",
+    "taskDefRef": "tasks/01KKVBQB4YT8FYR0XQ1H078RTC/task.json"
+  },
+  "checksum": "720dfea076a037f68bafbbd54cdae5b1cd0dce8c58f4a3ba026ae9f07d01cc8a"
+}

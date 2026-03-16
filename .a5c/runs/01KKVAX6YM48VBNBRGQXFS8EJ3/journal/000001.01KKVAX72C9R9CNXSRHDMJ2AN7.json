@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-03-16T12:46:04.365Z",
+  "data": {
+    "runId": "01KKVAX6YM48VBNBRGQXFS8EJ3",
+    "processId": "cancel-bug-playwright",
+    "entrypoint": {
+      "importPath": "../../processes/cancel-bug-playwright.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "847eb9b3ad4adc5279990bcac970260c3417b85cdecd187da287e9c855f3fa02"
+}

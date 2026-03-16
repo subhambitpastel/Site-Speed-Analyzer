@@ -4,6 +4,13 @@ This file tracks recent improvements and bug fixes. New entries are added at the
 
 ---
 
+### 7. Cancel Button Race Condition Fix (2026-03-16)
+- **Bug:** Cancel button caused errors due to race conditions with in-flight requests
+- **Root cause:** Cancel set isLoading=false immediately while workers still ran, causing stale state updates. Retry backoff wait was not abortable.
+- **Fix:** Removed immediate isLoading=false from cancel onClick (let workers finish cleanly), made retry wait abortable via AbortSignal, added abort check before caching results
+- **Files modified:** src/app/page.tsx, src/lib/pagespeedClient.ts, tests/cancel.spec.ts (new), playwright.config.ts (new)
+- **Verified by:** Playwright browser tests (2 tests passing)
+
 ### 5. Cancel Button Instantly Aborts Analysis (2026-03-16)
 - **Bug:** Cancel button did not stop in-flight API requests immediately
 - **Root cause:** Cancel only set a boolean flag; in-flight fetch() calls were not aborted

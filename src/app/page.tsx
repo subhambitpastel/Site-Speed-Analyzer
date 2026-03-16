@@ -141,10 +141,12 @@ export default function Home() {
 
       await Promise.all(workers);
       setIsLoading(false);
-      setResults((current) => {
-        resultsCacheRef.current.set(strategy, current);
-        return current;
-      });
+      if (!ac.signal.aborted) {
+        setResults((current) => {
+          resultsCacheRef.current.set(strategy, current);
+          return current;
+        });
+      }
     },
     [strategy],
   );
@@ -330,7 +332,7 @@ export default function Home() {
                   </span>
                   <button
                     type="button"
-                    onClick={() => { abortControllerRef.current?.abort(); setIsLoading(false); }}
+                    onClick={() => { abortControllerRef.current?.abort(); }}
                     className="rounded-lg border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-semibold text-red-600 transition-all duration-200 hover:bg-red-100 hover:border-red-300 dark:border-red-800/60 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/40"
                   >
                     Cancel

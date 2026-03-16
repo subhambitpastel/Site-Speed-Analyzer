@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKVBF7YFGRZ0VN3VF9A3PR2N",
+  "taskId": "verify-build",
+  "invocationKey": "cancel-bug-playwright:S000004:verify-build",
+  "status": "ok",
+  "result": {
+    "success": true
+  },
+  "startedAt": "2026-03-16T12:57:53.115Z",
+  "finishedAt": "2026-03-16T12:57:53.115Z",
+  "value": {
+    "success": true
+  }
+}

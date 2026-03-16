@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T12:47:38.289Z",
+  "data": {
+    "effectId": "01KKVB02QQMD03HWXN94PEMN7Q",
+    "invocationKey": "cancel-bug-playwright:S000002:run-playwright-test",
+    "invocationHash": "58009bf7fcb0e65fd01554e9a9d45ae49e3b4c5facc567e099a2e7e9fe46c486",
+    "stepId": "S000002",
+    "taskId": "run-playwright-test",
+    "kind": "agent",
+    "label": "Run Playwright test (reproduce)",
+    "taskDefRef": "tasks/01KKVB02QQMD03HWXN94PEMN7Q/task.json"
+  },
+  "checksum": "a1a7006cdbc91ea4cd689f793a41fcad92b496fce7018a0f0e2772b7c4e36f55"
+}

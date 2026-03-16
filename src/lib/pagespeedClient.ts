@@ -7,8 +7,22 @@ const TIMEOUT_MS = 60_000;
 const MAX_RETRIES = 3;
 const INITIAL_RETRY_DELAY_MS = 10_000;
 
-function wait(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+function abortableWait(ms: number, signal?: AbortSignal): Promise<void> {
+  return new Promise((resolve, reject) => {
+    if (signal?.aborted) {
+      reject(new DOMException("The operation was aborted.", "AbortError"));
+      return;
+    }
+    const timer = setTimeout(resolve, ms);
+    signal?.addEventListener(
+      "abort",
+      () => {
+        clearTimeout(timer);
+        reject(new DOMException("The operation was aborted.", "AbortError"));
+      },
+      { once: true },
+    );
+  });
 }
 
 /**
@@ -59,7 +73,7 @@ export async function fetchReport(
           clearTimeout(timeoutId);
           if (attempt < MAX_RETRIES) {
             const retryDelay = INITIAL_RETRY_DELAY_MS * Math.pow(2, attempt);
-            await wait(retryDelay);
+            await abortableWait(retryDelay, signal);
             continue;
           }
           throw lastError;

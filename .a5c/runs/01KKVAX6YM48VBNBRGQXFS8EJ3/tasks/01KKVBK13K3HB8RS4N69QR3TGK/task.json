@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKVBK13K3HB8RS4N69QR3TGK",
+  "taskId": "run-playwright-test",
+  "invocationKey": "cancel-bug-playwright:S000005:run-playwright-test",
+  "stepId": "S000005",
+  "kind": "agent",
+  "title": "Run Playwright test (verify)",
+  "io": {
+    "inputJsonPath": "tasks/01KKVBK13K3HB8RS4N69QR3TGK/input.json",
+    "outputJsonPath": "tasks/01KKVBK13K3HB8RS4N69QR3TGK/result.json"
+  },
+  "inputs": {
+    "phase": "verify"
+  }
+}
