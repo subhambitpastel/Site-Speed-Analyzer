@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV5Z95NB3ZPJTFHH9A5QFGD",
+  "taskId": "comprehensive-review",
+  "invocationKey": "bug-fix-pipeline:S000021:comprehensive-review",
+  "stepId": "S000021",
+  "kind": "agent",
+  "title": "Comprehensive frontend review",
+  "io": {
+    "inputJsonPath": "tasks/01KKV5Z95NB3ZPJTFHH9A5QFGD/input.json",
+    "outputJsonPath": "tasks/01KKV5Z95NB3ZPJTFHH9A5QFGD/result.json"
+  },
+  "inputs": {
+    "scope": "Review all pages, components, interactions, forms, export buttons, responsive layouts for correctness and visual quality"
+  }
+}

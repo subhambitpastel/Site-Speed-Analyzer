@@ -3,3 +3,24 @@
 This file tracks recent improvements and bug fixes. New entries are added at the top.
 
 ---
+
+### 1. Frontend UI & Mobile Responsiveness (2026-03-16)
+- **Bug:** Frontend not responsive on mobile/tablet - elements overflow, misalign, don't adapt
+- **Root cause:** Missing responsive breakpoints, fixed widths, no mobile-specific layouts, no dark mode toggle
+- **Fix:** Added mobile card-based layout for results table, responsive breakpoints across all components, dark mode toggle with localStorage, proper touch targets (44px), focus-visible rings, cancel button for scans
+- **Files modified:** src/app/page.tsx, src/app/globals.css, src/app/layout.tsx, src/components/ResultsTable.tsx, src/components/MetricsPanel.tsx, src/components/ScoreChart.tsx, src/components/ExportDropdown.tsx, src/components/URLInput.tsx, src/components/ScoreBadge.tsx
+- **Verified by:** Visual QA scoring (85/100), build verification passes
+
+### 2. Browser-Based Frontend Review & Fixes (2026-03-16)
+- **Bug:** Frontend needed comprehensive review for visual correctness and functional behavior
+- **Root cause:** Score ring animation had wrong circumference (282.74 vs 100.53), dropdown lacked keyboard accessibility, no cancel button, alert() used for errors
+- **Fix:** Fixed SVG score ring animation, added Escape key + ARIA attributes to export dropdown, added cancel button, replaced alert() with console.error in exports, added aria-labels to expandable rows
+- **Files modified:** src/app/globals.css, src/components/ExportDropdown.tsx, src/components/ResultsTable.tsx, src/app/page.tsx, src/lib/exportPDF.ts, src/lib/exportCSV.ts, src/lib/exportDOCX.ts
+- **Verified by:** Comprehensive code review, build verification passes
+
+### 3. Export Files Polish (PDF/CSV/DOCX) (2026-03-16)
+- **Bug:** Exported files not well-structured, not properly aligned, not visually attractive
+- **Root cause:** Basic formatting without professional styling - plain tables, no color coding, no branding
+- **Fix:** PDF: branded header bar, color-coded score backgrounds, alternating rows, footer with page numbers, visual summary section. DOCX: professional title page, colored table headers, score color shading, page breaks, header/footer. CSV: UTF-8 BOM, metadata comments, averages row
+- **Files modified:** src/lib/exportPDF.ts, src/lib/exportCSV.ts, src/lib/exportDOCX.ts
+- **Verified by:** Export quality scoring (85/100), build verification passes

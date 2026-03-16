@@ -217,6 +217,7 @@ function SuccessRow({ report, index }: { report: LighthouseReport; index: number
         onClick={() => setExpanded(!expanded)}
         role="button"
         aria-expanded={expanded}
+        aria-label={`Expand details for ${report.url}`}
         tabIndex={0}
         onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setExpanded(!expanded); } }}
         className={`animate-stagger-fade-in cursor-pointer border-b transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/50 focus-visible:ring-inset ${

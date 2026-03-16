@@ -328,6 +328,5 @@ export function exportPDF(reports: LighthouseReport[]): void {
   doc.save(filename);
   } catch (error) {
     console.error("Failed to export PDF:", error);
-    alert("Failed to export PDF. Please try again.");
   }
 }

@@ -224,9 +224,18 @@ export default function Home() {
                     Processing URLs...
                   </span>
                 </div>
-                <span className="text-sm font-bold tabular-nums text-slate-400 dark:text-slate-500">
-                  {progress.current}/{progress.total}
-                </span>
+                <div className="flex items-center gap-3">
+                  <span className="text-sm font-bold tabular-nums text-slate-400 dark:text-slate-500">
+                    {progress.current}/{progress.total}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => { abortRef.current = true; }}
+                    className="rounded-lg border border-red-200 bg-red-50 px-3 py-1 text-xs font-semibold text-red-600 transition-colors duration-200 hover:bg-red-100 dark:border-red-800 dark:bg-red-900/30 dark:text-red-400 dark:hover:bg-red-900/50"
+                  >
+                    Cancel
+                  </button>
+                </div>
               </div>
               <div className="h-2 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
                 <div

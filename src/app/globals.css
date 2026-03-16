@@ -55,7 +55,7 @@
 
 /* Animations */
 @keyframes score-ring-fill {
-  from { stroke-dashoffset: 282.74; }
+  from { stroke-dashoffset: 100.53; }
 }
 
 @keyframes fade-in-up {

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV5FH4Y41RXPVZPHHSJVPMD",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "bug-fix-pipeline:S000020:__sdk.breakpoint",
+  "stepId": "S000020",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Phase 2 complete: Export Files Polish. Score: 85/85 after 1 iterations. Committed. Review and approve to proceed to Phase 3 (Browser Review)?",
+      "tag": "phase-2-review",
+      "title": "Phase 2 Review - Export Files"
+    },
+    "requestedAt": "2026-03-16T11:11:13.054Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Phase 2 complete: Export Files Polish. Score: 85/85 after 1 iterations. Committed. Review and approve to proceed to Phase 3 (Browser Review)?",
+      "tag": "phase-2-review",
+      "title": "Phase 2 Review - Export Files"
+    },
+    "requestedAt": "2026-03-16T11:11:13.054Z"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKV6ATM997S2EK8WHB5D80EG",
+  "taskId": "document-fixes",
+  "invocationKey": "bug-fix-pipeline:S000024:document-fixes",
+  "stepId": "S000024",
+  "kind": "agent",
+  "title": "Document fixes in RECENT_FIXATION.md",
+  "io": {
+    "inputJsonPath": "tasks/01KKV6ATM997S2EK8WHB5D80EG/input.json",
+    "outputJsonPath": "tasks/01KKV6ATM997S2EK8WHB5D80EG/result.json"
+  },
+  "inputs": {
+    "bugsFixed": [
+      "BUG-1",
+      "BUG-2",
+      "BUG-3"
+    ],
+    "phases": [
+      {
+        "converged": true,
+        "iterations": 2,
+        "phase": "BUG-1: UI & Mobile Responsiveness",
+        "score": 85
+      },
+      {
+        "converged": true,
+        "iterations": 1,
+        "phase": "BUG-3: Export Files Polish",
+        "score": 85
+      }
+    ]
+  }
+}

@@ -133,6 +133,5 @@ export function exportCSV(reports: LighthouseReport[]): void {
   URL.revokeObjectURL(url);
   } catch (error) {
     console.error("Failed to export CSV:", error);
-    alert("Failed to export CSV. Please try again.");
   }
 }

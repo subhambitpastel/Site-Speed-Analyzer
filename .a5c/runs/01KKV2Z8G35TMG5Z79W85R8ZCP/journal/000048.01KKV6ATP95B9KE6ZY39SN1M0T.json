@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T11:26:07.562Z",
+  "data": {
+    "effectId": "01KKV6ATM997S2EK8WHB5D80EG",
+    "invocationKey": "bug-fix-pipeline:S000024:document-fixes",
+    "invocationHash": "7fffc3e4d09e2bdf333490f782d0ac904d4e02709e4e85acf2619fbc8a5b2e0b",
+    "stepId": "S000024",
+    "taskId": "document-fixes",
+    "kind": "agent",
+    "label": "Document fixes in RECENT_FIXATION.md",
+    "taskDefRef": "tasks/01KKV6ATM997S2EK8WHB5D80EG/task.json"
+  },
+  "checksum": "119338b48e1d3d3085840e55cd33f4d6b190aa1b6b5f76c03797f4af557a9e8c"
+}

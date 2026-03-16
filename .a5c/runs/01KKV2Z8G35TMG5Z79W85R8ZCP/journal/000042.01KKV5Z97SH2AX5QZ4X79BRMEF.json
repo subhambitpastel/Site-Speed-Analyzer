@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T11:19:49.241Z",
+  "data": {
+    "effectId": "01KKV5Z95NB3ZPJTFHH9A5QFGD",
+    "invocationKey": "bug-fix-pipeline:S000021:comprehensive-review",
+    "invocationHash": "db5f7d48d3ba562dc84fcc49456edc27fe512a86fbe99c3b9e41251a2b65b20a",
+    "stepId": "S000021",
+    "taskId": "comprehensive-review",
+    "kind": "agent",
+    "label": "Comprehensive frontend review",
+    "taskDefRef": "tasks/01KKV5Z95NB3ZPJTFHH9A5QFGD/task.json"
+  },
+  "checksum": "2c4cbcd556fdb496fd25742a082a982a669a045db707ac9a60028c0f783aafed"
+}

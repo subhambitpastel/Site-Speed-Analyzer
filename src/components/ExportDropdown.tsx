@@ -30,12 +30,20 @@ export default function ExportDropdown({ results }: ExportDropdownProps) {
       }
     }
 
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    }
+
     if (isOpen) {
       document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("keydown", handleKeyDown);
     }
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
     };
   }, [isOpen]);
 
@@ -75,6 +83,8 @@ export default function ExportDropdown({ results }: ExportDropdownProps) {
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
         disabled={isDisabled}
+        aria-haspopup="menu"
+        aria-expanded={isOpen}
         className={`inline-flex min-h-[44px] items-center gap-2 rounded-lg border border-slate-200 bg-white px-3.5 py-2 text-sm font-medium text-slate-700 shadow-sm transition-colors duration-200 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 ${
           isDisabled
             ? "cursor-not-allowed bg-slate-50 opacity-50 dark:bg-slate-800"
@@ -108,6 +118,8 @@ export default function ExportDropdown({ results }: ExportDropdownProps) {
 
       {/* Dropdown menu */}
       <div
+        role="menu"
+        aria-hidden={!isOpen}
         className={`absolute right-0 z-50 mt-2 w-48 origin-top-right transition-all duration-200 ${
           isOpen
             ? "scale-100 opacity-100"

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV5FH4Y41RXPVZPHHSJVPMD",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "bug-fix-pipeline:S000020:__sdk.breakpoint",
+  "status": "ok",
+  "result": {
+    "approved": true,
+    "message": "User approved. Proceed to Phase 3."
+  },
+  "startedAt": "2026-03-16T11:19:40.403Z",
+  "finishedAt": "2026-03-16T11:19:40.403Z",
+  "value": {
+    "approved": true,
+    "message": "User approved. Proceed to Phase 3."
+  }
+}

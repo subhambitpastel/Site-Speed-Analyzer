@@ -576,10 +576,8 @@ export function exportDOCX(reports: LighthouseReport[]): void {
     saveAs(blob, filename);
   }).catch((error) => {
     console.error("Failed to export DOCX:", error);
-    alert("Failed to export DOCX. Please try again.");
   });
   } catch (error) {
     console.error("Failed to export DOCX:", error);
-    alert("Failed to export DOCX. Please try again.");
   }
 }

@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKV5Z95NB3ZPJTFHH9A5QFGD",
+  "taskId": "comprehensive-review",
+  "invocationKey": "bug-fix-pipeline:S000021:comprehensive-review",
+  "status": "ok",
+  "result": {
+    "issuesFound": [
+      {
+        "file": "src/app/globals.css",
+        "issue": "animate-score-ring CSS animation uses hardcoded stroke-dashoffset 282.74 but ScoreBadge radius=16 gives circumference ~100.53 - ring animation renders incorrectly",
+        "line": 57,
+        "severity": "high"
+      },
+      {
+        "file": "src/components/ScoreBadge.tsx",
+        "issue": "SVG animate-score-ring class applies wrong starting offset - mismatch with actual circumference",
+        "line": 71,
+        "severity": "high"
+      },
+      {
+        "file": "src/components/ExportDropdown.tsx",
+        "issue": "Dropdown lacks keyboard accessibility: no Escape handler, no aria-haspopup/aria-expanded",
+        "line": 72,
+        "severity": "medium"
+      },
+      {
+        "file": "src/components/ExportDropdown.tsx",
+        "issue": "Hidden dropdown still visible to screen readers - needs aria-hidden",
+        "line": 110,
+        "severity": "medium"
+      },
+      {
+        "file": "src/lib/exportPDF.ts",
+        "issue": "alert() used for error handling - poor UX in modern web app",
+        "line": 331,
+        "severity": "medium"
+      },
+      {
+        "file": "src/app/page.tsx",
+        "issue": "No cancel/abort button for in-progress scans",
+        "line": 67,
+        "severity": "medium"
+      },
+      {
+        "file": "src/components/ResultsTable.tsx",
+        "issue": "tr used as interactive button - semantically incorrect HTML",
+        "line": 217,
+        "severity": "medium"
+      }
+    ],
+    "passed": false,
+    "summary": "2 high severity issues: score ring animation mismatch in globals.css/ScoreBadge.tsx. 5 medium severity issues including dropdown accessibility, alert() usage, missing cancel button, and table row semantics. 14 low severity issues."
+  },
+  "startedAt": "2026-03-16T11:22:07.733Z",
+  "finishedAt": "2026-03-16T11:22:07.733Z",
+  "value": {
+    "issuesFound": [
+      {
+        "file": "src/app/globals.css",
+        "issue": "animate-score-ring CSS animation uses hardcoded stroke-dashoffset 282.74 but ScoreBadge radius=16 gives circumference ~100.53 - ring animation renders incorrectly",
+        "line": 57,
+        "severity": "high"
+      },
+      {
+        "file": "src/components/ScoreBadge.tsx",
+        "issue": "SVG animate-score-ring class applies wrong starting offset - mismatch with actual circumference",
+        "line": 71,
+        "severity": "high"
+      },
+      {
+        "file": "src/components/ExportDropdown.tsx",
+        "issue": "Dropdown lacks keyboard accessibility: no Escape handler, no aria-haspopup/aria-expanded",
+        "line": 72,
+        "severity": "medium"
+      },
+      {
+        "file": "src/components/ExportDropdown.tsx",
+        "issue": "Hidden dropdown still visible to screen readers - needs aria-hidden",
+        "line": 110,
+        "severity": "medium"
+      },
+      {
+        "file": "src/lib/exportPDF.ts",
+        "issue": "alert() used for error handling - poor UX in modern web app",
+        "line": 331,
+        "severity": "medium"
+      },
+      {
+        "file": "src/app/page.tsx",
+        "issue": "No cancel/abort button for in-progress scans",
+        "line": 67,
+        "severity": "medium"
+      },
+      {
+        "file": "src/components/ResultsTable.tsx",
+        "issue": "tr used as interactive button - semantically incorrect HTML",
+        "line": 217,
+        "severity": "medium"
+      }
+    ],
+    "passed": false,
+    "summary": "2 high severity issues: score ring animation mismatch in globals.css/ScoreBadge.tsx. 5 medium severity issues including dropdown accessibility, alert() usage, missing cancel button, and table row semantics. 14 low severity issues."
+  }
+}
