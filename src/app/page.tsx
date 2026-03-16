@@ -52,8 +52,8 @@ export default function Home() {
 
   useEffect(() => {
     const cached = resultsCacheRef.current.get(strategy);
-    if (cached) {
-      setResults(cached);
+    if (cached && cached.length > 0) {
+      setResults(cached.filter(Boolean));
     } else if (!isLoading) {
       setResults([]);
     }
@@ -369,10 +369,10 @@ export default function Home() {
                   Results
                 </h3>
                 <p className="mt-0.5 text-sm text-[var(--text-tertiary)]">
-                  {results.filter((r) => r.fetchedAt).length} of {results.length} complete
+                  {results.filter((r) => r?.fetchedAt).length} of {results.length} complete
                 </p>
               </div>
-              {results.some((r) => r.fetchedAt) && (
+              {results.some((r) => r?.fetchedAt) && (
                 <ExportDropdown results={results} />
               )}
             </div>

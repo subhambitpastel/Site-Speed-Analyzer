@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T13:11:58.897Z",
+  "data": {
+    "effectId": "01KKVCCN375AWS24Y3FXRM7M3F",
+    "invocationKey": "fetchedat-fix:S000001:verify-build",
+    "invocationHash": "ce0e907889732eb3b315c8a17b361bfeaab72edd059e57f215e5122e9f363120",
+    "stepId": "S000001",
+    "taskId": "verify-build",
+    "kind": "agent",
+    "label": "Verify build",
+    "taskDefRef": "tasks/01KKVCCN375AWS24Y3FXRM7M3F/task.json"
+  },
+  "checksum": "230a897967a8a2f53081eeac8fd83456bca91f52355c87fb64bda3e44997c85b"
+}

@@ -4,6 +4,13 @@ This file tracks recent improvements and bug fixes. New entries are added at the
 
 ---
 
+### 8. Fix fetchedAt TypeError on Results Display (2026-03-16)
+- **Bug:** Runtime TypeError: Cannot read properties of undefined (reading 'fetchedAt') on line 372 of page.tsx
+- **Root cause:** Results array could contain undefined entries from strategy cache populated during cancelled/partial runs. The .filter() and .some() calls did not use optional chaining.
+- **Fix:** Added optional chaining (r?.fetchedAt) on results filter/some calls, and added .filter(Boolean) when restoring cached results to remove any undefined entries
+- **Files modified:** src/app/page.tsx
+- **Verified by:** Build passes
+
 ### 7. Cancel Button Race Condition Fix (2026-03-16)
 - **Bug:** Cancel button caused errors due to race conditions with in-flight requests
 - **Root cause:** Cancel set isLoading=false immediately while workers still ran, causing stale state updates. Retry backoff wait was not abortable.

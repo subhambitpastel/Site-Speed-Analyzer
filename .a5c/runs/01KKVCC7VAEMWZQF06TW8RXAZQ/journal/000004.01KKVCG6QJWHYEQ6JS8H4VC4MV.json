@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-16T13:13:55.186Z",
+  "data": {
+    "effectId": "01KKVCG6P1MZ6E3ENN11GT4X96",
+    "invocationKey": "fetchedat-fix:S000002:commit",
+    "invocationHash": "4853dbe8c7ecfdcc299d87df0a8075aadbe7a8831a2d60d559391e08c6d8f94c",
+    "stepId": "S000002",
+    "taskId": "commit",
+    "kind": "agent",
+    "label": "Commit fix",
+    "taskDefRef": "tasks/01KKVCG6P1MZ6E3ENN11GT4X96/task.json"
+  },
+  "checksum": "8886cac5c8f3183b4a4c791539586cf08f21fe172ff30618b7949f5b74977af5"
+}

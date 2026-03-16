@@ -1,0 +1,12 @@
+{
+  "type": "EFFECT_RESOLVED",
+  "recordedAt": "2026-03-16T13:13:49.464Z",
+  "data": {
+    "effectId": "01KKVCCN375AWS24Y3FXRM7M3F",
+    "status": "ok",
+    "resultRef": "tasks/01KKVCCN375AWS24Y3FXRM7M3F/result.json",
+    "startedAt": "2026-03-16T13:13:49.366Z",
+    "finishedAt": "2026-03-16T13:13:49.366Z"
+  },
+  "checksum": "594d9d18b095a9fc69a90f508f637efe18dc1a6114a960c05e5869e2f4ba51cc"
+}

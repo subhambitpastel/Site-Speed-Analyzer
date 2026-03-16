@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-03-16T13:11:45.392Z",
+  "data": {
+    "runId": "01KKVCC7VAEMWZQF06TW8RXAZQ",
+    "processId": "fetchedat-fix",
+    "entrypoint": {
+      "importPath": "../../processes/fetchedat-fix.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "65317274b0a09e9a255332ed8c1515cb6b0bc150b8c8e5a0fdde194a6f500747"
+}

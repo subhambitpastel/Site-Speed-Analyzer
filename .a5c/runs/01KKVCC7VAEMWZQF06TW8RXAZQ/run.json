@@ -1,0 +1,13 @@
+{
+  "runId": "01KKVCC7VAEMWZQF06TW8RXAZQ",
+  "request": "fetchedat-fix",
+  "processId": "fetchedat-fix",
+  "entrypoint": {
+    "importPath": "../../processes/fetchedat-fix.js",
+    "exportName": "process"
+  },
+  "processPath": "../../processes/fetchedat-fix.js",
+  "layoutVersion": "2026.01-storage-preview",
+  "createdAt": "2026-03-16T13:11:45.312Z",
+  "completionProof": "726a3c327a9b3c993137b033c3182d92"
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKVCCN375AWS24Y3FXRM7M3F",
+  "taskId": "verify-build",
+  "invocationKey": "fetchedat-fix:S000001:verify-build",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Verify build",
+  "io": {
+    "inputJsonPath": "tasks/01KKVCCN375AWS24Y3FXRM7M3F/input.json",
+    "outputJsonPath": "tasks/01KKVCCN375AWS24Y3FXRM7M3F/result.json"
+  },
+  "inputs": {}
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKVCG6P1MZ6E3ENN11GT4X96",
+  "taskId": "commit",
+  "invocationKey": "fetchedat-fix:S000002:commit",
+  "stepId": "S000002",
+  "kind": "agent",
+  "title": "Commit fix",
+  "io": {
+    "inputJsonPath": "tasks/01KKVCG6P1MZ6E3ENN11GT4X96/input.json",
+    "outputJsonPath": "tasks/01KKVCG6P1MZ6E3ENN11GT4X96/result.json"
+  },
+  "inputs": {}
+}

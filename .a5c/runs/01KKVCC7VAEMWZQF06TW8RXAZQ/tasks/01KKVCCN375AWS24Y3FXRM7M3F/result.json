@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKVCCN375AWS24Y3FXRM7M3F",
+  "taskId": "verify-build",
+  "invocationKey": "fetchedat-fix:S000001:verify-build",
+  "status": "ok",
+  "result": {
+    "success": true
+  },
+  "startedAt": "2026-03-16T13:13:49.366Z",
+  "finishedAt": "2026-03-16T13:13:49.366Z",
+  "value": {
+    "success": true
+  }
+}
