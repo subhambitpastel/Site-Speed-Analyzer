@@ -4,6 +4,55 @@ This file tracks recent improvements and bug fixes. New entries are added at the
 
 ---
 
+### 26. Metric Definition Tooltips for FCP/LCP/TBT/CLS/TTI (2026-03-17)
+- **Bug:** Hovering over FCP, LCP, TBT, CLS, TTI metric abbreviations in MetricsPanel showed no definitions
+- **Root cause:** Metric abbreviations had no hover tooltips explaining what each metric measures
+- **Fix:** Added detailed definition tooltips for all 5 metrics with full name and plain-English explanation (e.g., "FCP — Time until the browser renders the first piece of content"), dashed underline on abbreviations to hint interactivity, reused shared glass-panel tooltip component for consistency with BUG-6/BUG-7
+- **Files modified:** src/components/MetricsPanel.tsx
+- **Verified by:** Build passes, visual QA confirms tooltips appear on hover with consistent styling
+
+### 25. Premium Tooltips in ScoreChart Bar Chart (2026-03-17)
+- **Bug:** Hovering over category labels (Performance, Accessibility, SEO, Best Practices) in the Score Overview horizontal bar chart showed no tooltip
+- **Root cause:** ScoreChart category labels had no hover information explaining what each score measures
+- **Fix:** Added glass-panel tooltips with info icons on all 4 category labels in the horizontal bar chart, reusing the same Tooltip component and styling from ResultsTable for visual consistency, with intelligent positioning to avoid bar overlap or container clipping
+- **Files modified:** src/components/ScoreChart.tsx
+- **Verified by:** Build passes, tooltips render correctly without overlapping bars
+
+### 24. Premium Tooltips in ResultsTable (2026-03-17)
+- **Bug:** Hovering over Performance, Accessibility, SEO, and Best Practices column headers/score labels in the results table showed nothing
+- **Root cause:** Score category labels in desktop headers, desktop row cells, and mobile card labels had no hover information
+- **Fix:** Added glass-panel tooltips with smooth fade-in animation (150-200ms), subtle shadow, rounded corners, and info icons (circle-i) next to each header. Created reusable Tooltip component with detailed descriptions for all 4 categories. Positioned intelligently to avoid overflow
+- **Files modified:** src/components/ResultsTable.tsx, src/components/Tooltip.tsx (new)
+- **Verified by:** Build passes, quality score 92/85
+
+### 23. Orbiting Ring Loader Animation (2026-03-17)
+- **Bug:** Loading animation during analysis was a basic spinner without visual polish
+- **Root cause:** LoadingSpinner used simple rotate animation without gradient arc or glow effects
+- **Fix:** Replaced with 96px SVG ring loader featuring gradient arc trail (sky-500 to transparent), bloom glow filter, progress-proportional stroke-dasharray that fills as analysis progresses, smooth continuous rotation via GPU-accelerated CSS keyframes, and centered progress percentage text inside the ring
+- **Files modified:** src/components/LoadingSpinner.tsx, src/app/globals.css
+- **Verified by:** Build passes, quality score 92/85
+
+### 22. Strategy Badge in Results Area (2026-03-17)
+- **Bug:** After analysis completes, no visible indicator showed whether results were for Desktop or Mobile
+- **Root cause:** Results section header had no strategy label or badge
+- **Fix:** Added gradient pill badge next to Results heading showing "Desktop Results" or "Mobile Results" with device icon (monitor/smartphone SVG), using app accent gradient for active strategy color, badge-swap animation on strategy change, updates dynamically when user switches strategy and re-runs
+- **Files modified:** src/app/page.tsx
+- **Verified by:** Build passes, quality score 92/85
+
+### 21. Strategy Toggle Repositioned Near Generate Button (2026-03-17)
+- **Bug:** Desktop/Mobile toggle was disconnected from the URL input and Generate Report button, breaking the natural UX flow
+- **Root cause:** Toggle was positioned too far from the primary action area, not visually grouped with input/generate workflow
+- **Fix:** Moved toggle inline with the Generate Report button row (left-aligned toggle, right-aligned button) for tight visual grouping. Ensured balanced layout on both mobile and desktop viewports using consistent spacing tokens from the existing design system
+- **Files modified:** src/app/page.tsx
+- **Verified by:** Build passes, responsive layout verified on mobile and desktop
+
+### 20. Premium Sliding Toggle Switch (2026-03-17)
+- **Bug:** Desktop/Mobile strategy toggle used pill-style buttons that didn't feel like a modern premium switch
+- **Root cause:** Original implementation used two discrete buttons with no sliding thumb animation or physical motion feel
+- **Fix:** Replaced pill buttons with iOS-style sliding toggle switch featuring a smooth sliding thumb/knob with subtle shadow, track color/gradient change on slide, spring-like cubic-bezier easing for physical satisfying motion, bold/white active label with muted inactive label, monitor/phone icons beside labels, disabled state (dimmed, non-interactive) while analysis is loading
+- **Files modified:** src/app/page.tsx
+- **Verified by:** Build passes, quality score 85/85
+
 ### 19. Navbar Overlapping Content Fixed (2026-03-17)
 - **Bug:** Navbar overlapped page content when scrolling
 - **Root cause:** Fixed navbar had no hide/show behavior and main content lacked proper top padding
