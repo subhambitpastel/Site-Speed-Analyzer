@@ -2,10 +2,13 @@
 
 import { useState, useRef, useCallback } from "react";
 import { parseFile, SUPPORTED_EXTENSIONS, SUPPORTED_MIME_TYPES } from "@/lib/fileParser";
+import StrategyToggle from "@/components/StrategyToggle";
 
 interface FileUploadProps {
   onURLsExtracted: (urls: string[]) => void;
   isLoading: boolean;
+  strategy: "mobile" | "desktop";
+  setStrategy: (s: "mobile" | "desktop") => void;
 }
 
 type State =
@@ -18,6 +21,8 @@ type State =
 export default function FileUpload({
   onURLsExtracted,
   isLoading,
+  strategy,
+  setStrategy,
 }: FileUploadProps) {
   const [state, setState] = useState<State>({ kind: "idle" });
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -224,6 +229,13 @@ export default function FileUpload({
         </div>
       )}
 
+      {/* Strategy toggle for idle/dragging states */}
+      {(state.kind === "idle" || state.kind === "dragging") && (
+        <div className="flex justify-center">
+          <StrategyToggle strategy={strategy} setStrategy={setStrategy} disabled={isLoading} />
+        </div>
+      )}
+
       {/* Error state */}
       {state.kind === "error" && (
         <div className="animate-fade-in-up rounded-xl border border-red-200 bg-red-50/80 px-4 py-3 text-sm backdrop-blur-sm dark:border-red-800/40 dark:bg-red-950/30">
@@ -305,6 +317,11 @@ export default function FileUpload({
                 ...and {state.urls.length - 10} more
               </p>
             )}
+          </div>
+
+          {/* Strategy toggle */}
+          <div className="flex items-center justify-center border-t border-[var(--border)] px-5 py-3">
+            <StrategyToggle strategy={strategy} setStrategy={setStrategy} disabled={isLoading} />
           </div>
 
           {/* Action buttons */}

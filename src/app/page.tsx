@@ -250,50 +250,6 @@ export default function Home() {
 
         {/* Input Section */}
         <div className="animate-float-in mx-auto w-full max-w-2xl" style={{ animationDelay: "250ms", animationFillMode: "backwards" }}>
-          {/* Strategy Toggle — pill-style sliding switch */}
-          <div className="mb-5 flex justify-center">
-            <div
-              className={`relative flex items-center rounded-full bg-[var(--surface-elevated)] p-1 ring-1 ring-[var(--border)] ${isLoading ? "pointer-events-none opacity-60" : ""}`}
-            >
-              {/* Sliding background indicator */}
-              <div
-                className={`absolute top-1 bottom-1 w-[calc(50%-4px)] rounded-full bg-gradient-to-r from-sky-500 to-cyan-500 shadow-md shadow-sky-500/20 transition-[left] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
-                  strategy === "desktop" ? "left-1" : "left-[calc(50%+3px)]"
-                }`}
-              />
-              <button
-                type="button"
-                onClick={() => setStrategy("desktop")}
-                disabled={isLoading}
-                className={`relative z-10 flex min-h-[44px] items-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold tracking-wide transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50 sm:min-h-0 sm:py-2 ${
-                  strategy === "desktop"
-                    ? "text-white"
-                    : "text-[var(--text-tertiary)] hover:text-[var(--text-secondary)]"
-                }`}
-              >
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z" />
-                </svg>
-                Desktop
-              </button>
-              <button
-                type="button"
-                onClick={() => setStrategy("mobile")}
-                disabled={isLoading}
-                className={`relative z-10 flex min-h-[44px] items-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold tracking-wide transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50 sm:min-h-0 sm:py-2 ${
-                  strategy === "mobile"
-                    ? "text-white"
-                    : "text-[var(--text-tertiary)] hover:text-[var(--text-secondary)]"
-                }`}
-              >
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
-                </svg>
-                Mobile
-              </button>
-            </div>
-          </div>
-
           {/* Input Mode Toggle */}
           <div className="mb-4 flex justify-center">
             <div className="flex items-center gap-1 rounded-full bg-[var(--surface-elevated)] p-1 ring-1 ring-[var(--border)]">
@@ -335,9 +291,9 @@ export default function Home() {
           </div>
 
           {inputMode === "url" ? (
-            <URLInput onSubmit={handleSubmit} isLoading={isLoading} />
+            <URLInput onSubmit={handleSubmit} isLoading={isLoading} strategy={strategy} setStrategy={setStrategy} />
           ) : (
-            <FileUpload key={inputMode} onURLsExtracted={handleSubmit} isLoading={isLoading} />
+            <FileUpload key={inputMode} onURLsExtracted={handleSubmit} isLoading={isLoading} strategy={strategy} setStrategy={setStrategy} />
           )}
         </div>
 

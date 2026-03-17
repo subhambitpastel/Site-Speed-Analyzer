@@ -2,13 +2,16 @@
 
 import { useState } from "react";
 import { sanitizeAndValidate } from "@/lib/urlValidator";
+import StrategyToggle from "@/components/StrategyToggle";
 
 interface URLInputProps {
   onSubmit: (urls: string[]) => void;
   isLoading: boolean;
+  strategy: "mobile" | "desktop";
+  setStrategy: (s: "mobile" | "desktop") => void;
 }
 
-export default function URLInput({ onSubmit, isLoading }: URLInputProps) {
+export default function URLInput({ onSubmit, isLoading, strategy, setStrategy }: URLInputProps) {
   const [input, setInput] = useState("");
   const [invalidURLs, setInvalidURLs] = useState<string[]>([]);
 
@@ -62,11 +65,14 @@ export default function URLInput({ onSubmit, isLoading }: URLInputProps) {
         </div>
       )}
 
-      <button
-        type="submit"
-        disabled={isLoading || input.trim().length === 0}
-        className="group relative inline-flex w-full items-center justify-center gap-2.5 overflow-hidden rounded-2xl bg-gradient-to-r from-sky-500 to-cyan-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-sky-500/30 hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-sky-500/30 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:shadow-none dark:from-sky-500 dark:to-cyan-400 dark:shadow-sky-500/15 dark:hover:shadow-sky-500/25"
-      >
+      {/* Strategy toggle + Generate button row */}
+      <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <StrategyToggle strategy={strategy} setStrategy={setStrategy} disabled={isLoading} />
+        <button
+          type="submit"
+          disabled={isLoading || input.trim().length === 0}
+          className="group relative inline-flex w-full items-center justify-center gap-2.5 overflow-hidden rounded-2xl bg-gradient-to-r from-sky-500 to-cyan-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-sky-500/30 hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-sky-500/30 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:shadow-none sm:w-auto dark:from-sky-500 dark:to-cyan-400 dark:shadow-sky-500/15 dark:hover:shadow-sky-500/25"
+        >
         {isLoading && (
           <svg
             className="h-4 w-4 animate-spin"
@@ -96,6 +102,7 @@ export default function URLInput({ onSubmit, isLoading }: URLInputProps) {
           </svg>
         )}
       </button>
+      </div>
     </form>
   );
 }
