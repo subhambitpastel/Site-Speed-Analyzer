@@ -44,30 +44,9 @@ export default function Home() {
   const resultsCacheRef = useRef<Map<string, LighthouseReport[]>>(new Map());
   const completedRef = useRef(0);
 
-  const [navHidden, setNavHidden] = useState(false);
-
   useEffect(() => {
     setDarkMode(document.documentElement.classList.contains("dark"));
     setMounted(true);
-  }, []);
-
-  // BUG-11: Hide navbar on scroll down, show on scroll up (with debounce threshold)
-  useEffect(() => {
-    let prevScrollY = window.scrollY;
-    const SCROLL_THRESHOLD = 10;
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      const delta = currentScrollY - prevScrollY;
-      if (Math.abs(delta) < SCROLL_THRESHOLD) return;
-      if (delta > 0 && currentScrollY > 60) {
-        setNavHidden(true);
-      } else if (delta < 0) {
-        setNavHidden(false);
-      }
-      prevScrollY = currentScrollY;
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -182,7 +161,7 @@ export default function Home() {
       <div className="atmosphere" />
 
       {/* Header */}
-      <header className={`glass-panel fixed top-0 left-0 right-0 z-40 border-b border-[var(--border)] transition-transform duration-300 ${navHidden ? "-translate-y-full" : "translate-y-0"}`}>
+      <header className="glass-panel border-b border-[var(--border)]">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-3 sm:px-8 sm:py-4">
           <div className="flex items-center gap-3.5">
             {/* Logo */}
@@ -224,7 +203,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-8 px-5 pt-20 pb-8 sm:gap-10 sm:px-8 sm:pt-24 sm:pb-12 lg:gap-14 lg:pt-28 lg:pb-16">
+      <main className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-8 px-5 pt-8 pb-8 sm:gap-10 sm:px-8 sm:pt-10 sm:pb-12 lg:gap-14 lg:pt-12 lg:pb-16">
         {/* Hero Section */}
         <section className="animate-float-in mx-auto w-full max-w-2xl text-center" style={{ animationDelay: "100ms", animationFillMode: "backwards" }}>
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-3.5 py-1.5 text-xs font-medium text-sky-700 dark:border-sky-800/50 dark:bg-sky-900/20 dark:text-sky-300">
