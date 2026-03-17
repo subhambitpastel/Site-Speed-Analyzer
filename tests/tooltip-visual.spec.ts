@@ -22,10 +22,10 @@ test.describe('Tooltip Hover - Headed Browser', () => {
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'test-results/01-table.png', fullPage: true });
 
-    // Find ALL cursor-help spans (these are our tooltip triggers)
-    const triggers = page.locator('span.cursor-help');
+    // Find VISIBLE cursor-help spans (these are our tooltip triggers)
+    const triggers = page.locator('span.cursor-help:visible');
     const triggerCount = await triggers.count();
-    console.log(`Found ${triggerCount} tooltip triggers`);
+    console.log(`Found ${triggerCount} visible tooltip triggers`);
 
     // Hover each trigger and check for portal tooltip
     for (let i = 0; i < Math.min(triggerCount, 4); i++) {

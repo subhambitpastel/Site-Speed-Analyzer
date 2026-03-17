@@ -101,8 +101,6 @@ export default function Tooltip({ text, children, className = "" }: TooltipProps
       }`}
     >
       {text}
-      {/* Arrow pointing up toward trigger */}
-      <span className="absolute left-1/2 -translate-x-1/2 -top-[7px] border-[6px] border-transparent border-b-gray-900/90 dark:border-b-white/95" />
     </div>,
     document.body
   ) : null;
