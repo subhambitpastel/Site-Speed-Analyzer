@@ -298,11 +298,13 @@ body {
   animation: badge-swap 250ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Reduced motion */
+/* Reduced motion — only affect decorative animations, preserve functional ones */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  .animate-float-in,
+  .animate-fade-in-up,
+  .animate-stagger-fade-in,
+  .animate-badge-swap {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
   }
 }

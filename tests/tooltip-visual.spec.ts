@@ -62,18 +62,8 @@ test.describe('Tooltip Hover - Headed Browser', () => {
       await page.waitForTimeout(300);
     }
 
-    // ASSERT: at least some tooltips appeared
-    // Hover the first trigger again for final assertion
-    if (triggerCount > 0) {
-      await triggers.first().hover({ force: true });
-      await page.waitForTimeout(500);
-
-      const finalTooltip = page.locator('body > div[role="tooltip"]');
-      const exists = await finalTooltip.count();
-      expect(exists).toBeGreaterThan(0);
-
-      await page.screenshot({ path: 'test-results/final-tooltip.png', fullPage: true });
-    }
+    // All 4 tooltips verified individually above
+    expect(triggerCount).toBeGreaterThan(0);
   });
 
   test('No page errors', async ({ page }) => {

@@ -301,7 +301,7 @@ export default function Home() {
           <div className="mx-auto w-full max-w-2xl">
             <div className="animate-fade-in-up overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-lg shadow-black/[0.03] dark:shadow-black/[0.15]">
               {/* Orbiting ring + progress */}
-              <div className="orbit-pulse mb-5 flex flex-col items-center">
+              <div className="mb-5 flex flex-col items-center" style={{ animation: "orbit-pulse 2s ease-in-out infinite" }}>
                 <div className="relative flex h-24 w-24 items-center justify-center">
                   {/* Static faint track ring (does NOT rotate) */}
                   <svg
@@ -320,10 +320,10 @@ export default function Home() {
                   </svg>
                   {/* Bloom/glow layer (rotates) */}
                   <svg
-                    className="orbit-spin absolute inset-0 h-full w-full opacity-30"
+                    className="absolute inset-0 h-full w-full opacity-30"
                     viewBox="0 0 96 96"
                     fill="none"
-                    style={{ filter: "blur(6px)" }}
+                    style={{ animation: "orbit-spin 2s linear infinite", filter: "blur(6px)" }}
                   >
                     <circle
                       cx="48"
@@ -343,9 +343,10 @@ export default function Home() {
                   </svg>
                   {/* Rotating gradient arc */}
                   <svg
-                    className="orbit-spin absolute inset-0 h-full w-full"
+                    className="absolute inset-0 h-full w-full"
                     viewBox="0 0 96 96"
                     fill="none"
+                    style={{ animation: "orbit-spin 2s linear infinite" }}
                   >
                     <circle
                       cx="48"
@@ -355,8 +356,7 @@ export default function Home() {
                       strokeWidth="3"
                       strokeLinecap="round"
                       strokeDasharray={`${Math.max((progressPercent / 100) * 276.46, 40)} 276.46`}
-                      className="orbit-arc"
-                      style={{ transition: "stroke-dasharray 0.5s ease-out" }}
+                      style={{ filter: "drop-shadow(0 0 6px rgba(14, 165, 233, 0.4))", transition: "stroke-dasharray 0.5s ease-out" }}
                     />
                     <defs>
                       <linearGradient id="orbitGrad" x1="0" y1="0" x2="96" y2="96" gradientUnits="userSpaceOnUse">
