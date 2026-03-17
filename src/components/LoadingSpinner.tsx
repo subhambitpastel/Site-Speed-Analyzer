@@ -15,6 +15,8 @@ export default function LoadingSpinner({ size = "md" }: LoadingSpinnerProps) {
   const center = s.dim / 2;
   const radius = (s.dim - s.stroke) / 2;
   const circumference = 2 * Math.PI * radius;
+  const gapLength = circumference * 0.25;
+  const arcLength = circumference - gapLength;
 
   return (
     <svg
@@ -22,7 +24,7 @@ export default function LoadingSpinner({ size = "md" }: LoadingSpinnerProps) {
       height={s.dim}
       viewBox={`0 0 ${s.dim} ${s.dim}`}
       aria-label="Loading"
-      className="inline-block animate-spin"
+      className="inline-block spinner-rotate"
       style={{ transformOrigin: "center" }}
     >
       {/* Track */}
@@ -35,7 +37,7 @@ export default function LoadingSpinner({ size = "md" }: LoadingSpinnerProps) {
         strokeWidth={s.stroke}
         className="text-[var(--surface-elevated)]"
       />
-      {/* Arc */}
+      {/* Smooth circular motion arc with elastic dash */}
       <circle
         cx={center}
         cy={center}
@@ -44,8 +46,8 @@ export default function LoadingSpinner({ size = "md" }: LoadingSpinnerProps) {
         stroke="currentColor"
         strokeWidth={s.stroke}
         strokeLinecap="round"
-        strokeDasharray={`${circumference * 0.25} ${circumference * 0.75}`}
-        className="text-[var(--accent)]"
+        className="text-[var(--accent)] spinner-dash"
+        style={{ transformOrigin: "center" }}
       />
     </svg>
   );

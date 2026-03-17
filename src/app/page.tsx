@@ -45,9 +45,30 @@ export default function Home() {
   const resultsCacheRef = useRef<Map<string, LighthouseReport[]>>(new Map());
   const completedRef = useRef(0);
 
+  const [navHidden, setNavHidden] = useState(false);
+
   useEffect(() => {
     setDarkMode(document.documentElement.classList.contains("dark"));
     setMounted(true);
+  }, []);
+
+  // BUG-11: Hide navbar on scroll down, show on scroll up (with debounce threshold)
+  useEffect(() => {
+    let prevScrollY = window.scrollY;
+    const SCROLL_THRESHOLD = 10;
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const delta = currentScrollY - prevScrollY;
+      if (Math.abs(delta) < SCROLL_THRESHOLD) return;
+      if (delta > 0 && currentScrollY > 60) {
+        setNavHidden(true);
+      } else if (delta < 0) {
+        setNavHidden(false);
+      }
+      prevScrollY = currentScrollY;
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -162,7 +183,7 @@ export default function Home() {
       <div className="atmosphere" />
 
       {/* Header */}
-      <header className="glass-panel sticky top-0 z-40 border-b border-[var(--border)]">
+      <header className={`glass-panel fixed top-0 left-0 right-0 z-40 border-b border-[var(--border)] transition-transform duration-300 ${navHidden ? "-translate-y-full" : "translate-y-0"}`}>
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-3 sm:px-8 sm:py-4">
           <div className="flex items-center gap-3.5">
             {/* Logo */}
@@ -204,7 +225,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-8 px-5 py-8 sm:gap-10 sm:px-8 sm:py-12 lg:gap-14 lg:py-16">
+      <main className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-8 px-5 pt-20 pb-8 sm:gap-10 sm:px-8 sm:pt-24 sm:pb-12 lg:gap-14 lg:pt-28 lg:pb-16">
         {/* Hero Section */}
         <section className="animate-float-in mx-auto w-full max-w-2xl text-center" style={{ animationDelay: "100ms", animationFillMode: "backwards" }}>
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-3.5 py-1.5 text-xs font-medium text-sky-700 dark:border-sky-800/50 dark:bg-sky-900/20 dark:text-sky-300">
@@ -371,9 +392,24 @@ export default function Home() {
           <section className="w-full animate-fade-in-up">
             <div className="mb-5 flex flex-wrap items-center justify-between gap-4">
               <div>
-                <h3 className="text-xl font-bold text-[var(--foreground)]">
-                  Results
-                </h3>
+                <div className="flex items-center gap-3">
+                  <h3 className="text-xl font-bold text-[var(--foreground)]">
+                    Results
+                  </h3>
+                  {/* BUG-4: Strategy indicator badge */}
+                  <span key={strategy} className="animate-badge-swap inline-flex items-center gap-1.5 rounded-full border border-sky-200 bg-sky-50 px-2.5 py-1 text-xs font-semibold text-sky-700 dark:border-sky-800/50 dark:bg-sky-900/20 dark:text-sky-300">
+                    {strategy === "desktop" ? (
+                      <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z" />
+                      </svg>
+                    ) : (
+                      <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                      </svg>
+                    )}
+                    {strategy === "desktop" ? "Desktop" : "Mobile"}
+                  </span>
+                </div>
                 <p className="mt-0.5 text-sm text-[var(--text-tertiary)]">
                   {results.filter((r) => r?.fetchedAt).length} of {results.length} complete
                 </p>
