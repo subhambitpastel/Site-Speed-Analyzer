@@ -6,6 +6,14 @@ import ScoreBadge from "./ScoreBadge";
 import MetricsPanel from "./MetricsPanel";
 import ScoreChart from "./ScoreChart";
 import LoadingSpinner from "./LoadingSpinner";
+import Tooltip from "./Tooltip";
+
+const SCORE_TOOLTIPS: Record<string, string> = {
+  performance: "Measures page load speed, interactivity, and visual stability",
+  accessibility: "Measures how accessible your page is to users with disabilities",
+  seo: "Measures how well your page is optimized for search engine results",
+  bestPractices: "Measures adherence to web development best practices and security",
+};
 
 type SortKey = "url" | "performance" | "accessibility" | "seo" | "bestPractices";
 type SortDir = "asc" | "desc";
@@ -168,19 +176,27 @@ function SuccessCard({ report, index }: { report: LighthouseReport; index: numbe
           </p>
           <div className="mt-2.5 grid grid-cols-4 gap-2">
             <div className="flex flex-col items-center">
-              <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">Perf</span>
+              <Tooltip text={SCORE_TOOLTIPS.performance}>
+                <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">Perf</span>
+              </Tooltip>
               <ScoreBadge score={report.scores.performance} />
             </div>
             <div className="flex flex-col items-center">
-              <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">A11y</span>
+              <Tooltip text={SCORE_TOOLTIPS.accessibility}>
+                <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">A11y</span>
+              </Tooltip>
               <ScoreBadge score={report.scores.accessibility} />
             </div>
             <div className="flex flex-col items-center">
-              <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">SEO</span>
+              <Tooltip text={SCORE_TOOLTIPS.seo}>
+                <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">SEO</span>
+              </Tooltip>
               <ScoreBadge score={report.scores.seo} />
             </div>
             <div className="flex flex-col items-center">
-              <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">BP</span>
+              <Tooltip text={SCORE_TOOLTIPS.bestPractices}>
+                <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">BP</span>
+              </Tooltip>
               <ScoreBadge score={report.scores.bestPractices} />
             </div>
           </div>
@@ -235,22 +251,30 @@ function SuccessRow({ report, index }: { report: LighthouseReport; index: number
         </td>
         <td className="px-3 py-3.5 md:px-5 md:py-4">
           <div className="flex justify-center">
-            <ScoreBadge score={report.scores.performance} />
+            <Tooltip text={SCORE_TOOLTIPS.performance}>
+              <ScoreBadge score={report.scores.performance} />
+            </Tooltip>
           </div>
         </td>
         <td className="px-3 py-3.5 md:px-5 md:py-4">
           <div className="flex justify-center">
-            <ScoreBadge score={report.scores.accessibility} />
+            <Tooltip text={SCORE_TOOLTIPS.accessibility}>
+              <ScoreBadge score={report.scores.accessibility} />
+            </Tooltip>
           </div>
         </td>
         <td className="px-3 py-3.5 md:px-5 md:py-4">
           <div className="flex justify-center">
-            <ScoreBadge score={report.scores.seo} />
+            <Tooltip text={SCORE_TOOLTIPS.seo}>
+              <ScoreBadge score={report.scores.seo} />
+            </Tooltip>
           </div>
         </td>
         <td className="px-3 py-3.5 md:px-5 md:py-4">
           <div className="flex justify-center">
-            <ScoreBadge score={report.scores.bestPractices} />
+            <Tooltip text={SCORE_TOOLTIPS.bestPractices}>
+              <ScoreBadge score={report.scores.bestPractices} />
+            </Tooltip>
           </div>
         </td>
       </tr>
@@ -353,8 +377,17 @@ export default function ResultsTable({ results }: ResultsTableProps) {
                   onClick={() => handleSort(col.key)}
                   className={`cursor-pointer select-none px-3 py-3.5 text-[11px] font-bold uppercase tracking-widest text-[var(--text-tertiary)] transition-colors duration-200 hover:text-[var(--text-secondary)] md:px-5 md:py-4 ${col.align}`}
                 >
-                  <span className="md:hidden">{col.shortLabel}</span>
-                  <span className="hidden md:inline">{col.label}</span>
+                  {SCORE_TOOLTIPS[col.key] ? (
+                    <Tooltip text={SCORE_TOOLTIPS[col.key]}>
+                      <span className="md:hidden">{col.shortLabel}</span>
+                      <span className="hidden md:inline">{col.label}</span>
+                    </Tooltip>
+                  ) : (
+                    <>
+                      <span className="md:hidden">{col.shortLabel}</span>
+                      <span className="hidden md:inline">{col.label}</span>
+                    </>
+                  )}
                   <SortIcon
                     active={sortKey === col.key}
                     direction={sortKey === col.key ? sortDir : "desc"}

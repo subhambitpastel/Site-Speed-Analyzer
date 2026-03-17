@@ -1,6 +1,14 @@
 "use client";
 
 import type { LighthouseReport } from "@/types/report";
+import Tooltip from "./Tooltip";
+
+const SCORE_TOOLTIPS: Record<string, string> = {
+  performance: "Measures page load speed, interactivity, and visual stability",
+  accessibility: "Measures how accessible your page is to users with disabilities",
+  seo: "Measures how well your page is optimized for search engine results",
+  bestPractices: "Measures adherence to web development best practices and security",
+};
 
 interface ScoreChartProps {
   scores: LighthouseReport["scores"];
@@ -32,12 +40,14 @@ export default function ScoreChart({ scores }: ScoreChartProps) {
         const score = scores[cat.key];
         return (
           <div key={cat.key} className="flex items-center gap-3">
-            <span className="flex w-24 items-center gap-2 text-xs font-medium text-[var(--text-secondary)] shrink-0 sm:w-32">
-              <svg className="h-3.5 w-3.5 text-[var(--text-tertiary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d={cat.icon} />
-              </svg>
-              {cat.label}
-            </span>
+            <Tooltip text={SCORE_TOOLTIPS[cat.key]} className="w-24 shrink-0 sm:w-32">
+              <span className="flex w-full items-center gap-2 text-xs font-medium text-[var(--text-secondary)]">
+                <svg className="h-3.5 w-3.5 text-[var(--text-tertiary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d={cat.icon} />
+                </svg>
+                {cat.label}
+              </span>
+            </Tooltip>
             <div className="relative h-2.5 flex-1 overflow-hidden rounded-full bg-[var(--surface-elevated)]">
               <div
                 className="absolute inset-y-0 left-0 rounded-full transition-all duration-700 ease-out"
