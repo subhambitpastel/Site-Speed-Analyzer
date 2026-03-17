@@ -221,8 +221,11 @@ export default function Home() {
             Analyzer
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-[var(--text-secondary)] sm:text-lg">
-            Analyze multiple URLs for Desktop & Mobile — get Lighthouse scores
-            for performance, accessibility, SEO, and best practices in one go.
+            Analyze multiple URLs for{" "}
+            <span className="font-semibold text-[var(--foreground)] transition-colors duration-300">
+              {strategy === "desktop" ? "Desktop" : "Mobile"}
+            </span>{" "}
+            — get Lighthouse scores for performance, accessibility, SEO, and best practices in one go.
           </p>
         </section>
 
