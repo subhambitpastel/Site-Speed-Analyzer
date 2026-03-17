@@ -14,7 +14,7 @@ export default function Tooltip({ text, children, className = "" }: TooltipProps
       {children}
       <span
         role="tooltip"
-        className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 whitespace-normal rounded-md bg-gray-900/95 dark:bg-gray-100/95 px-3 py-2 text-xs font-normal normal-case tracking-normal text-white dark:text-gray-900 opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100 max-w-xs w-max"
+        className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 scale-95 whitespace-normal rounded-md bg-gray-900/95 dark:bg-gray-100/95 px-3 py-2 text-xs font-normal normal-case tracking-normal text-white dark:text-gray-900 opacity-0 shadow-lg transition-all duration-200 delay-150 group-hover:scale-100 group-hover:opacity-100 group-focus-within:scale-100 group-focus-within:opacity-100 max-w-xs w-max"
       >
         {text}
         {/* Arrow */}

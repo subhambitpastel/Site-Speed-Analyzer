@@ -236,14 +236,15 @@ export default function Home() {
             Powered by Google PageSpeed Insights
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-[var(--foreground)] sm:text-4xl lg:text-5xl">
-            Analyze your{" "}
+            Bulk{" "}
             <span className="bg-gradient-to-r from-sky-500 via-cyan-400 to-teal-400 bg-clip-text text-transparent dark:from-sky-400 dark:via-cyan-300 dark:to-teal-300">
-              websites
-            </span>
+              Site Speed
+            </span>{" "}
+            Analyzer
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-[var(--text-secondary)] sm:text-lg">
-            Enter URLs below to generate Lighthouse performance, accessibility,
-            SEO, and best practices reports — all at once.
+            Enter multiple URLs to generate comprehensive Lighthouse reports for performance,
+            accessibility, SEO, and best practices — instantly.
           </p>
         </section>
 
@@ -256,7 +257,7 @@ export default function Home() {
             >
               {/* Sliding background indicator */}
               <div
-                className={`absolute top-1 bottom-1 w-[calc(50%-4px)] rounded-full bg-gradient-to-r from-sky-500 to-cyan-500 shadow-md shadow-sky-500/20 transition-all duration-300 ease-in-out ${
+                className={`absolute top-1 bottom-1 w-[calc(50%-4px)] rounded-full bg-gradient-to-r from-sky-500 to-cyan-500 shadow-md shadow-sky-500/20 transition-[left] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
                   strategy === "desktop" ? "left-1" : "left-[calc(50%+3px)]"
                 }`}
               />

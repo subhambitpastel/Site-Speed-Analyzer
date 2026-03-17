@@ -46,6 +46,8 @@ export default function LoadingSpinner({ size = "md" }: LoadingSpinnerProps) {
         stroke="currentColor"
         strokeWidth={s.stroke}
         strokeLinecap="round"
+        strokeDasharray="1 150"
+        strokeDashoffset={0}
         className="text-[var(--accent)] spinner-dash"
         style={{ transformOrigin: "center" }}
       />

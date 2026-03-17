@@ -5,13 +5,13 @@ export default defineConfig({
   timeout: 120000,
   retries: 0,
   use: {
-    baseURL: 'http://localhost:3000',
+    baseURL: 'http://localhost:3001',
     headless: true,
   },
   webServer: {
-    command: 'npm run dev',
-    port: 3000,
+    command: 'npx next dev -p 3001',
+    port: 3001,
     reuseExistingServer: true,
-    timeout: 30000,
+    timeout: 60000,
   },
 });
