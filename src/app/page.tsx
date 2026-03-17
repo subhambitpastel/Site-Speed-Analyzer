@@ -303,12 +303,27 @@ export default function Home() {
               {/* Orbiting ring + progress */}
               <div className="orbit-pulse mb-5 flex flex-col items-center">
                 <div className="relative flex h-24 w-24 items-center justify-center">
-                  {/* Bloom/glow layer */}
+                  {/* Static faint track ring (does NOT rotate) */}
                   <svg
-                    className="orbit-spin absolute inset-0 h-full w-full opacity-40"
+                    className="absolute inset-0 h-full w-full"
                     viewBox="0 0 96 96"
                     fill="none"
-                    style={{ filter: "blur(8px)" }}
+                  >
+                    <circle
+                      cx="48"
+                      cy="48"
+                      r="44"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      className="text-[var(--foreground)] opacity-[0.08]"
+                    />
+                  </svg>
+                  {/* Bloom/glow layer (rotates) */}
+                  <svg
+                    className="orbit-spin absolute inset-0 h-full w-full opacity-30"
+                    viewBox="0 0 96 96"
+                    fill="none"
+                    style={{ filter: "blur(6px)" }}
                   >
                     <circle
                       cx="48"
@@ -317,31 +332,21 @@ export default function Home() {
                       stroke="url(#orbitGradBloom)"
                       strokeWidth="5"
                       strokeLinecap="round"
-                      strokeDasharray={`${Math.max((progressPercent / 100) * 276.46, 13.82)} 276.46`}
+                      strokeDasharray={`${Math.max((progressPercent / 100) * 276.46, 40)} 276.46`}
                     />
                     <defs>
                       <linearGradient id="orbitGradBloom" x1="0" y1="0" x2="96" y2="96" gradientUnits="userSpaceOnUse">
                         <stop stopColor="#0ea5e9" />
-                        <stop offset="1" stopColor="#22d3ee" />
+                        <stop offset="1" stopColor="transparent" />
                       </linearGradient>
                     </defs>
                   </svg>
-                  {/* SVG orbiting ring */}
+                  {/* Rotating gradient arc */}
                   <svg
                     className="orbit-spin absolute inset-0 h-full w-full"
                     viewBox="0 0 96 96"
                     fill="none"
                   >
-                    {/* Faint track */}
-                    <circle
-                      cx="48"
-                      cy="48"
-                      r="44"
-                      stroke="currentColor"
-                      strokeWidth="3"
-                      className="text-[var(--foreground)] opacity-10"
-                    />
-                    {/* Progress-proportional gradient arc */}
                     <circle
                       cx="48"
                       cy="48"
@@ -349,18 +354,19 @@ export default function Home() {
                       stroke="url(#orbitGrad)"
                       strokeWidth="3"
                       strokeLinecap="round"
-                      strokeDasharray={`${Math.max((progressPercent / 100) * 276.46, 13.82)} 276.46`}
+                      strokeDasharray={`${Math.max((progressPercent / 100) * 276.46, 40)} 276.46`}
                       className="orbit-arc"
                       style={{ transition: "stroke-dasharray 0.5s ease-out" }}
                     />
                     <defs>
                       <linearGradient id="orbitGrad" x1="0" y1="0" x2="96" y2="96" gradientUnits="userSpaceOnUse">
                         <stop stopColor="#0ea5e9" />
-                        <stop offset="1" stopColor="#22d3ee" />
+                        <stop offset="0.7" stopColor="#22d3ee" />
+                        <stop offset="1" stopColor="transparent" />
                       </linearGradient>
                     </defs>
                   </svg>
-                  {/* Centered text */}
+                  {/* Centered percentage text */}
                   <span className="relative text-2xl font-bold tabular-nums text-[var(--foreground)]">
                     {progressPercent}%
                   </span>

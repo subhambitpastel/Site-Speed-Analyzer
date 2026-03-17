@@ -255,34 +255,22 @@ function SuccessRow({ report, index }: { report: LighthouseReport; index: number
         </td>
         <td className="px-3 py-3.5 md:px-5 md:py-4">
           <div className="flex justify-center">
-            <Tooltip text={SCORE_TOOLTIPS.performance}>
-              <ScoreBadge score={report.scores.performance} />
-              <InfoIcon />
-            </Tooltip>
+            <ScoreBadge score={report.scores.performance} />
           </div>
         </td>
         <td className="px-3 py-3.5 md:px-5 md:py-4">
           <div className="flex justify-center">
-            <Tooltip text={SCORE_TOOLTIPS.accessibility}>
-              <ScoreBadge score={report.scores.accessibility} />
-              <InfoIcon />
-            </Tooltip>
+            <ScoreBadge score={report.scores.accessibility} />
           </div>
         </td>
         <td className="px-3 py-3.5 md:px-5 md:py-4">
           <div className="flex justify-center">
-            <Tooltip text={SCORE_TOOLTIPS.seo}>
-              <ScoreBadge score={report.scores.seo} />
-              <InfoIcon />
-            </Tooltip>
+            <ScoreBadge score={report.scores.seo} />
           </div>
         </td>
         <td className="px-3 py-3.5 md:px-5 md:py-4">
           <div className="flex justify-center">
-            <Tooltip text={SCORE_TOOLTIPS.bestPractices}>
-              <ScoreBadge score={report.scores.bestPractices} />
-              <InfoIcon />
-            </Tooltip>
+            <ScoreBadge score={report.scores.bestPractices} />
           </div>
         </td>
       </tr>
