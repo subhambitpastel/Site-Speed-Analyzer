@@ -204,7 +204,7 @@ body {
 /* Glow card effect */
 .glow-card {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .glow-card::after {
