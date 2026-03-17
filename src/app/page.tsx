@@ -221,8 +221,8 @@ export default function Home() {
             Analyzer
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-[var(--text-secondary)] sm:text-lg">
-            Enter multiple URLs to generate comprehensive Lighthouse reports for performance,
-            accessibility, SEO, and best practices — instantly.
+            Analyze multiple URLs for Desktop & Mobile — get Lighthouse scores
+            for performance, accessibility, SEO, and best practices in one go.
           </p>
         </section>
 
