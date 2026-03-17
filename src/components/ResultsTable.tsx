@@ -176,31 +176,19 @@ function SuccessCard({ report, index }: { report: LighthouseReport; index: numbe
           </p>
           <div className="mt-2.5 grid grid-cols-4 gap-2">
             <div className="flex flex-col items-center">
-              <Tooltip text={SCORE_TOOLTIPS.performance}>
-                <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">Perf</span>
-                <InfoIcon />
-              </Tooltip>
+              <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">Perf</span>
               <ScoreBadge score={report.scores.performance} />
             </div>
             <div className="flex flex-col items-center">
-              <Tooltip text={SCORE_TOOLTIPS.accessibility}>
-                <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">A11y</span>
-                <InfoIcon />
-              </Tooltip>
+              <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">A11y</span>
               <ScoreBadge score={report.scores.accessibility} />
             </div>
             <div className="flex flex-col items-center">
-              <Tooltip text={SCORE_TOOLTIPS.seo}>
-                <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">SEO</span>
-                <InfoIcon />
-              </Tooltip>
+              <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">SEO</span>
               <ScoreBadge score={report.scores.seo} />
             </div>
             <div className="flex flex-col items-center">
-              <Tooltip text={SCORE_TOOLTIPS.bestPractices}>
-                <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">BP</span>
-                <InfoIcon />
-              </Tooltip>
+              <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">BP</span>
               <ScoreBadge score={report.scores.bestPractices} />
             </div>
           </div>
