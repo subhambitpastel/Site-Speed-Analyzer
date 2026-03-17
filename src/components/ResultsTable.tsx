@@ -297,7 +297,7 @@ function SuccessRow({ report, index }: { report: LighthouseReport; index: number
                 <ScoreChart scores={report.scores} />
               </div>
               <div className="hidden lg:block w-px bg-[var(--border)]" />
-              <div className="min-w-0 overflow-hidden">
+              <div className="min-w-0 overflow-visible">
                 <p className="mb-3 text-xs font-bold uppercase tracking-widest text-[var(--text-tertiary)]">
                   Core Web Vitals
                 </p>
@@ -361,7 +361,7 @@ export default function ResultsTable({ results }: ResultsTableProps) {
   if (results.length === 0) return null;
 
   return (
-    <div className="overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] shadow-lg shadow-black/[0.03] dark:shadow-black/[0.15]">
+    <div className="overflow-visible rounded-2xl border border-[var(--border)] bg-[var(--surface)] shadow-lg shadow-black/[0.03] dark:shadow-black/[0.15]">
       {/* Mobile card view */}
       <div className="sm:hidden">
         {sortedResults.map((report, index) => {

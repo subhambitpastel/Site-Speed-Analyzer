@@ -23,7 +23,7 @@ interface MetricCardProps {
 
 function MetricCard({ name, abbreviation, displayValue }: MetricCardProps) {
   return (
-    <div className="glow-card min-w-0 overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)] px-3 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/[0.03] dark:hover:shadow-black/[0.15] sm:px-4 sm:py-4">
+    <div className="glow-card min-w-0 overflow-visible rounded-xl border border-[var(--border)] bg-[var(--surface)] px-3 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/[0.03] dark:hover:shadow-black/[0.15] sm:px-4 sm:py-4">
       <Tooltip text={METRIC_TOOLTIPS[abbreviation] || abbreviation}>
         <p className="truncate text-[10px] font-bold uppercase tracking-widest text-[var(--accent)] border-b border-dashed border-current">
           {abbreviation}
