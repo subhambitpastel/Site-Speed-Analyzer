@@ -516,17 +516,49 @@ export function exportDOCX(reports: LighthouseReport[]): void {
           // Scores table
           scoresTable,
 
-          // Score color legend
+          // Score color legend with colored indicators
           new Paragraph({
             children: [
               new TextRun({
-                text: "Scores: Green \u226590 (Good)  |  Orange \u226550 (Needs Work)  |  Red <50 (Poor)",
+                text: "Score Legend:  ",
+                color: "4B5563",
+                size: 18,
+                bold: true,
+              }),
+              new TextRun({
+                text: "\u25CF Green \u226590 (Good)",
+                color: "008000",
+                size: 18,
+                bold: true,
+              }),
+              new TextRun({
+                text: "  |  ",
                 color: "6B7280",
                 size: 18,
-                italics: true,
+              }),
+              new TextRun({
+                text: "\u25CF Orange \u226550 (Needs Work)",
+                color: "D97706",
+                size: 18,
+                bold: true,
+              }),
+              new TextRun({
+                text: "  |  ",
+                color: "6B7280",
+                size: 18,
+              }),
+              new TextRun({
+                text: "\u25CF Red <50 (Poor)",
+                color: "DC2626",
+                size: 18,
+                bold: true,
               }),
             ],
             spacing: { before: 200, after: 100 },
+            border: {
+              top: { style: BorderStyle.SINGLE, size: 1, color: "D1D5DB" },
+              bottom: { style: BorderStyle.SINGLE, size: 1, color: "D1D5DB" },
+            },
           }),
 
           // Page break before Core Web Vitals
