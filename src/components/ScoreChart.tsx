@@ -1,13 +1,13 @@
 "use client";
 
 import type { LighthouseReport } from "@/types/report";
-import Tooltip from "./Tooltip";
+import Tooltip, { InfoIcon } from "./Tooltip";
 
 const SCORE_TOOLTIPS: Record<string, string> = {
-  performance: "Measures page load speed, interactivity, and visual stability",
-  accessibility: "Measures how accessible your page is to users with disabilities",
-  seo: "Measures how well your page is optimized for search engine results",
-  bestPractices: "Measures adherence to web development best practices and security",
+  performance: "Measures how quickly page content loads and becomes interactive. Includes metrics like FCP, LCP, TBT, CLS, and Speed Index.",
+  accessibility: "Evaluates how accessible your page is to users with disabilities. Checks color contrast, ARIA attributes, keyboard navigation, and semantic HTML.",
+  seo: "Checks if the page follows search engine optimization best practices. Includes meta tags, crawlability, structured data, and mobile-friendliness.",
+  bestPractices: "Audits general web development best practices including HTTPS usage, image aspect ratios, console errors, and deprecated APIs.",
 };
 
 interface ScoreChartProps {
@@ -47,6 +47,7 @@ export default function ScoreChart({ scores }: ScoreChartProps) {
                 </svg>
                 {cat.label}
               </span>
+              <InfoIcon />
             </Tooltip>
             <div className="relative h-2.5 flex-1 overflow-hidden rounded-full bg-[var(--surface-elevated)]">
               <div

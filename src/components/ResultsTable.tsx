@@ -6,13 +6,13 @@ import ScoreBadge from "./ScoreBadge";
 import MetricsPanel from "./MetricsPanel";
 import ScoreChart from "./ScoreChart";
 import LoadingSpinner from "./LoadingSpinner";
-import Tooltip from "./Tooltip";
+import Tooltip, { InfoIcon } from "./Tooltip";
 
 const SCORE_TOOLTIPS: Record<string, string> = {
-  performance: "Measures page load speed, interactivity, and visual stability",
-  accessibility: "Measures how accessible your page is to users with disabilities",
-  seo: "Measures how well your page is optimized for search engine results",
-  bestPractices: "Measures adherence to web development best practices and security",
+  performance: "Measures how quickly page content loads and becomes interactive. Includes metrics like FCP, LCP, TBT, CLS, and Speed Index.",
+  accessibility: "Evaluates how accessible your page is to users with disabilities. Checks color contrast, ARIA attributes, keyboard navigation, and semantic HTML.",
+  seo: "Checks if the page follows search engine optimization best practices. Includes meta tags, crawlability, structured data, and mobile-friendliness.",
+  bestPractices: "Audits general web development best practices including HTTPS usage, image aspect ratios, console errors, and deprecated APIs.",
 };
 
 type SortKey = "url" | "performance" | "accessibility" | "seo" | "bestPractices";
@@ -178,24 +178,28 @@ function SuccessCard({ report, index }: { report: LighthouseReport; index: numbe
             <div className="flex flex-col items-center">
               <Tooltip text={SCORE_TOOLTIPS.performance}>
                 <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">Perf</span>
+                <InfoIcon />
               </Tooltip>
               <ScoreBadge score={report.scores.performance} />
             </div>
             <div className="flex flex-col items-center">
               <Tooltip text={SCORE_TOOLTIPS.accessibility}>
                 <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">A11y</span>
+                <InfoIcon />
               </Tooltip>
               <ScoreBadge score={report.scores.accessibility} />
             </div>
             <div className="flex flex-col items-center">
               <Tooltip text={SCORE_TOOLTIPS.seo}>
                 <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">SEO</span>
+                <InfoIcon />
               </Tooltip>
               <ScoreBadge score={report.scores.seo} />
             </div>
             <div className="flex flex-col items-center">
               <Tooltip text={SCORE_TOOLTIPS.bestPractices}>
                 <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">BP</span>
+                <InfoIcon />
               </Tooltip>
               <ScoreBadge score={report.scores.bestPractices} />
             </div>
@@ -253,6 +257,7 @@ function SuccessRow({ report, index }: { report: LighthouseReport; index: number
           <div className="flex justify-center">
             <Tooltip text={SCORE_TOOLTIPS.performance}>
               <ScoreBadge score={report.scores.performance} />
+              <InfoIcon />
             </Tooltip>
           </div>
         </td>
@@ -260,6 +265,7 @@ function SuccessRow({ report, index }: { report: LighthouseReport; index: number
           <div className="flex justify-center">
             <Tooltip text={SCORE_TOOLTIPS.accessibility}>
               <ScoreBadge score={report.scores.accessibility} />
+              <InfoIcon />
             </Tooltip>
           </div>
         </td>
@@ -267,6 +273,7 @@ function SuccessRow({ report, index }: { report: LighthouseReport; index: number
           <div className="flex justify-center">
             <Tooltip text={SCORE_TOOLTIPS.seo}>
               <ScoreBadge score={report.scores.seo} />
+              <InfoIcon />
             </Tooltip>
           </div>
         </td>
@@ -274,6 +281,7 @@ function SuccessRow({ report, index }: { report: LighthouseReport; index: number
           <div className="flex justify-center">
             <Tooltip text={SCORE_TOOLTIPS.bestPractices}>
               <ScoreBadge score={report.scores.bestPractices} />
+              <InfoIcon />
             </Tooltip>
           </div>
         </td>
@@ -381,6 +389,7 @@ export default function ResultsTable({ results }: ResultsTableProps) {
                     <Tooltip text={SCORE_TOOLTIPS[col.key]}>
                       <span className="md:hidden">{col.shortLabel}</span>
                       <span className="hidden md:inline">{col.label}</span>
+                      <InfoIcon />
                     </Tooltip>
                   ) : (
                     <>

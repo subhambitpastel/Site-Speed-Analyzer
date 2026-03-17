@@ -1,14 +1,14 @@
 "use client";
 
 import type { CoreWebVitals } from "@/types/report";
-import Tooltip from "./Tooltip";
+import Tooltip, { InfoIcon } from "./Tooltip";
 
 const METRIC_TOOLTIPS: Record<string, string> = {
-  FCP: "First Contentful Paint \u2014 Time until the first text or image is painted",
-  LCP: "Largest Contentful Paint \u2014 Time until the largest content element is visible",
-  TBT: "Total Blocking Time \u2014 Sum of time periods between FCP and TTI where tasks blocked the main thread",
-  CLS: "Cumulative Layout Shift \u2014 Measures visual stability; lower is better",
-  TTI: "Time to Interactive \u2014 Time until the page is fully interactive",
+  FCP: "First Contentful Paint \u2014 Time until the browser renders the first piece of content (text, image, canvas). Indicates how quickly users see something on screen.",
+  LCP: "Largest Contentful Paint \u2014 Time until the largest visible content element is fully rendered. Measures perceived load speed for the main content.",
+  TBT: "Total Blocking Time \u2014 Total time between FCP and TTI where the main thread was blocked long enough to prevent input responsiveness. Lower is better.",
+  CLS: "Cumulative Layout Shift \u2014 Measures visual stability \u2014 how much the page layout shifts unexpectedly during loading. A low score means elements don't jump around.",
+  TTI: "Time to Interactive \u2014 Time until the page is fully interactive \u2014 content is displayed and event handlers are registered for most visible elements.",
 };
 
 interface MetricsPanelProps {
@@ -25,9 +25,10 @@ function MetricCard({ name, abbreviation, displayValue }: MetricCardProps) {
   return (
     <div className="glow-card min-w-0 overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)] px-3 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/[0.03] dark:hover:shadow-black/[0.15] sm:px-4 sm:py-4">
       <Tooltip text={METRIC_TOOLTIPS[abbreviation] || abbreviation}>
-        <p className="truncate text-[10px] font-bold uppercase tracking-widest text-[var(--accent)]">
+        <p className="truncate text-[10px] font-bold uppercase tracking-widest text-[var(--accent)] border-b border-dashed border-current">
           {abbreviation}
         </p>
+        <InfoIcon />
       </Tooltip>
       <p className="mt-2 truncate text-xl font-bold tabular-nums font-mono text-[var(--foreground)] sm:text-2xl">
         {displayValue}
