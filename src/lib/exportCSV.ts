@@ -289,3 +289,66 @@ export function exportCSV(reports: LighthouseReport[]): void {
     console.error("Failed to export CSV:", error);
   }
 }
+
+function escapeCSVField(field: string): string {
+  if (field.includes(",") || field.includes('"') || field.includes("\n")) {
+    return `"${field.replace(/"/g, '""')}"`;
+  }
+  return field;
+}
+
+export function exportPlainCSV(reports: LighthouseReport[]) {
+  try {
+    const valid = reports.filter(isValidReport);
+    if (valid.length === 0) return;
+
+    const date = new Date().toISOString().split("T")[0];
+    const headers = ["URL", "Performance", "Accessibility", "SEO", "Best Practices", "FCP", "LCP", "TBT", "CLS", "TTI", "Strategy", "Fetched At"];
+
+    const rows: string[][] = [];
+
+    // Header row
+    rows.push(headers);
+
+    // Data rows
+    for (const r of valid) {
+      rows.push([
+        r.url,
+        r.scores.performance.toString(),
+        r.scores.accessibility.toString(),
+        r.scores.seo.toString(),
+        r.scores.bestPractices.toString(),
+        r.coreWebVitals.fcp.displayValue,
+        r.coreWebVitals.lcp.displayValue,
+        r.coreWebVitals.tbt.displayValue,
+        r.coreWebVitals.cls.displayValue,
+        r.coreWebVitals.tti.displayValue,
+        r.strategy,
+        r.fetchedAt,
+      ]);
+    }
+
+    // Average row
+    const avgPerf = valid.reduce((s, r) => s + r.scores.performance, 0) / valid.length;
+    const avgA11y = valid.reduce((s, r) => s + r.scores.accessibility, 0) / valid.length;
+    const avgSeo = valid.reduce((s, r) => s + r.scores.seo, 0) / valid.length;
+    const avgBp = valid.reduce((s, r) => s + r.scores.bestPractices, 0) / valid.length;
+    rows.push(["AVERAGE", avgPerf.toFixed(1), avgA11y.toFixed(1), avgSeo.toFixed(1), avgBp.toFixed(1), "", "", "", "", "", "", ""]);
+
+    const csvContent = "\uFEFF" + rows.map(row => row.map(escapeCSVField).join(",")).join("\n");
+
+    const filename = `lighthouse-report-${date}.csv`;
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", filename);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  } catch (error) {
+    console.error("Failed to export plain CSV:", error);
+  }
+}
