@@ -375,15 +375,15 @@ export default function ResultsTable({ results }: ResultsTableProps) {
         })}
       </div>
       {/* Desktop table view */}
-      <div className="hidden overflow-x-auto sm:block">
+      <div className="hidden sm:block">
         <table className="w-full">
-          <thead>
+          <thead className="relative z-20">
             <tr className="border-b border-[var(--border)] bg-[var(--surface-elevated)]">
               {COLUMNS.map((col) => (
                 <th
                   key={col.key}
                   onClick={() => handleSort(col.key)}
-                  className={`cursor-pointer select-none px-3 py-3.5 text-[11px] font-bold uppercase tracking-widest text-[var(--text-tertiary)] transition-colors duration-200 hover:text-[var(--text-secondary)] md:px-5 md:py-4 ${col.align}`}
+                  className={`relative cursor-pointer select-none px-3 py-3.5 text-[11px] font-bold uppercase tracking-widest text-[var(--text-tertiary)] transition-colors duration-200 hover:text-[var(--text-secondary)] md:px-5 md:py-4 ${col.align}`}
                 >
                   {SCORE_TOOLTIPS[col.key] ? (
                     <Tooltip text={SCORE_TOOLTIPS[col.key]}>

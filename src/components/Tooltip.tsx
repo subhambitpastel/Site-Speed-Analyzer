@@ -1,6 +1,7 @@
 "use client";
 
-import { type ReactNode } from "react";
+import { type ReactNode, useState, useRef, useEffect, useCallback } from "react";
+import { createPortal } from "react-dom";
 
 interface TooltipProps {
   text: string;
@@ -21,17 +22,103 @@ export function InfoIcon() {
 }
 
 export default function Tooltip({ text, children, className = "" }: TooltipProps) {
+  const [visible, setVisible] = useState(false);
+  const [pos, setPos] = useState({ top: 0, left: 0 });
+  const triggerRef = useRef<HTMLSpanElement>(null);
+  const tooltipRef = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
+
+  const updatePosition = useCallback(() => {
+    if (!triggerRef.current) return;
+    const rect = triggerRef.current.getBoundingClientRect();
+    const tooltipEl = tooltipRef.current;
+
+    // Position below the trigger by default
+    let top = rect.bottom + 8;
+    let left = rect.left + rect.width / 2;
+
+    // If tooltip would go off right edge, adjust
+    if (tooltipEl) {
+      const tooltipRect = tooltipEl.getBoundingClientRect();
+      if (left + tooltipRect.width / 2 > window.innerWidth - 8) {
+        left = window.innerWidth - tooltipRect.width / 2 - 8;
+      }
+      if (left - tooltipRect.width / 2 < 8) {
+        left = tooltipRect.width / 2 + 8;
+      }
+      // If below would go off bottom, show above instead
+      if (top + tooltipRect.height > window.innerHeight - 8) {
+        top = rect.top - tooltipRect.height - 8;
+      }
+    }
+
+    setPos({ top, left });
+  }, []);
+
+  const handleMouseEnter = useCallback(() => {
+    timeoutRef.current = setTimeout(() => {
+      setVisible(true);
+      // Update position after render
+      requestAnimationFrame(updatePosition);
+    }, 150);
+  }, [updatePosition]);
+
+  const handleMouseLeave = useCallback(() => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setVisible(false);
+  }, []);
+
+  // Update position when visible changes
+  useEffect(() => {
+    if (visible) {
+      updatePosition();
+      // Update again after a frame for accurate tooltip dimensions
+      requestAnimationFrame(updatePosition);
+    }
+  }, [visible, updatePosition]);
+
+  const tooltipEl = mounted && visible ? createPortal(
+    <div
+      ref={tooltipRef}
+      role="tooltip"
+      style={{
+        position: "fixed",
+        top: `${pos.top}px`,
+        left: `${pos.left}px`,
+        transform: "translateX(-50%)",
+        zIndex: 9999,
+      }}
+      className={`pointer-events-none whitespace-normal rounded-lg backdrop-blur-md bg-gray-900/90 dark:bg-white/95 border border-white/10 dark:border-gray-200/20 px-3 py-2 text-sm leading-relaxed font-normal normal-case tracking-normal text-white dark:text-gray-900 shadow-xl shadow-black/10 max-w-xs w-max transition-opacity duration-150 ${
+        visible ? "opacity-100" : "opacity-0"
+      }`}
+    >
+      {text}
+      {/* Arrow pointing up */}
+      <span className="absolute left-1/2 -translate-x-1/2 bottom-full border-4 border-transparent border-b-gray-900/90 dark:border-b-white/95" />
+    </div>,
+    document.body
+  ) : null;
+
   return (
-    <span className={`group relative inline-flex items-center ${className}`}>
+    <span
+      ref={triggerRef}
+      className={`group relative inline-flex items-center cursor-help ${className}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onFocus={handleMouseEnter}
+      onBlur={handleMouseLeave}
+      tabIndex={0}
+    >
       {children}
-      <span
-        role="tooltip"
-        className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 scale-95 whitespace-normal rounded-lg backdrop-blur-md bg-gray-900/80 dark:bg-white/90 border border-white/10 dark:border-gray-200/20 px-3 py-2 text-sm leading-relaxed font-normal normal-case tracking-normal text-white dark:text-gray-900 opacity-0 shadow-xl shadow-black/10 transition-all duration-200 ease-out delay-150 group-hover:scale-100 group-hover:opacity-100 group-focus-within:scale-100 group-focus-within:opacity-100 max-w-xs w-max"
-      >
-        {text}
-        {/* Arrow */}
-        <span className="absolute left-1/2 top-full -translate-x-1/2 border-4 border-transparent border-t-gray-900/80 dark:border-t-white/90" />
-      </span>
+      {tooltipEl}
     </span>
   );
 }
