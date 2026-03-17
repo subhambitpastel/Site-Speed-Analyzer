@@ -4,7 +4,6 @@ import { useState, useCallback, useRef, useEffect } from "react";
 import URLInput from "@/components/URLInput";
 import FileUpload from "@/components/FileUpload";
 import ResultsTable from "@/components/ResultsTable";
-import LoadingSpinner from "@/components/LoadingSpinner";
 import ExportDropdown from "@/components/ExportDropdown";
 import { fetchReport } from "@/lib/pagespeedClient";
 import { parseReport } from "@/lib/reportParser";
@@ -300,29 +299,96 @@ export default function Home() {
         {/* Progress Bar */}
         {isLoading && (
           <div className="mx-auto w-full max-w-2xl">
-            <div className="animate-fade-in-up overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5 shadow-lg shadow-black/[0.03] dark:shadow-black/[0.15]">
-              <div className="mb-4 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <LoadingSpinner size="sm" />
-                  <span className="text-sm font-medium text-[var(--text-secondary)]">
-                    Processing URLs...
-                  </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="font-mono text-sm font-semibold tabular-nums text-[var(--text-tertiary)]">
-                    {progress.current}
-                    <span className="mx-0.5 text-[var(--border)]">/</span>
-                    {progress.total}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => { abortControllerRef.current?.abort(); }}
-                    className="rounded-lg border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-semibold text-red-600 transition-all duration-200 hover:bg-red-100 hover:border-red-300 dark:border-red-800/60 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/40"
+            <div className="animate-fade-in-up overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-lg shadow-black/[0.03] dark:shadow-black/[0.15]">
+              {/* Orbiting ring + progress */}
+              <div className="orbit-pulse mb-5 flex flex-col items-center">
+                <div className="relative flex h-24 w-24 items-center justify-center">
+                  {/* Bloom/glow layer */}
+                  <svg
+                    className="orbit-spin absolute inset-0 h-full w-full opacity-40"
+                    viewBox="0 0 96 96"
+                    fill="none"
+                    style={{ filter: "blur(8px)" }}
                   >
-                    Cancel
-                  </button>
+                    <circle
+                      cx="48"
+                      cy="48"
+                      r="44"
+                      stroke="url(#orbitGradBloom)"
+                      strokeWidth="5"
+                      strokeLinecap="round"
+                      strokeDasharray={`${Math.max((progressPercent / 100) * 276.46, 13.82)} 276.46`}
+                    />
+                    <defs>
+                      <linearGradient id="orbitGradBloom" x1="0" y1="0" x2="96" y2="96" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#0ea5e9" />
+                        <stop offset="1" stopColor="#22d3ee" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  {/* SVG orbiting ring */}
+                  <svg
+                    className="orbit-spin absolute inset-0 h-full w-full"
+                    viewBox="0 0 96 96"
+                    fill="none"
+                  >
+                    {/* Faint track */}
+                    <circle
+                      cx="48"
+                      cy="48"
+                      r="44"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      className="text-[var(--foreground)] opacity-10"
+                    />
+                    {/* Progress-proportional gradient arc */}
+                    <circle
+                      cx="48"
+                      cy="48"
+                      r="44"
+                      stroke="url(#orbitGrad)"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeDasharray={`${Math.max((progressPercent / 100) * 276.46, 13.82)} 276.46`}
+                      className="orbit-arc"
+                      style={{ transition: "stroke-dasharray 0.5s ease-out" }}
+                    />
+                    <defs>
+                      <linearGradient id="orbitGrad" x1="0" y1="0" x2="96" y2="96" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#0ea5e9" />
+                        <stop offset="1" stopColor="#22d3ee" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  {/* Centered text */}
+                  <span className="relative text-2xl font-bold tabular-nums text-[var(--foreground)]">
+                    {progressPercent}%
+                  </span>
                 </div>
+                <span className="mt-2 text-xs font-medium text-[var(--text-tertiary)]">
+                  Processing URLs...
+                </span>
               </div>
+
+              {/* Visual connector */}
+              <div className="mx-auto mb-5 w-3/4 border-t border-[var(--border)]" />
+
+              {/* Counter + Cancel row */}
+              <div className="mb-4 flex items-center justify-between">
+                <span className="font-mono text-sm font-semibold tabular-nums text-[var(--text-tertiary)]">
+                  {progress.current}
+                  <span className="mx-0.5 text-[var(--border)]">/</span>
+                  {progress.total}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => { abortControllerRef.current?.abort(); }}
+                  className="rounded-lg border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-semibold text-red-600 transition-all duration-200 hover:bg-red-100 hover:border-red-300 dark:border-red-800/60 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/40"
+                >
+                  Cancel
+                </button>
+              </div>
+
               {/* Progress track */}
               <div className="relative h-2.5 w-full overflow-hidden rounded-full bg-[var(--surface-elevated)]">
                 <div
@@ -336,9 +402,6 @@ export default function Home() {
                     style={{ animation: "shimmer 1.5s infinite" }}
                   />
                 </div>
-              </div>
-              <div className="mt-2 text-right">
-                <span className="font-mono text-xs font-medium text-[var(--accent)]">{progressPercent}%</span>
               </div>
             </div>
           </div>
@@ -354,7 +417,7 @@ export default function Home() {
                     Results
                   </h3>
                   {/* BUG-4: Strategy indicator badge */}
-                  <span key={strategy} className="animate-badge-swap inline-flex items-center gap-1.5 rounded-full border border-sky-200 bg-sky-50 px-2.5 py-1 text-xs font-semibold text-sky-700 dark:border-sky-800/50 dark:bg-sky-900/20 dark:text-sky-300">
+                  <span key={strategy} className="animate-badge-swap inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-3 py-1 text-sm font-medium text-white shadow-md shadow-sky-500/20">
                     {strategy === "desktop" ? (
                       <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z" />
@@ -364,7 +427,7 @@ export default function Home() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
                       </svg>
                     )}
-                    {strategy === "desktop" ? "Desktop" : "Mobile"} results
+                    {strategy === "desktop" ? "Desktop Results" : "Mobile Results"}
                   </span>
                 </div>
                 <p className="mt-0.5 text-sm text-[var(--text-tertiary)]">
