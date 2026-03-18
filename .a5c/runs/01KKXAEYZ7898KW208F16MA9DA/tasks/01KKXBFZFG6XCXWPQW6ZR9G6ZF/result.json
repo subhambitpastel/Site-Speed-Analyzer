@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXBFZFG6XCXWPQW6ZR9G6ZF",
+  "taskId": "verify-build",
+  "invocationKey": "ui-bugfix-11:S000007:verify-build",
+  "status": "ok",
+  "result": {
+    "fixesApplied": [],
+    "success": true
+  },
+  "startedAt": "2026-03-17T07:36:36.150Z",
+  "finishedAt": "2026-03-17T07:36:36.150Z",
+  "value": {
+    "fixesApplied": [],
+    "success": true
+  }
+}

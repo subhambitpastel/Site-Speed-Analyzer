@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXD8B7A2QYGYDXSY0SJS3AB",
+  "taskId": "document-all-fixes",
+  "invocationKey": "ui-bugfix-11:S000026:document-all-fixes",
+  "status": "ok",
+  "result": {
+    "filesModified": [
+      "RECENT_FIXATION.md",
+      "TO_BE_FIXED.md"
+    ],
+    "success": true
+  },
+  "startedAt": "2026-03-17T08:06:48.978Z",
+  "finishedAt": "2026-03-17T08:06:48.978Z",
+  "value": {
+    "filesModified": [
+      "RECENT_FIXATION.md",
+      "TO_BE_FIXED.md"
+    ],
+    "success": true
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXCV1Z3B8SKN6R2P8BZ5R80",
+  "taskId": "fix-export-styling",
+  "invocationKey": "ui-bugfix-11:S000022:fix-export-styling",
+  "status": "ok",
+  "result": {
+    "filesModified": [
+      "src/lib/exportCSV.ts",
+      "src/lib/exportDOCX.ts",
+      "src/components/ExportDropdown.tsx"
+    ],
+    "success": true,
+    "summary": "Replaced CSV with SpreadsheetML XML format with color-coded scores, enhanced DOCX with styled score legend. Build passes."
+  },
+  "startedAt": "2026-03-17T08:02:09.406Z",
+  "finishedAt": "2026-03-17T08:02:09.406Z",
+  "value": {
+    "filesModified": [
+      "src/lib/exportCSV.ts",
+      "src/lib/exportDOCX.ts",
+      "src/components/ExportDropdown.tsx"
+    ],
+    "success": true,
+    "summary": "Replaced CSV with SpreadsheetML XML format with color-coded scores, enhanced DOCX with styled score legend. Build passes."
+  }
+}

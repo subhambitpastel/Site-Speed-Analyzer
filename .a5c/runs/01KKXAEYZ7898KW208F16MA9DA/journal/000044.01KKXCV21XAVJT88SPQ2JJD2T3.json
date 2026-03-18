@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T07:58:19.710Z",
+  "data": {
+    "effectId": "01KKXCV1Z3B8SKN6R2P8BZ5R80",
+    "invocationKey": "ui-bugfix-11:S000022:fix-export-styling",
+    "invocationHash": "bbf0916430907b8c20e8e3146cf78876cf65259e13d51b3274cfd8a6ab1725bc",
+    "stepId": "S000022",
+    "taskId": "fix-export-styling",
+    "kind": "agent",
+    "label": "Fix export styling (BUG-9,10)",
+    "taskDefRef": "tasks/01KKXCV1Z3B8SKN6R2P8BZ5R80/task.json"
+  },
+  "checksum": "8dd6569eafc70cd0f109656cf961bbf901744e6754ad8f2a7b993174a00163e3"
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXDFT79P71GETX9SZK9FE8V",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "ui-bugfix-11:S000029:__sdk.breakpoint",
+  "stepId": "S000029",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "All 11 bugs fixed across 4 phases. Final build: PASSED. Phases: Phase 1: Strategy Toggle: 85, Phase 2: UI Enhancements: 92, Phase 3: Tooltips: 92, Phase 4: Export Styling: 88. Approve completion?",
+      "tag": "final-review",
+      "title": "Final Review - All 11 Bugs Fixed"
+    },
+    "requestedAt": "2026-03-17T08:09:39.816Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "All 11 bugs fixed across 4 phases. Final build: PASSED. Phases: Phase 1: Strategy Toggle: 85, Phase 2: UI Enhancements: 92, Phase 3: Tooltips: 92, Phase 4: Export Styling: 88. Approve completion?",
+      "tag": "final-review",
+      "title": "Final Review - All 11 Bugs Fixed"
+    },
+    "requestedAt": "2026-03-17T08:09:39.816Z"
+  }
+}

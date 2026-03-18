@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXG4N7NKKT6KZ8YP5YD0WRZ",
+  "taskId": "verify-build",
+  "invocationKey": "premium-bugfix:S000005:verify-build",
+  "status": "ok",
+  "result": {
+    "fixesApplied": [],
+    "success": true
+  },
+  "startedAt": "2026-03-17T08:57:47.195Z",
+  "finishedAt": "2026-03-17T08:57:47.195Z",
+  "value": {
+    "fixesApplied": [],
+    "success": true
+  }
+}

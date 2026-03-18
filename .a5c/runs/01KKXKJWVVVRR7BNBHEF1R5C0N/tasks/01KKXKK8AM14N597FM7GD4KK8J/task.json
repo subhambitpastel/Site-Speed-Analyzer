@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXKK8AM14N597FM7GD4KK8J",
+  "taskId": "run-headed-test",
+  "invocationKey": "tooltip-headed:S000001:run-headed-test",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Run headed Playwright test (iter 1)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXKK8AM14N597FM7GD4KK8J/input.json",
+    "outputJsonPath": "tasks/01KKXKK8AM14N597FM7GD4KK8J/result.json"
+  },
+  "inputs": {
+    "iteration": 1
+  }
+}

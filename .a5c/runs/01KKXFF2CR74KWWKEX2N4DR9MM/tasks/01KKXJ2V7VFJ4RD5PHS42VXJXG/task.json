@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXJ2V7VFJ4RD5PHS42VXJXG",
+  "taskId": "document-fixes",
+  "invocationKey": "premium-bugfix:S000024:document-fixes",
+  "stepId": "S000024",
+  "kind": "agent",
+  "title": "Document 7 bug fixes",
+  "io": {
+    "inputJsonPath": "tasks/01KKXJ2V7VFJ4RD5PHS42VXJXG/input.json",
+    "outputJsonPath": "tasks/01KKXJ2V7VFJ4RD5PHS42VXJXG/result.json"
+  },
+  "inputs": {
+    "phases": [
+      {
+        "bugs": [
+          "BUG-1",
+          "BUG-2"
+        ],
+        "phase": "Phase 1: Premium Toggle",
+        "score": 91
+      },
+      {
+        "bugs": [
+          "BUG-4",
+          "BUG-5"
+        ],
+        "phase": "Phase 2: Results & Loading",
+        "score": 91
+      },
+      {
+        "bugs": [
+          "BUG-6",
+          "BUG-7",
+          "BUG-8"
+        ],
+        "phase": "Phase 3: Premium Tooltips",
+        "score": 95
+      }
+    ]
+  }
+}

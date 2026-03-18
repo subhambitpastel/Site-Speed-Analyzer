@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXG8478VKQW1B3GNPCQBHYQ",
+  "taskId": "score-toggle",
+  "invocationKey": "premium-bugfix:S000006:score-toggle",
+  "status": "ok",
+  "result": {
+    "gaps": [
+      "Thumb asymmetric inset",
+      "Missing hover brightness lift",
+      "Dark mode ring glow nearly invisible"
+    ],
+    "overallScore": 88
+  },
+  "startedAt": "2026-03-17T08:58:47.419Z",
+  "finishedAt": "2026-03-17T08:58:47.419Z",
+  "value": {
+    "gaps": [
+      "Thumb asymmetric inset",
+      "Missing hover brightness lift",
+      "Dark mode ring glow nearly invisible"
+    ],
+    "overallScore": 88
+  }
+}

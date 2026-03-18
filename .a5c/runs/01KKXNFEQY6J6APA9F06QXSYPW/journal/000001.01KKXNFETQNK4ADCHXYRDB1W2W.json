@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-03-17T10:29:16.760Z",
+  "data": {
+    "runId": "01KKXNFEQY6J6APA9F06QXSYPW",
+    "processId": "arrow-loader-fix",
+    "entrypoint": {
+      "importPath": "../../processes/arrow-loader-fix.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "d9e146cc3336d5686f4e04763bcdd52898641b45fa70af66e2d11c1805583b0b"
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXCV1Z3B8SKN6R2P8BZ5R80",
+  "taskId": "fix-export-styling",
+  "invocationKey": "ui-bugfix-11:S000022:fix-export-styling",
+  "stepId": "S000022",
+  "kind": "agent",
+  "title": "Fix export styling (BUG-9,10)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXCV1Z3B8SKN6R2P8BZ5R80/input.json",
+    "outputJsonPath": "tasks/01KKXCV1Z3B8SKN6R2P8BZ5R80/result.json"
+  },
+  "inputs": {
+    "bugs": [
+      "BUG-9: Color-coded CSV with Excel XML formatting",
+      "BUG-10: Color-coded DOCX with styled tables and headers"
+    ],
+    "targetQuality": 85
+  }
+}

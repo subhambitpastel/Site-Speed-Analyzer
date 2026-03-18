@@ -1,0 +1,5 @@
+{
+  "success": true,
+  "changesApplied": ["Inline script now validates localStorage theme value explicitly", "Replaced useEffect sync with lazy useState initializer to eliminate hydration mismatch", "Extracted DOM theme manipulation into reusable applyTheme callback"],
+  "filesModified": ["src/app/layout.tsx", "src/app/page.tsx"]
+}

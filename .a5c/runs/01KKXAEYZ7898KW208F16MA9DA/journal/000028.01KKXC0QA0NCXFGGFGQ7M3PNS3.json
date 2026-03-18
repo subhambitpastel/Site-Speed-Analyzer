@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T07:43:56.736Z",
+  "data": {
+    "effectId": "01KKXC0Q85BCT81NXKMBVK0TW7",
+    "invocationKey": "ui-bugfix-11:S000014:fix-tooltips",
+    "invocationHash": "1e10a60b91bed05d73adee424a2eb3f57c2d3d72f8f5ad074147ab3f0b8f5868",
+    "stepId": "S000014",
+    "taskId": "fix-tooltips",
+    "kind": "agent",
+    "label": "Add tooltips (BUG-6,7,8)",
+    "taskDefRef": "tasks/01KKXC0Q85BCT81NXKMBVK0TW7/task.json"
+  },
+  "checksum": "b81d0ff142c43f90ba537dade664b95580e53d71dd414ec27e3e9fdf92f078c7"
+}

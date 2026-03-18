@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXC0Q85BCT81NXKMBVK0TW7",
+  "taskId": "fix-tooltips",
+  "invocationKey": "ui-bugfix-11:S000014:fix-tooltips",
+  "stepId": "S000014",
+  "kind": "agent",
+  "title": "Add tooltips (BUG-6,7,8)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXC0Q85BCT81NXKMBVK0TW7/input.json",
+    "outputJsonPath": "tasks/01KKXC0Q85BCT81NXKMBVK0TW7/result.json"
+  },
+  "inputs": {
+    "bugs": [
+      "BUG-6: Hover tooltips on score badges in ResultsTable",
+      "BUG-7: Hover tooltips on Score Overview categories in ScoreChart",
+      "BUG-8: Hover tooltips on FCP/LCP/TBT/CLS/TTI metric abbreviations in MetricsPanel"
+    ],
+    "targetQuality": 85
+  }
+}

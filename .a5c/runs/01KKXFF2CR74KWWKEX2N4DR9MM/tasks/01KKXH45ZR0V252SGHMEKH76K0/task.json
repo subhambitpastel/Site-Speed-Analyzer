@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXH45ZR0V252SGHMEKH76K0",
+  "taskId": "refine-results-loading",
+  "invocationKey": "premium-bugfix:S000015:refine-results-loading",
+  "stepId": "S000015",
+  "kind": "agent",
+  "title": "Refine results/loading (iter 1)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXH45ZR0V252SGHMEKH76K0/input.json",
+    "outputJsonPath": "tasks/01KKXH45ZR0V252SGHMEKH76K0/result.json"
+  },
+  "inputs": {
+    "iteration": 1,
+    "previousScore": 82,
+    "targetQuality": 90
+  }
+}

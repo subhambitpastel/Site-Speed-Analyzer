@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXJZ4ASM3T195ADHVYFKN5B",
+  "taskId": "commit",
+  "invocationKey": "tooltip-fix:S000002:commit",
+  "stepId": "S000002",
+  "kind": "agent",
+  "title": "Commit tooltip fix",
+  "io": {
+    "inputJsonPath": "tasks/01KKXJZ4ASM3T195ADHVYFKN5B/input.json",
+    "outputJsonPath": "tasks/01KKXJZ4ASM3T195ADHVYFKN5B/result.json"
+  },
+  "inputs": {}
+}

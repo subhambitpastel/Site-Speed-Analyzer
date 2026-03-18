@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T08:44:32.303Z",
+  "data": {
+    "effectId": "01KKXFFNK4B6F922NE9YF6XBW5",
+    "invocationKey": "premium-bugfix:S000001:fix-premium-toggle",
+    "invocationHash": "916ad0f8b186a1c0dbe14b57b474ad967618dc113496eef47911dbbb1d5beb66",
+    "stepId": "S000001",
+    "taskId": "fix-premium-toggle",
+    "kind": "agent",
+    "label": "Premium toggle (BUG-1,2)",
+    "taskDefRef": "tasks/01KKXFFNK4B6F922NE9YF6XBW5/task.json"
+  },
+  "checksum": "d47fc0dae69d2d825f7fef11bbf8f87b87f46bff49c8d4db797eb3466b43bd7e"
+}

@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T08:02:19.068Z",
+  "data": {
+    "effectId": "01KKXD2BR77GBRS20VZNFXBZQK",
+    "invocationKey": "ui-bugfix-11:S000023:verify-build",
+    "invocationHash": "a727885a433f1c4945e60a37c47fee236c84d49e099588a7768320a99ee2f97a",
+    "stepId": "S000023",
+    "taskId": "verify-build",
+    "kind": "agent",
+    "label": "Verify build (Phase 4 - Export Styling)",
+    "taskDefRef": "tasks/01KKXD2BR77GBRS20VZNFXBZQK/task.json"
+  },
+  "checksum": "f09f0bc430e3fa37a51b39a98a7f41cba2167f888e2eb77bf7a06dad30e45deb"
+}

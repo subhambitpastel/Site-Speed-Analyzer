@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXFWCT6R24PVCSJKTJP8CEG",
+  "taskId": "score-toggle",
+  "invocationKey": "premium-bugfix:S000003:score-toggle",
+  "status": "ok",
+  "result": {
+    "gaps": [
+      "Thumb too small relative to track, no indicator inside",
+      "No scale press effect on thumb, track gradient jarring color jump",
+      "No dark mode track border, thumb has no dark mode ring",
+      "Analysis mode label adds clutter",
+      "Thumb overlaps Desktop label area"
+    ],
+    "overallScore": 62
+  },
+  "startedAt": "2026-03-17T08:52:26.292Z",
+  "finishedAt": "2026-03-17T08:52:26.292Z",
+  "value": {
+    "gaps": [
+      "Thumb too small relative to track, no indicator inside",
+      "No scale press effect on thumb, track gradient jarring color jump",
+      "No dark mode track border, thumb has no dark mode ring",
+      "Analysis mode label adds clutter",
+      "Thumb overlaps Desktop label area"
+    ],
+    "overallScore": 62
+  }
+}

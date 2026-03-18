@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXGESWHVYRPPVT1HA0ZPCSK",
+  "taskId": "score-toggle",
+  "invocationKey": "premium-bugfix:S000009:score-toggle",
+  "stepId": "S000009",
+  "kind": "agent",
+  "title": "Score toggle (iter 2)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXGESWHVYRPPVT1HA0ZPCSK/input.json",
+    "outputJsonPath": "tasks/01KKXGESWHVYRPPVT1HA0ZPCSK/result.json"
+  },
+  "inputs": {
+    "iteration": 2,
+    "targetQuality": 90
+  }
+}

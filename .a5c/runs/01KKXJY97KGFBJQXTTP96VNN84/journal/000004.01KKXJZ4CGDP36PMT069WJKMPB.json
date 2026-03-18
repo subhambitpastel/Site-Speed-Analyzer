@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T09:45:24.625Z",
+  "data": {
+    "effectId": "01KKXJZ4ASM3T195ADHVYFKN5B",
+    "invocationKey": "tooltip-fix:S000002:commit",
+    "invocationHash": "900c8ed61b9baccf0c703c8df56457650749a6c5799a32f8905da1dd77caaf49",
+    "stepId": "S000002",
+    "taskId": "commit",
+    "kind": "agent",
+    "label": "Commit tooltip fix",
+    "taskDefRef": "tasks/01KKXJZ4ASM3T195ADHVYFKN5B/task.json"
+  },
+  "checksum": "9fd19c3c302447019416feaf81aee245541d2da94bab222c2e5631390a27be3c"
+}

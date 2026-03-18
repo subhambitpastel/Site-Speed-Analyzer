@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXGESWHVYRPPVT1HA0ZPCSK",
+  "taskId": "score-toggle",
+  "invocationKey": "premium-bugfix:S000009:score-toggle",
+  "status": "ok",
+  "result": {
+    "gaps": [
+      "Icons could use filled variant for better readability at small size"
+    ],
+    "overallScore": 91
+  },
+  "startedAt": "2026-03-17T09:01:42.670Z",
+  "finishedAt": "2026-03-17T09:01:42.670Z",
+  "value": {
+    "gaps": [
+      "Icons could use filled variant for better readability at small size"
+    ],
+    "overallScore": 91
+  }
+}

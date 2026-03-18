@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXRY4PSTYRDGHACV82BBFC3",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "csv-option:S000002:__sdk.breakpoint",
+  "stepId": "S000002",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "CSV option added alongside Excel. Export dropdown now shows: Excel (.xls with colors), CSV (.csv plain), PDF, DOCX. Approve?",
+      "tag": "done",
+      "title": "Done"
+    },
+    "requestedAt": "2026-03-17T11:29:43.640Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "CSV option added alongside Excel. Export dropdown now shows: Excel (.xls with colors), CSV (.csv plain), PDF, DOCX. Approve?",
+      "tag": "done",
+      "title": "Done"
+    },
+    "requestedAt": "2026-03-17T11:29:43.640Z"
+  }
+}

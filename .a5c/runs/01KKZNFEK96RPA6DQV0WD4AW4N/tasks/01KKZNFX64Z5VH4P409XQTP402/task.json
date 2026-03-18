@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKZNFX64Z5VH4P409XQTP402",
+  "taskId": "fix-dark-mode-default",
+  "invocationKey": "bugfix-9-10:S000001:fix-dark-mode-default",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Fix dark mode default (BUG-9)",
+  "io": {
+    "inputJsonPath": "tasks/01KKZNFX64Z5VH4P409XQTP402/input.json",
+    "outputJsonPath": "tasks/01KKZNFX64Z5VH4P409XQTP402/result.json"
+  },
+  "inputs": {}
+}

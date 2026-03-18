@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXNNCS9VXZSS08R12BYVGNR",
+  "taskId": "commit",
+  "invocationKey": "arrow-loader-fix:S000002:commit",
+  "stepId": "S000002",
+  "kind": "agent",
+  "title": "Commit fixes",
+  "io": {
+    "inputJsonPath": "tasks/01KKXNNCS9VXZSS08R12BYVGNR/input.json",
+    "outputJsonPath": "tasks/01KKXNNCS9VXZSS08R12BYVGNR/result.json"
+  },
+  "inputs": {}
+}

@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-03-17T11:29:00.549Z",
+  "data": {
+    "runId": "01KKXRWTFBMQ01S4BAE1FBY1WG",
+    "processId": "csv-option",
+    "entrypoint": {
+      "importPath": "../../processes/csv-option.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "fa9f4c8ca2bbdb6b5fb95cd0ade0425790549c00661fba7d820e8379ff8bdff1"
+}

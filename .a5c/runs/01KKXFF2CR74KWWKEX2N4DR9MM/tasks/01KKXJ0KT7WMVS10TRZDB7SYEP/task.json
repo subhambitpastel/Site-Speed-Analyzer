@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXJ0KT7WMVS10TRZDB7SYEP",
+  "taskId": "score-tooltips",
+  "invocationKey": "premium-bugfix:S000022:score-tooltips",
+  "stepId": "S000022",
+  "kind": "agent",
+  "title": "Score tooltips (iter 0)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXJ0KT7WMVS10TRZDB7SYEP/input.json",
+    "outputJsonPath": "tasks/01KKXJ0KT7WMVS10TRZDB7SYEP/result.json"
+  },
+  "inputs": {
+    "iteration": 0,
+    "targetQuality": 90
+  }
+}

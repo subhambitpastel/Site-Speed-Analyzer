@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T09:33:15.042Z",
+  "data": {
+    "effectId": "01KKXJ8VVFBGXPVZJ69447C93S",
+    "invocationKey": "premium-bugfix:S000026:git-commit",
+    "invocationHash": "76ff13379d674a3596e7c8292268501093dbeb0d8122564eca30bc810c7a0ce2",
+    "stepId": "S000026",
+    "taskId": "git-commit",
+    "kind": "agent",
+    "label": "Commit: Document 7 premium bug fixes, clear TO_BE_FIXED.md",
+    "taskDefRef": "tasks/01KKXJ8VVFBGXPVZJ69447C93S/task.json"
+  },
+  "checksum": "9fa5251620f8ac4ea44c93669129d571ce4dcdba125146994bc9a990ea1f6d98"
+}

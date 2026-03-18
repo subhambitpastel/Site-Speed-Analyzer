@@ -1,0 +1,1 @@
+{"overallScore": 82, "breakdown": {"resultsTable": 25, "scoreChart": 25, "metricsPanel": 25, "tooltipDesign": 7}, "gaps": ["Tooltip lacks dark mode styling - gray-900 invisible on dark backgrounds", "No keyboard/focus support for tooltips", "Desktop table rows lack tooltips on score badge cells"]}

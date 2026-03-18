@@ -1,0 +1,1 @@
+{"overallScore": 88, "breakdown": {"csvXls": 37, "docx": 38, "codeQuality": 13}, "gaps": ["Duplicated isValidReport helper", "Summary row not color-coded in XLS"]}

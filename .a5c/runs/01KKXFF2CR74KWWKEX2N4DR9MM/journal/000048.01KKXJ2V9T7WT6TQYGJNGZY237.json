@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T09:29:57.818Z",
+  "data": {
+    "effectId": "01KKXJ2V7VFJ4RD5PHS42VXJXG",
+    "invocationKey": "premium-bugfix:S000024:document-fixes",
+    "invocationHash": "733ef241055ae6c09a3ef049769b2c5c388fcf5e9d8805d0f2174c20b9d9c3e9",
+    "stepId": "S000024",
+    "taskId": "document-fixes",
+    "kind": "agent",
+    "label": "Document 7 bug fixes",
+    "taskDefRef": "tasks/01KKXJ2V7VFJ4RD5PHS42VXJXG/task.json"
+  },
+  "checksum": "b91f0c476a563bfd7569afbe55fe66b302fe234810def5a07a5565e608e50d8c"
+}

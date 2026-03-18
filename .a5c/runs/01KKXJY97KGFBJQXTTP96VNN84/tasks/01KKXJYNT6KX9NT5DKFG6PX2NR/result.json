@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXJYNT6KX9NT5DKFG6PX2NR",
+  "taskId": "verify-fix",
+  "invocationKey": "tooltip-fix:S000001:verify-fix",
+  "status": "ok",
+  "result": {
+    "success": true,
+    "testsFail": 0,
+    "testsPass": 6
+  },
+  "startedAt": "2026-03-17T09:45:19.131Z",
+  "finishedAt": "2026-03-17T09:45:19.131Z",
+  "value": {
+    "success": true,
+    "testsFail": 0,
+    "testsPass": 6
+  }
+}

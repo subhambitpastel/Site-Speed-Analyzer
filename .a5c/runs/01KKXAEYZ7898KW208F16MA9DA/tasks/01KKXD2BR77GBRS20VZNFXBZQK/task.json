@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXD2BR77GBRS20VZNFXBZQK",
+  "taskId": "verify-build",
+  "invocationKey": "ui-bugfix-11:S000023:verify-build",
+  "stepId": "S000023",
+  "kind": "agent",
+  "title": "Verify build (Phase 4 - Export Styling)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXD2BR77GBRS20VZNFXBZQK/input.json",
+    "outputJsonPath": "tasks/01KKXD2BR77GBRS20VZNFXBZQK/result.json"
+  },
+  "inputs": {
+    "phase": "Phase 4 - Export Styling"
+  }
+}

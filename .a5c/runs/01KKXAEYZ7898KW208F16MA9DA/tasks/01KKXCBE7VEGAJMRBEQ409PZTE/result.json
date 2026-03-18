@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXCBE7VEGAJMRBEQ409PZTE",
+  "taskId": "score-phase3",
+  "invocationKey": "ui-bugfix-11:S000016:score-phase3",
+  "status": "ok",
+  "result": {
+    "breakdown": {
+      "metricsPanel": 25,
+      "resultsTable": 25,
+      "scoreChart": 25,
+      "tooltipDesign": 7
+    },
+    "gaps": [
+      "Tooltip lacks dark mode styling - gray-900 invisible on dark backgrounds",
+      "No keyboard/focus support for tooltips",
+      "Desktop table rows lack tooltips on score badge cells"
+    ],
+    "overallScore": 82
+  },
+  "startedAt": "2026-03-17T07:50:40.233Z",
+  "finishedAt": "2026-03-17T07:50:40.233Z",
+  "value": {
+    "breakdown": {
+      "metricsPanel": 25,
+      "resultsTable": 25,
+      "scoreChart": 25,
+      "tooltipDesign": 7
+    },
+    "gaps": [
+      "Tooltip lacks dark mode styling - gray-900 invisible on dark backgrounds",
+      "No keyboard/focus support for tooltips",
+      "Desktop table rows lack tooltips on score badge cells"
+    ],
+    "overallScore": 82
+  }
+}

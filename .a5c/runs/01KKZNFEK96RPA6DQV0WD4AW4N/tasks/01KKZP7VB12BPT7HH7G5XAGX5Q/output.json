@@ -1,0 +1,5 @@
+{
+  "overallScore": 90,
+  "breakdown": {"defaultState": 28, "foucPrevention": 28, "localStorageRespect": 20, "hydrationSafety": 7, "codeQuality": 7},
+  "gaps": ["Minor: React initializer uses !== 'light' shortcut vs inline script explicit validation - fragile if new theme values added", "Minor: mounted guard renders empty placeholder before hydration"]
+}

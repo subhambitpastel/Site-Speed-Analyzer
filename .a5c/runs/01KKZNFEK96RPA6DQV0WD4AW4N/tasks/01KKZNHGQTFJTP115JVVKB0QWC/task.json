@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKZNHGQTFJTP115JVVKB0QWC",
+  "taskId": "verify-build",
+  "invocationKey": "bugfix-9-10:S000002:verify-build",
+  "stepId": "S000002",
+  "kind": "agent",
+  "title": "Verify build (Phase 1 — Dark Mode Default)",
+  "io": {
+    "inputJsonPath": "tasks/01KKZNHGQTFJTP115JVVKB0QWC/input.json",
+    "outputJsonPath": "tasks/01KKZNHGQTFJTP115JVVKB0QWC/result.json"
+  },
+  "inputs": {
+    "phase": "Phase 1 — Dark Mode Default"
+  }
+}

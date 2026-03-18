@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-03-17T09:44:55.308Z",
+  "data": {
+    "runId": "01KKXJY97KGFBJQXTTP96VNN84",
+    "processId": "tooltip-fix",
+    "entrypoint": {
+      "importPath": "../../processes/tooltip-fix.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "7040c609bdb3f693263fc161fe4f688fa218789a8e00fc2afd238f6017a4266b"
+}

@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-18T05:08:00.406Z",
+  "data": {
+    "effectId": "01KKZNFX64Z5VH4P409XQTP402",
+    "invocationKey": "bugfix-9-10:S000001:fix-dark-mode-default",
+    "invocationHash": "66fb94701ac52b00eb14ea04c9d99a445b4621580a6703d557ac59e803cf3737",
+    "stepId": "S000001",
+    "taskId": "fix-dark-mode-default",
+    "kind": "agent",
+    "label": "Fix dark mode default (BUG-9)",
+    "taskDefRef": "tasks/01KKZNFX64Z5VH4P409XQTP402/task.json"
+  },
+  "checksum": "74c32eb786b3cc8892b2dee95175142338ff1c87b20b93dbc2a71adbfb312a1a"
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXCS1N95M5V3DT5WHYQ70BW",
+  "taskId": "git-commit",
+  "invocationKey": "ui-bugfix-11:S000020:git-commit",
+  "stepId": "S000020",
+  "kind": "agent",
+  "title": "Git commit: Phase 3",
+  "io": {
+    "inputJsonPath": "tasks/01KKXCS1N95M5V3DT5WHYQ70BW/input.json",
+    "outputJsonPath": "tasks/01KKXCS1N95M5V3DT5WHYQ70BW/result.json"
+  },
+  "inputs": {
+    "phase": "Phase 3",
+    "summary": "Added hover tooltips for score categories in ResultsTable and ScoreChart, plus metric definitions in MetricsPanel. Score: 92/85.",
+    "title": "BUG-6,7,8 — Score and metric tooltips"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXJ248C4KYMKKD70EXS6X37",
+  "taskId": "git-commit",
+  "invocationKey": "premium-bugfix:S000023:git-commit",
+  "stepId": "S000023",
+  "kind": "agent",
+  "title": "Commit: BUG-6,7,8 — Premium glass-panel tooltips with info icons",
+  "io": {
+    "inputJsonPath": "tasks/01KKXJ248C4KYMKKD70EXS6X37/input.json",
+    "outputJsonPath": "tasks/01KKXJ248C4KYMKKD70EXS6X37/result.json"
+  },
+  "inputs": {
+    "summary": "Polished tooltips with glass styling, info icons, consistent across all components. Score: 95",
+    "title": "BUG-6,7,8 — Premium glass-panel tooltips with info icons"
+  }
+}

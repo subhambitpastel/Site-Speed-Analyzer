@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXG9Z1DYJ1ESMAFY7BV34MR",
+  "taskId": "refine-toggle",
+  "invocationKey": "premium-bugfix:S000007:refine-toggle",
+  "status": "ok",
+  "result": {
+    "changesApplied": [
+      "Symmetric thumb inset",
+      "Hover brightness",
+      "Dark mode ring glow"
+    ],
+    "filesModified": [
+      "src/components/StrategyToggle.tsx"
+    ],
+    "success": true
+  },
+  "startedAt": "2026-03-17T08:59:32.390Z",
+  "finishedAt": "2026-03-17T08:59:32.390Z",
+  "value": {
+    "changesApplied": [
+      "Symmetric thumb inset",
+      "Hover brightness",
+      "Dark mode ring glow"
+    ],
+    "filesModified": [
+      "src/components/StrategyToggle.tsx"
+    ],
+    "success": true
+  }
+}

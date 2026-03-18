@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T09:13:13.023Z",
+  "data": {
+    "effectId": "01KKXH45ZR0V252SGHMEKH76K0",
+    "invocationKey": "premium-bugfix:S000015:refine-results-loading",
+    "invocationHash": "e7ecfab3628f54d842a1c550dd7a1738d6e54ba7d0ea0e6d39456e58ffc8adf0",
+    "stepId": "S000015",
+    "taskId": "refine-results-loading",
+    "kind": "agent",
+    "label": "Refine results/loading (iter 1)",
+    "taskDefRef": "tasks/01KKXH45ZR0V252SGHMEKH76K0/task.json"
+  },
+  "checksum": "ee70505f93dc5f289f6a3a2470c42dd6d09266528b36b8cad4dd965ec98144c6"
+}

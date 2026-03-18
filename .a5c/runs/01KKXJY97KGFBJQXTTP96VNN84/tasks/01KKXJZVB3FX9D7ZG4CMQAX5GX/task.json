@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXJZVB3FX9D7ZG4CMQAX5GX",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "tooltip-fix:S000003:__sdk.breakpoint",
+  "stepId": "S000003",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Tooltip fix complete. Playwright: 6/6 tests pass. Root cause: overflow-hidden on parent containers clipped absolute-positioned tooltips. Fix: changed to overflow-visible. Approve?",
+      "tag": "done",
+      "title": "Tooltip Fix Complete"
+    },
+    "requestedAt": "2026-03-17T09:45:48.131Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Tooltip fix complete. Playwright: 6/6 tests pass. Root cause: overflow-hidden on parent containers clipped absolute-positioned tooltips. Fix: changed to overflow-visible. Approve?",
+      "tag": "done",
+      "title": "Tooltip Fix Complete"
+    },
+    "requestedAt": "2026-03-17T09:45:48.131Z"
+  }
+}

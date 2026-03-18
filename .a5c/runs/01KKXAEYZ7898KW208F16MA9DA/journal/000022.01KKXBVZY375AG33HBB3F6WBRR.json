@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T07:41:21.731Z",
+  "data": {
+    "effectId": "01KKXBVZW9EWXZJF8FPNCHCJ7X",
+    "invocationKey": "ui-bugfix-11:S000011:score-phase2",
+    "invocationHash": "70f125b5ef88e8a2c7b85786d95102977a1c84856e733115a962d028de2dcd02",
+    "stepId": "S000011",
+    "taskId": "score-phase2",
+    "kind": "agent",
+    "label": "Score Phase 2 (iteration 1)",
+    "taskDefRef": "tasks/01KKXBVZW9EWXZJF8FPNCHCJ7X/task.json"
+  },
+  "checksum": "4005d1a174724da13ac10a06951f08b1fd8580f2c4d765f83835bf3d0337b640"
+}

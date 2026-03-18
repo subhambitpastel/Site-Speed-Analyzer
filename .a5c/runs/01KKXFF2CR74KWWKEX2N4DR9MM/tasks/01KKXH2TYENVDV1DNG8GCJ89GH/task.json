@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXH2TYENVDV1DNG8GCJ89GH",
+  "taskId": "score-results-loading",
+  "invocationKey": "premium-bugfix:S000014:score-results-loading",
+  "stepId": "S000014",
+  "kind": "agent",
+  "title": "Score results/loading (iter 0)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXH2TYENVDV1DNG8GCJ89GH/input.json",
+    "outputJsonPath": "tasks/01KKXH2TYENVDV1DNG8GCJ89GH/result.json"
+  },
+  "inputs": {
+    "iteration": 0,
+    "targetQuality": 90
+  }
+}

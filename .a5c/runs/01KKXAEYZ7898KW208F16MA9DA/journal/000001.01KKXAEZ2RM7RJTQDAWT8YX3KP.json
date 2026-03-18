@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-03-17T07:16:46.296Z",
+  "data": {
+    "runId": "01KKXAEYZ7898KW208F16MA9DA",
+    "processId": "ui-bugfix-11",
+    "entrypoint": {
+      "importPath": "../../processes/ui-bugfix-11.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "d4776198682be61c038575678048d8f8b309a932e650d45a798b463a3e67ffbf"
+}

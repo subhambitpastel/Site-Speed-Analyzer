@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T08:49:33.144Z",
+  "data": {
+    "effectId": "01KKXFRVD1BT415HTGS06HJTW9",
+    "invocationKey": "premium-bugfix:S000002:verify-build",
+    "invocationHash": "253fe8c16c631f86d174f026ac88f4cd64d84ecd5a06cb8e1f5183ad4d02ce7e",
+    "stepId": "S000002",
+    "taskId": "verify-build",
+    "kind": "agent",
+    "label": "Build (Phase 1)",
+    "taskDefRef": "tasks/01KKXFRVD1BT415HTGS06HJTW9/task.json"
+  },
+  "checksum": "c9b7471c7d5dd40c339d8de282a2a36625aa556634384a9f1f63ceee05a213b7"
+}

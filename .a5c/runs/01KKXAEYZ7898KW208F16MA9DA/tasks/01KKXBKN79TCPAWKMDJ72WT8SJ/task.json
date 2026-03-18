@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXBKN79TCPAWKMDJ72WT8SJ",
+  "taskId": "score-phase2",
+  "invocationKey": "ui-bugfix-11:S000008:score-phase2",
+  "stepId": "S000008",
+  "kind": "agent",
+  "title": "Score Phase 2 (iteration 0)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXBKN79TCPAWKMDJ72WT8SJ/input.json",
+    "outputJsonPath": "tasks/01KKXBKN79TCPAWKMDJ72WT8SJ/result.json"
+  },
+  "inputs": {
+    "iteration": 0,
+    "targetQuality": 85
+  }
+}

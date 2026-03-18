@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXD5PPCKWDSRSEAEDBD577J",
+  "taskId": "score-phase4",
+  "invocationKey": "ui-bugfix-11:S000024:score-phase4",
+  "status": "ok",
+  "result": {
+    "breakdown": {
+      "codeQuality": 13,
+      "csvXls": 37,
+      "docx": 38
+    },
+    "gaps": [
+      "Duplicated isValidReport helper",
+      "Summary row not color-coded in XLS"
+    ],
+    "overallScore": 88
+  },
+  "startedAt": "2026-03-17T08:04:58.141Z",
+  "finishedAt": "2026-03-17T08:04:58.141Z",
+  "value": {
+    "breakdown": {
+      "codeQuality": 13,
+      "csvXls": 37,
+      "docx": 38
+    },
+    "gaps": [
+      "Duplicated isValidReport helper",
+      "Summary row not color-coded in XLS"
+    ],
+    "overallScore": 88
+  }
+}

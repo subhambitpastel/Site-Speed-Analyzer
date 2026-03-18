@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKZP9NXMRH037VHT6SFF3BCG",
+  "taskId": "git-commit",
+  "invocationKey": "bugfix-9-10:S000007:git-commit",
+  "stepId": "S000007",
+  "kind": "agent",
+  "title": "Git commit: Phase 1",
+  "io": {
+    "inputJsonPath": "tasks/01KKZP9NXMRH037VHT6SFF3BCG/input.json",
+    "outputJsonPath": "tasks/01KKZP9NXMRH037VHT6SFF3BCG/result.json"
+  },
+  "inputs": {
+    "phase": "Phase 1",
+    "summary": "Changed theme initialization to default to dark mode when no localStorage preference exists. Applied dark class before first paint to avoid flash. Score: 90/85.",
+    "title": "BUG-9 — Default to dark mode on first visit"
+  }
+}

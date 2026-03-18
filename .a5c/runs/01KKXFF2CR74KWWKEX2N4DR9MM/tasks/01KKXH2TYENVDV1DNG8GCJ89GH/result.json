@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXH2TYENVDV1DNG8GCJ89GH",
+  "taskId": "score-results-loading",
+  "invocationKey": "premium-bugfix:S000014:score-results-loading",
+  "status": "ok",
+  "result": {
+    "gaps": [
+      "No bloom/outer glow layer on ring",
+      "Arc dasharray static not progress-proportional",
+      "Ring and progress bar feel disconnected",
+      "Pulse scale too subtle"
+    ],
+    "overallScore": 82
+  },
+  "startedAt": "2026-03-17T09:13:06.917Z",
+  "finishedAt": "2026-03-17T09:13:06.917Z",
+  "value": {
+    "gaps": [
+      "No bloom/outer glow layer on ring",
+      "Arc dasharray static not progress-proportional",
+      "Ring and progress bar feel disconnected",
+      "Pulse scale too subtle"
+    ],
+    "overallScore": 82
+  }
+}

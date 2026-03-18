@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T09:21:18.575Z",
+  "data": {
+    "effectId": "01KKXHK05QBY7V4PMAMS8WH4G1",
+    "invocationKey": "premium-bugfix:S000018:git-commit",
+    "invocationHash": "2a44a82eab7e209f44c4f105b374b5b8513b29d882ee512163a647906c3d468e",
+    "stepId": "S000018",
+    "taskId": "git-commit",
+    "kind": "agent",
+    "label": "Commit: BUG-4,5 — Strategy badge + orbiting ring loader",
+    "taskDefRef": "tasks/01KKXHK05QBY7V4PMAMS8WH4G1/task.json"
+  },
+  "checksum": "fe161e858823cca7dd9647d3bcea9462954d2f786853535d34d4332cfab45aaa"
+}

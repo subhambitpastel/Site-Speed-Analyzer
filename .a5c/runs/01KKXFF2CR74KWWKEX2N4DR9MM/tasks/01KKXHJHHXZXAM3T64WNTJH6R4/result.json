@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXHJHHXZXAM3T64WNTJH6R4",
+  "taskId": "score-results-loading",
+  "invocationKey": "premium-bugfix:S000017:score-results-loading",
+  "status": "ok",
+  "result": {
+    "gaps": [
+      "Could add subtle particle trail for even more premium feel"
+    ],
+    "overallScore": 91
+  },
+  "startedAt": "2026-03-17T09:21:12.267Z",
+  "finishedAt": "2026-03-17T09:21:12.267Z",
+  "value": {
+    "gaps": [
+      "Could add subtle particle trail for even more premium feel"
+    ],
+    "overallScore": 91
+  }
+}

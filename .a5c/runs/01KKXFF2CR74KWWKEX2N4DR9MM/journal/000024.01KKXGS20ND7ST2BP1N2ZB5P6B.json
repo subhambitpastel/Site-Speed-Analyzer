@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T09:07:08.437Z",
+  "data": {
+    "effectId": "01KKXGS1YYV06GRAZSBDTFF70N",
+    "invocationKey": "premium-bugfix:S000012:fix-results-loading",
+    "invocationHash": "3b2937c60f5c8149921bbb8c8c2c9f0dad0debfcf607d503af0caf80c19c2eff",
+    "stepId": "S000012",
+    "taskId": "fix-results-loading",
+    "kind": "agent",
+    "label": "Results badge + loading (BUG-4,5)",
+    "taskDefRef": "tasks/01KKXGS1YYV06GRAZSBDTFF70N/task.json"
+  },
+  "checksum": "5613a2bc269faaaab276e5e3dc2dfc4404b73befa4ad8b7277acffa12296cc28"
+}

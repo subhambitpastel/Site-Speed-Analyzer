@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-03-17T08:44:12.709Z",
+  "data": {
+    "runId": "01KKXFF2CR74KWWKEX2N4DR9MM",
+    "processId": "premium-bugfix",
+    "entrypoint": {
+      "importPath": "../../processes/premium-bugfix.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "2014ccb9c4997294b8c3e6487c825318639225e9796cb1eee44d3f6db011bef6"
+}

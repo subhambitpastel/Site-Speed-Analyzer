@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXB0JXE55MPFWNZ7SVWHMNH",
+  "taskId": "verify-build",
+  "invocationKey": "ui-bugfix-11:S000002:verify-build",
+  "stepId": "S000002",
+  "kind": "agent",
+  "title": "Verify build (Phase 1 - Strategy Toggle)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXB0JXE55MPFWNZ7SVWHMNH/input.json",
+    "outputJsonPath": "tasks/01KKXB0JXE55MPFWNZ7SVWHMNH/result.json"
+  },
+  "inputs": {
+    "phase": "Phase 1 - Strategy Toggle"
+  }
+}

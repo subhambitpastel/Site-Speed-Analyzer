@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXHF7WJCAMWXRE01RSSD1YW",
+  "taskId": "verify-build",
+  "invocationKey": "premium-bugfix:S000016:verify-build",
+  "stepId": "S000016",
+  "kind": "agent",
+  "title": "Build (Phase 2 Refine 1)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXHF7WJCAMWXRE01RSSD1YW/input.json",
+    "outputJsonPath": "tasks/01KKXHF7WJCAMWXRE01RSSD1YW/result.json"
+  },
+  "inputs": {
+    "phase": "Phase 2 Refine 1"
+  }
+}

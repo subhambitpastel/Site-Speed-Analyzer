@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXJZVB3FX9D7ZG4CMQAX5GX",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "tooltip-fix:S000003:__sdk.breakpoint",
+  "status": "ok",
+  "result": {
+    "approved": true,
+    "message": "Found additional root cause: .glow-card CSS class had overflow:hidden. Fixed."
+  },
+  "startedAt": "2026-03-17T09:50:53.899Z",
+  "finishedAt": "2026-03-17T09:50:53.899Z",
+  "value": {
+    "approved": true,
+    "message": "Found additional root cause: .glow-card CSS class had overflow:hidden. Fixed."
+  }
+}

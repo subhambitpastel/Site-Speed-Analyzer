@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKZNSBTCM84MQFE01AJWPG50",
+  "taskId": "score-dark-mode",
+  "invocationKey": "bugfix-9-10:S000003:score-dark-mode",
+  "stepId": "S000003",
+  "kind": "agent",
+  "title": "Score dark mode (iteration 0)",
+  "io": {
+    "inputJsonPath": "tasks/01KKZNSBTCM84MQFE01AJWPG50/input.json",
+    "outputJsonPath": "tasks/01KKZNSBTCM84MQFE01AJWPG50/result.json"
+  },
+  "inputs": {
+    "iteration": 0,
+    "targetQuality": 85
+  }
+}

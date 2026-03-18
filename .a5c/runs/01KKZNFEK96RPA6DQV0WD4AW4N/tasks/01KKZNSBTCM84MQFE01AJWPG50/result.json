@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKZNSBTCM84MQFE01AJWPG50",
+  "taskId": "score-dark-mode",
+  "invocationKey": "bugfix-9-10:S000003:score-dark-mode",
+  "status": "ok",
+  "result": {
+    "breakdown": {
+      "codeQuality": 4,
+      "defaultState": 28,
+      "foucPrevention": 28,
+      "hydrationSafety": 4,
+      "localStorageRespect": 18
+    },
+    "gaps": [
+      "Hydration mismatch: useEffect syncs from classList, but server renders darkMode=true causing potential icon flash before mount",
+      "CSS has redundant prefers-color-scheme media queries that duplicate .dark class variables",
+      "Inline script does not handle unexpected localStorage values explicitly",
+      "toggleDarkMode logic in page.tsx duplicates inline script logic with no shared utility"
+    ],
+    "overallScore": 82
+  },
+  "startedAt": "2026-03-18T05:13:49.678Z",
+  "finishedAt": "2026-03-18T05:13:49.678Z",
+  "value": {
+    "breakdown": {
+      "codeQuality": 4,
+      "defaultState": 28,
+      "foucPrevention": 28,
+      "hydrationSafety": 4,
+      "localStorageRespect": 18
+    },
+    "gaps": [
+      "Hydration mismatch: useEffect syncs from classList, but server renders darkMode=true causing potential icon flash before mount",
+      "CSS has redundant prefers-color-scheme media queries that duplicate .dark class variables",
+      "Inline script does not handle unexpected localStorage values explicitly",
+      "toggleDarkMode logic in page.tsx duplicates inline script logic with no shared utility"
+    ],
+    "overallScore": 82
+  }
+}

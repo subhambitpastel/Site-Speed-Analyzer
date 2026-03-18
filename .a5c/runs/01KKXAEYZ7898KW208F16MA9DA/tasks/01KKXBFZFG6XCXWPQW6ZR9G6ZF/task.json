@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXBFZFG6XCXWPQW6ZR9G6ZF",
+  "taskId": "verify-build",
+  "invocationKey": "ui-bugfix-11:S000007:verify-build",
+  "stepId": "S000007",
+  "kind": "agent",
+  "title": "Verify build (Phase 2 - UI Enhancements)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXBFZFG6XCXWPQW6ZR9G6ZF/input.json",
+    "outputJsonPath": "tasks/01KKXBFZFG6XCXWPQW6ZR9G6ZF/result.json"
+  },
+  "inputs": {
+    "phase": "Phase 2 - UI Enhancements"
+  }
+}

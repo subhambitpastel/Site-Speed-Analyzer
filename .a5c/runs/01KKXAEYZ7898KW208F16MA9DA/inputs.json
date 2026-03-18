@@ -1,0 +1,25 @@
+{
+  "targetQuality": 85,
+  "maxIterations": 3,
+  "bugs": {
+    "phase1": [
+      "BUG-1",
+      "BUG-2",
+      "BUG-3"
+    ],
+    "phase2": [
+      "BUG-4",
+      "BUG-5",
+      "BUG-11"
+    ],
+    "phase3": [
+      "BUG-6",
+      "BUG-7",
+      "BUG-8"
+    ],
+    "phase4": [
+      "BUG-9",
+      "BUG-10"
+    ]
+  }
+}

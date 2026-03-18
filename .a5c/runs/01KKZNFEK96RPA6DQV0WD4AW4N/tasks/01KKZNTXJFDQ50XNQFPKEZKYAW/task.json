@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKZNTXJFDQ50XNQFPKEZKYAW",
+  "taskId": "refine-dark-mode",
+  "invocationKey": "bugfix-9-10:S000004:refine-dark-mode",
+  "stepId": "S000004",
+  "kind": "agent",
+  "title": "Refine dark mode (iteration 1)",
+  "io": {
+    "inputJsonPath": "tasks/01KKZNTXJFDQ50XNQFPKEZKYAW/input.json",
+    "outputJsonPath": "tasks/01KKZNTXJFDQ50XNQFPKEZKYAW/result.json"
+  },
+  "inputs": {
+    "iteration": 1,
+    "previousScore": 82,
+    "targetQuality": 85
+  }
+}

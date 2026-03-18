@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXBNK7FPHE0TFX4K8NAJM54",
+  "taskId": "refine-phase2",
+  "invocationKey": "ui-bugfix-11:S000009:refine-phase2",
+  "status": "ok",
+  "result": {
+    "changesApplied": [
+      "Elastic dasharray animation on LoadingSpinner",
+      "Badge swap animation on strategy indicator",
+      "10px scroll delta buffer on navbar"
+    ],
+    "filesModified": [
+      "src/app/globals.css",
+      "src/components/LoadingSpinner.tsx",
+      "src/app/page.tsx"
+    ],
+    "success": true
+  },
+  "startedAt": "2026-03-17T07:39:12.695Z",
+  "finishedAt": "2026-03-17T07:39:12.695Z",
+  "value": {
+    "changesApplied": [
+      "Elastic dasharray animation on LoadingSpinner",
+      "Badge swap animation on strategy indicator",
+      "10px scroll delta buffer on navbar"
+    ],
+    "filesModified": [
+      "src/app/globals.css",
+      "src/components/LoadingSpinner.tsx",
+      "src/app/page.tsx"
+    ],
+    "success": true
+  }
+}

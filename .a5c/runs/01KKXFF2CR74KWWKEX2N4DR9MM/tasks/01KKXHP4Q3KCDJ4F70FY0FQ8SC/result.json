@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXHP4Q3KCDJ4F70FY0FQ8SC",
+  "taskId": "fix-premium-tooltips",
+  "invocationKey": "premium-bugfix:S000020:fix-premium-tooltips",
+  "status": "ok",
+  "result": {
+    "filesModified": [
+      "src/components/Tooltip.tsx",
+      "src/components/ResultsTable.tsx",
+      "src/components/ScoreChart.tsx",
+      "src/components/MetricsPanel.tsx"
+    ],
+    "success": true,
+    "summary": "Glass-panel tooltips with backdrop blur, info icons, updated descriptions, dashed underlines. Build passes."
+  },
+  "startedAt": "2026-03-17T09:26:51.568Z",
+  "finishedAt": "2026-03-17T09:26:51.568Z",
+  "value": {
+    "filesModified": [
+      "src/components/Tooltip.tsx",
+      "src/components/ResultsTable.tsx",
+      "src/components/ScoreChart.tsx",
+      "src/components/MetricsPanel.tsx"
+    ],
+    "success": true,
+    "summary": "Glass-panel tooltips with backdrop blur, info icons, updated descriptions, dashed underlines. Build passes."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T09:28:44.667Z",
+  "data": {
+    "effectId": "01KKXJ0KT7WMVS10TRZDB7SYEP",
+    "invocationKey": "premium-bugfix:S000022:score-tooltips",
+    "invocationHash": "b7701b19c33aafe71ffd6bc0cbe864d714f517fa774258276b9130de76dcbf35",
+    "stepId": "S000022",
+    "taskId": "score-tooltips",
+    "kind": "agent",
+    "label": "Score tooltips (iter 0)",
+    "taskDefRef": "tasks/01KKXJ0KT7WMVS10TRZDB7SYEP/task.json"
+  },
+  "checksum": "cc25490d455cb2cab4252f73195b02fcea41d08cea584f93fc159721e4dc12b0"
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXCQF5VZDN40G6XQJ5M4AHG",
+  "taskId": "score-phase3",
+  "invocationKey": "ui-bugfix-11:S000019:score-phase3",
+  "status": "ok",
+  "result": {
+    "breakdown": {
+      "metricsPanel": 25,
+      "resultsTable": 28,
+      "scoreChart": 25,
+      "tooltipDesign": 14
+    },
+    "gaps": [
+      "tabIndex missing on tooltip triggers",
+      "No aria-describedby"
+    ],
+    "overallScore": 92
+  },
+  "startedAt": "2026-03-17T07:57:03.874Z",
+  "finishedAt": "2026-03-17T07:57:03.874Z",
+  "value": {
+    "breakdown": {
+      "metricsPanel": 25,
+      "resultsTable": 28,
+      "scoreChart": 25,
+      "tooltipDesign": 14
+    },
+    "gaps": [
+      "tabIndex missing on tooltip triggers",
+      "No aria-describedby"
+    ],
+    "overallScore": 92
+  }
+}

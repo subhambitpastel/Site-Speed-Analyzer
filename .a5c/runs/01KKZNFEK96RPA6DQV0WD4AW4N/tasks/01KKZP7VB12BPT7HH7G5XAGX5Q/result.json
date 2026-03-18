@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKZP7VB12BPT7HH7G5XAGX5Q",
+  "taskId": "score-dark-mode",
+  "invocationKey": "bugfix-9-10:S000006:score-dark-mode",
+  "status": "ok",
+  "result": {
+    "breakdown": {
+      "codeQuality": 7,
+      "defaultState": 28,
+      "foucPrevention": 28,
+      "hydrationSafety": 7,
+      "localStorageRespect": 20
+    },
+    "gaps": [
+      "Minor: React initializer uses !== 'light' shortcut vs inline script explicit validation - fragile if new theme values added",
+      "Minor: mounted guard renders empty placeholder before hydration"
+    ],
+    "overallScore": 90
+  },
+  "startedAt": "2026-03-18T05:21:50.468Z",
+  "finishedAt": "2026-03-18T05:21:50.468Z",
+  "value": {
+    "breakdown": {
+      "codeQuality": 7,
+      "defaultState": 28,
+      "foucPrevention": 28,
+      "hydrationSafety": 7,
+      "localStorageRespect": 20
+    },
+    "gaps": [
+      "Minor: React initializer uses !== 'light' shortcut vs inline script explicit validation - fragile if new theme values added",
+      "Minor: mounted guard renders empty placeholder before hydration"
+    ],
+    "overallScore": 90
+  }
+}

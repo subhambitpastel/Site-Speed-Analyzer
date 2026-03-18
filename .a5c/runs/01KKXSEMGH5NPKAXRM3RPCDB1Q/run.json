@@ -1,0 +1,13 @@
+{
+  "runId": "01KKXSEMGH5NPKAXRM3RPCDB1Q",
+  "request": "csv-option",
+  "processId": "csv-option",
+  "entrypoint": {
+    "importPath": "../../processes/csv-option.js",
+    "exportName": "process"
+  },
+  "processPath": "../../processes/csv-option.js",
+  "layoutVersion": "2026.01-storage-preview",
+  "createdAt": "2026-03-17T11:38:44.200Z",
+  "completionProof": "cd61fa967762e6316edfaa694ccb3b32"
+}

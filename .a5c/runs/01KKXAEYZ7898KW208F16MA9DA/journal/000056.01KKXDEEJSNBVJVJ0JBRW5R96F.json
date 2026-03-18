@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T08:08:55.129Z",
+  "data": {
+    "effectId": "01KKXDEEH5YZ2YPYAN611E48R2",
+    "invocationKey": "ui-bugfix-11:S000028:git-commit",
+    "invocationHash": "544d83c0b75ffa1c1f57a979617afc744647e78a841a50fc06bdf061284261ea",
+    "stepId": "S000028",
+    "taskId": "git-commit",
+    "kind": "agent",
+    "label": "Git commit: Final",
+    "taskDefRef": "tasks/01KKXDEEH5YZ2YPYAN611E48R2/task.json"
+  },
+  "checksum": "b54f23c65f5a7967a85fc5df6310116aea01c60f7414d75715cf5d5efd1340c1"
+}

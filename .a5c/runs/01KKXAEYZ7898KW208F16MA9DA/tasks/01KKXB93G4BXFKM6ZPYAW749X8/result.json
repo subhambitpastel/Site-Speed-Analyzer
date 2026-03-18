@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXB93G4BXFKM6ZPYAW749X8",
+  "taskId": "fix-ui-enhancements",
+  "invocationKey": "ui-bugfix-11:S000006:fix-ui-enhancements",
+  "status": "ok",
+  "result": {
+    "filesModified": [
+      "src/app/page.tsx",
+      "src/components/LoadingSpinner.tsx",
+      "src/app/globals.css"
+    ],
+    "success": true,
+    "summary": "Added strategy pill badge in results area, circular ring loading animation, hide-on-scroll navbar. Build passes."
+  },
+  "startedAt": "2026-03-17T07:34:38.038Z",
+  "finishedAt": "2026-03-17T07:34:38.038Z",
+  "value": {
+    "filesModified": [
+      "src/app/page.tsx",
+      "src/components/LoadingSpinner.tsx",
+      "src/app/globals.css"
+    ],
+    "success": true,
+    "summary": "Added strategy pill badge in results area, circular ring loading animation, hide-on-scroll navbar. Build passes."
+  }
+}

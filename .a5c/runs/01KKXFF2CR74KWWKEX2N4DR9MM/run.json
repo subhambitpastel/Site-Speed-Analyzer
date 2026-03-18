@@ -1,0 +1,13 @@
+{
+  "runId": "01KKXFF2CR74KWWKEX2N4DR9MM",
+  "request": "premium-bugfix",
+  "processId": "premium-bugfix",
+  "entrypoint": {
+    "importPath": "../../processes/premium-bugfix.js",
+    "exportName": "process"
+  },
+  "processPath": "../../processes/premium-bugfix.js",
+  "layoutVersion": "2026.01-storage-preview",
+  "createdAt": "2026-03-17T08:44:12.611Z",
+  "completionProof": "f2fbd36b248d4465068c2d4d87c6bb36"
+}

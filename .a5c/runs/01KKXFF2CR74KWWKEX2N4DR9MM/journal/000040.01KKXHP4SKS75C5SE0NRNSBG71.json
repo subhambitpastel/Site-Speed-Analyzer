@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T09:23:01.556Z",
+  "data": {
+    "effectId": "01KKXHP4Q3KCDJ4F70FY0FQ8SC",
+    "invocationKey": "premium-bugfix:S000020:fix-premium-tooltips",
+    "invocationHash": "b52186e4120ac814f3a80bba3d030dfa5b4b62a15566ef0633a86bb9d47b6284",
+    "stepId": "S000020",
+    "taskId": "fix-premium-tooltips",
+    "kind": "agent",
+    "label": "Premium tooltips (BUG-6,7,8)",
+    "taskDefRef": "tasks/01KKXHP4Q3KCDJ4F70FY0FQ8SC/task.json"
+  },
+  "checksum": "f4cfd7fdbe185e0f290eaf73685e5a46490f935003fec47d12773b293d99579c"
+}

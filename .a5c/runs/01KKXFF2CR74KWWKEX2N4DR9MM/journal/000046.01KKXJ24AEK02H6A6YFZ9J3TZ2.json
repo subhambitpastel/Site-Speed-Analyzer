@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T09:29:34.286Z",
+  "data": {
+    "effectId": "01KKXJ248C4KYMKKD70EXS6X37",
+    "invocationKey": "premium-bugfix:S000023:git-commit",
+    "invocationHash": "5b952b10bd0877af571c27027459173682c1bcb15757b913f89c6fe3499bc4c9",
+    "stepId": "S000023",
+    "taskId": "git-commit",
+    "kind": "agent",
+    "label": "Commit: BUG-6,7,8 — Premium glass-panel tooltips with info icons",
+    "taskDefRef": "tasks/01KKXJ248C4KYMKKD70EXS6X37/task.json"
+  },
+  "checksum": "1d1b47afdeb0e73b9b26a4fe709695295b6d94e5151f3636b01dde4d3b8684ba"
+}

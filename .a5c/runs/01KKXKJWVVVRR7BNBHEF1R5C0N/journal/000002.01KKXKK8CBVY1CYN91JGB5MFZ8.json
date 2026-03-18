@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T09:56:24.075Z",
+  "data": {
+    "effectId": "01KKXKK8AM14N597FM7GD4KK8J",
+    "invocationKey": "tooltip-headed:S000001:run-headed-test",
+    "invocationHash": "45cfc6042483d4c3647a31026234858a4c58bb72ed03f969f6328f2359254b0c",
+    "stepId": "S000001",
+    "taskId": "run-headed-test",
+    "kind": "agent",
+    "label": "Run headed Playwright test (iter 1)",
+    "taskDefRef": "tasks/01KKXKK8AM14N597FM7GD4KK8J/task.json"
+  },
+  "checksum": "23df3fa2fdae4654f3502a4473785148e70b49def52fedc0781e713a88fed134"
+}

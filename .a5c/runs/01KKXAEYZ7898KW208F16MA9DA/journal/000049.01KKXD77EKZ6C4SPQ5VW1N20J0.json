@@ -1,0 +1,12 @@
+{
+  "type": "EFFECT_RESOLVED",
+  "recordedAt": "2026-03-17T08:04:58.451Z",
+  "data": {
+    "effectId": "01KKXD5PPCKWDSRSEAEDBD577J",
+    "status": "ok",
+    "resultRef": "tasks/01KKXD5PPCKWDSRSEAEDBD577J/result.json",
+    "startedAt": "2026-03-17T08:04:58.141Z",
+    "finishedAt": "2026-03-17T08:04:58.141Z"
+  },
+  "checksum": "f53de74376eee6aa1dd09de94f4ead96615ba4bc0c91ebeb5e01b87306c72fde"
+}

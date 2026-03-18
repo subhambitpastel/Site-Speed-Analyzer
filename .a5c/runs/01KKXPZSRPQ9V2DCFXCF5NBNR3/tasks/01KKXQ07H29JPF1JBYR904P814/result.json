@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXQ07H29JPF1JBYR904P814",
+  "taskId": "run-test",
+  "invocationKey": "arrow-loader-fix:S000001:run-test",
+  "status": "ok",
+  "result": {
+    "failures": [],
+    "passed": 2,
+    "total": 2
+  },
+  "startedAt": "2026-03-17T11:02:56.166Z",
+  "finishedAt": "2026-03-17T11:02:56.166Z",
+  "value": {
+    "failures": [],
+    "passed": 2,
+    "total": 2
+  }
+}

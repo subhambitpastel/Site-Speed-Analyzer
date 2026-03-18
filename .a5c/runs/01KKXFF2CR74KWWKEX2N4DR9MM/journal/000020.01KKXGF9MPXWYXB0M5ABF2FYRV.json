@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T09:01:48.566Z",
+  "data": {
+    "effectId": "01KKXGF9JV2W9MG5DM6XMYFK5N",
+    "invocationKey": "premium-bugfix:S000010:git-commit",
+    "invocationHash": "0085616a9f507d936da6273d176f85708b06454d671efa39365f613425c27001",
+    "stepId": "S000010",
+    "taskId": "git-commit",
+    "kind": "agent",
+    "label": "Commit: BUG-1,2 — Premium iOS-style strategy toggle",
+    "taskDefRef": "tasks/01KKXGF9JV2W9MG5DM6XMYFK5N/task.json"
+  },
+  "checksum": "4ca4a6091e1bec0972ed7a18f833418ee4e0ea756040ced6ebbeb44e7217190b"
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXCDBXVABM5F7BZ4JS1CXDX",
+  "taskId": "refine-phase3",
+  "invocationKey": "ui-bugfix-11:S000017:refine-phase3",
+  "stepId": "S000017",
+  "kind": "agent",
+  "title": "Refine Phase 3 (iteration 1)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXCDBXVABM5F7BZ4JS1CXDX/input.json",
+    "outputJsonPath": "tasks/01KKXCDBXVABM5F7BZ4JS1CXDX/result.json"
+  },
+  "inputs": {
+    "iteration": 1,
+    "previousScore": 82,
+    "targetQuality": 85
+  }
+}

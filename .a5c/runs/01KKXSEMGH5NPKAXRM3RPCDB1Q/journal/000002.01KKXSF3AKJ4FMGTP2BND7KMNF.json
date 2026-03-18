@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T11:38:59.283Z",
+  "data": {
+    "effectId": "01KKXSF392X5QHQ1D00AJE9PDN",
+    "invocationKey": "csv-option:S000001:commit",
+    "invocationHash": "f282f6fb16e09fe66e881f2df05a7b2190e1a46a5316c1da03657cafb1d1572d",
+    "stepId": "S000001",
+    "taskId": "commit",
+    "kind": "agent",
+    "label": "Commit CSV option",
+    "taskDefRef": "tasks/01KKXSF392X5QHQ1D00AJE9PDN/task.json"
+  },
+  "checksum": "0534570f638f853cf0eb4323065a6d8fb18513e720170852763abb1a45481c81"
+}

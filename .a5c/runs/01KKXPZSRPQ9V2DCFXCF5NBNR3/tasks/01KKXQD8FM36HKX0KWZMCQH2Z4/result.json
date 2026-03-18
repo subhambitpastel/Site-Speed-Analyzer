@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXQD8FM36HKX0KWZMCQH2Z4",
+  "taskId": "commit",
+  "invocationKey": "arrow-loader-fix:S000002:commit",
+  "status": "ok",
+  "result": {
+    "commitHash": "89ae1eb",
+    "success": true
+  },
+  "startedAt": "2026-03-17T11:03:13.516Z",
+  "finishedAt": "2026-03-17T11:03:13.516Z",
+  "value": {
+    "commitHash": "89ae1eb",
+    "success": true
+  }
+}

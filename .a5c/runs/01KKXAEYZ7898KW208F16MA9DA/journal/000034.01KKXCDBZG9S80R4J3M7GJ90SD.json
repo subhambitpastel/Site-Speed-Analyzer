@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T07:50:51.120Z",
+  "data": {
+    "effectId": "01KKXCDBXVABM5F7BZ4JS1CXDX",
+    "invocationKey": "ui-bugfix-11:S000017:refine-phase3",
+    "invocationHash": "a9556b33f7b7bcc5809c9e16bd79cadb4b22812c37cc299865517fb1513b0ae8",
+    "stepId": "S000017",
+    "taskId": "refine-phase3",
+    "kind": "agent",
+    "label": "Refine Phase 3 (iteration 1)",
+    "taskDefRef": "tasks/01KKXCDBXVABM5F7BZ4JS1CXDX/task.json"
+  },
+  "checksum": "bd587e3b46186f4be9bee8c6b2632f67e5f5ba4cebc167494b452f6b1779de0d"
+}

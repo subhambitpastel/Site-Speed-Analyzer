@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXKNQXAD61WDNS43HR1NY9W",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "tooltip-headed:S000002:__sdk.breakpoint",
+  "stepId": "S000002",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Iteration 1: Playwright ran with visible browser. Tests: 3/3 pass. Screenshots in test-results/. Did you see the tooltips working? Approve or request another iteration?",
+      "tag": "iter-1",
+      "title": "Iteration 1 Review"
+    },
+    "requestedAt": "2026-03-17T09:57:45.514Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Iteration 1: Playwright ran with visible browser. Tests: 3/3 pass. Screenshots in test-results/. Did you see the tooltips working? Approve or request another iteration?",
+      "tag": "iter-1",
+      "title": "Iteration 1 Review"
+    },
+    "requestedAt": "2026-03-17T09:57:45.514Z"
+  }
+}

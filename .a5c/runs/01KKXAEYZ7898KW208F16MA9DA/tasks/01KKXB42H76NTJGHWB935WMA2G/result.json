@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXB42H76NTJGHWB935WMA2G",
+  "taskId": "score-phase1",
+  "invocationKey": "ui-bugfix-11:S000003:score-phase1",
+  "status": "ok",
+  "result": {
+    "breakdown": {
+      "default": 15,
+      "functionality": 8,
+      "position": 25,
+      "toggleDesign": 27,
+      "visualPolish": 10
+    },
+    "gaps": [
+      "No cursor-not-allowed on disabled buttons",
+      "Missing ARIA attributes for accessibility",
+      "No smooth text color crossfade with pill slide",
+      "Cache integration only stores results after full run completion"
+    ],
+    "overallScore": 85
+  },
+  "startedAt": "2026-03-17T07:28:57.445Z",
+  "finishedAt": "2026-03-17T07:28:57.445Z",
+  "value": {
+    "breakdown": {
+      "default": 15,
+      "functionality": 8,
+      "position": 25,
+      "toggleDesign": 27,
+      "visualPolish": 10
+    },
+    "gaps": [
+      "No cursor-not-allowed on disabled buttons",
+      "Missing ARIA attributes for accessibility",
+      "No smooth text color crossfade with pill slide",
+      "Cache integration only stores results after full run completion"
+    ],
+    "overallScore": 85
+  }
+}

@@ -1,0 +1,1 @@
+{"success": true, "filesModified": ["src/lib/exportCSV.ts", "src/lib/exportDOCX.ts", "src/components/ExportDropdown.tsx"], "summary": "Replaced CSV with SpreadsheetML XML format with color-coded scores, enhanced DOCX with styled score legend. Build passes."}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXBVZW9EWXZJF8FPNCHCJ7X",
+  "taskId": "score-phase2",
+  "invocationKey": "ui-bugfix-11:S000011:score-phase2",
+  "status": "ok",
+  "result": {
+    "breakdown": {
+      "loadingAnimation": 28,
+      "navbarFix": 23,
+      "strategyIndicator": 28,
+      "visualPolish": 13
+    },
+    "gaps": [
+      "Badge lacks exit transition",
+      "Spinner arc is single-color"
+    ],
+    "overallScore": 92
+  },
+  "startedAt": "2026-03-17T07:42:17.550Z",
+  "finishedAt": "2026-03-17T07:42:17.550Z",
+  "value": {
+    "breakdown": {
+      "loadingAnimation": 28,
+      "navbarFix": 23,
+      "strategyIndicator": 28,
+      "visualPolish": 13
+    },
+    "gaps": [
+      "Badge lacks exit transition",
+      "Spinner arc is single-color"
+    ],
+    "overallScore": 92
+  }
+}

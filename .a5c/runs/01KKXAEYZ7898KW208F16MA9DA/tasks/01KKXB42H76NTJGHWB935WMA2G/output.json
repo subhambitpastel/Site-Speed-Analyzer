@@ -1,0 +1,1 @@
+{"overallScore": 85, "breakdown": {"toggleDesign": 27, "position": 25, "default": 15, "visualPolish": 10, "functionality": 8}, "gaps": ["No cursor-not-allowed on disabled buttons", "Missing ARIA attributes for accessibility", "No smooth text color crossfade with pill slide", "Cache integration only stores results after full run completion"]}

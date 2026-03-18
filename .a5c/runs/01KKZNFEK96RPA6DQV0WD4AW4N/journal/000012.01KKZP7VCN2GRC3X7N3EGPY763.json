@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-18T05:21:04.917Z",
+  "data": {
+    "effectId": "01KKZP7VB12BPT7HH7G5XAGX5Q",
+    "invocationKey": "bugfix-9-10:S000006:score-dark-mode",
+    "invocationHash": "0810b85a2ec3bf29b7f02e0f9689fb03241eaf0a9dd288025783e83e6284f129",
+    "stepId": "S000006",
+    "taskId": "score-dark-mode",
+    "kind": "agent",
+    "label": "Score dark mode (iteration 1)",
+    "taskDefRef": "tasks/01KKZP7VB12BPT7HH7G5XAGX5Q/task.json"
+  },
+  "checksum": "eb7b055415403139a25af305bd80665919efa4556f276e8f7067cd636e983559"
+}

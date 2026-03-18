@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXFFNK4B6F922NE9YF6XBW5",
+  "taskId": "fix-premium-toggle",
+  "invocationKey": "premium-bugfix:S000001:fix-premium-toggle",
+  "status": "ok",
+  "result": {
+    "filesModified": [
+      "src/app/page.tsx",
+      "src/components/URLInput.tsx",
+      "src/components/FileUpload.tsx",
+      "src/components/StrategyToggle.tsx"
+    ],
+    "success": true,
+    "summary": "Premium iOS-style sliding toggle with spring easing thumb, repositioned inline with Generate button. Build passes."
+  },
+  "startedAt": "2026-03-17T08:49:21.228Z",
+  "finishedAt": "2026-03-17T08:49:21.228Z",
+  "value": {
+    "filesModified": [
+      "src/app/page.tsx",
+      "src/components/URLInput.tsx",
+      "src/components/FileUpload.tsx",
+      "src/components/StrategyToggle.tsx"
+    ],
+    "success": true,
+    "summary": "Premium iOS-style sliding toggle with spring easing thumb, repositioned inline with Generate button. Build passes."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T09:45:09.764Z",
+  "data": {
+    "effectId": "01KKXJYNT6KX9NT5DKFG6PX2NR",
+    "invocationKey": "tooltip-fix:S000001:verify-fix",
+    "invocationHash": "4c558e53d38a335c7edd947f68603c315a99c0bfc4de74148fe7b3cfc26f880b",
+    "stepId": "S000001",
+    "taskId": "verify-fix",
+    "kind": "agent",
+    "label": "Verify tooltip fix with Playwright",
+    "taskDefRef": "tasks/01KKXJYNT6KX9NT5DKFG6PX2NR/task.json"
+  },
+  "checksum": "537976d63c153c6aba2d5d859d29b0a90a1b2a411aa6fe4812ca6d53ba2837d1"
+}

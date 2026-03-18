@@ -1,0 +1,18 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T09:33:40.548Z",
+  "data": {
+    "effectId": "01KKXJ9MQNN6J7WHRPQH6BK9YG",
+    "invocationKey": "premium-bugfix:S000027:__sdk.breakpoint",
+    "invocationHash": "5ca684a23685bffa6b7ef89bd07516753319df87ad5342df14c5093eaefb80c6",
+    "stepId": "S000027",
+    "taskId": "__sdk.breakpoint",
+    "kind": "breakpoint",
+    "label": "breakpoint",
+    "taskDefRef": "tasks/01KKXJ9MQNN6J7WHRPQH6BK9YG/task.json",
+    "labels": [
+      "breakpoint"
+    ]
+  },
+  "checksum": "ac7a9ac1e341e175edb80f473b38a4b0479ebc6cda5bf867bc1e3f513ee5597b"
+}

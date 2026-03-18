@@ -1,0 +1,13 @@
+{
+  "runId": "01KKXJY97KGFBJQXTTP96VNN84",
+  "request": "tooltip-fix",
+  "processId": "tooltip-fix",
+  "entrypoint": {
+    "importPath": "../../processes/tooltip-fix.js",
+    "exportName": "process"
+  },
+  "processPath": "../../processes/tooltip-fix.js",
+  "layoutVersion": "2026.01-storage-preview",
+  "createdAt": "2026-03-17T09:44:56.855Z",
+  "completionProof": "afb4ef9e6d005f8abf428ee5703113e9"
+}

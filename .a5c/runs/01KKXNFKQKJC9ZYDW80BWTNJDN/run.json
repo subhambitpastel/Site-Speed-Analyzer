@@ -1,0 +1,13 @@
+{
+  "runId": "01KKXNFKQKJC9ZYDW80BWTNJDN",
+  "request": "arrow-loader-fix",
+  "processId": "arrow-loader-fix",
+  "entrypoint": {
+    "importPath": "../../processes/arrow-loader-fix.js",
+    "exportName": "process"
+  },
+  "processPath": "../../processes/arrow-loader-fix.js",
+  "layoutVersion": "2026.01-storage-preview",
+  "createdAt": "2026-03-17T10:29:21.836Z",
+  "completionProof": "7109d1fd3aacb62799f020de7e1992ec"
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKZNTXJFDQ50XNQFPKEZKYAW",
+  "taskId": "refine-dark-mode",
+  "invocationKey": "bugfix-9-10:S000004:refine-dark-mode",
+  "status": "ok",
+  "result": {
+    "changesApplied": [
+      "Inline script now validates localStorage theme value explicitly",
+      "Replaced useEffect sync with lazy useState initializer to eliminate hydration mismatch",
+      "Extracted DOM theme manipulation into reusable applyTheme callback"
+    ],
+    "filesModified": [
+      "src/app/layout.tsx",
+      "src/app/page.tsx"
+    ],
+    "success": true
+  },
+  "startedAt": "2026-03-18T05:18:37.652Z",
+  "finishedAt": "2026-03-18T05:18:37.652Z",
+  "value": {
+    "changesApplied": [
+      "Inline script now validates localStorage theme value explicitly",
+      "Replaced useEffect sync with lazy useState initializer to eliminate hydration mismatch",
+      "Extracted DOM theme manipulation into reusable applyTheme callback"
+    ],
+    "filesModified": [
+      "src/app/layout.tsx",
+      "src/app/page.tsx"
+    ],
+    "success": true
+  }
+}

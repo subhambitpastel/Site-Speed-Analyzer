@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T07:17:04.041Z",
+  "data": {
+    "effectId": "01KKXAFGB03DHTK6N13VSFWTEV",
+    "invocationKey": "ui-bugfix-11:S000001:fix-strategy-toggle",
+    "invocationHash": "f1311d79e9c2dbb1e0789236cf1430e88d7308a3d4a35b58819266aee55a8455",
+    "stepId": "S000001",
+    "taskId": "fix-strategy-toggle",
+    "kind": "agent",
+    "label": "Fix strategy toggle (BUG-1,2,3)",
+    "taskDefRef": "tasks/01KKXAFGB03DHTK6N13VSFWTEV/task.json"
+  },
+  "checksum": "85874078351450ba501cda25085a3b04db0f41c2a94cde2baf1060c93df5abb0"
+}

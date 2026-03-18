@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXKK8AM14N597FM7GD4KK8J",
+  "taskId": "run-headed-test",
+  "invocationKey": "tooltip-headed:S000001:run-headed-test",
+  "status": "ok",
+  "result": {
+    "allPass": true,
+    "failures": [],
+    "passed": 3,
+    "total": 3
+  },
+  "startedAt": "2026-03-17T09:57:41.909Z",
+  "finishedAt": "2026-03-17T09:57:41.909Z",
+  "value": {
+    "allPass": true,
+    "failures": [],
+    "passed": 3,
+    "total": 3
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXH45ZR0V252SGHMEKH76K0",
+  "taskId": "refine-results-loading",
+  "invocationKey": "premium-bugfix:S000015:refine-results-loading",
+  "status": "ok",
+  "result": {
+    "changesApplied": [
+      "Bloom glow layer",
+      "Progress-proportional arc",
+      "Border divider",
+      "Larger pulse scale"
+    ],
+    "filesModified": [
+      "src/app/page.tsx",
+      "src/app/globals.css"
+    ],
+    "success": true
+  },
+  "startedAt": "2026-03-17T09:19:09.026Z",
+  "finishedAt": "2026-03-17T09:19:09.026Z",
+  "value": {
+    "changesApplied": [
+      "Bloom glow layer",
+      "Progress-proportional arc",
+      "Border divider",
+      "Larger pulse scale"
+    ],
+    "filesModified": [
+      "src/app/page.tsx",
+      "src/app/globals.css"
+    ],
+    "success": true
+  }
+}

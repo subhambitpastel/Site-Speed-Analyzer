@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-03-17T09:56:12.369Z",
+  "data": {
+    "runId": "01KKXKJWVVVRR7BNBHEF1R5C0N",
+    "processId": "tooltip-headed",
+    "entrypoint": {
+      "importPath": "../../processes/tooltip-headed.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "1c61ceaeeef7168bd757dfd285b4a463ec81186ae8962b3fbe6cffd5f1ee0621"
+}

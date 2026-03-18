@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXRMPSE5CPRX2TMF0PQ54QE",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "csv-option:S000002:__sdk.breakpoint",
+  "status": "ok",
+  "result": {
+    "approved": true
+  },
+  "startedAt": "2026-03-17T11:24:42.826Z",
+  "finishedAt": "2026-03-17T11:24:42.826Z",
+  "value": {
+    "approved": true
+  }
+}

@@ -1,0 +1,1 @@
+{"overallScore": 92, "breakdown": {"resultsTable": 28, "scoreChart": 25, "metricsPanel": 25, "tooltipDesign": 14}, "gaps": ["tabIndex missing on tooltip triggers", "No aria-describedby"]}

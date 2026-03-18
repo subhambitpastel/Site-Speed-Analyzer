@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXD7HFDMQXCFNE96JD28NJ9",
+  "taskId": "git-commit",
+  "invocationKey": "ui-bugfix-11:S000025:git-commit",
+  "stepId": "S000025",
+  "kind": "agent",
+  "title": "Git commit: Phase 4",
+  "io": {
+    "inputJsonPath": "tasks/01KKXD7HFDMQXCFNE96JD28NJ9/input.json",
+    "outputJsonPath": "tasks/01KKXD7HFDMQXCFNE96JD28NJ9/result.json"
+  },
+  "inputs": {
+    "phase": "Phase 4",
+    "summary": "Enhanced CSV with Excel XML color formatting, improved DOCX with color-coded scores and styled tables. Score: 88/85.",
+    "title": "BUG-9,10 — Color-coded CSV and DOCX exports"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXJ0KT7WMVS10TRZDB7SYEP",
+  "taskId": "score-tooltips",
+  "invocationKey": "premium-bugfix:S000022:score-tooltips",
+  "status": "ok",
+  "result": {
+    "gaps": [
+      "SCORE_TOOLTIPS duplicated in ResultsTable and ScoreChart"
+    ],
+    "overallScore": 95
+  },
+  "startedAt": "2026-03-17T09:29:27.830Z",
+  "finishedAt": "2026-03-17T09:29:27.830Z",
+  "value": {
+    "gaps": [
+      "SCORE_TOOLTIPS duplicated in ResultsTable and ScoreChart"
+    ],
+    "overallScore": 95
+  }
+}

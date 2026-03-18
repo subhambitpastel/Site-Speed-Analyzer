@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T08:57:53.703Z",
+  "data": {
+    "effectId": "01KKXG8478VKQW1B3GNPCQBHYQ",
+    "invocationKey": "premium-bugfix:S000006:score-toggle",
+    "invocationHash": "a31a4042e21e2d7dc49864d482aedbb449627cc098a0d0417c916b18a4a0d89d",
+    "stepId": "S000006",
+    "taskId": "score-toggle",
+    "kind": "agent",
+    "label": "Score toggle (iter 1)",
+    "taskDefRef": "tasks/01KKXG8478VKQW1B3GNPCQBHYQ/task.json"
+  },
+  "checksum": "731116b090b4db8710aa274dcc2c69595fe3e28d13d9a3eab34b06fb96104010"
+}

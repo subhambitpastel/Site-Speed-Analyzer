@@ -29,7 +29,7 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var d=document.documentElement;var t=localStorage.getItem('theme');if(t==='dark'||(t!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches)){d.classList.add('dark');d.removeAttribute('data-theme')}else{d.classList.remove('dark');d.setAttribute('data-theme','light')}}catch(e){}})()`,
+            __html: `(function(){try{var d=document.documentElement;var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){localStorage.removeItem('theme');t='dark'}if(t==='light'){d.classList.remove('dark');d.setAttribute('data-theme','light')}else{d.classList.add('dark');d.removeAttribute('data-theme')}}catch(e){d.classList.add('dark')}})()`,
           }}
         />
       </head>

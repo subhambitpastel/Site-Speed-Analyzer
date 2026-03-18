@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXDAYF02JS8FP77T77EFBZN",
+  "taskId": "verify-build",
+  "invocationKey": "ui-bugfix-11:S000027:verify-build",
+  "stepId": "S000027",
+  "kind": "agent",
+  "title": "Verify build (Final Build)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXDAYF02JS8FP77T77EFBZN/input.json",
+    "outputJsonPath": "tasks/01KKXDAYF02JS8FP77T77EFBZN/result.json"
+  },
+  "inputs": {
+    "phase": "Final Build"
+  }
+}

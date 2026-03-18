@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXGF9JV2W9MG5DM6XMYFK5N",
+  "taskId": "git-commit",
+  "invocationKey": "premium-bugfix:S000010:git-commit",
+  "stepId": "S000010",
+  "kind": "agent",
+  "title": "Commit: BUG-1,2 — Premium iOS-style strategy toggle",
+  "io": {
+    "inputJsonPath": "tasks/01KKXGF9JV2W9MG5DM6XMYFK5N/input.json",
+    "outputJsonPath": "tasks/01KKXGF9JV2W9MG5DM6XMYFK5N/result.json"
+  },
+  "inputs": {
+    "summary": "Premium sliding toggle with spring easing, repositioned near Generate button. Score: 91",
+    "title": "BUG-1,2 — Premium iOS-style strategy toggle"
+  }
+}

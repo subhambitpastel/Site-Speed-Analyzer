@@ -1,0 +1,1 @@
+{"success": true, "filesModified": ["src/app/page.tsx"], "summary": "Replaced Desktop/Mobile buttons with smooth sliding pill toggle, moved to input area, defaulted to Desktop. Build passes."}

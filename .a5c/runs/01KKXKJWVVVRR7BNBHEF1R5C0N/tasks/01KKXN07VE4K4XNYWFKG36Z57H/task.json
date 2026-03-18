@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXN07VE4K4XNYWFKG36Z57H",
+  "taskId": "commit",
+  "invocationKey": "tooltip-headed:S000003:commit",
+  "stepId": "S000003",
+  "kind": "agent",
+  "title": "Commit fixes",
+  "io": {
+    "inputJsonPath": "tasks/01KKXN07VE4K4XNYWFKG36Z57H/input.json",
+    "outputJsonPath": "tasks/01KKXN07VE4K4XNYWFKG36Z57H/result.json"
+  },
+  "inputs": {
+    "iteration": 1
+  }
+}

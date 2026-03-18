@@ -1,0 +1,1 @@
+{"success": true, "changesApplied": ["Elastic dasharray animation on LoadingSpinner", "Badge swap animation on strategy indicator", "10px scroll delta buffer on navbar"], "filesModified": ["src/app/globals.css", "src/components/LoadingSpinner.tsx", "src/app/page.tsx"]}

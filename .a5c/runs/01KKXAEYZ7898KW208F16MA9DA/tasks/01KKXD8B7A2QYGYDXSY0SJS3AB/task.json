@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXD8B7A2QYGYDXSY0SJS3AB",
+  "taskId": "document-all-fixes",
+  "invocationKey": "ui-bugfix-11:S000026:document-all-fixes",
+  "stepId": "S000026",
+  "kind": "agent",
+  "title": "Document all 11 bug fixes",
+  "io": {
+    "inputJsonPath": "tasks/01KKXD8B7A2QYGYDXSY0SJS3AB/input.json",
+    "outputJsonPath": "tasks/01KKXD8B7A2QYGYDXSY0SJS3AB/result.json"
+  },
+  "inputs": {
+    "bugsFixed": [
+      "BUG-1",
+      "BUG-2",
+      "BUG-3",
+      "BUG-4",
+      "BUG-5",
+      "BUG-6",
+      "BUG-7",
+      "BUG-8",
+      "BUG-9",
+      "BUG-10",
+      "BUG-11"
+    ],
+    "phases": [
+      {
+        "bugs": [
+          "BUG-1",
+          "BUG-2",
+          "BUG-3"
+        ],
+        "converged": true,
+        "iterations": 0,
+        "phase": "Phase 1: Strategy Toggle",
+        "score": 85
+      },
+      {
+        "bugs": [
+          "BUG-4",
+          "BUG-5",
+          "BUG-11"
+        ],
+        "converged": true,
+        "iterations": 1,
+        "phase": "Phase 2: UI Enhancements",
+        "score": 92
+      },
+      {
+        "bugs": [
+          "BUG-6",
+          "BUG-7",
+          "BUG-8"
+        ],
+        "converged": true,
+        "iterations": 1,
+        "phase": "Phase 3: Tooltips",
+        "score": 92
+      },
+      {
+        "bugs": [
+          "BUG-9",
+          "BUG-10"
+        ],
+        "converged": true,
+        "iterations": 0,
+        "phase": "Phase 4: Export Styling",
+        "score": 88
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "runId": "01KKXKJWVVVRR7BNBHEF1R5C0N",
+  "request": "tooltip-headed",
+  "processId": "tooltip-headed",
+  "entrypoint": {
+    "importPath": "../../processes/tooltip-headed.js",
+    "exportName": "process"
+  },
+  "processPath": "../../processes/tooltip-headed.js",
+  "layoutVersion": "2026.01-storage-preview",
+  "createdAt": "2026-03-17T09:56:12.322Z",
+  "completionProof": "20cafc9ba5cf98bef1b25e13b76a51f1"
+}

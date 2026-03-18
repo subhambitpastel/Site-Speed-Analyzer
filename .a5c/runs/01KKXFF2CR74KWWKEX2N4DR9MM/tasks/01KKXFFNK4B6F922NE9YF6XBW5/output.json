@@ -1,0 +1,1 @@
+{"success": true, "filesModified": ["src/app/page.tsx", "src/components/URLInput.tsx", "src/components/FileUpload.tsx", "src/components/StrategyToggle.tsx"], "summary": "Premium iOS-style sliding toggle with spring easing thumb, repositioned inline with Generate button. Build passes."}

@@ -37,7 +37,14 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [progress, setProgress] = useState({ current: 0, total: 0 });
   const [strategy, setStrategy] = useState<"mobile" | "desktop">("desktop");
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window === "undefined") return true;
+    try {
+      return localStorage.getItem("theme") !== "light";
+    } catch {
+      return true;
+    }
+  });
   const [inputMode, setInputMode] = useState<"url" | "file">("url");
   const [mounted, setMounted] = useState(false);
   const abortControllerRef = useRef<AbortController | null>(null);
@@ -45,7 +52,6 @@ export default function Home() {
   const completedRef = useRef(0);
 
   useEffect(() => {
-    setDarkMode(document.documentElement.classList.contains("dark"));
     setMounted(true);
   }, []);
 
@@ -58,18 +64,22 @@ export default function Home() {
     }
   }, [strategy, isLoading]);
 
-  const toggleDarkMode = useCallback(() => {
-    const next = !darkMode;
-    setDarkMode(next);
+  const applyTheme = useCallback((isDark: boolean) => {
     const d = document.documentElement;
-    d.classList.toggle("dark", next);
-    if (next) {
+    d.classList.toggle("dark", isDark);
+    if (isDark) {
       d.removeAttribute("data-theme");
     } else {
       d.setAttribute("data-theme", "light");
     }
-    localStorage.setItem("theme", next ? "dark" : "light");
-  }, [darkMode]);
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  }, []);
+
+  const toggleDarkMode = useCallback(() => {
+    const next = !darkMode;
+    setDarkMode(next);
+    applyTheme(next);
+  }, [darkMode, applyTheme]);
 
   const handleSubmit = useCallback(
     async (urls: string[]) => {

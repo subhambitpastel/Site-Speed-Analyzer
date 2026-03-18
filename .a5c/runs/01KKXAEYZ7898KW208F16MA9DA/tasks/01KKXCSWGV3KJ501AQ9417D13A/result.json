@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXCSWGV3KJ501AQ9417D13A",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "ui-bugfix-11:S000021:__sdk.breakpoint",
+  "status": "ok",
+  "result": {
+    "approved": true,
+    "message": "Proceed to Phase 4"
+  },
+  "startedAt": "2026-03-17T07:58:05.289Z",
+  "finishedAt": "2026-03-17T07:58:05.289Z",
+  "value": {
+    "approved": true,
+    "message": "Proceed to Phase 4"
+  }
+}

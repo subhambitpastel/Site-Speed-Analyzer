@@ -1,0 +1,3 @@
+{
+  "scope": "Fix overflow-hidden clipping tooltips, verify with Playwright"
+}

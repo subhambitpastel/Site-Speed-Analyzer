@@ -1,0 +1,18 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T11:29:43.694Z",
+  "data": {
+    "effectId": "01KKXRY4PSTYRDGHACV82BBFC3",
+    "invocationKey": "csv-option:S000002:__sdk.breakpoint",
+    "invocationHash": "78482c752676958d86fd9bbd0dbf8a00c874ee0936d4e3b193ee52c5870455bb",
+    "stepId": "S000002",
+    "taskId": "__sdk.breakpoint",
+    "kind": "breakpoint",
+    "label": "breakpoint",
+    "taskDefRef": "tasks/01KKXRY4PSTYRDGHACV82BBFC3/task.json",
+    "labels": [
+      "breakpoint"
+    ]
+  },
+  "checksum": "1ff0434b6ad25c6418643922f068292aac1abfccfded2ea289c56d4443c3cf08"
+}

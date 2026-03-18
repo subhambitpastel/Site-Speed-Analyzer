@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXPFAPD4S3NYYZ7817YB07G",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "arrow-loader-fix:S000003:__sdk.breakpoint",
+  "stepId": "S000003",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Fixes applied: (1) Tooltip arrow repositioned to top of tooltip pointing up, (2) Removed tooltips from individual score cells in table rows, (3) Fixed orbiting ring - static track + rotating gradient arc with glow trail. Playwright: 2/2 pass. Screenshots in test-results/. Approve?",
+      "tag": "review",
+      "title": "Arrow + Loader Fix Review"
+    },
+    "requestedAt": "2026-03-17T10:46:41.100Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Fixes applied: (1) Tooltip arrow repositioned to top of tooltip pointing up, (2) Removed tooltips from individual score cells in table rows, (3) Fixed orbiting ring - static track + rotating gradient arc with glow trail. Playwright: 2/2 pass. Screenshots in test-results/. Approve?",
+      "tag": "review",
+      "title": "Arrow + Loader Fix Review"
+    },
+    "requestedAt": "2026-03-17T10:46:41.100Z"
+  }
+}

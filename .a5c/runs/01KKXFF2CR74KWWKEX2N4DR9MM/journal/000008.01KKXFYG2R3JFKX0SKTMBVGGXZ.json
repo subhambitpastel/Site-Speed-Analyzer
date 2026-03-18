@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T08:52:38.105Z",
+  "data": {
+    "effectId": "01KKXFYG0WYXH4VM3YBCYTNGVE",
+    "invocationKey": "premium-bugfix:S000004:refine-toggle",
+    "invocationHash": "ad639987124eeeb4659d9b0801a3852fd4fa7e0a71becedfcaef0bb693e65ec9",
+    "stepId": "S000004",
+    "taskId": "refine-toggle",
+    "kind": "agent",
+    "label": "Refine toggle (iter 1)",
+    "taskDefRef": "tasks/01KKXFYG0WYXH4VM3YBCYTNGVE/task.json"
+  },
+  "checksum": "45d9a82394e1188927900db343e269da994655bd6a60d048c839b673d639b112"
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXCDBXVABM5F7BZ4JS1CXDX",
+  "taskId": "refine-phase3",
+  "invocationKey": "ui-bugfix-11:S000017:refine-phase3",
+  "status": "ok",
+  "result": {
+    "changesApplied": [
+      "Dark mode tooltip styling",
+      "Focus/keyboard support",
+      "Desktop row score tooltips"
+    ],
+    "filesModified": [
+      "src/components/Tooltip.tsx",
+      "src/components/ResultsTable.tsx"
+    ],
+    "success": true
+  },
+  "startedAt": "2026-03-17T07:54:27.220Z",
+  "finishedAt": "2026-03-17T07:54:27.220Z",
+  "value": {
+    "changesApplied": [
+      "Dark mode tooltip styling",
+      "Focus/keyboard support",
+      "Desktop row score tooltips"
+    ],
+    "filesModified": [
+      "src/components/Tooltip.tsx",
+      "src/components/ResultsTable.tsx"
+    ],
+    "success": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXHP4Q3KCDJ4F70FY0FQ8SC",
+  "taskId": "fix-premium-tooltips",
+  "invocationKey": "premium-bugfix:S000020:fix-premium-tooltips",
+  "stepId": "S000020",
+  "kind": "agent",
+  "title": "Premium tooltips (BUG-6,7,8)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXHP4Q3KCDJ4F70FY0FQ8SC/input.json",
+    "outputJsonPath": "tasks/01KKXHP4Q3KCDJ4F70FY0FQ8SC/result.json"
+  },
+  "inputs": {}
+}

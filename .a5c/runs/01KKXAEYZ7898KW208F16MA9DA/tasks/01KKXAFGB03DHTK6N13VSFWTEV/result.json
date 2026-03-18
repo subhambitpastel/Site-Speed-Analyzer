@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXAFGB03DHTK6N13VSFWTEV",
+  "taskId": "fix-strategy-toggle",
+  "invocationKey": "ui-bugfix-11:S000001:fix-strategy-toggle",
+  "status": "ok",
+  "result": {
+    "filesModified": [
+      "src/app/page.tsx"
+    ],
+    "success": true,
+    "summary": "Replaced Desktop/Mobile buttons with smooth sliding pill toggle, moved to input area, defaulted to Desktop. Build passes."
+  },
+  "startedAt": "2026-03-17T07:26:14.123Z",
+  "finishedAt": "2026-03-17T07:26:14.123Z",
+  "value": {
+    "filesModified": [
+      "src/app/page.tsx"
+    ],
+    "success": true,
+    "summary": "Replaced Desktop/Mobile buttons with smooth sliding pill toggle, moved to input area, defaulted to Desktop. Build passes."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXAFGB03DHTK6N13VSFWTEV",
+  "taskId": "fix-strategy-toggle",
+  "invocationKey": "ui-bugfix-11:S000001:fix-strategy-toggle",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Fix strategy toggle (BUG-1,2,3)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXAFGB03DHTK6N13VSFWTEV/input.json",
+    "outputJsonPath": "tasks/01KKXAFGB03DHTK6N13VSFWTEV/result.json"
+  },
+  "inputs": {
+    "bugs": [
+      "BUG-1: Replace buttons with smooth sliding toggle switch",
+      "BUG-2: Move toggle near URL input/generate area",
+      "BUG-3: Default strategy to Desktop"
+    ],
+    "targetQuality": 85
+  }
+}

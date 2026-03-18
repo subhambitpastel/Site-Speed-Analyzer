@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXC0Q85BCT81NXKMBVK0TW7",
+  "taskId": "fix-tooltips",
+  "invocationKey": "ui-bugfix-11:S000014:fix-tooltips",
+  "status": "ok",
+  "result": {
+    "filesModified": [
+      "src/components/Tooltip.tsx",
+      "src/components/ResultsTable.tsx",
+      "src/components/ScoreChart.tsx",
+      "src/components/MetricsPanel.tsx"
+    ],
+    "success": true,
+    "summary": "Created reusable Tooltip component. Added score tooltips to ResultsTable headers and mobile cards, ScoreChart labels, and metric definition tooltips to MetricsPanel. Build passes."
+  },
+  "startedAt": "2026-03-17T07:47:23.550Z",
+  "finishedAt": "2026-03-17T07:47:23.550Z",
+  "value": {
+    "filesModified": [
+      "src/components/Tooltip.tsx",
+      "src/components/ResultsTable.tsx",
+      "src/components/ScoreChart.tsx",
+      "src/components/MetricsPanel.tsx"
+    ],
+    "success": true,
+    "summary": "Created reusable Tooltip component. Added score tooltips to ResultsTable headers and mobile cards, ScoreChart labels, and metric definition tooltips to MetricsPanel. Build passes."
+  }
+}

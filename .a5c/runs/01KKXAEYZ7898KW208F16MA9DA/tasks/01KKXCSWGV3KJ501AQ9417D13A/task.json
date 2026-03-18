@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXCSWGV3KJ501AQ9417D13A",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "ui-bugfix-11:S000021:__sdk.breakpoint",
+  "stepId": "S000021",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Phase 3 done: Tooltips (BUG-6,7,8). Score: 92/85. Proceed to Phase 4 (Export Styling)?",
+      "tag": "phase-3-review",
+      "title": "Phase 3 Review"
+    },
+    "requestedAt": "2026-03-17T07:57:41.274Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Phase 3 done: Tooltips (BUG-6,7,8). Score: 92/85. Proceed to Phase 4 (Export Styling)?",
+      "tag": "phase-3-review",
+      "title": "Phase 3 Review"
+    },
+    "requestedAt": "2026-03-17T07:57:41.274Z"
+  }
+}

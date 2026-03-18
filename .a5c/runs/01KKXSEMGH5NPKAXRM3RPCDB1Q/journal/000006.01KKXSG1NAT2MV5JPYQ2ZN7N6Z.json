@@ -1,0 +1,8 @@
+{
+  "type": "RUN_COMPLETED",
+  "recordedAt": "2026-03-17T11:39:30.347Z",
+  "data": {
+    "outputRef": "state/output.json"
+  },
+  "checksum": "f3c2407af8de1c16401db648a5a0c27a317049fca9c3206a6f2cac79ebd28870"
+}

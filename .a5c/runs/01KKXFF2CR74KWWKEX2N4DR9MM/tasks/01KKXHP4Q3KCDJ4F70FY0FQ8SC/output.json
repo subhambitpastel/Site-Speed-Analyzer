@@ -1,0 +1,1 @@
+{"success": true, "filesModified": ["src/components/Tooltip.tsx", "src/components/ResultsTable.tsx", "src/components/ScoreChart.tsx", "src/components/MetricsPanel.tsx"], "summary": "Glass-panel tooltips with backdrop blur, info icons, updated descriptions, dashed underlines. Build passes."}

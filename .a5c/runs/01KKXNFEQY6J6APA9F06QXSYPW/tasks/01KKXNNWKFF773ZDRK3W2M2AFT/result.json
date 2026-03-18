@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXNNWKFF773ZDRK3W2M2AFT",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "arrow-loader-fix:S000003:__sdk.breakpoint",
+  "status": "ok",
+  "result": {
+    "approved": true
+  },
+  "startedAt": "2026-03-17T10:33:26.032Z",
+  "finishedAt": "2026-03-17T10:33:26.032Z",
+  "value": {
+    "approved": true
+  }
+}

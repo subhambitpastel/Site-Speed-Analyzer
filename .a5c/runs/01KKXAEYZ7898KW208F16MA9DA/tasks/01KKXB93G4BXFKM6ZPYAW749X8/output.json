@@ -1,0 +1,1 @@
+{"success": true, "filesModified": ["src/app/page.tsx", "src/components/LoadingSpinner.tsx", "src/app/globals.css"], "summary": "Added strategy pill badge in results area, circular ring loading animation, hide-on-scroll navbar. Build passes."}

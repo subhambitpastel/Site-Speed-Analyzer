@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXJYNT6KX9NT5DKFG6PX2NR",
+  "taskId": "verify-fix",
+  "invocationKey": "tooltip-fix:S000001:verify-fix",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Verify tooltip fix with Playwright",
+  "io": {
+    "inputJsonPath": "tasks/01KKXJYNT6KX9NT5DKFG6PX2NR/input.json",
+    "outputJsonPath": "tasks/01KKXJYNT6KX9NT5DKFG6PX2NR/result.json"
+  },
+  "inputs": {}
+}

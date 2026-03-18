@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T11:03:01.928Z",
+  "data": {
+    "effectId": "01KKXQD8FM36HKX0KWZMCQH2Z4",
+    "invocationKey": "arrow-loader-fix:S000002:commit",
+    "invocationHash": "a2355597b3dac8a417bf66ff7765788e38164acd53983e98c8c06fa806323fb9",
+    "stepId": "S000002",
+    "taskId": "commit",
+    "kind": "agent",
+    "label": "Commit fixes",
+    "taskDefRef": "tasks/01KKXQD8FM36HKX0KWZMCQH2Z4/task.json"
+  },
+  "checksum": "dcf76632c6f27fc8b141b54aa2d35468bf8157e2d0336540b0bf0c899cb86cfc"
+}

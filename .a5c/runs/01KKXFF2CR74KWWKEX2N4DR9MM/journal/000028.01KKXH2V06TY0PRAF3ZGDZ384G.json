@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T09:12:28.934Z",
+  "data": {
+    "effectId": "01KKXH2TYENVDV1DNG8GCJ89GH",
+    "invocationKey": "premium-bugfix:S000014:score-results-loading",
+    "invocationHash": "013106e59d19efe329ed45e7d9cf618c39d464c38927c500d2934f2eb59f561c",
+    "stepId": "S000014",
+    "taskId": "score-results-loading",
+    "kind": "agent",
+    "label": "Score results/loading (iter 0)",
+    "taskDefRef": "tasks/01KKXH2TYENVDV1DNG8GCJ89GH/task.json"
+  },
+  "checksum": "748b524104b6a933b8232d50e5c33f46fa8d5563bdf73e55cb54b8d572fe7513"
+}

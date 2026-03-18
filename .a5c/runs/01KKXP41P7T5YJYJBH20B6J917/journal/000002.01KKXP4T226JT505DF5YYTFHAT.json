@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T10:40:56.387Z",
+  "data": {
+    "effectId": "01KKXP4T0E4GE2FT60W0PSR4B2",
+    "invocationKey": "arrow-loader-fix:S000001:run-test",
+    "invocationHash": "f368cb8f0426802493c282222decfceb51e107119e3f76345f63a934343654ea",
+    "stepId": "S000001",
+    "taskId": "run-test",
+    "kind": "agent",
+    "label": "Run headed Playwright test",
+    "taskDefRef": "tasks/01KKXP4T0E4GE2FT60W0PSR4B2/task.json"
+  },
+  "checksum": "9360d2d9746130be1ec2e837606845d0a7cf8e1f49085976fadea082cfc87240"
+}

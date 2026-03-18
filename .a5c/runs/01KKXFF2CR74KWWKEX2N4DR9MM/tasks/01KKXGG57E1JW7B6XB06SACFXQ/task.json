@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXGG57E1JW7B6XB06SACFXQ",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "premium-bugfix:S000011:__sdk.breakpoint",
+  "stepId": "S000011",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Phase 1 done (BUG-1,2). Score: 91/90. Proceed?",
+      "tag": "p1",
+      "title": "Phase 1 Review"
+    },
+    "requestedAt": "2026-03-17T09:02:16.814Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Phase 1 done (BUG-1,2). Score: 91/90. Proceed?",
+      "tag": "p1",
+      "title": "Phase 1 Review"
+    },
+    "requestedAt": "2026-03-17T09:02:16.814Z"
+  }
+}

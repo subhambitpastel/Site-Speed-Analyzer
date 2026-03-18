@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXB93G4BXFKM6ZPYAW749X8",
+  "taskId": "fix-ui-enhancements",
+  "invocationKey": "ui-bugfix-11:S000006:fix-ui-enhancements",
+  "stepId": "S000006",
+  "kind": "agent",
+  "title": "Fix UI enhancements (BUG-4,5,11)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXB93G4BXFKM6ZPYAW749X8/input.json",
+    "outputJsonPath": "tasks/01KKXB93G4BXFKM6ZPYAW749X8/result.json"
+  },
+  "inputs": {
+    "bugs": [
+      "BUG-4: Add Desktop/Mobile indicator in results area",
+      "BUG-5: Circular motion loading ring animation",
+      "BUG-11: Fix navbar overlapping content on scroll"
+    ],
+    "targetQuality": 85
+  }
+}

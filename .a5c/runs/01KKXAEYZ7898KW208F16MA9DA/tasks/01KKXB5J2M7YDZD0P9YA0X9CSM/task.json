@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXB5J2M7YDZD0P9YA0X9CSM",
+  "taskId": "git-commit",
+  "invocationKey": "ui-bugfix-11:S000004:git-commit",
+  "stepId": "S000004",
+  "kind": "agent",
+  "title": "Git commit: Phase 1",
+  "io": {
+    "inputJsonPath": "tasks/01KKXB5J2M7YDZD0P9YA0X9CSM/input.json",
+    "outputJsonPath": "tasks/01KKXB5J2M7YDZD0P9YA0X9CSM/result.json"
+  },
+  "inputs": {
+    "phase": "Phase 1",
+    "summary": "Replaced Desktop/Mobile buttons with smooth sliding toggle switch, repositioned near input area, defaulted to Desktop. Score: 85/85.",
+    "title": "BUG-1,2,3 — Smooth strategy toggle, repositioned, Desktop default"
+  }
+}

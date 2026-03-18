@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-03-18T05:07:45.529Z",
+  "data": {
+    "runId": "01KKZNFEK96RPA6DQV0WD4AW4N",
+    "processId": "bugfix-9-10",
+    "entrypoint": {
+      "importPath": "../../processes/bugfix-9-10.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "b6bd6e02d36a4124382570e52c1a16b4091c49c13f0d84b7cf9177306bfcc2c8"
+}

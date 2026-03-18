@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXP4T0E4GE2FT60W0PSR4B2",
+  "taskId": "run-test",
+  "invocationKey": "arrow-loader-fix:S000001:run-test",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Run headed Playwright test",
+  "io": {
+    "inputJsonPath": "tasks/01KKXP4T0E4GE2FT60W0PSR4B2/input.json",
+    "outputJsonPath": "tasks/01KKXP4T0E4GE2FT60W0PSR4B2/result.json"
+  },
+  "inputs": {}
+}

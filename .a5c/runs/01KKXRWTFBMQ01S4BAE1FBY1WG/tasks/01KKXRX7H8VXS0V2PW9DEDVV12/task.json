@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXRX7H8VXS0V2PW9DEDVV12",
+  "taskId": "commit",
+  "invocationKey": "csv-option:S000001:commit",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Commit CSV option",
+  "io": {
+    "inputJsonPath": "tasks/01KKXRX7H8VXS0V2PW9DEDVV12/input.json",
+    "outputJsonPath": "tasks/01KKXRX7H8VXS0V2PW9DEDVV12/result.json"
+  },
+  "inputs": {}
+}

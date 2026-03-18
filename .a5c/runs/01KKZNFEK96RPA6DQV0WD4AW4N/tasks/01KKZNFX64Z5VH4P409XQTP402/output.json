@@ -1,0 +1,5 @@
+{
+  "success": true,
+  "filesModified": ["src/app/layout.tsx", "src/app/page.tsx"],
+  "summary": "Changed default theme to dark mode. In layout.tsx, the blocking inline script now only removes the 'dark' class when localStorage explicitly contains 'light'; otherwise it adds 'dark' (including on first visit with no stored preference). In page.tsx, the darkMode useState initializer changed from false to true so React's initial state matches the inline script, preventing hydration mismatch. Existing user preferences stored in localStorage are still respected."
+}

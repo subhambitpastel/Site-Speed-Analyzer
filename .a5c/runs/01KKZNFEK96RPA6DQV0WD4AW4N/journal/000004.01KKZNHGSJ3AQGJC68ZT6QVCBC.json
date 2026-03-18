@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-18T05:08:53.170Z",
+  "data": {
+    "effectId": "01KKZNHGQTFJTP115JVVKB0QWC",
+    "invocationKey": "bugfix-9-10:S000002:verify-build",
+    "invocationHash": "6ea618fa22ec5f721d240d3c763b0ddb851aa495b10ecbf469832e8f9ce85030",
+    "stepId": "S000002",
+    "taskId": "verify-build",
+    "kind": "agent",
+    "label": "Verify build (Phase 1 — Dark Mode Default)",
+    "taskDefRef": "tasks/01KKZNHGQTFJTP115JVVKB0QWC/task.json"
+  },
+  "checksum": "18e7ec80fcbb5855e3ad52d43c0fc7d0e373dac1e11357c758b4df4ea83de274"
+}

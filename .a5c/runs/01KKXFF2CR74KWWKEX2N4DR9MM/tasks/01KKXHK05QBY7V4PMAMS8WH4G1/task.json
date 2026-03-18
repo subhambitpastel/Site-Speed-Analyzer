@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXHK05QBY7V4PMAMS8WH4G1",
+  "taskId": "git-commit",
+  "invocationKey": "premium-bugfix:S000018:git-commit",
+  "stepId": "S000018",
+  "kind": "agent",
+  "title": "Commit: BUG-4,5 — Strategy badge + orbiting ring loader",
+  "io": {
+    "inputJsonPath": "tasks/01KKXHK05QBY7V4PMAMS8WH4G1/input.json",
+    "outputJsonPath": "tasks/01KKXHK05QBY7V4PMAMS8WH4G1/result.json"
+  },
+  "inputs": {
+    "summary": "Premium strategy badge in results, orbiting ring with glow trail. Score: 91",
+    "title": "BUG-4,5 — Strategy badge + orbiting ring loader"
+  }
+}

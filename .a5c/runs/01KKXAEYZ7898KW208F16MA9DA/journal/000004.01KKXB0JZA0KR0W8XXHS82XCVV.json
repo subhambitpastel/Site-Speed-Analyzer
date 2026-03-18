@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-17T07:26:23.722Z",
+  "data": {
+    "effectId": "01KKXB0JXE55MPFWNZ7SVWHMNH",
+    "invocationKey": "ui-bugfix-11:S000002:verify-build",
+    "invocationHash": "14e2d84839b2b5e6f7832fe3cec1a0f77c8ec97073adcb00f25a63e0f59e533c",
+    "stepId": "S000002",
+    "taskId": "verify-build",
+    "kind": "agent",
+    "label": "Verify build (Phase 1 - Strategy Toggle)",
+    "taskDefRef": "tasks/01KKXB0JXE55MPFWNZ7SVWHMNH/task.json"
+  },
+  "checksum": "0228092de9b582b0d1b0bbdf77dc9d6cb83d5dd7f314a89b553837c6fa31a241"
+}

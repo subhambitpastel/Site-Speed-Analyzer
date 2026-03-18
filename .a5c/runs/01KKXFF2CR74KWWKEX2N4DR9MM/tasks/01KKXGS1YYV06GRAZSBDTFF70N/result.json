@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKXGS1YYV06GRAZSBDTFF70N",
+  "taskId": "fix-results-loading",
+  "invocationKey": "premium-bugfix:S000012:fix-results-loading",
+  "status": "ok",
+  "result": {
+    "filesModified": [
+      "src/app/page.tsx",
+      "src/app/globals.css"
+    ],
+    "success": true,
+    "summary": "Gradient strategy badge with icon, 96px orbiting ring with glow arc and pulse. Build passes."
+  },
+  "startedAt": "2026-03-17T09:10:35.086Z",
+  "finishedAt": "2026-03-17T09:10:35.086Z",
+  "value": {
+    "filesModified": [
+      "src/app/page.tsx",
+      "src/app/globals.css"
+    ],
+    "success": true,
+    "summary": "Gradient strategy badge with icon, 96px orbiting ring with glow arc and pulse. Build passes."
+  }
+}

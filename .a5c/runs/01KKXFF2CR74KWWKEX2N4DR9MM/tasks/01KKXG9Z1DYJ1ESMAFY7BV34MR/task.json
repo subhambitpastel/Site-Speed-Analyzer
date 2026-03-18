@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXG9Z1DYJ1ESMAFY7BV34MR",
+  "taskId": "refine-toggle",
+  "invocationKey": "premium-bugfix:S000007:refine-toggle",
+  "stepId": "S000007",
+  "kind": "agent",
+  "title": "Refine toggle (iter 2)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXG9Z1DYJ1ESMAFY7BV34MR/input.json",
+    "outputJsonPath": "tasks/01KKXG9Z1DYJ1ESMAFY7BV34MR/result.json"
+  },
+  "inputs": {
+    "iteration": 2,
+    "previousScore": 88,
+    "targetQuality": 90
+  }
+}

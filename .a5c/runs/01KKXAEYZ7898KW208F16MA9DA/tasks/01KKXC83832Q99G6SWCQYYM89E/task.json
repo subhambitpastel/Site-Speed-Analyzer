@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKXC83832Q99G6SWCQYYM89E",
+  "taskId": "verify-build",
+  "invocationKey": "ui-bugfix-11:S000015:verify-build",
+  "stepId": "S000015",
+  "kind": "agent",
+  "title": "Verify build (Phase 3 - Tooltips)",
+  "io": {
+    "inputJsonPath": "tasks/01KKXC83832Q99G6SWCQYYM89E/input.json",
+    "outputJsonPath": "tasks/01KKXC83832Q99G6SWCQYYM89E/result.json"
+  },
+  "inputs": {
+    "phase": "Phase 3 - Tooltips"
+  }
+}
