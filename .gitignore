@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules/
+/video/
 /.pnp
 .pnp.*
 .yarn/*
@@ -12,16 +13,20 @@
 
 # testing
 /coverage
+/test-results/
 
 # next.js
 /.next/
 
 # production
 /build
+/out/
 
 # misc
 .DS_Store
 *.pem
+Thumbs.db
+Desktop.ini
 
 # debug
 npm-debug.log*
@@ -29,7 +34,7 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# env files
 .env*
 
 # vercel
@@ -38,3 +43,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI agent tooling
+/.a5c/
+/.claude/
+
+# exported reports
+lighthouse-report-*.csv
+lighthouse-report-*.pdf
+lighthouse-report-*.docx
+lighthouse-report-*.xls
+
+# video build artifacts
+/video/node_modules/
+/video/out/
+
+# demo assets
+demo.mp4
