@@ -158,9 +158,11 @@ function createScoreCell(
 
 export function exportDOCX(reports: LighthouseReport[]): void {
   try {
-  const validReports = reports.filter(isValidReport);
+  // Include all reports (completed + incomplete) so re-import can resume
+  const allReports = reports.filter(r => r.url && r.url.trim() !== "");
+  const validReports = allReports.filter(isValidReport);
 
-  if (validReports.length === 0) {
+  if (allReports.length === 0) {
     return;
   }
 
@@ -171,18 +173,18 @@ export function exportDOCX(reports: LighthouseReport[]): void {
     day: "numeric",
   });
 
-  const avgPerformance =
-    validReports.reduce((sum, r) => sum + r.scores.performance, 0) /
-    validReports.length;
-  const avgAccessibility =
-    validReports.reduce((sum, r) => sum + r.scores.accessibility, 0) /
-    validReports.length;
-  const avgSEO =
-    validReports.reduce((sum, r) => sum + r.scores.seo, 0) /
-    validReports.length;
-  const avgBestPractices =
-    validReports.reduce((sum, r) => sum + r.scores.bestPractices, 0) /
-    validReports.length;
+  const avgPerformance = validReports.length > 0
+    ? validReports.reduce((sum, r) => sum + r.scores.performance, 0) / validReports.length
+    : 0;
+  const avgAccessibility = validReports.length > 0
+    ? validReports.reduce((sum, r) => sum + r.scores.accessibility, 0) / validReports.length
+    : 0;
+  const avgSEO = validReports.length > 0
+    ? validReports.reduce((sum, r) => sum + r.scores.seo, 0) / validReports.length
+    : 0;
+  const avgBestPractices = validReports.length > 0
+    ? validReports.reduce((sum, r) => sum + r.scores.bestPractices, 0) / validReports.length
+    : 0;
 
   // -- Summary score cards table --
   const summaryScores = [
@@ -275,18 +277,26 @@ export function exportDOCX(reports: LighthouseReport[]): void {
     ],
   });
 
-  // -- Data rows for scores table --
-  const dataRows = validReports.map(
+  // -- Data rows for scores table (all reports, blanks for incomplete) --
+  const dataRows = allReports.map(
     (report, idx) => {
       const isAlt = idx % 2 === 1;
+      const completed = isValidReport(report);
       return new TableRow({
         children: [
           createDataCell(report.url, { width: 4000, isAltRow: isAlt }),
-          createScoreCell(report.scores.performance, 1500, isAlt),
-          createScoreCell(report.scores.accessibility, 1500, isAlt),
-          createScoreCell(report.scores.seo, 1200, isAlt),
-          createScoreCell(report.scores.bestPractices, 1500, isAlt),
-          createDataCell(report.strategy, {
+          ...(completed ? [
+            createScoreCell(report.scores.performance, 1500, isAlt),
+            createScoreCell(report.scores.accessibility, 1500, isAlt),
+            createScoreCell(report.scores.seo, 1200, isAlt),
+            createScoreCell(report.scores.bestPractices, 1500, isAlt),
+          ] : [
+            createDataCell("", { width: 1500, alignment: AlignmentType.CENTER, isAltRow: isAlt }),
+            createDataCell("", { width: 1500, alignment: AlignmentType.CENTER, isAltRow: isAlt }),
+            createDataCell("", { width: 1200, alignment: AlignmentType.CENTER, isAltRow: isAlt }),
+            createDataCell("", { width: 1500, alignment: AlignmentType.CENTER, isAltRow: isAlt }),
+          ]),
+          createDataCell(completed ? report.strategy : "", {
             width: 1300,
             alignment: AlignmentType.CENTER,
             isAltRow: isAlt,
@@ -314,38 +324,39 @@ export function exportDOCX(reports: LighthouseReport[]): void {
     ],
   });
 
-  const vitalsDataRows = validReports.map(
+  const vitalsDataRows = allReports.map(
     (report, idx) => {
       const isAlt = idx % 2 === 1;
+      const completed = isValidReport(report);
       return new TableRow({
         children: [
           createDataCell(report.url, { width: 3500, isAltRow: isAlt }),
-          createDataCell(report.coreWebVitals.fcp.displayValue, {
+          createDataCell(completed ? report.coreWebVitals.fcp.displayValue : "", {
             width: 1200,
             alignment: AlignmentType.CENTER,
             isAltRow: isAlt,
           }),
-          createDataCell(report.coreWebVitals.lcp.displayValue, {
+          createDataCell(completed ? report.coreWebVitals.lcp.displayValue : "", {
             width: 1200,
             alignment: AlignmentType.CENTER,
             isAltRow: isAlt,
           }),
-          createDataCell(report.coreWebVitals.tbt.displayValue, {
+          createDataCell(completed ? report.coreWebVitals.tbt.displayValue : "", {
             width: 1200,
             alignment: AlignmentType.CENTER,
             isAltRow: isAlt,
           }),
-          createDataCell(report.coreWebVitals.cls.displayValue, {
+          createDataCell(completed ? report.coreWebVitals.cls.displayValue : "", {
             width: 1200,
             alignment: AlignmentType.CENTER,
             isAltRow: isAlt,
           }),
-          createDataCell(report.coreWebVitals.tti.displayValue, {
+          createDataCell(completed ? report.coreWebVitals.tti.displayValue : "", {
             width: 1200,
             alignment: AlignmentType.CENTER,
             isAltRow: isAlt,
           }),
-          createDataCell(report.strategy, {
+          createDataCell(completed ? report.strategy : "", {
             width: 1200,
             alignment: AlignmentType.CENTER,
             isAltRow: isAlt,

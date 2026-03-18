@@ -45,28 +45,30 @@ function numberCell(value: number, styleId?: string): string {
 
 export function exportCSV(reports: LighthouseReport[]): void {
   try {
-    const validReports = reports.filter(isValidReport);
+    // Include all reports (completed + incomplete) so re-import can resume
+    const allReports = reports.filter(r => r.url && r.url.trim() !== "");
+    const validReports = allReports.filter(isValidReport);
 
-    if (validReports.length === 0) {
+    if (allReports.length === 0) {
       return;
     }
 
     const today = new Date().toISOString().split("T")[0];
     const colCount = 12;
 
-    // Compute averages
-    const avgPerformance =
-      validReports.reduce((sum, r) => sum + r.scores.performance, 0) /
-      validReports.length;
-    const avgAccessibility =
-      validReports.reduce((sum, r) => sum + r.scores.accessibility, 0) /
-      validReports.length;
-    const avgSEO =
-      validReports.reduce((sum, r) => sum + r.scores.seo, 0) /
-      validReports.length;
-    const avgBestPractices =
-      validReports.reduce((sum, r) => sum + r.scores.bestPractices, 0) /
-      validReports.length;
+    // Compute averages only from valid/completed reports
+    const avgPerformance = validReports.length > 0
+      ? validReports.reduce((sum, r) => sum + r.scores.performance, 0) / validReports.length
+      : 0;
+    const avgAccessibility = validReports.length > 0
+      ? validReports.reduce((sum, r) => sum + r.scores.accessibility, 0) / validReports.length
+      : 0;
+    const avgSEO = validReports.length > 0
+      ? validReports.reduce((sum, r) => sum + r.scores.seo, 0) / validReports.length
+      : 0;
+    const avgBestPractices = validReports.length > 0
+      ? validReports.reduce((sum, r) => sum + r.scores.bestPractices, 0) / validReports.length
+      : 0;
 
     const headers = [
       "URL",
@@ -208,7 +210,7 @@ export function exportCSV(reports: LighthouseReport[]): void {
 
     // Title row (merged across all columns)
     lines.push(`    <Row ss:Height="30">`);
-    lines.push(`      <Cell ss:StyleID="sTitle" ss:MergeAcross="${colCount - 1}"><Data ss:Type="String">Lighthouse Bulk Performance Report — ${escapeXml(today)} — ${validReports.length} URLs</Data></Cell>`);
+    lines.push(`      <Cell ss:StyleID="sTitle" ss:MergeAcross="${colCount - 1}"><Data ss:Type="String">Lighthouse Bulk Performance Report — ${escapeXml(today)} — ${allReports.length} URLs (${validReports.length} completed)</Data></Cell>`);
     lines.push(`    </Row>`);
 
     // Empty spacer row
@@ -223,25 +225,33 @@ export function exportCSV(reports: LighthouseReport[]): void {
     }
     lines.push(`    </Row>`);
 
-    // Data rows
-    validReports.forEach((report, idx) => {
+    // Data rows — include ALL reports (completed show scores, incomplete show blanks)
+    allReports.forEach((report, idx) => {
       const isEven = idx % 2 === 0;
       const rowStyle = isEven ? "sRowEven" : "sRowOdd";
       const rowCenterStyle = isEven ? "sRowEvenCenter" : "sRowOddCenter";
+      const completed = isValidReport(report);
 
       lines.push(`    <Row>`);
       lines.push(dataCell(report.url, rowStyle));
-      lines.push(numberCell(report.scores.performance, getScoreStyleId(report.scores.performance)));
-      lines.push(numberCell(report.scores.accessibility, getScoreStyleId(report.scores.accessibility)));
-      lines.push(numberCell(report.scores.seo, getScoreStyleId(report.scores.seo)));
-      lines.push(numberCell(report.scores.bestPractices, getScoreStyleId(report.scores.bestPractices)));
-      lines.push(dataCell(report.coreWebVitals.fcp.displayValue, rowCenterStyle));
-      lines.push(dataCell(report.coreWebVitals.lcp.displayValue, rowCenterStyle));
-      lines.push(dataCell(report.coreWebVitals.tbt.displayValue, rowCenterStyle));
-      lines.push(dataCell(report.coreWebVitals.cls.displayValue, rowCenterStyle));
-      lines.push(dataCell(report.coreWebVitals.tti.displayValue, rowCenterStyle));
-      lines.push(dataCell(report.strategy, rowCenterStyle));
-      lines.push(dataCell(report.fetchedAt, rowCenterStyle));
+      if (completed) {
+        lines.push(numberCell(report.scores.performance, getScoreStyleId(report.scores.performance)));
+        lines.push(numberCell(report.scores.accessibility, getScoreStyleId(report.scores.accessibility)));
+        lines.push(numberCell(report.scores.seo, getScoreStyleId(report.scores.seo)));
+        lines.push(numberCell(report.scores.bestPractices, getScoreStyleId(report.scores.bestPractices)));
+        lines.push(dataCell(report.coreWebVitals.fcp.displayValue, rowCenterStyle));
+        lines.push(dataCell(report.coreWebVitals.lcp.displayValue, rowCenterStyle));
+        lines.push(dataCell(report.coreWebVitals.tbt.displayValue, rowCenterStyle));
+        lines.push(dataCell(report.coreWebVitals.cls.displayValue, rowCenterStyle));
+        lines.push(dataCell(report.coreWebVitals.tti.displayValue, rowCenterStyle));
+        lines.push(dataCell(report.strategy, rowCenterStyle));
+        lines.push(dataCell(report.fetchedAt, rowCenterStyle));
+      } else {
+        // Incomplete — blank score and metric cells
+        for (let i = 0; i < 11; i++) {
+          lines.push(dataCell("", rowCenterStyle));
+        }
+      }
       lines.push(`    </Row>`);
     });
 
@@ -299,8 +309,10 @@ function escapeCSVField(field: string): string {
 
 export function exportPlainCSV(reports: LighthouseReport[]) {
   try {
-    const valid = reports.filter(isValidReport);
-    if (valid.length === 0) return;
+    // Include all reports (completed + incomplete) so re-import can resume
+    const allReports = reports.filter(r => r.url && r.url.trim() !== "");
+    const valid = allReports.filter(isValidReport);
+    if (allReports.length === 0) return;
 
     const date = new Date().toISOString().split("T")[0];
     const headers = ["URL", "Performance", "Accessibility", "SEO", "Best Practices", "FCP", "LCP", "TBT", "CLS", "TTI", "Strategy", "Fetched At"];
@@ -310,29 +322,34 @@ export function exportPlainCSV(reports: LighthouseReport[]) {
     // Header row
     rows.push(headers);
 
-    // Data rows
-    for (const r of valid) {
-      rows.push([
-        r.url,
-        r.scores.performance.toString(),
-        r.scores.accessibility.toString(),
-        r.scores.seo.toString(),
-        r.scores.bestPractices.toString(),
-        r.coreWebVitals.fcp.displayValue,
-        r.coreWebVitals.lcp.displayValue,
-        r.coreWebVitals.tbt.displayValue,
-        r.coreWebVitals.cls.displayValue,
-        r.coreWebVitals.tti.displayValue,
-        r.strategy,
-        r.fetchedAt,
-      ]);
+    // Data rows — all reports, blank fields for incomplete
+    for (const r of allReports) {
+      const completed = isValidReport(r);
+      if (completed) {
+        rows.push([
+          r.url,
+          r.scores.performance.toString(),
+          r.scores.accessibility.toString(),
+          r.scores.seo.toString(),
+          r.scores.bestPractices.toString(),
+          r.coreWebVitals.fcp.displayValue,
+          r.coreWebVitals.lcp.displayValue,
+          r.coreWebVitals.tbt.displayValue,
+          r.coreWebVitals.cls.displayValue,
+          r.coreWebVitals.tti.displayValue,
+          r.strategy,
+          r.fetchedAt,
+        ]);
+      } else {
+        rows.push([r.url, "", "", "", "", "", "", "", "", "", "", ""]);
+      }
     }
 
-    // Average row
-    const avgPerf = valid.reduce((s, r) => s + r.scores.performance, 0) / valid.length;
-    const avgA11y = valid.reduce((s, r) => s + r.scores.accessibility, 0) / valid.length;
-    const avgSeo = valid.reduce((s, r) => s + r.scores.seo, 0) / valid.length;
-    const avgBp = valid.reduce((s, r) => s + r.scores.bestPractices, 0) / valid.length;
+    // Average row (only from completed)
+    const avgPerf = valid.length > 0 ? valid.reduce((s, r) => s + r.scores.performance, 0) / valid.length : 0;
+    const avgA11y = valid.length > 0 ? valid.reduce((s, r) => s + r.scores.accessibility, 0) / valid.length : 0;
+    const avgSeo = valid.length > 0 ? valid.reduce((s, r) => s + r.scores.seo, 0) / valid.length : 0;
+    const avgBp = valid.length > 0 ? valid.reduce((s, r) => s + r.scores.bestPractices, 0) / valid.length : 0;
     rows.push(["AVERAGE", avgPerf.toFixed(1), avgA11y.toFixed(1), avgSeo.toFixed(1), avgBp.toFixed(1), "", "", "", "", "", "", ""]);
 
     const csvContent = "\uFEFF" + rows.map(row => row.map(escapeCSVField).join(",")).join("\n");

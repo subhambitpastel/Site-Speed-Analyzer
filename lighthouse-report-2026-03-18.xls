@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+  <Styles>
+    <Style ss:ID="Default" ss:Name="Normal">
+      <Font ss:FontName="Calibri" ss:Size="11"/>
+    </Style>
+    <Style ss:ID="sTitle">
+      <Font ss:FontName="Calibri" ss:Size="16" ss:Bold="1" ss:Color="#1E2952"/>
+      <Alignment ss:Horizontal="Left" ss:Vertical="Center"/>
+    </Style>
+    <Style ss:ID="sHeader">
+      <Font ss:FontName="Calibri" ss:Size="11" ss:Bold="1" ss:Color="#FFFFFF"/>
+      <Interior ss:Color="#1E2952" ss:Pattern="Solid"/>
+      <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+      <Borders>
+        <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#D1D5DB"/>
+        <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#D1D5DB"/>
+        <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#D1D5DB"/>
+        <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#D1D5DB"/>
+      </Borders>
+    </Style>
+    <Style ss:ID="sGreen">
+      <Font ss:FontName="Calibri" ss:Size="11" ss:Bold="1" ss:Color="#1B5E20"/>
+      <Interior ss:Color="#E8F5E9" ss:Pattern="Solid"/>
+      <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+      <NumberFormat ss:Format="0.0"/>
+    </Style>
+    <Style ss:ID="sOrange">
+      <Font ss:FontName="Calibri" ss:Size="11" ss:Bold="1" ss:Color="#E65100"/>
+      <Interior ss:Color="#FFF3E0" ss:Pattern="Solid"/>
+      <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+      <NumberFormat ss:Format="0.0"/>
+    </Style>
+    <Style ss:ID="sRed">
+      <Font ss:FontName="Calibri" ss:Size="11" ss:Bold="1" ss:Color="#B71C1C"/>
+      <Interior ss:Color="#FFEBEE" ss:Pattern="Solid"/>
+      <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+      <NumberFormat ss:Format="0.0"/>
+    </Style>
+    <Style ss:ID="sRowEven">
+      <Font ss:FontName="Calibri" ss:Size="11"/>
+      <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+      <Alignment ss:Vertical="Center"/>
+    </Style>
+    <Style ss:ID="sRowOdd">
+      <Font ss:FontName="Calibri" ss:Size="11"/>
+      <Interior ss:Color="#F5F7FA" ss:Pattern="Solid"/>
+      <Alignment ss:Vertical="Center"/>
+    </Style>
+    <Style ss:ID="sRowEvenCenter">
+      <Font ss:FontName="Calibri" ss:Size="11"/>
+      <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+      <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+    </Style>
+    <Style ss:ID="sRowOddCenter">
+      <Font ss:FontName="Calibri" ss:Size="11"/>
+      <Interior ss:Color="#F5F7FA" ss:Pattern="Solid"/>
+      <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+    </Style>
+    <Style ss:ID="sSummary">
+      <Font ss:FontName="Calibri" ss:Size="11" ss:Bold="1"/>
+      <Interior ss:Color="#E8EAF0" ss:Pattern="Solid"/>
+      <Alignment ss:Vertical="Center"/>
+    </Style>
+    <Style ss:ID="sSummaryCenter">
+      <Font ss:FontName="Calibri" ss:Size="11" ss:Bold="1"/>
+      <Interior ss:Color="#E8EAF0" ss:Pattern="Solid"/>
+      <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+      <NumberFormat ss:Format="0.0"/>
+    </Style>
+  </Styles>
+  <Worksheet ss:Name="Lighthouse Report">
+    <Table ss:DefaultColumnWidth="100">
+      <Column ss:Width="280"/>
+      <Column ss:Width="100"/>
+      <Column ss:Width="100"/>
+      <Column ss:Width="80"/>
+      <Column ss:Width="110"/>
+      <Column ss:Width="90"/>
+      <Column ss:Width="90"/>
+      <Column ss:Width="90"/>
+      <Column ss:Width="80"/>
+      <Column ss:Width="90"/>
+      <Column ss:Width="90"/>
+      <Column ss:Width="140"/>
+    <Row ss:Height="30">
+      <Cell ss:StyleID="sTitle" ss:MergeAcross="11"><Data ss:Type="String">Lighthouse Bulk Performance Report — 2026-03-18 — 3 URLs</Data></Cell>
+    </Row>
+    <Row ss:Height="8">
+      <Cell><Data ss:Type="String"></Data></Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="sHeader"><Data ss:Type="String">URL</Data></Cell>
+      <Cell ss:StyleID="sHeader"><Data ss:Type="String">Performance</Data></Cell>
+      <Cell ss:StyleID="sHeader"><Data ss:Type="String">Accessibility</Data></Cell>
+      <Cell ss:StyleID="sHeader"><Data ss:Type="String">SEO</Data></Cell>
+      <Cell ss:StyleID="sHeader"><Data ss:Type="String">Best Practices</Data></Cell>
+      <Cell ss:StyleID="sHeader"><Data ss:Type="String">FCP</Data></Cell>
+      <Cell ss:StyleID="sHeader"><Data ss:Type="String">LCP</Data></Cell>
+      <Cell ss:StyleID="sHeader"><Data ss:Type="String">TBT</Data></Cell>
+      <Cell ss:StyleID="sHeader"><Data ss:Type="String">CLS</Data></Cell>
+      <Cell ss:StyleID="sHeader"><Data ss:Type="String">TTI</Data></Cell>
+      <Cell ss:StyleID="sHeader"><Data ss:Type="String">Strategy</Data></Cell>
+      <Cell ss:StyleID="sHeader"><Data ss:Type="String">Fetched At</Data></Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="sRowEven"><Data ss:Type="String">https://ayamset.com/</Data></Cell>
+      <Cell ss:StyleID="sGreen"><Data ss:Type="Number">90</Data></Cell>
+      <Cell ss:StyleID="sOrange"><Data ss:Type="Number">87</Data></Cell>
+      <Cell ss:StyleID="sGreen"><Data ss:Type="Number">92</Data></Cell>
+      <Cell ss:StyleID="sGreen"><Data ss:Type="Number">96</Data></Cell>
+      <Cell ss:StyleID="sRowEvenCenter"><Data ss:Type="String">0.5 s</Data></Cell>
+      <Cell ss:StyleID="sRowEvenCenter"><Data ss:Type="String">1.7 s</Data></Cell>
+      <Cell ss:StyleID="sRowEvenCenter"><Data ss:Type="String">100 ms</Data></Cell>
+      <Cell ss:StyleID="sRowEvenCenter"><Data ss:Type="String">0</Data></Cell>
+      <Cell ss:StyleID="sRowEvenCenter"><Data ss:Type="String">3.2 s</Data></Cell>
+      <Cell ss:StyleID="sRowEvenCenter"><Data ss:Type="String">desktop</Data></Cell>
+      <Cell ss:StyleID="sRowEvenCenter"><Data ss:Type="String">2026-03-18T05:57:45.490Z</Data></Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="sRowOdd"><Data ss:Type="String">https://ibizafashionfestival.com/</Data></Cell>
+      <Cell ss:StyleID="sGreen"><Data ss:Type="Number">93</Data></Cell>
+      <Cell ss:StyleID="sGreen"><Data ss:Type="Number">95</Data></Cell>
+      <Cell ss:StyleID="sGreen"><Data ss:Type="Number">92</Data></Cell>
+      <Cell ss:StyleID="sGreen"><Data ss:Type="Number">96</Data></Cell>
+      <Cell ss:StyleID="sRowOddCenter"><Data ss:Type="String">0.3 s</Data></Cell>
+      <Cell ss:StyleID="sRowOddCenter"><Data ss:Type="String">1.6 s</Data></Cell>
+      <Cell ss:StyleID="sRowOddCenter"><Data ss:Type="String">10 ms</Data></Cell>
+      <Cell ss:StyleID="sRowOddCenter"><Data ss:Type="String">0.001</Data></Cell>
+      <Cell ss:StyleID="sRowOddCenter"><Data ss:Type="String">2.4 s</Data></Cell>
+      <Cell ss:StyleID="sRowOddCenter"><Data ss:Type="String">desktop</Data></Cell>
+      <Cell ss:StyleID="sRowOddCenter"><Data ss:Type="String">2026-03-18T05:57:39.157Z</Data></Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="sRowEven"><Data ss:Type="String">https://comhla.co.uk/</Data></Cell>
+      <Cell ss:StyleID="sOrange"><Data ss:Type="Number">85</Data></Cell>
+      <Cell ss:StyleID="sOrange"><Data ss:Type="Number">77</Data></Cell>
+      <Cell ss:StyleID="sOrange"><Data ss:Type="Number">85</Data></Cell>
+      <Cell ss:StyleID="sGreen"><Data ss:Type="Number">96</Data></Cell>
+      <Cell ss:StyleID="sRowEvenCenter"><Data ss:Type="String">0.8 s</Data></Cell>
+      <Cell ss:StyleID="sRowEvenCenter"><Data ss:Type="String">1.6 s</Data></Cell>
+      <Cell ss:StyleID="sRowEvenCenter"><Data ss:Type="String">130 ms</Data></Cell>
+      <Cell ss:StyleID="sRowEvenCenter"><Data ss:Type="String">0</Data></Cell>
+      <Cell ss:StyleID="sRowEvenCenter"><Data ss:Type="String">2.5 s</Data></Cell>
+      <Cell ss:StyleID="sRowEvenCenter"><Data ss:Type="String">desktop</Data></Cell>
+      <Cell ss:StyleID="sRowEvenCenter"><Data ss:Type="String">2026-03-18T05:57:51.634Z</Data></Cell>
+    </Row>
+    <Row ss:Height="6">
+      <Cell><Data ss:Type="String"></Data></Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="sSummary"><Data ss:Type="String">AVERAGE</Data></Cell>
+      <Cell ss:StyleID="sSummaryCenter"><Data ss:Type="Number">89.3</Data></Cell>
+      <Cell ss:StyleID="sSummaryCenter"><Data ss:Type="Number">86.3</Data></Cell>
+      <Cell ss:StyleID="sSummaryCenter"><Data ss:Type="Number">89.7</Data></Cell>
+      <Cell ss:StyleID="sSummaryCenter"><Data ss:Type="Number">96</Data></Cell>
+      <Cell ss:StyleID="sSummary"><Data ss:Type="String"></Data></Cell>
+      <Cell ss:StyleID="sSummary"><Data ss:Type="String"></Data></Cell>
+      <Cell ss:StyleID="sSummary"><Data ss:Type="String"></Data></Cell>
+      <Cell ss:StyleID="sSummary"><Data ss:Type="String"></Data></Cell>
+      <Cell ss:StyleID="sSummary"><Data ss:Type="String"></Data></Cell>
+      <Cell ss:StyleID="sSummary"><Data ss:Type="String"></Data></Cell>
+      <Cell ss:StyleID="sSummary"><Data ss:Type="String"></Data></Cell>
+    </Row>
+    </Table>
+  </Worksheet>
+</Workbook>

@@ -4,6 +4,20 @@ This file tracks recent improvements and bug fixes. New entries are added at the
 
 ---
 
+### 28. Resume Analysis from Previously Exported Files (2026-03-18)
+- **Bug:** Uploading a previously exported XLS/CSV/XLSX re-analyzed all URLs from scratch instead of reusing existing data
+- **Root cause:** fileParser.ts only extracted URLs, discarded all score/metric data from uploaded files
+- **Fix:** Enhanced fileParser to detect exported report files (checks for Performance/Accessibility/SEO/Best Practices columns), reconstructs LighthouseReport objects from exported data, returns discriminated union. Updated FileUpload with import UI showing summary. Added handleImportReports to page.tsx for direct result pre-population. Added "From file" badge in ResultsTable. Also updated export functions to include ALL URLs (completed + incomplete) so progress can be saved and resumed.
+- **Files modified:** src/lib/fileParser.ts, src/components/FileUpload.tsx, src/app/page.tsx, src/types/report.ts, src/components/ResultsTable.tsx, src/lib/exportCSV.ts, src/lib/exportDOCX.ts
+- **Verified by:** Build passes, quality score 90/85
+
+### 27. Default to Dark Mode on First Visit (2026-03-18)
+- **Bug:** App defaulted to light mode on first visit, ignoring dark-mode-first preference
+- **Root cause:** useState initializer defaulted to false (light mode), no blocking script to set dark class before paint
+- **Fix:** Added blocking inline script in layout.tsx that checks localStorage and defaults to dark, changed useState to default true, added explicit localStorage validation, extracted reusable applyTheme callback
+- **Files modified:** src/app/layout.tsx, src/app/page.tsx
+- **Verified by:** Build passes, quality score 90/85, no FOUC, existing preferences respected
+
 ### 26. Metric Definition Tooltips for FCP/LCP/TBT/CLS/TTI (2026-03-17)
 - **Bug:** Hovering over FCP, LCP, TBT, CLS, TTI metric abbreviations in MetricsPanel showed no definitions
 - **Root cause:** Metric abbreviations had no hover tooltips explaining what each metric measures

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKZRTEMSWECBZM9QN2QPE4AB",
+  "taskId": "document-fixes",
+  "invocationKey": "bugfix-9-10:S000015:document-fixes",
+  "stepId": "S000015",
+  "kind": "agent",
+  "title": "Document BUG-9 and BUG-10 fixes",
+  "io": {
+    "inputJsonPath": "tasks/01KKZRTEMSWECBZM9QN2QPE4AB/input.json",
+    "outputJsonPath": "tasks/01KKZRTEMSWECBZM9QN2QPE4AB/result.json"
+  },
+  "inputs": {
+    "bugsFixed": [
+      "BUG-9",
+      "BUG-10"
+    ],
+    "phases": [
+      {
+        "bug": "BUG-9",
+        "converged": true,
+        "iterations": 1,
+        "phase": "Phase 1: Dark Mode Default",
+        "score": 90
+      },
+      {
+        "bug": "BUG-10",
+        "converged": true,
+        "iterations": 0,
+        "phase": "Phase 2: Resume from Exported Files",
+        "score": 90
+      }
+    ]
+  }
+}

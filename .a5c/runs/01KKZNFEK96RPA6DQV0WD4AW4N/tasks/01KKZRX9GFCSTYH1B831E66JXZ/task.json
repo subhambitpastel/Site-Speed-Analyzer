@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKZRX9GFCSTYH1B831E66JXZ",
+  "taskId": "git-commit",
+  "invocationKey": "bugfix-9-10:S000017:git-commit",
+  "stepId": "S000017",
+  "kind": "agent",
+  "title": "Git commit: Final",
+  "io": {
+    "inputJsonPath": "tasks/01KKZRX9GFCSTYH1B831E66JXZ/input.json",
+    "outputJsonPath": "tasks/01KKZRX9GFCSTYH1B831E66JXZ/result.json"
+  },
+  "inputs": {
+    "phase": "Final",
+    "summary": "Updated RECENT_FIXATION.md with both bug fix entries, removed fixed bugs from TO_BE_FIXED.md.",
+    "title": "Document BUG-9 and BUG-10 fixes, clean up TO_BE_FIXED.md"
+  }
+}

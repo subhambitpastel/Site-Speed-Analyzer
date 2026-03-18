@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKZR64HWBY9EFG9AASSQBCTY",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "bugfix-9-10:S000014:__sdk.breakpoint",
+  "status": "ok",
+  "result": {
+    "approved": true,
+    "response": "Proceed but first fix export to include all URLs (completed and incomplete)"
+  },
+  "startedAt": "2026-03-18T06:01:44.916Z",
+  "finishedAt": "2026-03-18T06:01:44.916Z",
+  "value": {
+    "approved": true,
+    "response": "Proceed but first fix export to include all URLs (completed and incomplete)"
+  }
+}

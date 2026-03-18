@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKZR64HWBY9EFG9AASSQBCTY",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "bugfix-9-10:S000014:__sdk.breakpoint",
+  "stepId": "S000014",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Phase 2 done: Resume from Exported Files (BUG-10). Score: 90/85. Proceed to documentation?",
+      "tag": "phase-2-review",
+      "title": "Phase 2 Review — Resume Feature"
+    },
+    "requestedAt": "2026-03-18T05:55:05.916Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Phase 2 done: Resume from Exported Files (BUG-10). Score: 90/85. Proceed to documentation?",
+      "tag": "phase-2-review",
+      "title": "Phase 2 Review — Resume Feature"
+    },
+    "requestedAt": "2026-03-18T05:55:05.916Z"
+  }
+}
