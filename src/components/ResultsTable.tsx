@@ -151,6 +151,14 @@ function LoadingRow({ url }: { url: string }) {
   );
 }
 
+function FromFileBadge() {
+  return (
+    <span className="ml-2 inline-flex items-center rounded-full bg-violet-100 px-2 py-0.5 text-[10px] font-semibold leading-none text-violet-700 dark:bg-violet-900/40 dark:text-violet-300">
+      From file
+    </span>
+  );
+}
+
 function SuccessCard({ report, index }: { report: LighthouseReport; index: number }) {
   const [expanded, setExpanded] = useState(false);
 
@@ -173,6 +181,7 @@ function SuccessCard({ report, index }: { report: LighthouseReport; index: numbe
         <div className="min-w-0 flex-1">
           <p className="truncate text-sm font-medium text-[var(--foreground)]">
             {report.url}
+            {report.loadedFromFile && <FromFileBadge />}
           </p>
           <div className="mt-2.5 grid grid-cols-4 gap-2">
             <div className="flex flex-col items-center">
@@ -238,6 +247,7 @@ function SuccessRow({ report, index }: { report: LighthouseReport; index: number
             <ChevronIcon expanded={expanded} />
             <span className="block max-w-[200px] truncate font-medium text-[var(--foreground)] md:max-w-sm lg:max-w-lg">
               {report.url}
+              {report.loadedFromFile && <FromFileBadge />}
             </span>
           </div>
         </td>

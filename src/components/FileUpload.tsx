@@ -2,10 +2,13 @@
 
 import { useState, useRef, useCallback } from "react";
 import { parseFile, SUPPORTED_EXTENSIONS, SUPPORTED_MIME_TYPES } from "@/lib/fileParser";
+import type { ParseFileResult } from "@/lib/fileParser";
+import type { LighthouseReport } from "@/types/report";
 import StrategyToggle from "@/components/StrategyToggle";
 
 interface FileUploadProps {
   onURLsExtracted: (urls: string[]) => void;
+  onReportsImported?: (completedReports: LighthouseReport[], incompleteUrls: string[]) => void;
   isLoading: boolean;
   strategy: "mobile" | "desktop";
   setStrategy: (s: "mobile" | "desktop") => void;
@@ -16,10 +19,12 @@ type State =
   | { kind: "dragging" }
   | { kind: "parsing" }
   | { kind: "done"; fileName: string; urls: string[]; truncated: boolean }
+  | { kind: "done-reports"; fileName: string; completedReports: LighthouseReport[]; incompleteUrls: string[] }
   | { kind: "error"; message: string };
 
 export default function FileUpload({
   onURLsExtracted,
+  onReportsImported,
   isLoading,
   strategy,
   setStrategy,
@@ -39,8 +44,18 @@ export default function FileUpload({
     setState({ kind: "parsing" });
 
     try {
-      const { urls, truncated } = await parseFile(file);
-      setState({ kind: "done", fileName: file.name, urls, truncated });
+      const result: ParseFileResult = await parseFile(file);
+
+      if (result.kind === "reports") {
+        setState({
+          kind: "done-reports",
+          fileName: file.name,
+          completedReports: result.completedReports,
+          incompleteUrls: result.incompleteUrls,
+        });
+      } else {
+        setState({ kind: "done", fileName: file.name, urls: result.urls, truncated: result.truncated });
+      }
     } catch (err: unknown) {
       setState({
         kind: "error",
@@ -127,15 +142,23 @@ export default function FileUpload({
     }
   }, [state, onURLsExtracted]);
 
+  const handleImportReports = useCallback(() => {
+    if (state.kind === "done-reports" && onReportsImported) {
+      onReportsImported(state.completedReports, state.incompleteUrls);
+    }
+  }, [state, onReportsImported]);
+
   const isDragging = state.kind === "dragging";
+  const showDropZone =
+    state.kind === "idle" ||
+    state.kind === "dragging" ||
+    state.kind === "parsing" ||
+    state.kind === "error";
 
   return (
     <div className="w-full space-y-4">
       {/* Drop zone - visible in idle, dragging, parsing, and error states */}
-      {(state.kind === "idle" ||
-        state.kind === "dragging" ||
-        state.kind === "parsing" ||
-        state.kind === "error") && (
+      {showDropZone && (
         <div
           role="button"
           tabIndex={0}
@@ -269,7 +292,7 @@ export default function FileUpload({
         </div>
       )}
 
-      {/* URLs Found state */}
+      {/* URLs Found state (original behavior) */}
       {state.kind === "done" && (
         <div className="animate-fade-in-up overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] shadow-lg shadow-black/[0.03] dark:shadow-black/[0.15]">
           {/* File info header */}
@@ -341,6 +364,135 @@ export default function FileUpload({
               className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-sky-500 to-cyan-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-sky-500/30 hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-sky-500/30 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:shadow-none dark:from-sky-500 dark:to-cyan-400 dark:shadow-sky-500/15 dark:hover:shadow-sky-500/25"
             >
               Use These URLs
+              <svg
+                className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2.5}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Imported Reports state */}
+      {state.kind === "done-reports" && (
+        <div className="animate-fade-in-up overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] shadow-lg shadow-black/[0.03] dark:shadow-black/[0.15]">
+          {/* File info header */}
+          <div className="flex items-center gap-3 border-b border-[var(--border)] px-5 py-3.5">
+            <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-violet-50 text-violet-600 dark:bg-violet-900/30 dark:text-violet-400">
+              <svg
+                className="h-4.5 w-4.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+                />
+              </svg>
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="truncate text-sm font-semibold text-[var(--foreground)]">
+                {state.fileName}
+              </p>
+              <p className="text-xs text-[var(--text-tertiary)]">
+                Exported report detected
+              </p>
+            </div>
+          </div>
+
+          {/* Import summary */}
+          <div className="space-y-2 px-5 py-4">
+            {state.completedReports.length > 0 && (
+              <div className="flex items-center gap-2.5 rounded-lg bg-emerald-50/80 px-3.5 py-2.5 dark:bg-emerald-900/15">
+                <svg className="h-4 w-4 flex-shrink-0 text-emerald-500 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
+                  {state.completedReports.length} completed result{state.completedReports.length !== 1 ? "s" : ""} to load
+                </p>
+              </div>
+            )}
+            {state.incompleteUrls.length > 0 && (
+              <div className="flex items-center gap-2.5 rounded-lg bg-amber-50/80 px-3.5 py-2.5 dark:bg-amber-900/15">
+                <svg className="h-4 w-4 flex-shrink-0 text-amber-500 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                </svg>
+                <p className="text-sm font-medium text-amber-700 dark:text-amber-300">
+                  {state.incompleteUrls.length} site{state.incompleteUrls.length !== 1 ? "s" : ""} queued for analysis
+                </p>
+              </div>
+            )}
+          </div>
+
+          {/* URL preview list */}
+          <div className="max-h-[220px] overflow-y-auto border-t border-[var(--border)] px-5 py-3">
+            <ul className="space-y-1" role="list" aria-label="Imported URLs">
+              {state.completedReports.slice(0, 6).map((r) => (
+                <li
+                  key={r.url}
+                  className="flex items-center gap-2 truncate rounded-lg px-3 py-1.5 font-mono text-xs text-[var(--text-secondary)] odd:bg-[var(--surface-elevated)]/50"
+                >
+                  <span className="inline-flex h-4 items-center rounded bg-emerald-100 px-1.5 text-[10px] font-semibold text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">
+                    {Math.round(r.scores.performance)}
+                  </span>
+                  <span className="truncate">{r.url}</span>
+                </li>
+              ))}
+              {state.incompleteUrls.slice(0, 4).map((url) => (
+                <li
+                  key={url}
+                  className="flex items-center gap-2 truncate rounded-lg px-3 py-1.5 font-mono text-xs text-[var(--text-secondary)] odd:bg-[var(--surface-elevated)]/50"
+                >
+                  <span className="inline-flex h-4 items-center rounded bg-amber-100 px-1.5 text-[10px] font-semibold text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
+                    ---
+                  </span>
+                  <span className="truncate">{url}</span>
+                </li>
+              ))}
+            </ul>
+            {(state.completedReports.length + state.incompleteUrls.length) > 10 && (
+              <p className="mt-2 px-3 text-xs text-[var(--text-tertiary)]">
+                ...and {state.completedReports.length + state.incompleteUrls.length - 10} more
+              </p>
+            )}
+          </div>
+
+          {/* Strategy toggle */}
+          <div className="flex items-center justify-center border-t border-[var(--border)] px-5 py-3">
+            <StrategyToggle strategy={strategy} setStrategy={setStrategy} disabled={isLoading} />
+          </div>
+
+          {/* Action buttons */}
+          <div className="flex items-center justify-between gap-3 border-t border-[var(--border)] px-5 py-3.5">
+            <button
+              type="button"
+              onClick={resetState}
+              disabled={isLoading}
+              className="rounded-lg px-4 py-2 text-sm font-medium text-[var(--text-secondary)] transition-all duration-200 hover:text-[var(--foreground)] hover:bg-[var(--surface-elevated)] disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              Clear
+            </button>
+            <button
+              type="button"
+              onClick={handleImportReports}
+              disabled={isLoading || !onReportsImported}
+              className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-violet-500 to-purple-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-violet-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-violet-500/30 hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-violet-500/30 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:shadow-none dark:from-violet-500 dark:to-purple-400 dark:shadow-violet-500/15 dark:hover:shadow-violet-500/25"
+            >
+              {state.incompleteUrls.length > 0
+                ? "Resume Analysis"
+                : "Load Results"}
               <svg
                 className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5"
                 fill="none"

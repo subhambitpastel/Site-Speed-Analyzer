@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-18T05:42:48.031Z",
+  "data": {
+    "effectId": "01KKZQFKXEVHP5RP8J8S15NWFF",
+    "invocationKey": "bugfix-9-10:S000009:analyze-resume-feature",
+    "invocationHash": "6f1fe5d36ab2dc71b6fcd867ea681c5522e46f0140cfdd30181bd83f4a335e3f",
+    "stepId": "S000009",
+    "taskId": "analyze-resume-feature",
+    "kind": "agent",
+    "label": "Analyze codebase for resume feature",
+    "taskDefRef": "tasks/01KKZQFKXEVHP5RP8J8S15NWFF/task.json"
+  },
+  "checksum": "5549646217d13318717404b083c648585b9610ad8d6f2da873ffe6650899fc55"
+}

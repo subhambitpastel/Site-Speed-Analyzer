@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKZR4FH4HH2XK3W7H6GKGY7T",
+  "taskId": "git-commit",
+  "invocationKey": "bugfix-9-10:S000013:git-commit",
+  "stepId": "S000013",
+  "kind": "agent",
+  "title": "Git commit: Phase 2",
+  "io": {
+    "inputJsonPath": "tasks/01KKZR4FH4HH2XK3W7H6GKGY7T/input.json",
+    "outputJsonPath": "tasks/01KKZR4FH4HH2XK3W7H6GKGY7T/result.json"
+  },
+  "inputs": {
+    "phase": "Phase 2",
+    "summary": "Enhanced FileUpload to detect completed results in uploaded XLS/CSV/XLSX files, pre-populate results table, and only queue incomplete URLs for fresh analysis. Added \"loaded from file\" badges and import summary. Score: 90/85.",
+    "title": "BUG-10 — Resume analysis from previously exported files"
+  }
+}

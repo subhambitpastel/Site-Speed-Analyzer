@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKZQZ9MJ1J1468RHBJ9KGJVQ",
+  "taskId": "verify-build",
+  "invocationKey": "bugfix-9-10:S000011:verify-build",
+  "stepId": "S000011",
+  "kind": "agent",
+  "title": "Verify build (Phase 2 — Resume Feature)",
+  "io": {
+    "inputJsonPath": "tasks/01KKZQZ9MJ1J1468RHBJ9KGJVQ/input.json",
+    "outputJsonPath": "tasks/01KKZQZ9MJ1J1468RHBJ9KGJVQ/result.json"
+  },
+  "inputs": {
+    "phase": "Phase 2 — Resume Feature"
+  }
+}

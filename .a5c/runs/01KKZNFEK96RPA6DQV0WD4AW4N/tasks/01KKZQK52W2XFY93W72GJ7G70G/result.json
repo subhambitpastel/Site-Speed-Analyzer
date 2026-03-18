@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKZQK52W2XFY93W72GJ7G70G",
+  "taskId": "implement-resume-feature",
+  "invocationKey": "bugfix-9-10:S000010:implement-resume-feature",
+  "status": "ok",
+  "result": {
+    "filesModified": [
+      "src/types/report.ts",
+      "src/lib/fileParser.ts",
+      "src/components/FileUpload.tsx",
+      "src/app/page.tsx",
+      "src/components/ResultsTable.tsx"
+    ],
+    "success": true,
+    "summary": "Implemented resume-from-exported-files across 5 files. fileParser returns discriminated union. FileUpload has new import UI with summary. page.tsx handles import with direct result population. ResultsTable shows 'From file' badge."
+  },
+  "startedAt": "2026-03-18T05:51:05.211Z",
+  "finishedAt": "2026-03-18T05:51:05.211Z",
+  "value": {
+    "filesModified": [
+      "src/types/report.ts",
+      "src/lib/fileParser.ts",
+      "src/components/FileUpload.tsx",
+      "src/app/page.tsx",
+      "src/components/ResultsTable.tsx"
+    ],
+    "success": true,
+    "summary": "Implemented resume-from-exported-files across 5 files. fileParser returns discriminated union. FileUpload has new import UI with summary. page.tsx handles import with direct result population. ResultsTable shows 'From file' badge."
+  }
+}

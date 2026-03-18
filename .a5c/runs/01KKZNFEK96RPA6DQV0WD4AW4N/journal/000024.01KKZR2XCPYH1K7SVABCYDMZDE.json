@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-18T05:53:20.278Z",
+  "data": {
+    "effectId": "01KKZR2XB6MAB9PM3Z24PVYR4A",
+    "invocationKey": "bugfix-9-10:S000012:score-resume-feature",
+    "invocationHash": "3cfc67ae74759dfc7b1591c7f1522a3630679188f38f0ea628c94883401cce55",
+    "stepId": "S000012",
+    "taskId": "score-resume-feature",
+    "kind": "agent",
+    "label": "Score resume feature (iteration 0)",
+    "taskDefRef": "tasks/01KKZR2XB6MAB9PM3Z24PVYR4A/task.json"
+  },
+  "checksum": "9a1fc3c30cabbdfc8a3869bcb960137b781e345dd9c7ff6c5b6827e80474f1bf"
+}

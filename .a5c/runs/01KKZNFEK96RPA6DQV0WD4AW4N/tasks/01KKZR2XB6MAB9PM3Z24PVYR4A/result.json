@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KKZR2XB6MAB9PM3Z24PVYR4A",
+  "taskId": "score-resume-feature",
+  "invocationKey": "bugfix-9-10:S000012:score-resume-feature",
+  "status": "ok",
+  "result": {
+    "breakdown": {
+      "dataReconstruction": 18,
+      "detectionLogic": 19,
+      "edgeCases": 4,
+      "prePopulation": 15,
+      "queueLogic": 14,
+      "uxBadge": 10,
+      "uxSummary": 10
+    },
+    "gaps": [
+      "isLoading() guard could misclassify loaded-from-file reports with value=0",
+      "No 0-100 range validation for scores",
+      "No fuzzy column name matching",
+      "Imported results not cached in resultsCacheRef"
+    ],
+    "overallScore": 90
+  },
+  "startedAt": "2026-03-18T05:54:00.935Z",
+  "finishedAt": "2026-03-18T05:54:00.935Z",
+  "value": {
+    "breakdown": {
+      "dataReconstruction": 18,
+      "detectionLogic": 19,
+      "edgeCases": 4,
+      "prePopulation": 15,
+      "queueLogic": 14,
+      "uxBadge": 10,
+      "uxSummary": 10
+    },
+    "gaps": [
+      "isLoading() guard could misclassify loaded-from-file reports with value=0",
+      "No 0-100 range validation for scores",
+      "No fuzzy column name matching",
+      "Imported results not cached in resultsCacheRef"
+    ],
+    "overallScore": 90
+  }
+}

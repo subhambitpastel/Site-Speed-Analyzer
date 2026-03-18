@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-18T05:44:43.922Z",
+  "data": {
+    "effectId": "01KKZQK52W2XFY93W72GJ7G70G",
+    "invocationKey": "bugfix-9-10:S000010:implement-resume-feature",
+    "invocationHash": "1362b0a8e4b782c6cdec3ba81b9ac1869cb8bfa3d2950c21fa2eb71e62d0b5c9",
+    "stepId": "S000010",
+    "taskId": "implement-resume-feature",
+    "kind": "agent",
+    "label": "Implement resume from exported files (BUG-10)",
+    "taskDefRef": "tasks/01KKZQK52W2XFY93W72GJ7G70G/task.json"
+  },
+  "checksum": "ab49546b248e097091c350657cc5cc5b325b6a91f2f874aba2e9afb7695b6263"
+}

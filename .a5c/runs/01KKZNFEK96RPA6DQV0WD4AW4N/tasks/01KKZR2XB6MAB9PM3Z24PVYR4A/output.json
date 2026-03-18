@@ -1,0 +1,5 @@
+{
+  "overallScore": 90,
+  "breakdown": {"detectionLogic": 19, "dataReconstruction": 18, "prePopulation": 15, "queueLogic": 14, "uxBadge": 10, "uxSummary": 10, "edgeCases": 4},
+  "gaps": ["isLoading() guard could misclassify loaded-from-file reports with value=0", "No 0-100 range validation for scores", "No fuzzy column name matching", "Imported results not cached in resultsCacheRef"]
+}

@@ -160,6 +160,92 @@ export default function Home() {
     [strategy],
   );
 
+  const handleImportReports = useCallback(
+    async (completedReports: LighthouseReport[], incompleteUrls: string[]) => {
+      // Set completed reports immediately
+      const allResults: LighthouseReport[] = [
+        ...completedReports,
+        ...incompleteUrls.map((url) => createPlaceholderReport(url, strategy)),
+      ];
+      setResults(allResults);
+
+      // If there are incomplete URLs, queue them for analysis
+      if (incompleteUrls.length === 0) return;
+
+      const ac = new AbortController();
+      abortControllerRef.current = ac;
+      completedRef.current = 0;
+      setIsLoading(true);
+      setProgress({ current: 0, total: incompleteUrls.length });
+
+      const baseIndex = completedReports.length; // offset into allResults
+
+      const processUrl = async (queueIndex: number) => {
+        if (ac.signal.aborted) return;
+        const resultIndex = baseIndex + queueIndex;
+        const url = incompleteUrls[queueIndex];
+        try {
+          const apiResponse = await fetchReport(url, strategy, ac.signal);
+          const report = parseReport(url, apiResponse, strategy);
+          setResults((prev) => {
+            const updated = [...prev];
+            updated[resultIndex] = report;
+            return updated;
+          });
+        } catch (error: unknown) {
+          if (error instanceof DOMException && error.name === "AbortError") {
+            setResults((prev) => {
+              const updated = [...prev];
+              updated[resultIndex] = {
+                ...createPlaceholderReport(url, strategy),
+                error: "Cancelled",
+                fetchedAt: new Date().toISOString(),
+              };
+              return updated;
+            });
+            return;
+          }
+          const errorMessage =
+            error instanceof Error ? error.message : "An unknown error occurred";
+          setResults((prev) => {
+            const updated = [...prev];
+            updated[resultIndex] = {
+              ...createPlaceholderReport(url, strategy),
+              error: errorMessage,
+              fetchedAt: new Date().toISOString(),
+            };
+            return updated;
+          });
+        } finally {
+          completedRef.current += 1;
+          setProgress({ current: completedRef.current, total: incompleteUrls.length });
+        }
+      };
+
+      const queue = incompleteUrls.map((_, i) => i);
+      const workers = Array.from(
+        { length: Math.min(CONCURRENCY, incompleteUrls.length) },
+        async () => {
+          while (queue.length > 0 && !ac.signal.aborted) {
+            const index = queue.shift();
+            if (index === undefined) break;
+            await processUrl(index);
+          }
+        },
+      );
+
+      await Promise.all(workers);
+      setIsLoading(false);
+      if (!ac.signal.aborted) {
+        setResults((current) => {
+          resultsCacheRef.current.set(strategy, current);
+          return current;
+        });
+      }
+    },
+    [strategy],
+  );
+
   const progressPercent =
     progress.total > 0
       ? Math.round((progress.current / progress.total) * 100)
@@ -284,7 +370,7 @@ export default function Home() {
           {inputMode === "url" ? (
             <URLInput onSubmit={handleSubmit} isLoading={isLoading} strategy={strategy} setStrategy={setStrategy} />
           ) : (
-            <FileUpload key={inputMode} onURLsExtracted={handleSubmit} isLoading={isLoading} strategy={strategy} setStrategy={setStrategy} />
+            <FileUpload key={inputMode} onURLsExtracted={handleSubmit} onReportsImported={handleImportReports} isLoading={isLoading} strategy={strategy} setStrategy={setStrategy} />
           )}
         </div>
 

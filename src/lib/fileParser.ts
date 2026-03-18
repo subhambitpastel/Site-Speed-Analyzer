@@ -1,4 +1,5 @@
 import * as xlsx from "xlsx";
+import type { LighthouseReport } from "@/types/report";
 
 export const SUPPORTED_EXTENSIONS = [".xlsx", ".xls", ".csv"];
 
@@ -16,10 +17,44 @@ const URL_HEADER_KEYWORDS = ["url", "website", "site", "domain", "link"];
 
 const URL_PATTERN = /https?:\/\/[^\s,;"'<>]+/gi;
 
+/** Columns that indicate this is an exported Lighthouse report file */
+const REPORT_COLUMNS = ["performance", "accessibility", "seo", "best practices"];
+
+/** All expected export header names (lowercased for matching) */
+const EXPORT_HEADERS_MAP: Record<string, string> = {
+  url: "url",
+  performance: "performance",
+  accessibility: "accessibility",
+  seo: "seo",
+  "best practices": "bestPractices",
+  fcp: "fcp",
+  lcp: "lcp",
+  tbt: "tbt",
+  cls: "cls",
+  tti: "tti",
+  strategy: "strategy",
+  "fetched at": "fetchedAt",
+};
+
+export type ParseUrlsResult = {
+  kind: "urls";
+  urls: string[];
+  truncated: boolean;
+};
+
+export type ParseReportsResult = {
+  kind: "reports";
+  completedReports: LighthouseReport[];
+  incompleteUrls: string[];
+};
+
+export type ParseFileResult = ParseUrlsResult | ParseReportsResult;
+
 /**
- * Parse a File object (xlsx, xls, or csv) and return extracted URLs.
+ * Parse a File object (xlsx, xls, or csv) and return either extracted URLs
+ * or reconstructed LighthouseReport objects (if the file is an exported report).
  */
-export async function parseFile(file: File): Promise<{ urls: string[]; truncated: boolean }> {
+export async function parseFile(file: File): Promise<ParseFileResult> {
   if (file.size > MAX_FILE_SIZE) {
     throw new Error(
       `File exceeds the 10 MB size limit (${(file.size / 1024 / 1024).toFixed(1)} MB). Please use a smaller file.`
@@ -53,6 +88,13 @@ export async function parseFile(file: File): Promise<{ urls: string[]; truncated
     throw new Error("The file contains no sheets.");
   }
 
+  // Check if this is an exported report file by inspecting headers of the first sheet
+  const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+  if (firstSheet && isExportedReportSheet(firstSheet)) {
+    return parseReportsFromWorkbook(workbook);
+  }
+
+  // Fallback: extract URLs only (original behavior)
   const allUrls: string[] = [];
 
   for (const sheetName of workbook.SheetNames) {
@@ -70,7 +112,169 @@ export async function parseFile(file: File): Promise<{ urls: string[]; truncated
   }
 
   const truncated = unique.length > MAX_URLS;
-  return { urls: truncated ? unique.slice(0, MAX_URLS) : unique, truncated };
+  return {
+    kind: "urls",
+    urls: truncated ? unique.slice(0, MAX_URLS) : unique,
+    truncated,
+  };
+}
+
+/**
+ * Detect whether a sheet has the columns of an exported Lighthouse report.
+ */
+function isExportedReportSheet(sheet: xlsx.WorkSheet): boolean {
+  const rows = xlsx.utils.sheet_to_json<Record<string, unknown>>(sheet, {
+    defval: "",
+  });
+  if (rows.length === 0) return false;
+
+  const headers = Object.keys(rows[0]).map((h) => h.toLowerCase().trim());
+
+  // Must have at least 3 of the 4 report score columns AND a URL column
+  const hasUrl = headers.some((h) =>
+    URL_HEADER_KEYWORDS.some((kw) => h.includes(kw))
+  );
+  const matchedScoreCols = REPORT_COLUMNS.filter((col) =>
+    headers.some((h) => h === col)
+  );
+
+  return hasUrl && matchedScoreCols.length >= 3;
+}
+
+/**
+ * Parse an exported report workbook into completed reports and incomplete URLs.
+ */
+function parseReportsFromWorkbook(workbook: xlsx.WorkBook): ParseReportsResult {
+  const completedReports: LighthouseReport[] = [];
+  const incompleteUrls: string[] = [];
+
+  for (const sheetName of workbook.SheetNames) {
+    const sheet = workbook.Sheets[sheetName];
+    if (!sheet) continue;
+
+    const rows = xlsx.utils.sheet_to_json<Record<string, unknown>>(sheet, {
+      defval: "",
+    });
+    if (rows.length === 0) continue;
+
+    // Build a column mapping from actual header names to our canonical keys
+    const rawHeaders = Object.keys(rows[0]);
+    const colMap = buildColumnMapping(rawHeaders);
+
+    if (!colMap.url) continue; // No URL column found, skip this sheet
+
+    for (const row of rows) {
+      const urlValue = String(row[colMap.url] ?? "").trim();
+
+      // Skip AVERAGE summary rows
+      if (!urlValue || urlValue.toUpperCase() === "AVERAGE") continue;
+
+      // Skip title/spacer rows: check if the URL looks like a title or is not a valid URL
+      const validatedUrl = validateUrl(urlValue);
+      if (!validatedUrl) continue;
+
+      // Extract scores
+      const performance = safeNumber(row[colMap.performance ?? ""]);
+      const accessibility = safeNumber(row[colMap.accessibility ?? ""]);
+      const seo = safeNumber(row[colMap.seo ?? ""]);
+      const bestPractices = safeNumber(row[colMap.bestPractices ?? ""]);
+
+      // A row is "completed" if it has at least one non-zero score
+      const hasScores =
+        performance > 0 || accessibility > 0 || seo > 0 || bestPractices > 0;
+
+      if (!hasScores) {
+        incompleteUrls.push(validatedUrl);
+        continue;
+      }
+
+      // Extract web vitals display values
+      const fcp = String(row[colMap.fcp ?? ""] ?? "").trim() || "N/A";
+      const lcp = String(row[colMap.lcp ?? ""] ?? "").trim() || "N/A";
+      const tbt = String(row[colMap.tbt ?? ""] ?? "").trim() || "N/A";
+      const cls = String(row[colMap.cls ?? ""] ?? "").trim() || "N/A";
+      const tti = String(row[colMap.tti ?? ""] ?? "").trim() || "N/A";
+
+      // Extract strategy and fetchedAt
+      const strategyRaw = String(row[colMap.strategy ?? ""] ?? "").trim().toLowerCase();
+      const strategyValue: "mobile" | "desktop" =
+        strategyRaw === "mobile" ? "mobile" : "desktop";
+
+      const fetchedAt = String(row[colMap.fetchedAt ?? ""] ?? "").trim() || new Date().toISOString();
+
+      const report: LighthouseReport = {
+        url: validatedUrl,
+        scores: {
+          performance,
+          accessibility,
+          seo,
+          bestPractices,
+        },
+        coreWebVitals: {
+          fcp: { value: 0, displayValue: fcp },
+          lcp: { value: 0, displayValue: lcp },
+          tbt: { value: 0, displayValue: tbt },
+          cls: { value: 0, displayValue: cls },
+          tti: { value: 0, displayValue: tti },
+        },
+        fetchedAt,
+        strategy: strategyValue,
+        loadedFromFile: true,
+      };
+
+      completedReports.push(report);
+    }
+  }
+
+  // If we found nothing at all, throw
+  if (completedReports.length === 0 && incompleteUrls.length === 0) {
+    throw new Error("No valid URLs found in the exported report file.");
+  }
+
+  return {
+    kind: "reports",
+    completedReports,
+    incompleteUrls: Array.from(new Set(incompleteUrls)),
+  };
+}
+
+/**
+ * Build a mapping from our canonical field keys to actual column header names.
+ */
+function buildColumnMapping(headers: string[]): Record<string, string | undefined> {
+  const map: Record<string, string | undefined> = {};
+
+  for (const header of headers) {
+    const lower = header.toLowerCase().trim();
+
+    // Check exact match in EXPORT_HEADERS_MAP
+    if (EXPORT_HEADERS_MAP[lower]) {
+      const canonicalKey = EXPORT_HEADERS_MAP[lower];
+      map[canonicalKey] = header;
+      continue;
+    }
+
+    // Fuzzy match for URL column
+    if (!map.url && URL_HEADER_KEYWORDS.some((kw) => lower.includes(kw))) {
+      map.url = header;
+    }
+  }
+
+  return map;
+}
+
+/**
+ * Safely parse a numeric value from a cell. Returns 0 for non-numeric values.
+ */
+function safeNumber(value: unknown): number {
+  if (typeof value === "number") {
+    return isFinite(value) ? value : 0;
+  }
+  if (typeof value === "string") {
+    const parsed = parseFloat(value);
+    return isFinite(parsed) ? parsed : 0;
+  }
+  return 0;
 }
 
 /**

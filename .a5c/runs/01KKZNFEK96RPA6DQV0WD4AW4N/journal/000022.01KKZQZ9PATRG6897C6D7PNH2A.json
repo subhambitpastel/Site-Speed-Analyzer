@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-03-18T05:51:21.802Z",
+  "data": {
+    "effectId": "01KKZQZ9MJ1J1468RHBJ9KGJVQ",
+    "invocationKey": "bugfix-9-10:S000011:verify-build",
+    "invocationHash": "832b6bbbe3f7ceb56ee64f749e57aeba237326fd73b4e83481bd0aaa28a8335a",
+    "stepId": "S000011",
+    "taskId": "verify-build",
+    "kind": "agent",
+    "label": "Verify build (Phase 2 — Resume Feature)",
+    "taskDefRef": "tasks/01KKZQZ9MJ1J1468RHBJ9KGJVQ/task.json"
+  },
+  "checksum": "8135ed4a0e37fda3435da46c6efaece5aa5e19debb2ceb58b256e5946bd79802"
+}

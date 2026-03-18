@@ -1,0 +1,5 @@
+{
+  "success": true,
+  "filesModified": ["src/types/report.ts", "src/lib/fileParser.ts", "src/components/FileUpload.tsx", "src/app/page.tsx", "src/components/ResultsTable.tsx"],
+  "summary": "Implemented resume-from-exported-files across 5 files. fileParser returns discriminated union. FileUpload has new import UI with summary. page.tsx handles import with direct result population. ResultsTable shows 'From file' badge."
+}

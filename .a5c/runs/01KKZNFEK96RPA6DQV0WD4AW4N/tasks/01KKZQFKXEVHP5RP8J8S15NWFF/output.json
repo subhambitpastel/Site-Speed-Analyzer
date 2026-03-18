@@ -1,0 +1,7 @@
+{
+  "exportFormat": {"columns": ["URL","Performance","Accessibility","SEO","Best Practices","FCP","LCP","TBT","CLS","TTI","Strategy","Fetched At"]},
+  "reportType": {"fields": ["url","scores.performance","scores.accessibility","scores.seo","scores.bestPractices","coreWebVitals.fcp","coreWebVitals.lcp","coreWebVitals.tbt","coreWebVitals.cls","coreWebVitals.tti","fetchedAt","strategy","error"]},
+  "currentUploadFlow": "FileUpload delegates to lib/fileParser.ts which uses xlsx library to read files, extracts only URLs, discards all score/metric data",
+  "recommendedApproach": "Detect known header signature (Performance,Accessibility,SEO,Best Practices columns). Return discriminated union: {kind:'urls'} or {kind:'reports'}. Add handleImportReports to page.tsx that sets results directly without API calls. Mark imported results with loadedFromFile flag.",
+  "parsingStrategy": "Use xlsx.utils.sheet_to_json() to get rows. Reconstruct LighthouseReport from exported columns. Set WebVitalMetric.value=0 (only displayValue matters for UI). Skip AVERAGE/title/spacer rows."
+}

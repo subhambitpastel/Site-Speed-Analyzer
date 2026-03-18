@@ -25,4 +25,5 @@ export interface LighthouseReport {
   fetchedAt: string;
   strategy: "mobile" | "desktop";
   error?: string;
+  loadedFromFile?: boolean;
 }

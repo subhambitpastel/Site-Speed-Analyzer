@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KKZQEQWB32CQMX1FPQQ8S9H5",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "bugfix-9-10:S000008:__sdk.breakpoint",
+  "stepId": "S000008",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Phase 1 done: Dark Mode Default (BUG-9). Score: 90/85. Proceed to Phase 2 (Resume from Exported Files)?",
+      "tag": "phase-1-review",
+      "title": "Phase 1 Review — Dark Mode"
+    },
+    "requestedAt": "2026-03-18T05:42:19.275Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Phase 1 done: Dark Mode Default (BUG-9). Score: 90/85. Proceed to Phase 2 (Resume from Exported Files)?",
+      "tag": "phase-1-review",
+      "title": "Phase 1 Review — Dark Mode"
+    },
+    "requestedAt": "2026-03-18T05:42:19.275Z"
+  }
+}
