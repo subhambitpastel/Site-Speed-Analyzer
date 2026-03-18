@@ -44,6 +44,7 @@ export default function ScoreBadge({ score, label }: ScoreBadgeProps) {
   const [displayedScore, setDisplayedScore] = useState(0);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- animation loop requires synchronous setState
     setDisplayedScore(0);
     const start = performance.now();
     const duration = 800;

@@ -43,7 +43,7 @@ test.describe('UI Bug Fixes Verification', () => {
     // Verify spinner CSS animations are defined
     const spinnerCSS = await page.evaluate(() => {
       const sheets = document.styleSheets;
-      let found = { rotate: false, dash: false };
+      const found = { rotate: false, dash: false };
       for (const sheet of sheets) {
         try {
           for (const rule of sheet.cssRules) {
@@ -52,7 +52,7 @@ test.describe('UI Bug Fixes Verification', () => {
               if (rule.name === 'spinner-dash') found.dash = true;
             }
           }
-        } catch (e) { /* cross-origin */ }
+        } catch (_) { /* cross-origin */ }
       }
       return found;
     });
@@ -73,7 +73,7 @@ test.describe('UI Bug Fixes Verification', () => {
               found = true;
             }
           }
-        } catch (e) { /* cross-origin */ }
+        } catch (_) { /* cross-origin */ }
       }
       return found;
     });

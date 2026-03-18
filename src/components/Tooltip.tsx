@@ -30,6 +30,7 @@ export default function Tooltip({ text, children, className = "" }: TooltipProps
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- mount detection requires setState in effect
     setMounted(true);
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -79,6 +80,7 @@ export default function Tooltip({ text, children, className = "" }: TooltipProps
   // Update position when visible changes
   useEffect(() => {
     if (visible) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- position must update when visibility changes
       updatePosition();
       // Update again after a frame for accurate tooltip dimensions
       requestAnimationFrame(updatePosition);

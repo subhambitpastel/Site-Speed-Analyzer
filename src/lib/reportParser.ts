@@ -12,6 +12,7 @@ const DEFAULT_METRIC: WebVitalMetric = { value: 0, displayValue: "N/A" };
  * Lighthouse scores are 0-1 floats; we multiply by 100 and round.
  */
 function extractCategoryScore(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- API response structure is dynamic
   categories: Record<string, any> | undefined,
   key: string,
 ): number {
@@ -24,6 +25,7 @@ function extractCategoryScore(
  * Safely extracts a Web Vital metric from the audits map.
  */
 function extractMetric(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- API response structure is dynamic
   audits: Record<string, any> | undefined,
   auditId: string,
 ): WebVitalMetric {
@@ -42,6 +44,7 @@ function extractMetric(
  */
 export function parseReport(
   url: string,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- raw API response has no typed definition
   apiResponse: any,
   strategy: "mobile" | "desktop",
 ): LighthouseReport {

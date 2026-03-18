@@ -4,6 +4,13 @@ This file tracks recent improvements and bug fixes. New entries are added at the
 
 ---
 
+### 29. Comprehensive Unit Testing Setup (2026-03-18)
+- **Bug:** No test suite existed for the application — no way to verify component behavior or catch regressions
+- **Root cause:** Test infrastructure not set up, no test configuration or test files
+- **Fix:** Set up Jest + React Testing Library with next/jest, browser API mocks, and path alias support. Wrote 179 tests across 18 test suites: 7 utility module test files (urlValidator, reportParser, pagespeedClient, exportCSV, exportPDF, exportDOCX, fileParser), 9 component test files (URLInput, FileUpload, ScoreBadge, ScoreChart, MetricsPanel, Tooltip, ResultsTable, ExportDropdown, LoadingSpinner), and page.tsx integration tests. All tests pass with zero failures.
+- **Files modified:** jest.config.ts (new), jest.setup.ts (new), package.json, src/__tests__/smoke.test.ts, src/__tests__/lib/*.test.ts (7 files), src/__tests__/components/*.test.tsx (9 files), src/__tests__/page.test.tsx
+- **Verified by:** npm test (179/179 passing), npm run build (success), npm run lint (clean)
+
 ### 28. Resume Analysis from Previously Exported Files (2026-03-18)
 - **Bug:** Uploading a previously exported XLS/CSV/XLSX re-analyzed all URLs from scratch instead of reusing existing data
 - **Root cause:** fileParser.ts only extracted URLs, discarded all score/metric data from uploaded files

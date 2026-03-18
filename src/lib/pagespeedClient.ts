@@ -34,7 +34,7 @@ export async function fetchReport(
   url: string,
   strategy: "mobile" | "desktop",
   signal?: AbortSignal,
-): Promise<any> {
+): Promise<Record<string, unknown>> {
   const params: Record<string, string> = { url, strategy };
   if (API_KEY) {
     params.key = API_KEY;
