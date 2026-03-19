@@ -1,0 +1,17 @@
+            - name: Claude BugBot
+  # You may pin to the exact commit or the version.
+  # uses: rekpero/claude-bugbot-github-action@0b1c1ba99b75b76cdee9b5ef6e46e7c808bf376d
+  uses: rekpero/claude-bugbot-github-action@v1.0.9
+  with:
+    # Claude Code OAuth token from `claude setup-token` (for Max/Pro subscription users)
+    claude-setup-token: # optional
+    # Anthropic API key (alternative to claude-setup-token)
+    anthropic-api-key: # optional
+    # Claude model to use (e.g. sonnet, opus, haiku)
+    model: # optional, default is sonnet
+    # GitHub token for posting PR reviews and resolving fixed threads. Requires pull-requests: write permission.
+    github-token: # optional, default is ${{ github.token }}
+    # Maximum budget in USD per analysis run
+    max-budget: # optional, default is 1.00
+
+          
